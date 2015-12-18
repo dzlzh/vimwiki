@@ -6,45 +6,56 @@ document.cookie  = "_jc_save_fromDate=2016-02-04;path=/;expires=" + _date.toGMTS
 document.cookie  = "_jc_save_fromStation=%u5317%u4EAC%2CBJP;path=/;expires=" + _date.toGMTString();
 //目的地
 document.cookie  = "_jc_save_toStation=%u90AF%u90F8%2CHDP;path=/;expires=" + _date.toGMTString();
+window.location.href="https://kyfw.12306.cn/otn/leftTicket/init";
+
+
+
+var passengerId = "0000000000000";
+var trainNumber = [""];
+//SWZ   商务座      TZ    特等座   ZY    一等座     ZE    二等座
+//YYRW  高级动卧    SRRB  动卧     GR    高级软卧   RW    软卧
+//YW    硬卧        RZ    软座     YZ    硬座       WZ    无座
+var xb = ["ZE", "YZ", "YW"];
+var rq = ["2016-02-03","2016-02-04"];
+var searchTime = 1500;
 
 $("input#auto_query").attr('checked','checked');
 $("input#autoSubmit").attr('checked','checked');
 $("input#partSubmit").attr('checked','checked');
 $("input#avail_ticket").attr('checked','checked');
-$.showSelectBuyer();
-if(passengerAll != null) {
-    for (var i=0;i<passengerAll.length;i++) {
-        if(passengerAll[i].passenger_id_no == '###############') {
-            //已选常用联系人
-            passengerChecked=[passengerAll[i]];
-            break;
-        };
+setData();
+
+
+function setData() {
+    $.showSelectBuyer();
+    if(passengerAll != null) {
+        for (var i=0;i<passengerAll.length;i++) {
+            if(passengerAll[i].passenger_id_no == passengerId) {
+                //已选常用联系人
+                passengerChecked=[passengerAll[i]];
+                break;
+            };
+        }
+        $.closeSelectBuyer();
+        //优先车次
+        ccSelected= trainNumber;
+        //优先席别
+        xbChecked = xb;
+        //备选日期
+        rqChecked = rq;
+        //间隔时间
+        autoSearchTime = searchTime;
+        if(passengerChecked != null) {
+            $("a#query_ticket").click();
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
     }
-    $.closeSelectBuyer();
-    //优先车次
-    ccSelected=[];
-    //优先席别
-    //SWZ   商务座
-    //TZ    特等座
-    //ZY    一等座
-    //ZE    二等座
-    //YYRW  高级动卧
-    //SRRB  动卧
-    //GR    高级软卧
-    //RW    软卧
-    //YW    硬卧
-    //RZ    软座
-    //YZ    硬座
-    //WZ    无座
-    xbChecked=["ZE", "YZ", "YW"];
-    //备选日期
-    rqChecked=["2016-02-03","2016-02-04"];
-    //间隔时间
-    autoSearchTime=1500;
-    $("a#query_ticket").click();
-} else {
-    alert('登录');
 }
+
 
 
 
