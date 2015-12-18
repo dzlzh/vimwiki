@@ -18,6 +18,8 @@ var trainNumber = [""];
 var xb = ["ZE", "YZ", "YW"];
 var rq = ["2016-02-03","2016-02-04"];
 var searchTime = 1500;
+var searchTime = 1500;
+var notStop = true;
 
 $("input#auto_query").attr('checked','checked');
 $("input#autoSubmit").attr('checked','checked');
@@ -25,8 +27,8 @@ $("input#partSubmit").attr('checked','checked');
 $("input#avail_ticket").attr('checked','checked');
 setData();
 
-
 function setData() {
+
     $.showSelectBuyer();
     if(passengerAll != null) {
         for (var i=0;i<passengerAll.length;i++) {
@@ -47,15 +49,13 @@ function setData() {
         autoSearchTime = searchTime;
         if(passengerChecked != null) {
             $("a#query_ticket").click();
-            return true;
-        } else {
-            return false;
+            notStop = false;
         }
-    } else {
-        return false;
+    }
+    if(notStop) {
+        setTimeout("setData()",10000);
     }
 }
-
 
 
 
