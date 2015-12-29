@@ -32,7 +32,7 @@ git reset --hard <HEAD^|commitID> //版本回退
 
 git reset HEAD file //可以把暂存区的修改撤销掉
 
-git checkout -- file //可以丢弃工作区的修改：
+git checkout -- file //可以丢弃工作区的修改
 
 git stash //把当前工作现场“储藏”起来
 
