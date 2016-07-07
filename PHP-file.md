@@ -18,5 +18,12 @@ string basename ( string $path [, string $suffix ] )
 
 //判断给定文件名是否是一个目录
 bool is_dir ( string $filename )
+
+//返回文件路径的信息
+mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME ] )
+//PATHINFO_DIRNAME 目录
+//PATHINFO_BASENAME 文件全名
+//PATHINFO_EXTENSION 类型
+//PATHINFO_FILENAME 文件名
 ```
 
