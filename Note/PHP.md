@@ -54,6 +54,9 @@ array compact ( mixed $varname [, mixed $... ] )
 # PHP文件操作
 
 ```php
+//PHP内置常量，目录分隔符
+DIRECTORY_SEPARATOR
+
 //新建目录
 bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive = false [, resource $context ]]] )
 
@@ -78,6 +81,117 @@ mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASE
 //PATHINFO_BASENAME 文件全名
 //PATHINFO_EXTENSION 类型
 //PATHINFO_FILENAME 文件名
+
+//打开目录句柄
+opendir()
+
+//从目录句柄中读取条目
+readdir()
+
+//倒回目录句柄开头
+rewinddir()
+
+//关闭目录句柄
+closedir()
 ```
 
+# PHP静态(Static)关键字
 
+- 静态属性用于保存类的公有数据
+- 静态方法里只能访问静态属性
+- 静态成员不需要实例化对象就可以访问
+- 类的内部可以通过`self`或者`static`关键字访问自身静态成员可以通过`parent`关键字访问父类的静态成员
+- 可以通过类的名称在类定义外部访问静态成员
+
+# PHP命令行参数
+
+- `$argv`是一个数组，包含了提供的参数，第一个参数总是脚本文件名字
+- `$argc`包含了`$argv`数组包含元素的数目
+
+# PHP安全
+
+## 变量的处理
+
+ __web程序中所有`get` `post` `cookies` `update_files`来的变量都是不可信的__
+
+- 输入的变量组成mysql SQL前都要用`mysql_real_escape_string()`处理
+
+- 输入的变量回显在页面或者存入数据库钱都要用`htmlspecialchars()`函数处
+
+- 对于传入的整数或浮点数可以使用`intval()`或`floatval()`处理
+
+- 关闭`magic_quotes_runtime`安全掌握到自己的手里 `set_magic_quotes_runtime(false) `
+
+## 数据加密
+
+__序列化 -> 加密 -> 解密 -> 反序列化__
+
+```php
+$userinfo = '信息'; //用户信息
+$secureKey = '密钥'; //加密密钥
+$str = serialize($userinfo); //将用户信息序列化
+echo "用户信息加密前：".$str;
+$str = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $secureKey, $str, MCRYPT_MODE_ECB));
+echo "用户信息加密后：".$str;
+//将加密后的用户数据存储到cookie中
+setcookie('userinfo', $str); 
+//当需要使用时进行解密
+$str = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $secureKey, base64_decode($str), MCRYPT_MODE_ECB);
+$uinfo = unserialize($str);
+echo "解密后的用户信息：\n";
+var_dump($uinfo);
+```
+
+## 密码加密
+
+```php
+$password = '密码';
+$salt = substr(uniqid(rand()), -6);
+echo $salt . "\n";
+$password = md5(md5($password).$salt);
+echo $password;
+```
+
+# PHP小技巧
+
+- foreach效率更高，尽量用`foreach`代替`while`和`for`循环
+
+- 循环内部不要声明变量，尤其是对象这样的变量
+
+- 循环里别用函数
+
+- 在多重嵌套循环中，如有可能，应当将最长的循环放在内层，最短循环放在外层，从而减少cpu跨循环层的次数，优化程序性能
+
+- 用单引号替代双引号引用字符串以实现PHP性能优化
+
+- 用`i+=1`代替`i=i+1`。符合c/c++的习惯，效率还高
+
+- 优化Select SQL语句，在可能的情况下尽量少的进行`Insert`、`Update`操作，达到PHP性能优化的目的
+
+- 某些地方使用`isset`代替`strlen`
+
+- 尽量的少进行文件操作，虽然PHP的文件操作效率也不低的
+
+- 尽可能的使用PHP内部函数
+
+- 在可以用PHP内部字符串操作函数的情况下，不要用正则表达式
+
+- 在可以用`file_get_contents`替代`file`、`fopen`、`feof`、`fgets`等系列方法的情况下，尽量用`file_get_contents`，因为它的效率高得多。但是要注意`file_get_contents`在打开一个URL文件时候的PHP版本问题
+
+- 不要随便就复制变量
+
+- Apache解析一个PHP脚本的时间要比解析一个静态HTML页面慢2至10倍。尽量多用静态HTML页面，少用脚本
+
+- 试着喜欢使用三元运算符`(?：)`
+
+- 使用选择分支语句，`switch case`好于使用多个`if`，`else if`语句,并且代码更加容易阅读和维护
+
+- 当`echo`字符串时用逗号代替点连接符更快些。`echo`一种可以把多个字符串当作参数的“函数”。`echo`是语言结构，不是真正的函数，故把函数加上了双引号
+
+- 去除HTML标签以及空格换行等字符`preg_replace("/(\s|\&nbsp\;|　|\xc2\xa0)/", "", strip_tags($str))`
+
+- 目录分隔符 `DIRECTORY_SEPARATOR`
+
+- 多路径分隔符 `PATH_SEPARATOR`
+
+- `bool || die()`
