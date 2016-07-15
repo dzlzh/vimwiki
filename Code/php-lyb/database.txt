@@ -1,0 +1,26 @@
+
+Guestbook Table
++------------+---------------------+------+-----+---------+----------------+
+| Field      | Type                | Null | Key | Default | Extra          |
++------------+---------------------+------+-----+---------+----------------+
+| id         | int(10) unsigned    | NO   | PRI | NULL    | auto_increment |
+| nickname   | char(16)            | NO   |     |         |                |
+| email      | varchar(60)         | YES  |     | NULL    |                |
+| content    | text                | NO   |     | NULL    |                |
+| createtime | int(10) unsigned    | NO   |     | 0       |                |
+| reply      | text                | YES  |     | NULL    |                |
+| replytime  | int(10) unsigned    | YES  |     | NULL    |                |
+| status     | tinyint(1) unsigned | YES  |     | 0       |                |
++------------+---------------------+------+-----+---------+----------------+
+
+User Table
++------------+---------------------+------+-----+---------+----------------+
+| Field      | Type                | Null | Key | Default | Extra          |
++------------+---------------------+------+-----+---------+----------------+
+| uid        | int(10)             | NO   | PRI | NULL    | auto_increment |
+| nickname   | varchar(30)         | NO   |     | NULL    |                |
+| password   | varchar(32)         | NO   |     | NULL    |                |
+| createtime | int(10) unsigned    | NO   |     | NULL    |                |
+| level      | tinyint(1) unsigned | YES  |     | 0       |                |
++------------+---------------------+------+-----+---------+----------------+
+
