@@ -1,4 +1,4 @@
-# CPP_Primer
+# CPP Primer
 
 ## 头文件
 
@@ -67,8 +67,6 @@ type (expr);
 private  //不是类的组成部分的代码不能访问。
 public   //定义的成员在程序的任何部分都可以访问。
 ```
-
-
 
 ## 对象
 
@@ -742,3 +740,240 @@ double revenue;
 ```
 
 在冒号和花括号之间的代码称为_构造函数的初始化列表(constuctor initializer list)_。
+
+
+
+
+
+-----
+
+
+
+
+
+# CPP Primer Plus
+
+## 头文件
+
+```
+#include <iostream> // 输入、输出
+#include <cmath> or #include <math.h> //函数
+#include <climits> or #include <limits.h> //整型限制信息 符号常量
+#include <cfloat> or #include <float.h> //浮点类型限制信息
+```
+
+## 名称空间
+
+```
+using namespace std;
+
+```
+
+## 控制符
+
+```
+cout << // 输出
+cin  >> // 输入
+endl //换行
+dec //十进制
+oct //八进制
+hex //十六进制
+\  //转义字符
+\u or \U  //通用字符名 \u后面是8个十六进制 \U后面是16个十六进制
+#define //符号常量---预处理器方法
+const  //常量的声明
+auto   //声明自动变量
+```
+
+## C++源代码风格
+
+- 每条语句占一行。
+- 每个函数都有一个开始花括号和一个结束花括号，这两个花括号各占一行。
+- 函数中的语句都相对于花括号进行缩进。
+- 与函数名称相关的贺括号周围没有空白。
+
+## 函数
+
+### 函数格式
+
+```
+type functionname(argumentlist)
+{
+    statements
+}
+```
+
+### 函数原型
+
+```
+type functionname(type)
+```
+
+### 函数特性
+
+
+- 有函数头和函数体。
+- 接受一个参数。
+- 返回一个值。
+- 需要一个原型。
+
+### 方法
+
+```
+sizeof()
+```
+
+#### 成员函数
+
+```
+cout.put() //显示一个字符
+```
+
+## 访问名称空间std的方法
+
+- 将using namespace std; 放在函数定义之前，让文件中所有的函数都能够使用名称空间std中所有的元素。
+- 将using namespace std; 放在特定的函数定义中，让该函数能够使用名称空间std中的所有元素。
+- 在特定的函数中使用类似using std::cout;这样的编译指令，而不是using namespace std;，让该函数能够使用指定的元素，如cout.
+- 完全不使用编译指令using，而需要使用名称空间std中的元素时，使用前缀std::，如下所示：std::cout << "I'm using cout and endl from the std namespace" << std::endl;
+
+## 数据类型
+
+### 无符号类型
+
+用unsigned来声明。
+
+> `unsigned short change;`
+
+### 整型short、int、long和long long
+
+最小长度
+
+- short至少16位
+- int至少与short一样长
+- long到少32位，且至少与int一样长
+- long long到少64位，且到少与long一样长
+
+### 整型字面值
+
+- 第一位为1~9，则基数为10（十进制）；控制符dec
+- 第一位为0，第二位为1~7，刚基数为8（八进制）；控制符oct
+- 前两位为0x或0X，刚基数为16（十六进制）； 控制符hex
+
+### char类型：字符和小整数
+
+字符用单引号`""`,字符串用双引号`""`。
+
+与int不同的是，char在默认情况下既不是没有符号，也不是有符号。
+
+如果将`char`用作数值类型，刚`unsigned char`和`signed char`之间的差异将非常重要。`usigned char` 类型的表示范围通常为0~255，
+而`signed char`的表示范围为-128~127。
+
+### wchar_t（宽字符类型)
+
+`wchar_t`也叫扩展字符集。它是一种整数类型。它和别一种整型（底层（underlying)类型）的长度和符号属性相同。
+
+`wchar_t`用`wcin`和`wcout`作为输入、输出。用L表示wchar_t常量。
+
+### char16_t 和 char32_t
+
+用u表示`char16_t`常量。是无符号常量，长16位。
+
+用U表示`char32_t`常量。是无符号常量，长32位。
+
+### bool类型
+
+`bool`类型的值可以为`true`（非0，1）或者`false`（0）。
+
+### const限定符
+
+`const`用于常量的声明
+
+```
+const type name = value;
+```
+
+### 浮点数
+
+浮点数能够表示带有小数点的数字。
+
+> `d.dddE+n` 指的是将小数点向右移n位，而`d.dddE-n`指的是将小数点向左移n位。
+
+### 浮点类型
+
+三种浮点类型：
+
+- `float`至少32位，通常为32位
+- `double`至少48位，通常为64位
+- `long double`不少于`float`至少和`double`一样多，通常为80、96或128位
+
+可从头文件cfloat(float.h)中找到系统的限制。
+
+### 浮点常量
+
+像8.24和2.4E8都属于double类型。
+
+常量为`float`类型用f或F后缀。
+
+常量为`long double`类型用l或L后缀。
+
+### 将类型分类
+
+C++对基本类型进行分类，形成了若干个族。类型`signed char`、`short``int`和`long`统称为符号整型;
+它们的无符号版本统称为无符号整型；C++11新增了`long long`。`bool`、`char`、`wchar_t`、符号整数和无符号整型统称为整型;
+C++11新增了`char16_t`和`char32_t`。`float`、`double`和`long double`统称为浮点型。整数和浮点型统称算术类型。
+
+## C++算术运算符
+
+C++提供了5种基本的算术计算：加法、减法、乘法、除法以及求模。
+
+> 求模运算符只能用于整型，如果是浮点数将导致编译错误。如国其中一个是负数，则结果的符号满足以下规则：`(a/b)*b+a%b = a.`。
+
+### 类型转换
+
+C++自动执行很多类型转换：
+
+- 将一种算术类型的值赋给另一种算术类型的变量时，C++将对值进行转换;
+- 表达式中包含不同的类型时，C++将对值进行转换;
+- 将参数传递给函数时，C++将对值进行转换;
+
+#### 表达式类型转换
+
+- 如果有一个操作数的类型是long double，则将另一个操作数转换为long double。
+- 否则，如果有一个操作数的类型是double，则将别一个操作数换成double。
+- 否则，如果有一个操作数的类型是float，则将另一个操作数转换成float。
+- 在这种情况下，如果两个操作数都是有符号或无符号的，且其中一个操作数的级别比另一个低，则转换为级别高的类型。
+- 如果一个操作数为有符号的，另一个操作数为无符号的，且无符号操作数的级别有符号操作数高，则将有符号操作数转换为无符号操作数所属的类型。
+- 否则，如果有符号类型可表示无符号类型的所有可能取值，则将无符号操作数转换为有符号操作数所属的类型。
+- 否则，将两个操作数都转换为有符号类型的无符号版本。
+
+有符号整型按级别从高到低依次为long long 、long、int、short和signed char。
+无符号整型的排列顺序与有符号整型相同。
+类型char、signed char和unsigned char的级别相同。
+类型bool的级别最低。
+wchar_t、char16_t和char32_t的级别与其底层类型相同。
+
+#### 强制类型转换
+
+```
+(typeName) value
+typeName (value)
+static_cast<typeName> (value)
+```
+
+### 数组
+
+数组(array)是一种数据格式，能够存储多个同类型的值。
+
+数组声明应该指出以下三点：
+
+- 存储在每个元素中的值的类型;
+- 数组名;
+- 数组中的元素数。
+
+声明数组的通用格式：
+
+```
+typeName arrayName[arraySize];  
+//arraySize指定元素数目，它必须是整型常数或const值，也可以是常量表达式，即其中所有的值在编译时都是已知的。
+//具体地说，arraySizei不能是变量，变量的值是在程序运行时设置的。
+```
