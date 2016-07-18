@@ -2,20 +2,37 @@
 
 ```php
 //创建cookie
-bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] )
+bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] );
+
+//对 JSON 格式的字符串进行解码
+mixed json_decode ( string $json [, bool $assoc = false [, int $depth = 512 [, int $options = 0 ]]] );
+/*
+json
+待解码的 json string 格式的字符串。
+(这个函数仅能处理 UTF-8 编码的数据。)
+
+assoc
+当该参数为 TRUE 时，将返回 array 而非 object 。
+*/
+
+//对变量进行 JSON 编码
+string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] );
+
+//建立一个数组，包括变量名和它们的值
+array compact ( mixed $varname [, mixed $... ] );
 
 //解析一个配置文件
-array parse_ini_file ( string $filename [, bool $process_sections = false [, int $scanner_mode = INI_SCANNER_NORMAL ]] )
+array parse_ini_file ( string $filename [, bool $process_sections = false [, int $scanner_mode = INI_SCANNER_NORMAL ]] );
 
 //以千位分隔符方式格式化一个数字
-string number_format ( float $number [, int $decimals = 0 ] )
-string number_format ( float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = "," )
+string number_format ( float $number [, int $decimals = 0 ] );
+string number_format ( float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = "," );
 
 //子字符串替换
-mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count ] )
+mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count ] );
 
 //从数组中将变量导入到当前的符号表
-int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string $prefix = NULL ]] )
+int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string $prefix = NULL ]] );
 /*
 var_array
 一个关联数组。此函数会将键名当作变量名，值作为变量的值。 对每个键／值对都会在当前的符号表中建立变量，并受到 extract_type 和 prefix 参数的影响。
@@ -48,7 +65,10 @@ prefix
 */
 
 //建立一个数组，包括变量名和它们的值
-array compact ( mixed $varname [, mixed $... ] )
+array compact ( mixed $varname [, mixed $... ] );
+
+//为cURL传输会话批量设置选项
+bool curl_setopt_array ( resource $ch , array $options );
 ```
 
 # PHP文件操作
