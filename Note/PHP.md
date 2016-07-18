@@ -1,6 +1,9 @@
 # PHP函数
 
 ```php
+//发送原生 HTTP 头
+void header ( string $string [, bool $replace = true [, int $http_response_code ]] )
+
 //创建cookie
 bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] );
 
