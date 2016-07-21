@@ -21,6 +21,9 @@ assoc
 //对变量进行 JSON 编码
 string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] );
 
+//返回一个包含函数参数列表的数组
+array func_get_args ( void );
+
 //建立一个数组，包括变量名和它们的值
 array compact ( mixed $varname [, mixed $... ] );
 
