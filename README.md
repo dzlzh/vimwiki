@@ -2,11 +2,15 @@
 
 - [PHP](Note/PHP.md)
 - [Laravel](Note/laravel.md)
+- [Sql](Note/Sql.md)
 - [Git](Note/CPP.md)
 - [Regex](Note/regex.md)
 - [Docker](Note/Docker.md)
 - [CPP](Note/CPP.md)
 - [Notes](Note/Notes.md)
+- [HTML](Note/Html.md)
+- [Linux](Note/Linux.md)
+- [other](Note/other.md)
 
 ## Code
 
