@@ -21,6 +21,9 @@ assoc
 //对变量进行 JSON 编码
 string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] );
 
+//将回调函数作用到给定数组的单元上
+array array_map ( callable $callback , array $arr1 [, array $... ] );
+
 //返回一个包含函数参数列表的数组
 array func_get_args ( void );
 
