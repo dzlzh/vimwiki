@@ -21,6 +21,12 @@ assoc
 //对变量进行 JSON 编码
 string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] );
 
+//产生一个可存储的值的表示-序列化
+string serialize ( mixed $value );
+
+//从已存储的表示中创建 PHP 的值-反序列化
+mixed unserialize ( string $str );
+
 //将回调函数作用到给定数组的单元上
 array array_map ( callable $callback , array $arr1 [, array $... ] );
 
@@ -78,6 +84,9 @@ array compact ( mixed $varname [, mixed $... ] );
 
 //为cURL传输会话批量设置选项
 bool curl_setopt_array ( resource $ch , array $options );
+
+//生成一个唯一ID
+string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
 ```
 
 # PHP执行外部命令函数
@@ -114,41 +123,61 @@ echo `ls -al`;
 DIRECTORY_SEPARATOR
 
 //新建目录
-bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive = false [, resource $context ]]] )
+bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive = false [, resource $context ]]] );
 
 //改变文件模式
-bool chmod ( string $filename , int $mode )
+bool chmod ( string $filename , int $mode );
   
 //检查文件或目录是否存在
-bool file_exists ( string $filename )
+bool file_exists ( string $filename );
 
 //返回路径中的目录部分
-string dirname ( string $path )
+string dirname ( string $path );
 
 //返回路径中的文件名部分
-string basename ( string $path [, string $suffix ] )
+string basename ( string $path [, string $suffix ] );
 
 //判断给定文件名是否是一个目录
-bool is_dir ( string $filename )
+bool is_dir ( string $filename );
 
 //返回文件路径的信息
-mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME ] )
+mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME ] );
 //PATHINFO_DIRNAME 目录
 //PATHINFO_BASENAME 文件全名
 //PATHINFO_EXTENSION 类型
 //PATHINFO_FILENAME 文件名
 
 //打开目录句柄
-opendir()
+opendir();
 
 //从目录句柄中读取条目
-readdir()
+readdir();
 
 //倒回目录句柄开头
-rewinddir()
+rewinddir();
 
 //关闭目录句柄
-closedir()
+closedir();
+
+//寻找与模式匹配的文件路径
+array glob ( string $pattern [, int $flags = 0 ] );
+/*
+返回一个包含有匹配文件／目录的数组。如果出错返回 FALSE。
+
+GLOB_MARK - 在每个返回的项目中加一个斜线
+GLOB_NOSORT - 按照文件在目录中出现的原始顺序返回（不排序）
+GLOB_NOCHECK - 如果没有文件匹配则返回用于搜索的模式
+GLOB_NOESCAPE - 反斜线不转义元字符
+GLOB_BRACE - 扩充 {a,b,c} 来匹配 'a'，'b' 或 'c'
+GLOB_ONLYDIR - 仅返回与模式匹配的目录项
+GLOB_ERR - 停止并读取错误信息（比如说不可读的目录），默认的情况下忽略所有错误
+*/
+
+//返回规范化的绝对路径名
+string realpath ( string $path );
+
+//列出指定路径中的文件和目录
+array scandir ( string $directory [, int $sorting_order [, resource $context ]] );
 ```
 
 # PHP静态(Static)关键字
