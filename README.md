@@ -3,7 +3,7 @@
 - [PHP](Note/PHP.md)
 - [Laravel](Note/laravel.md)
 - [Sql](Note/Sql.md)
-- [Git](Note/CPP.md)
+- [Git](Note/git.md)
 - [Vim](Note/Vim.md)
 - [Regex](Note/regex.md)
 - [Docker](Note/Docker.md)
