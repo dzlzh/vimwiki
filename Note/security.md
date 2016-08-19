@@ -11,12 +11,11 @@
 **web程序中所有`get` `post` `cookies` `update_files`来的变量都是不可信的**
 
 * 输入的变量组成mysql SQL前都要用`mysql_real_escape_string()`处理
-
 * 输入的变量回显在页面或者存入数据库钱都要用`htmlspecialchars()`函数处
-
 * 对于传入的整数或浮点数可以使用`intval()`或`floatval()`处理
-
 * 关闭`magic_quotes_runtime`安全掌握到自己的手里 `set_magic_quotes_runtime(false)`
+* 严格控制上传文件类型
+* 使用mysqli或者 PDO，不用或者少用mysql，避免SQL注入
 
 ## 数据加密
 
@@ -46,5 +45,7 @@ $password = md5(md5($password).$salt);
 echo $password;
 ```
 
-## SQL
+
+
+
 
