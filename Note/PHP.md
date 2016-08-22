@@ -173,6 +173,10 @@ GLOB_ONLYDIR - 仅返回与模式匹配的目录项
 GLOB_ERR - 停止并读取错误信息（比如说不可读的目录），默认的情况下忽略所有错误
 */
 
+//取得当前工作目录
+string getcwd(void);
+/*成功则返回当前工作目录，失败返回 FALSE。*/
+
 //返回规范化的绝对路径名
 string realpath ( string $path );
 
