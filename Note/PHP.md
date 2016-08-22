@@ -82,9 +82,6 @@ prefix
 //建立一个数组，包括变量名和它们的值
 array compact ( mixed $varname [, mixed $... ] );
 
-//为cURL传输会话批量设置选项
-bool curl_setopt_array ( resource $ch , array $options );
-
 //生成一个唯一ID
 string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
 ```
@@ -183,6 +180,33 @@ string realpath ( string $path );
 //列出指定路径中的文件和目录
 array scandir ( string $directory [, int $sorting_order [, resource $context ]] );
 ```
+
+## CURL
+
+```php
+//为cURL传输会话批量设置选项
+bool curl_setopt_array ( resource $ch , array $options );
+
+//CURLFile 类
+CURLFile {
+    /* 属性 */
+    public $name ;
+    public $mime ;
+    public $postname ;
+
+    /* 方法 */
+    public __construct ( string $filename [, string $mimetype [, string $postname ]] )
+    public string getFilename ( void )
+    public string getMimeType ( void )
+    public string getPostFilename ( void )
+    public void setMimeType ( string $mime )
+    public void setPostFilename ( string $postname )
+    public void __wakeup ( void )
+}
+/*CURLFile 应该与选项 CURLOPT_POSTFIELDS 一同使用用于上传文件。*/
+```
+
+
 
 # PHP静态(Static)关键字
 
