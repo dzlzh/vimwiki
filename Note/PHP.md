@@ -7,6 +7,34 @@ void header ( string $string [, bool $replace = true [, int $http_response_code 
 //创建cookie
 bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] );
 
+//生成 URL-encode 之后的请求字符串
+string http_build_query ( mixed $query_data [, string $numeric_prefix [, string $arg_separator [, int $enc_type = PHP_QUERY_RFC1738 ]]] );
+/*
+使用给出的关联（或下标）数组生成一个经过 URL-encode 的请求字符串。
+
+query_data
+可以是数组或包含属性的对象。
+
+一个 query_data 数组可以是简单的一维结构，也可以是由数组组成的数组（其依次可以包含其它数组）。
+
+如果 query_data 是一个对象，只有 public 的属性会加入结果。
+
+numeric_prefix
+如果在基础数组中使用了数字下标同时给出了该参数，此参数值将会作为基础数组中的数字下标元素的前缀。
+
+这是为了让 PHP 或其它 CGI 程序在稍后对数据进行解码时获取合法的变量名。
+
+arg_separator
+除非指定并使用了这个参数，否则会用 arg_separator.output 来分隔参数。
+
+enc_type
+默认使用 PHP_QUERY_RFC1738。
+
+如果 enc_type 是 PHP_QUERY_RFC1738，则编码将会以 » RFC 1738 标准和 application/x-www-form-urlencoded 媒体类型进行编码，空格会被编码成加号（+）。
+
+如果 enc_type 是 PHP_QUERY_RFC3986，将根据 » RFC 3986 编码，空格会被百分号编码（%20）。
+*/
+
 //对 JSON 格式的字符串进行解码
 mixed json_decode ( string $json [, bool $assoc = false [, int $depth = 512 [, int $options = 0 ]]] );
 /*
