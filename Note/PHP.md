@@ -207,6 +207,13 @@ string realpath ( string $path );
 
 //列出指定路径中的文件和目录
 array scandir ( string $directory [, int $sorting_order [, resource $context ]] );
+
+//将整个文件读入一个字符串
+string file_get_contents ( string $filename [, bool $use_include_path = false [, resource $context [, int $offset = -1 [, int $maxlen ]]]] );
+
+//将一个字符串写入文件
+int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, resource $context ]] );
+
 ```
 
 ## CURL
