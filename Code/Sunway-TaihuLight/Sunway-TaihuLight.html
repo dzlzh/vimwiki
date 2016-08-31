@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>Sunway TaihuLight</title>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<style>
+body {
+  margin-top: 10px;
+}
+.content {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="text-center">神威·太湖之光</h1>
+        <h2 class="text-center"><em>世界上最快的超级计算机</em></h2>
+        <div class="thumbnail">
+          <img src="Sunway-TaihuLight.jpg" alt="神威·太湖之光">
+          <div class="caption text-center">神威·太湖之光部署在江苏省无锡的国家超级计算无锡中心，由清华大学负责运营。</div>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h3>硬件</h3>
+          <div class="content">神威·太湖之光使用中国江南计算所所开发的处理器SW26010。此款处理器，基于DEC Alpha 64微架构、64位、精简指令集、乱序运行、支持SIMD的申威-64架构，制程未知。每个处理器芯片中有260个核心，采用大规模多核心并发运算的结构，其中4个为资源管理用途，称为MPE（Management Processing Element，管理处理组件），采用对称多处理器的结构；另外256个作通用运算用途，每64个核心组成一个处理器核心数组，共计8个数组，合称为CPE（Computing Processing Element，运算处理组件）。MPE和CPE的连接布局类似于Cell的协处理器式、非对称多处理的布局（PPE+SPE），而CPE的数组则与Xeon Phi、GPGPU等的流处理器形式相近。CPE核心和MPE核心都是相同的指令集，同样具备256比特SIMD单元，但不同的是MPE均支持用户模式和系统模式、32KiB一级指令缓存、32KiB一级数据缓存、256KiB二级缓存，而CPE仅支持用户模式、16KiB一级指令缓存、64KiB本地暂存式内存而无数据缓存，而且访问系统内存需要与MPE沟通。该CPU时钟频率设置在 1.45GHz。不过，内存访问方面的规格相对较为贫弱，使用的是四通道DDR3 SDRAM，而不是最新的DDR4 SDRAM，各通道拥有独立的、128位位宽的内存控制器，每通道容量 8GiB，一颗CPU可最大支持32GiB的DDR3-2133，尽管如此，每个芯片的内存带宽仍达 136.5GB/s。除此以外，每颗芯片上还自带了片上网络互联，而非传统的缓存一致性处理。因此，该CPU与Cell宽带引擎一样，偏重于浮点数运算。</div>
+          <div class="content">整套系统高达 40,960 个 SW26010处理器，共有 10,649,600 个CPU核心。每个处理器为一个节点单元，一块主板上有两颗处理器，32块这样的主板组成一架主机，每台主机作为一个“超级节点”，一共有256个这样的超级节点。根据数据图显示，这样的构造使得主机需采用非标准设计，而非标准的刀片服务器机架和机柜，这样的一种机柜可以容纳4台主机机架。运算节点单元之间全数采用PCIe总线互联，互联结构分为三层，顶层网络是“中央切换网络”，中间层是“超级节点网络”，底层是“资源共用网络”。</div>
+          <h3>软件</h3>
+          <div class="content">神威·太湖之光采用的是基于Linux核心的神威睿思（即RaiseOS 2.0.5），也是分布式操作系统，已有10多年历史，主要面向高性能领域和通用计算领域。中国工程院院士陈左宁表示，在通用计算领域，神威睿思操作系统的主要优势在于自主可控度高和安全性强等方面</div>
+          <div class="content">该系统具有其自身的定制化实现的OpenACC2.0以帮助的代码并行化</div>
+          <h3>性能</h3>
+          <div class="content">理论浮点数运算性能为125,435.9 TFlops，而LINPACK测试中的实际性能为93,014.6 TFlops，有74%的效率，相比天河二号（62%）以及排名第三的泰坦（65.8%）都要高。本机组的图形性能也较为突出，在Graph500排名中位列亚军。不过遇上内存访问较为频繁的运算处理操作、整数数值较多的运算，内存访问的樽颈效应就开始显现了。</div>
+          <div class="content">相较天河二号系统功耗达17.8百万瓦（打开散热系统全速运转时则高达24百万瓦），神威·太湖之光仅使用15.3百万瓦，且每瓦性能达到 6 GFLOPS/W，Green 500能效比排名中也位列日本的菖蒲、皋月（前者的性能升级版）机组之后排名第三，不过皋月机组的性能并不突出。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
