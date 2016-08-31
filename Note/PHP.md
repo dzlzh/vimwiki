@@ -74,6 +74,16 @@ string number_format ( float $number , int $decimals = 0 , string $dec_point = "
 //子字符串替换
 mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count ] );
 
+//生成一个唯一ID
+string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
+```
+
+# PHP数组函数
+
+```php
+//建立一个数组，包括变量名和它们的值
+array compact ( mixed $varname [, mixed $... ] );
+
 //从数组中将变量导入到当前的符号表
 int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string $prefix = NULL ]] );
 /*
@@ -107,12 +117,17 @@ prefix
 注意 prefix 仅在 extract_type 的值是 EXTR_PREFIX_SAME，EXTR_PREFIX_ALL，EXTR_PREFIX_INVALID 或 EXTR_PREFIX_IF_EXISTS 时需要。 如果附加了前缀后的结果不是合法的变量名，将不会导入到符号表中。前缀和数组键名之间会自动加上一个下划线。
 */
 
-//建立一个数组，包括变量名和它们的值
-array compact ( mixed $varname [, mixed $... ] );
-
-//生成一个唯一ID
-string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
+//移除数组中重复的值
+array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
+/*
+SORT_STRING - 默认。把项目作为字符串来比较。
+SORT_REGULAR - 把每一项按常规顺序排列（Standard ASCII，不改变类型）。
+SORT_NUMERIC - 把每一项作为数字来处理。
+SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
+*/
 ```
+
+
 
 # PHP执行外部命令函数
 
