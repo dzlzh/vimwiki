@@ -5,3 +5,13 @@
 stringObject.match(searchvalue);
 stringObject.match(regexp);
 ```
+
+# JavaScript Math对象
+
+```javascript
+//返回介于0~1之间的一个随机数
+Math.random();
+
+//对一个数进行下舍入
+Math.floor(x);
+```
