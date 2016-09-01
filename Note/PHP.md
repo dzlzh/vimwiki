@@ -125,6 +125,9 @@ SORT_REGULAR - 把每一项按常规顺序排列（Standard ASCII，不改变类
 SORT_NUMERIC - 把每一项作为数字来处理。
 SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
 */
+
+//检查给定的键名或索引是否存在于数组中
+bool array_key_exists ( mixed $key , array $search );
 ```
 
 
