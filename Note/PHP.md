@@ -76,6 +76,12 @@ mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$cou
 
 //生成一个唯一ID
 string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
+
+//将字符串转化为小写
+string strtolower ( string $string );
+
+//将字符串转化为大写
+string strtoupper ( string $string );
 ```
 
 # PHP数组函数
