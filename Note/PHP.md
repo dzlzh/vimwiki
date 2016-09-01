@@ -76,6 +76,12 @@ mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$cou
 
 //生成一个唯一ID
 string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
+
+//将字符串转化为小写
+string strtolower ( string $string );
+
+//将字符串转化为大写
+string strtoupper ( string $string );
 ```
 
 # PHP数组函数
@@ -125,6 +131,9 @@ SORT_REGULAR - 把每一项按常规顺序排列（Standard ASCII，不改变类
 SORT_NUMERIC - 把每一项作为数字来处理。
 SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
 */
+
+//检查给定的键名或索引是否存在于数组中
+bool array_key_exists ( mixed $key , array $search );
 ```
 
 
