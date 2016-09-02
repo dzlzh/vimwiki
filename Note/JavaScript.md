@@ -21,6 +21,9 @@ stringObj.toLowerCase();
 
 //字符串转为大写形式
 stringObj.toUpperCase();
+
+//使用一个替换值（replacement）替换掉一个匹配模式（pattern）在原字符串中某些或所有的匹配项，并返回替换后的新的字符串
+stringObj.replace(regexp|substr, newSubStr|function);
 ```
 
 # JavaScript Math对象
