@@ -24,6 +24,9 @@ stringObj.toUpperCase();
 
 //使用一个替换值（replacement）替换掉一个匹配模式（pattern）在原字符串中某些或所有的匹配项，并返回替换后的新的字符串
 stringObj.replace(regexp|substr, newSubStr|function);
+
+//提取字符串的某个部分，并以新的字符串返回被提取的部分
+stringObject.slice(start,end);
 ```
 
 # JavaScript Math对象
