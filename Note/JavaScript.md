@@ -111,5 +111,8 @@ arrayobj.sort(sortFunction);
 
 //反转 Array 中的元素
 arrayObj.reverse();
+
+//组合两个或两个以上的数组
+array1.concat([item1[, item2[, . . . [, itemN]]]]);
 ```
 
