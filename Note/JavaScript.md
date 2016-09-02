@@ -27,6 +27,12 @@ stringObj.replace(regexp|substr, newSubStr|function);
 
 //提取字符串的某个部分，并以新的字符串返回被提取的部分
 stringObject.slice(start,end);
+
+//返回字符串中从指定位置开始到指定长度的子字符串
+str.substr(start[, length]);
+
+//构造并返回一个重复当前字符串若干次数的新字符串
+var newString = string.repeat(count);
 ```
 
 # JavaScript Math对象
