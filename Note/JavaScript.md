@@ -152,5 +152,8 @@ array.push(element1, ..., elmentN);
 
 //复制数组的一部分到一个新的数组,并返回这个数组
 array.slice([begin[, end]]);
+
+//用新元素替换旧元素,以此修改数组的内容
+array.splice(start, deleteCount[, item1[, item2, ...]]);
 ```
 
