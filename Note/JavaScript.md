@@ -49,3 +49,21 @@ space
 */
 ```
 
+# JavaScript Array 对象
+
+```javascript
+//对数组的每个元素调用定义的回调函数并返回包含结果的数组。
+array1.map(callbackfn[, thisArg]);
+/*
+回调函数语法
+回调函数的语法如下所示：
+function callbackfn(value, index, array1)
+你可使用最多三个参数来声明回调函数。
+下表列出了回调函数参数。
+回调参数  定义
+Value    数组元素的值。
+index    数组元素的数字索引。
+array1   包含该元素的数组对象
+*/
+```
+
