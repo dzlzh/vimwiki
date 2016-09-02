@@ -4,6 +4,17 @@
 //字符串内检索指定的值,或找到一个或多个正则表达式的匹配
 stringObject.match(searchvalue);
 stringObject.match(regexp);
+
+//使用指定的分隔符将一个字符串拆分为多个子字符串，并将其以数组形式返回。
+stringObj.split([separator[, limit]]);
+/*
+stringObj
+必选。要拆分的 String 对象或字符串。 split 方法将不修改此对象。
+separator
+可选。一个字符串或正则表达式对象，标识用于分隔字符串的一个或多个字符。如果忽略该参数，则将返回包含整个字符串的单元素数组。
+limit
+可选。一个用于限制数组中返回的元素数量的值。
+*/
 ```
 
 # JavaScript Math对象
