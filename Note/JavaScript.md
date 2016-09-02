@@ -15,6 +15,12 @@ separator
 limit
 可选。一个用于限制数组中返回的元素数量的值。
 */
+
+//字符串转为小写形式
+stringObj.toLowerCase();
+
+//字符串转为大写形式
+stringObj.toUpperCase();
 ```
 
 # JavaScript Math对象
