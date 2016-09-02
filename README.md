@@ -1,7 +1,7 @@
 ## Note
 
 - [PHP](Note/PHP.md)
-- [Laravel](Note/laravel.md)
+- [Laravel](Note/Laravel.md)
 - [Sql](Note/Sql.md)
 - [Git](Note/git.md)
 - [Vim](Note/Vim.md)
