@@ -65,5 +65,27 @@ Value    数组元素的值。
 index    数组元素的数字索引。
 array1   包含该元素的数组对象
 */
+
+//对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
+array1.reduce(callbackfn[, initialValue]);
+/*
+回调函数语法
+回调函数的语法如下所示：
+function callbackfn(previousValue, currentValue, currentIndex, array1)
+可使用最多四个参数来声明回调函数。
+下表列出了回调函数参数。
+
+previousValue 
+通过上一次调用回调函数获得的值。如果向 reduce 方法提供 initialValue，则在首次调用函数时，previousValue 为 initialValue。
+
+currentValue
+当前数组元素的值。
+
+currentIndex
+当前数组元素的数字索引。
+
+array1
+包含该元素的数组对象。
+*/
 ```
 
