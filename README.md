@@ -11,6 +11,7 @@
 - [Notes](Note/Notes.md)
 - [HTML](Note/Html.md)
 - [Linux](Note/Linux.md)
+- [AutoHotkey](Note/AutoHotkey.md)
 - [other](Note/other.md)
 
 ## Code
