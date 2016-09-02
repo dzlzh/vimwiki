@@ -33,6 +33,9 @@ string.substr(start[, length]);
 
 //构造并返回一个重复当前字符串若干次数的新字符串
 var newString = string.repeat(count);
+
+//返回指定值在字符串对象中首次出现的位置,从formIndex位置开始查找,如果不存在,则返回-1
+string.indexOf(searchValue[, formIndex]);
 ```
 
 # JavaScript Math对象
