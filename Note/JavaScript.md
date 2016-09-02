@@ -125,5 +125,8 @@ arrayObj.reverse();
 
 //组合两个或两个以上的数组
 array1.concat([item1[, item2[, . . . [, itemN]]]]);
+
+//添加由指定分隔符字符串分隔的数组的所有元素
+arrayObj.join([separator]);
 ```
 
