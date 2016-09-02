@@ -87,5 +87,16 @@ currentIndex
 array1
 包含该元素的数组对象。
 */
+
+//返回数组中的满足回调函数中指定的条件的元素。
+array1.filter(callbackfn[, thisArg]);
+/*
+返回值
+一个包含回调函数为其返回 true 的所有值的新数组。如果回调函数为 array1 的所有元素返回 false，则新数组的长度为 0。
+
+回调函数语法
+同map
+*/
+
 ```
 
