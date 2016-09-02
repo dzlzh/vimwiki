@@ -149,5 +149,8 @@ arrayObj.join([separator]);
 
 //添加一个或多个元素到数组的末尾，并返回数组新的长度（length 属性值）
 arrayObj.push(element1, ..., elmentN);
+
+//复制数组的一部分到一个新的数组,并返回这个数组
+array.slice([begin[, end]]);
 ```
 
