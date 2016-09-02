@@ -12,6 +12,7 @@
 - [HTML](Note/Html.md)
 - [Linux](Note/Linux.md)
 - [AutoHotkey](Note/AutoHotkey.md)
+- [Security](Note/security.md)
 - [other](Note/other.md)
 
 ## Code
