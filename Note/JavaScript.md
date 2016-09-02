@@ -98,5 +98,18 @@ array1.filter(callbackfn[, thisArg]);
 同map
 */
 
+//对 Array 排序
+arrayobj.sort(sortFunction);
+/*
+如果省略sortFunction则按ACSII字符顺序
+
+如果在 sortFunction 参数中提供一个函数，则该函数必须返回下列值之一：
+如果所传递的第一个参数小于第二个参数，则返回负值。
+如果两个参数相等，则返回零。
+如果第一个参数大于第二个参数，则返回正值。
+*/
+
+//反转 Array 中的元素
+arrayObj.reverse();
 ```
 
