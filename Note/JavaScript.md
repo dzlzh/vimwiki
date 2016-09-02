@@ -2,11 +2,11 @@
 
 ```javascript
 //字符串内检索指定的值,或找到一个或多个正则表达式的匹配
-stringObject.match(searchvalue);
-stringObject.match(regexp);
+string.match(searchvalue);
+string.match(regexp);
 
 //使用指定的分隔符将一个字符串拆分为多个子字符串，并将其以数组形式返回。
-stringObj.split([separator[, limit]]);
+string.split([separator[, limit]]);
 /*
 stringObj
 必选。要拆分的 String 对象或字符串。 split 方法将不修改此对象。
@@ -17,19 +17,19 @@ limit
 */
 
 //字符串转为小写形式
-stringObj.toLowerCase();
+string.toLowerCase();
 
 //字符串转为大写形式
-stringObj.toUpperCase();
+string.toUpperCase();
 
 //使用一个替换值（replacement）替换掉一个匹配模式（pattern）在原字符串中某些或所有的匹配项，并返回替换后的新的字符串
-stringObj.replace(regexp|substr, newSubStr|function);
+string.replace(regexp|substr, newSubStr|function);
 
 //提取字符串的某个部分，并以新的字符串返回被提取的部分
 stringObject.slice(start,end);
 
 //返回字符串中从指定位置开始到指定长度的子字符串
-str.substr(start[, length]);
+string.substr(start[, length]);
 
 //构造并返回一个重复当前字符串若干次数的新字符串
 var newString = string.repeat(count);
@@ -82,7 +82,7 @@ space
 
 ```javascript
 //对数组的每个元素调用定义的回调函数并返回包含结果的数组。
-array1.map(callbackfn[, thisArg]);
+array.map(callbackfn[, thisArg]);
 /*
 回调函数语法
 回调函数的语法如下所示：
@@ -96,7 +96,7 @@ array1   包含该元素的数组对象
 */
 
 //对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
-array1.reduce(callbackfn[, initialValue]);
+array.reduce(callbackfn[, initialValue]);
 /*
 回调函数语法
 回调函数的语法如下所示：
@@ -118,7 +118,7 @@ array1
 */
 
 //返回数组中的满足回调函数中指定的条件的元素。
-array1.filter(callbackfn[, thisArg]);
+array.filter(callbackfn[, thisArg]);
 /*
 返回值
 一个包含回调函数为其返回 true 的所有值的新数组。如果回调函数为 array1 的所有元素返回 false，则新数组的长度为 0。
@@ -128,7 +128,7 @@ array1.filter(callbackfn[, thisArg]);
 */
 
 //对 Array 排序
-arrayobj.sort(sortFunction);
+array.sort(sortFunction);
 /*
 如果省略sortFunction则按ACSII字符顺序
 
@@ -139,16 +139,16 @@ arrayobj.sort(sortFunction);
 */
 
 //反转 Array 中的元素
-arrayObj.reverse();
+array.reverse();
 
 //组合两个或两个以上的数组
-array1.concat([item1[, item2[, . . . [, itemN]]]]);
+array.concat([item1[, item2[, . . . [, itemN]]]]);
 
 //添加由指定分隔符字符串分隔的数组的所有元素
-arrayObj.join([separator]);
+array.join([separator]);
 
 //添加一个或多个元素到数组的末尾，并返回数组新的长度（length 属性值）
-arrayObj.push(element1, ..., elmentN);
+array.push(element1, ..., elmentN);
 
 //复制数组的一部分到一个新的数组,并返回这个数组
 array.slice([begin[, end]]);
