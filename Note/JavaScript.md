@@ -167,4 +167,9 @@ array.splice(start, deleteCount[, item1[, item2, ...]]);
 
 //使用指定的函数测试所有的元素,并创建一个包含所有通过测试的元素的新数组
 array.filter(callback[, thisArr]);
+/*
+调用时使用参数(element, index, array)
+返回true表示保留该元素
+返回false则不保留
+*/
 ```
