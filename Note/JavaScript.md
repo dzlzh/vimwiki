@@ -1,3 +1,9 @@
+# JavaScript Function
+
+## `arguments`
+
+一个类数组对象。代表传给一个`function`的参数列表。
+
 # JavaScript String 对象
 
 ```javascript
@@ -162,4 +168,3 @@ array.splice(start, deleteCount[, item1[, item2, ...]]);
 //使用指定的函数测试所有的元素,并创建一个包含所有通过测试的元素的新数组
 array.filter(callback[, thisArr]);
 ```
-
