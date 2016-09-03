@@ -42,6 +42,13 @@ var newString = string.repeat(count);
 
 //返回指定值在字符串对象中首次出现的位置,从formIndex位置开始查找,如果不存在,则返回-1
 string.indexOf(searchValue[, formIndex]);
+
+
+//String对象提供的静态方法,根据指定的Unicode编码中的序号值来返回一个字串
+String.fromCharCode(num1, ..., numN);
+
+//返回给定位置字符的Unicode码点,相当与String.fromCharCode()的逆操作
+string.charCodeAt(index);
 ```
 
 # JavaScript Math对象
