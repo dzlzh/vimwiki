@@ -172,4 +172,7 @@ array.filter(callback[, thisArr]);
 返回true表示保留该元素
 返回false则不保留
 */
+
+//返回给定元素能找在数组中找到的第一个索引值,否则返回-1
+array.indexOf(searchElement[, fromIndex = 0]);
 ```
