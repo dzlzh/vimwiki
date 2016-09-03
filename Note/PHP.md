@@ -1,142 +1,197 @@
+
+
 # PHP函数
 
+## 发送原生HTTP头
+
 ```php
-//发送原生 HTTP 头
-void header ( string $string [, bool $replace = true [, int $http_response_code ]] )
+void header (string $string [, bool $replace = true [, int $http_response_code ]])
+```
 
-//创建cookie
+## 创建cookie
+
+```php
 bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] );
+```
 
-//生成 URL-encode 之后的请求字符串
+## 生成 URL-encode 之后的请求字符串
+
+```php
 string http_build_query ( mixed $query_data [, string $numeric_prefix [, string $arg_separator [, int $enc_type = PHP_QUERY_RFC1738 ]]] );
-/*
+```
+
 使用给出的关联（或下标）数组生成一个经过 URL-encode 的请求字符串。
 
-query_data
-可以是数组或包含属性的对象。
+`query_data`
 
-一个 query_data 数组可以是简单的一维结构，也可以是由数组组成的数组（其依次可以包含其它数组）。
+> 可以是数组或包含属性的对象。
+> 一个 `query_data` 数组可以是简单的一维结构，也可以是由数组组成的数组（其依次可以包含其它数组）。
+> 如果 `query_data` 是一个对象，只有 `public` 的属性会加入结果。
 
-如果 query_data 是一个对象，只有 public 的属性会加入结果。
+`numeric_prefix`
 
-numeric_prefix
-如果在基础数组中使用了数字下标同时给出了该参数，此参数值将会作为基础数组中的数字下标元素的前缀。
+> 如果在基础数组中使用了数字下标同时给出了该参数，此参数值将会作为基础数组中的数字下标元素的前缀。
+> 这是为了让 PHP 或其它 CGI 程序在稍后对数据进行解码时获取合法的变量名。
 
-这是为了让 PHP 或其它 CGI 程序在稍后对数据进行解码时获取合法的变量名。
+`arg_separator`
 
-arg_separator
-除非指定并使用了这个参数，否则会用 arg_separator.output 来分隔参数。
+> 除非指定并使用了这个参数，否则会用 `arg_separator.output` 来分隔参数。
 
-enc_type
-默认使用 PHP_QUERY_RFC1738。
+`enc_type`
 
-如果 enc_type 是 PHP_QUERY_RFC1738，则编码将会以 » RFC 1738 标准和 application/x-www-form-urlencoded 媒体类型进行编码，空格会被编码成加号（+）。
+> 默认使用 PHP_QUERY_RFC1738。
+> 如果 `enc_type` 是 PHP_QUERY_RFC1738，则编码将会以 » RFC 1738 标准和 application/x-www-form-urlencoded 媒体类型进行编码，空格会被编码成加号（+）。
+> 如果 `enc_type` 是 PHP_QUERY_RFC3986，将根据 » RFC 3986 编码，空格会被百分号编码（%20）。
 
-如果 enc_type 是 PHP_QUERY_RFC3986，将根据 » RFC 3986 编码，空格会被百分号编码（%20）。
-*/
+## 对 JSON 格式的字符串进行解码
 
-//对 JSON 格式的字符串进行解码
+```php
 mixed json_decode ( string $json [, bool $assoc = false [, int $depth = 512 [, int $options = 0 ]]] );
-/*
-json
-待解码的 json string 格式的字符串。
-(这个函数仅能处理 UTF-8 编码的数据。)
+```
 
-assoc
-当该参数为 TRUE 时，将返回 array 而非 object 。
-*/
+`json`
 
-//对变量进行 JSON 编码
+> 待解码的 json string 格式的字符串。(这个函数仅能处理 UTF-8 编码的数据。)
+
+`assoc`
+
+> 当该参数为 TRUE 时，将返回 array 而非 object 。
+
+##  对变量进行 JSON 编码
+
+```php
 string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] );
+```
 
-//产生一个可存储的值的表示-序列化
+##  产生一个可存储的值的表示-序列化
+
+```php
 string serialize ( mixed $value );
+```
 
-//从已存储的表示中创建 PHP 的值-反序列化
+##  从已存储的表示中创建 PHP 的值-反序列化
+
+```php
 mixed unserialize ( string $str );
+```
 
-//将回调函数作用到给定数组的单元上
+##  将回调函数作用到给定数组的单元上
+
+```php
 array array_map ( callable $callback , array $arr1 [, array $... ] );
+```
 
-//返回一个包含函数参数列表的数组
+## 返回一个包含函数参数列表的数组
+
+```php
 array func_get_args ( void );
+```
 
-//建立一个数组，包括变量名和它们的值
+## 建立一个数组，包括变量名和它们的值
+
+```php
 array compact ( mixed $varname [, mixed $... ] );
+```
 
-//解析一个配置文件
+## 解析一个配置文件
+
+```php
 array parse_ini_file ( string $filename [, bool $process_sections = false [, int $scanner_mode = INI_SCANNER_NORMAL ]] );
+```
 
-//以千位分隔符方式格式化一个数字
+## 以千位分隔符方式格式化一个数字
+
+```php
 string number_format ( float $number [, int $decimals = 0 ] );
 string number_format ( float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = "," );
+```
 
-//子字符串替换
+## 子字符串替换
+
+```php
 mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count ] );
+```
 
-//生成一个唯一ID
+## 生成一个唯一ID
+
+```php
 string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
+```
 
-//将字符串转化为小写
+## 将字符串转化为小写
+
+```php
 string strtolower ( string $string );
+```
 
-//将字符串转化为大写
+## 将字符串转化为大写
+
+```php
 string strtoupper ( string $string );
 ```
 
 # PHP数组函数
 
+## 建立一个数组，包括变量名和它们的值
+
 ```php
-//建立一个数组，包括变量名和它们的值
 array compact ( mixed $varname [, mixed $... ] );
-
-//从数组中将变量导入到当前的符号表
-int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string $prefix = NULL ]] );
-/*
-var_array
-一个关联数组。此函数会将键名当作变量名，值作为变量的值。 对每个键／值对都会在当前的符号表中建立变量，并受到 extract_type 和 prefix 参数的影响。
-
-必须使用关联数组，数字索引的数组将不会产生结果，除非用了 EXTR_PREFIX_ALL 或者 EXTR_PREFIX_INVALID。
-
-extract_type
-对待非法／数字和冲突的键名的方法将根据 extract_type 参数决定。可以是以下值之一：
-
-EXTR_OVERWRITE
-如果有冲突，覆盖已有的变量。
-EXTR_SKIP
-如果有冲突，不覆盖已有的变量。
-EXTR_PREFIX_SAME
-如果有冲突，在变量名前加上前缀 prefix。
-EXTR_PREFIX_ALL
-给所有变量名加上前缀 prefix。
-EXTR_PREFIX_INVALID
-仅在非法／数字的变量名前加上前缀 prefix。
-EXTR_IF_EXISTS
-仅在当前符号表中已有同名变量时，覆盖它们的值。其它的都不处理。 举个例子，以下情况非常有用：定义一些有效变量，然后从 $_REQUEST 中仅导入这些已定义的变量。
-EXTR_PREFIX_IF_EXISTS
-仅在当前符号表中已有同名变量时，建立附加了前缀的变量名，其它的都不处理。
-EXTR_REFS
-将变量作为引用提取。这有力地表明了导入的变量仍然引用了 var_array 参数的值。可以单独使用这个标志或者在 extract_type 中用 OR 与其它任何标志结合使用。
-如果没有指定 extract_type，则被假定为 EXTR_OVERWRITE。
-
-prefix
-注意 prefix 仅在 extract_type 的值是 EXTR_PREFIX_SAME，EXTR_PREFIX_ALL，EXTR_PREFIX_INVALID 或 EXTR_PREFIX_IF_EXISTS 时需要。 如果附加了前缀后的结果不是合法的变量名，将不会导入到符号表中。前缀和数组键名之间会自动加上一个下划线。
-*/
-
-//移除数组中重复的值
-array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
-/*
-SORT_STRING - 默认。把项目作为字符串来比较。
-SORT_REGULAR - 把每一项按常规顺序排列（Standard ASCII，不改变类型）。
-SORT_NUMERIC - 把每一项作为数字来处理。
-SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
-*/
-
-//检查给定的键名或索引是否存在于数组中
-bool array_key_exists ( mixed $key , array $search );
 ```
 
+## 从数组中将变量导入到当前的符号表
 
+```php
+int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string $prefix = NULL ]] );
+```
+
+`var_array`
+
+> 一个关联数组。此函数会将键名当作变量名，值作为变量的值。 对每个键／值对都会在当前的符号表中建立变量，并受到 `extract_type` 和 `prefix` 参数的影响。
+>
+> 必须使用关联数组，数字索引的数组将不会产生结果，除非用了 `EXTR_PREFIX_ALL` 或者 `EXTR_PREFIX_INVALID`。
+
+`extract_type`
+
+> 对待非法／数字和冲突的键名的方法将根据 `extract_type` 参数决定。可以是以下值之一：
+> `EXTR_OVERWRITE` 
+> 如果有冲突，覆盖已有的变量。
+> `EXTR_SKIP` 
+> 如果有冲突，不覆盖已有的变量。
+> `EXTR_PREFIX_SAME` 
+> 如果有冲突，在变量名前加上前缀 `prefix`。
+> `EXTR_PREFIX_ALL` 
+> 给所有变量名加上前缀 prefix。
+> `EXTR_PREFIX_INVALID`
+> 仅在非法／数字的变量名前加上前缀 `prefix`。
+> `EXTR_IF_EXISTS` 
+> 仅在当前符号表中已有同名变量时，覆盖它们的值。其它的都不处理。 举个例子，以下情况非常有用：定义一些有效变量，然后从 $_REQUEST 中仅导入这些已定义的变量。
+> `EXTR_PREFIX_IF_EXISTS` 
+> 仅在当前符号表中已有同名变量时，建立附加了前缀的变量名，其它的都不处理。
+> `EXTR_REFS` 
+> 将变量作为引用提取。这有力地表明了导入的变量仍然引用了 `var_array` 参数的值。可以单独使用这个标志或者在 `extract_type` 中用 `OR` 与其它任何标志结合使用。
+> 如果没有指定 `extract_type`，则被假定为 `EXTR_OVERWRITE`。
+
+`prefix`
+
+> 注意 prefix 仅在 extract_type 的值是 EXTR_PREFIX_SAME，EXTR_PREFIX_ALL，EXTR_PREFIX_INVALID 或 EXTR_PREFIX_IF_EXISTS 时需要。 如果附加了前缀后的结果不是合法的变量名，将不会导入到符号表中。前缀和数组键名之间会自动加上一个下划线。
+
+## 移除数组中重复的值
+
+```php
+array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
+```
+
+> SORT_STRING - 默认。把项目作为字符串来比较。
+> SORT_REGULAR - 把每一项按常规顺序排列（Standard ASCII，不改变类型）。
+> SORT_NUMERIC - 把每一项作为数字来处理。
+> SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
+
+
+## 检查给定的键名或索引是否存在于数组中
+
+```php
+bool array_key_exists ( mixed $key , array $search );
+```
 
 # PHP执行外部命令函数
 
