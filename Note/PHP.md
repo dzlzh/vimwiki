@@ -1,5 +1,3 @@
-
-
 # PHP函数
 
 ## 发送原生HTTP头
@@ -233,77 +231,123 @@ echo `ls -al`;
 
 # PHP文件操作
 
+## PHP内置常量，目录分隔符
+
 ```php
-//PHP内置常量，目录分隔符
 DIRECTORY_SEPARATOR
+```
 
-//新建目录
+## 新建目录
+
+```php
 bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive = false [, resource $context ]]] );
+```
 
-//改变文件模式
+## 改变文件模式
+
+```php
 bool chmod ( string $filename , int $mode );
-  
-//检查文件或目录是否存在
+```
+
+## 检查文件或目录是否存在
+
+```php
 bool file_exists ( string $filename );
+```
 
-//返回路径中的目录部分
+## 返回路径中的目录部分
+
+```php
 string dirname ( string $path );
+```
 
-//返回路径中的文件名部分
+## 返回路径中的文件名部分
+
+```php
 string basename ( string $path [, string $suffix ] );
+```
 
-//判断给定文件名是否是一个目录
+## 判断给定文件名是否是一个目录
+
+```php
 bool is_dir ( string $filename );
+```
 
-//返回文件路径的信息
+## 返回文件路径的信息
+
+```php
 mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME ] );
-//PATHINFO_DIRNAME 目录
-//PATHINFO_BASENAME 文件全名
-//PATHINFO_EXTENSION 类型
-//PATHINFO_FILENAME 文件名
+```
+> `PATHINFO_DIRNAME` 目录
+> `PATHINFO_BASENAME` 文件全名
+> `PATHINFO_EXTENSION` 类型
+> `PATHINFO_FILENAME` 文件名
 
-//打开目录句柄
+## 打开目录句柄
+
+```php
 opendir();
+```
 
-//从目录句柄中读取条目
+## 从目录句柄中读取条目
+
+```php
 readdir();
+```
 
-//倒回目录句柄开头
+## 倒回目录句柄开头
+
+```php
 rewinddir();
+```
 
-//关闭目录句柄
+## 关闭目录句柄
+
+```php
 closedir();
+```
 
-//寻找与模式匹配的文件路径
+## 寻找与模式匹配的文件路径
+
+```php
 array glob ( string $pattern [, int $flags = 0 ] );
-/*
-返回一个包含有匹配文件／目录的数组。如果出错返回 FALSE。
+```
+> 返回一个包含有匹配文件／目录的数组。如果出错返回 FALSE。
+> GLOB_MARK - 在每个返回的项目中加一个斜线
+> GLOB_NOSORT - 按照文件在目录中出现的原始顺序返回（不排序）GLOB_NOCHECK - 如果没有文件匹配则返回用于搜索的模式GLOB_NOESCAPE - 反斜线不转义元字符
+> GLOB_BRACE - 扩充 {a,b,c} 来匹配 'a'，'b' 或 'c'
+> GLOB_ONLYDIR - 仅返回与模式匹配的目录项
+> GLOB_ERR - 停止并读取错误信息（比如说不可读的目录），默认的情况下忽略所有错误
 
-GLOB_MARK - 在每个返回的项目中加一个斜线
-GLOB_NOSORT - 按照文件在目录中出现的原始顺序返回（不排序）
-GLOB_NOCHECK - 如果没有文件匹配则返回用于搜索的模式
-GLOB_NOESCAPE - 反斜线不转义元字符
-GLOB_BRACE - 扩充 {a,b,c} 来匹配 'a'，'b' 或 'c'
-GLOB_ONLYDIR - 仅返回与模式匹配的目录项
-GLOB_ERR - 停止并读取错误信息（比如说不可读的目录），默认的情况下忽略所有错误
-*/
+## 取得当前工作目录
 
-//取得当前工作目录
+```php
 string getcwd(void);
-/*成功则返回当前工作目录，失败返回 FALSE。*/
+```
+> 成功则返回当前工作目录，失败返回 FALSE。
 
-//返回规范化的绝对路径名
+## 返回规范化的绝对路径名
+
+```php
 string realpath ( string $path );
+```
 
-//列出指定路径中的文件和目录
+## 列出指定路径中的文件和目录
+
+```php
 array scandir ( string $directory [, int $sorting_order [, resource $context ]] );
+```
 
-//将整个文件读入一个字符串
+## 将整个文件读入一个字符串
+
+```php
 string file_get_contents ( string $filename [, bool $use_include_path = false [, resource $context [, int $offset = -1 [, int $maxlen ]]]] );
+```
 
-//将一个字符串写入文件
+## 将一个字符串写入文件
+
+```php
 int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, resource $context ]] );
-
 ```
 
 ## CURL
