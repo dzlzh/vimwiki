@@ -340,5 +340,30 @@ arr.filter(callback[, thisArr]);
 arr.indexOf(searchElement[, fromIndex = 0]);
 ```
 
+## `arr.forEach()`
 
+让数组的每一项都执行一次给定的函数
 
+```javascript
+arr.forEach(callback[, thisArg]);
+```
+
+`callback`
+
+> 在数组每一项上执行的函数,接收三个参数:
+>
+> `currentValue`
+>
+> 当前项（指遍历时正在被处理那个数组项）的值。
+>
+> `index`
+>
+> 当前项的索引（或下标）。
+>
+> `array`
+>
+> 数组本身。
+
+`thisArg`
+
+> 可选参数。用来当作cakkback函数内this的值的对象。
