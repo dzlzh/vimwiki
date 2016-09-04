@@ -195,28 +195,39 @@ bool array_key_exists ( mixed $key , array $search );
 
 # PHP执行外部命令函数
 
+## 执行一个外部程序
+
 ```php
-//执行一个外部程序
 string exec ( string $command [, array &$output [, int &$return_var ]] );
-/*
-命令执行结果的最后一行内容。 如果你需要获取未经处理的全部输出数据， 请使用 passthru() 函数。
-如果想要获取命令的输出内容， 请确保使用 output参数。
-*/
+```
 
-//执行外部程序并且显示原始输出
+> 命令执行结果的最后一行内容。 如果你需要获取未经处理的全部输出数据， 请使用 `passthru()` 函数。
+>
+> 如果想要获取命令的输出内容， 请确保使用 `output`参数。
+
+## 执行外部程序并且显示原始输出
+
+```php
 void passthru ( string $command [, int &$return_var ] );
+```
 
-//执行外部程序，并且显示输出
+##  执行外部程序，并且显示输出
+
+```php
 string system ( string $command [, int &$return_var ] );
-/*
-成功则返回命令输出的最后一行， 失败则返回 FALSE
-*/
+```
 
-//通过 shell 环境执行命令，并且将完整的输出以字符串的方式返回。
+> 成功则返回命令输出的最后一行， 失败则返回 FALSE
+
+##  通过 shell 环境执行命令，并且将完整的输出以字符串的方式返回
+
+```php
 string shell_exec ( string $cmd );
+```
 
-//执行运算符
-//反引号（``）
+##  执行运算符 - 反引号（``）
+
+```php
 echo `ls -al`;
 ```
 
@@ -297,11 +308,15 @@ int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, reso
 
 ## CURL
 
-```php
-//为cURL传输会话批量设置选项
-bool curl_setopt_array ( resource $ch , array $options );
+##  为cURL传输会话批量设置选项
 
-//CURLFile 类
+```php
+bool curl_setopt_array ( resource $ch , array $options );
+```
+
+## CURLFile 类
+
+```php
 CURLFile {
     /* 属性 */
     public $name ;
@@ -317,8 +332,9 @@ CURLFile {
     public void setPostFilename ( string $postname )
     public void __wakeup ( void )
 }
-/*CURLFile 应该与选项 CURLOPT_POSTFIELDS 一同使用用于上传文件。*/
 ```
+
+> `CURLFile` 应该与选项 `CURLOPT_POSTFIELDS` 一同使用用于上传文件。
 
 ## php://
 
