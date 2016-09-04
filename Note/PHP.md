@@ -1,18 +1,24 @@
 # PHP函数
 
-## 发送原生HTTP头
+## `header()`
+
+发送原生HTTP头
 
 ```php
 void header (string $string [, bool $replace = true [, int $http_response_code ]])
 ```
 
-## 创建cookie
+## `setcookie()`
+
+创建cookie
 
 ```php
 bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] );
 ```
 
-## 生成 URL-encode 之后的请求字符串
+## `http_build_query()`
+
+生成 URL-encode 之后的请求字符串
 
 ```php
 string http_build_query ( mixed $query_data [, string $numeric_prefix [, string $arg_separator [, int $enc_type = PHP_QUERY_RFC1738 ]]] );
@@ -46,7 +52,9 @@ string http_build_query ( mixed $query_data [, string $numeric_prefix [, string 
 >
 > 如果 `enc_type` 是 PHP_QUERY_RFC3986，将根据 » RFC 3986 编码，空格会被百分号编码（%20）。
 
-## 对 JSON 格式的字符串进行解码
+## `json_decode()`
+
+对 JSON 格式的字符串进行解码
 
 ```php
 mixed json_decode ( string $json [, bool $assoc = false [, int $depth = 512 [, int $options = 0 ]]] );
@@ -60,74 +68,82 @@ mixed json_decode ( string $json [, bool $assoc = false [, int $depth = 512 [, i
 
 > 当该参数为 TRUE 时，将返回 array 而非 object 。
 
-##  对变量进行 JSON 编码
+##  `json_encode()`
+
+对变量进行 JSON 编码
 
 ```php
 string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] );
 ```
 
-##  产生一个可存储的值的表示-序列化
+##  `serialize()`
+
+产生一个可存储的值的表示-序列化
 
 ```php
 string serialize ( mixed $value );
 ```
 
-##  从已存储的表示中创建 PHP 的值-反序列化
+##  `unserialize()`
+
+从已存储的表示中创建 PHP 的值-反序列化
 
 ```php
 mixed unserialize ( string $str );
 ```
 
-##  将回调函数作用到给定数组的单元上
+## `func_get_args()`
 
-```php
-array array_map ( callable $callback , array $arr1 [, array $... ] );
-```
-
-## 返回一个包含函数参数列表的数组
+返回一个包含函数参数列表的数组
 
 ```php
 array func_get_args ( void );
 ```
 
-## 建立一个数组，包括变量名和它们的值
+## `parse_ini_file()`
 
-```php
-array compact ( mixed $varname [, mixed $... ] );
-```
-
-## 解析一个配置文件
+解析一个配置文件
 
 ```php
 array parse_ini_file ( string $filename [, bool $process_sections = false [, int $scanner_mode = INI_SCANNER_NORMAL ]] );
 ```
 
-## 以千位分隔符方式格式化一个数字
+## `number_format()`
+
+以千位分隔符方式格式化一个数字
 
 ```php
 string number_format ( float $number [, int $decimals = 0 ] );
 string number_format ( float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = "," );
 ```
 
-## 子字符串替换
+## `str_replace()`
+
+子字符串替换
 
 ```php
 mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count ] );
 ```
 
-## 生成一个唯一ID
+## `uniqid()`
+
+生成一个唯一ID
 
 ```php
 string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
 ```
 
-## 将字符串转化为小写
+## `strtolower()`
+
+将字符串转化为小写
 
 ```php
 string strtolower ( string $string );
 ```
 
-## 将字符串转化为大写
+## `strtoupper()`
+
+将字符串转化为大写
 
 ```php
 string strtoupper ( string $string );
@@ -135,13 +151,17 @@ string strtoupper ( string $string );
 
 # PHP数组函数
 
-## 建立一个数组，包括变量名和它们的值
+## `compact()`
+
+建立一个数组，包括变量名和它们的值
 
 ```php
 array compact ( mixed $varname [, mixed $... ] );
 ```
 
-## 从数组中将变量导入到当前的符号表
+## `extract()`
+
+从数组中将变量导入到当前的符号表
 
 ```php
 int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string $prefix = NULL ]] );
@@ -187,7 +207,9 @@ int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string 
 
 > 注意 prefix 仅在 extract_type 的值是 EXTR_PREFIX_SAME，EXTR_PREFIX_ALL，EXTR_PREFIX_INVALID 或 EXTR_PREFIX_IF_EXISTS 时需要。 如果附加了前缀后的结果不是合法的变量名，将不会导入到符号表中。前缀和数组键名之间会自动加上一个下划线。
 
-## 移除数组中重复的值
+## `array_unique()`
+
+移除数组中重复的值
 
 ```php
 array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
@@ -201,16 +223,27 @@ array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
 >
 > SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
 
+## `array_key_exists()`
 
-## 检查给定的键名或索引是否存在于数组中
+检查给定的键名或索引是否存在于数组中
 
 ```php
 bool array_key_exists ( mixed $key , array $search );
 ```
 
+##  `array_map()`
+
+将回调函数作用到给定数组的单元上
+
+```php
+array array_map ( callable $callback , array $arr1 [, array $... ] );
+```
+
 # PHP执行外部命令函数
 
-## 执行一个外部程序
+## `exec()`
+
+执行一个外部程序
 
 ```php
 string exec ( string $command [, array &$output [, int &$return_var ]] );
@@ -220,13 +253,17 @@ string exec ( string $command [, array &$output [, int &$return_var ]] );
 >
 > 如果想要获取命令的输出内容， 请确保使用 `output`参数。
 
-## 执行外部程序并且显示原始输出
+## `passthru()`
+
+执行外部程序并且显示原始输出
 
 ```php
 void passthru ( string $command [, int &$return_var ] );
 ```
 
-##  执行外部程序，并且显示输出
+##  `system()`
+
+执行外部程序，并且显示输出
 
 ```php
 string system ( string $command [, int &$return_var ] );
@@ -234,7 +271,9 @@ string system ( string $command [, int &$return_var ] );
 
 成功则返回命令输出的最后一行， 失败则返回 FALSE
 
-##  通过 shell 环境执行命令，并且将完整的输出以字符串的方式返回
+##  `shell_exec()`
+
+通过 shell 环境执行命令，并且将完整的输出以字符串的方式返回
 
 ```php
 string shell_exec ( string $cmd );
@@ -248,49 +287,65 @@ echo `ls -al`;
 
 # PHP文件操作
 
-## PHP内置常量，目录分隔符
+## `DIRECTORY_SEPARATOR`
+
+PHP内置常量，目录分隔符
 
 ```php
 DIRECTORY_SEPARATOR
 ```
 
-## 新建目录
+## `mkdir()`
+
+新建目录
 
 ```php
 bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive = false [, resource $context ]]] );
 ```
 
-## 改变文件模式
+## `chmod()`
+
+改变文件模式
 
 ```php
 bool chmod ( string $filename , int $mode );
 ```
 
-## 检查文件或目录是否存在
+## `file_exists()`
+
+检查文件或目录是否存在
 
 ```php
 bool file_exists ( string $filename );
 ```
 
-## 返回路径中的目录部分
+## `dirname()`
+
+返回路径中的目录部分
 
 ```php
 string dirname ( string $path );
 ```
 
-## 返回路径中的文件名部分
+## `basename()`
+
+返回路径中的文件名部分
 
 ```php
 string basename ( string $path [, string $suffix ] );
 ```
 
-## 判断给定文件名是否是一个目录
+## `is_dir()`
+
+判断给定文件名是否是一个目录
 
 ```php
 bool is_dir ( string $filename );
 ```
 
-## 返回文件路径的信息
+## `pathinfo()`
+
+返回文件路径的信息
 
 ```php
 mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME ] );
@@ -303,31 +358,41 @@ mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASE
 >
 > `PATHINFO_FILENAME` 文件名
 
-## 打开目录句柄
+## `opendir()`
+
+打开目录句柄
 
 ```php
 opendir();
 ```
 
-## 从目录句柄中读取条目
+## `readdir()`
+
+从目录句柄中读取条目
 
 ```php
 readdir();
 ```
 
-## 倒回目录句柄开头
+## `rewinddir()`
+
+倒回目录句柄开头
 
 ```php
 rewinddir();
 ```
 
-## 关闭目录句柄
+## `closedir()`
+
+关闭目录句柄
 
 ```php
 closedir();
 ```
 
-## 寻找与模式匹配的文件路径
+## `glob()`
+
+寻找与模式匹配的文件路径
 
 ```php
 array glob ( string $pattern [, int $flags = 0 ] );
@@ -348,32 +413,42 @@ array glob ( string $pattern [, int $flags = 0 ] );
 >
 > GLOB_ERR - 停止并读取错误信息（比如说不可读的目录），默认的情况下忽略所有错误
 
-## 取得当前工作目录
+## `getcwd()`
+
+取得当前工作目录
 
 ```php
 string getcwd(void);
 ```
 成功则返回当前工作目录，失败返回 FALSE。
 
-## 返回规范化的绝对路径名
+## `realpath()`
+
+返回规范化的绝对路径名
 
 ```php
 string realpath ( string $path );
 ```
 
-## 列出指定路径中的文件和目录
+## `scandir()`
+
+列出指定路径中的文件和目录
 
 ```php
 array scandir ( string $directory [, int $sorting_order [, resource $context ]] );
 ```
 
-## 将整个文件读入一个字符串
+## `file_get_contents()`
+
+将整个文件读入一个字符串
 
 ```php
 string file_get_contents ( string $filename [, bool $use_include_path = false [, resource $context [, int $offset = -1 [, int $maxlen ]]]] );
 ```
 
-## 将一个字符串写入文件
+## `file_put_contents()`
+
+将一个字符串写入文件
 
 ```php
 int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, resource $context ]] );
@@ -381,7 +456,9 @@ int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, reso
 
 # CURL
 
-##  为cURL传输会话批量设置选项
+##  `curl_setopt_array()`
+
+为cURL传输会话批量设置选项
 
 ```php
 bool curl_setopt_array ( resource $ch , array $options );
