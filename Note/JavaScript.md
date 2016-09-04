@@ -367,3 +367,14 @@ arr.forEach(callback[, thisArg]);
 `thisArg`
 
 > 可选参数。用来当作cakkback函数内this的值的对象。
+
+# JavaScript Object对象
+
+## `Object.keys()`
+
+返回一个由给定对象的所有可枚举自身属性的属性名组成的数组，数组中属性名的排列顺序和使用`for-in`循环遍历该对象时返回的顺序一致（两者的主要区别是for-in`还会遍历出一个对象从其原型链上继承到的可枚举属性）。
+
+```javascript
+Object.keys(obj);
+```
+
