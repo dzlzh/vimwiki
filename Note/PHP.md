@@ -23,12 +23,15 @@ string http_build_query ( mixed $query_data [, string $numeric_prefix [, string 
 `query_data`
 
 > 可以是数组或包含属性的对象。
+>
 > 一个 `query_data` 数组可以是简单的一维结构，也可以是由数组组成的数组（其依次可以包含其它数组）。
+>
 > 如果 `query_data` 是一个对象，只有 `public` 的属性会加入结果。
 
 `numeric_prefix`
 
 > 如果在基础数组中使用了数字下标同时给出了该参数，此参数值将会作为基础数组中的数字下标元素的前缀。
+>
 > 这是为了让 PHP 或其它 CGI 程序在稍后对数据进行解码时获取合法的变量名。
 
 `arg_separator`
@@ -38,7 +41,9 @@ string http_build_query ( mixed $query_data [, string $numeric_prefix [, string 
 `enc_type`
 
 > 默认使用 PHP_QUERY_RFC1738。
+>
 > 如果 `enc_type` 是 PHP_QUERY_RFC1738，则编码将会以 » RFC 1738 标准和 application/x-www-form-urlencoded 媒体类型进行编码，空格会被编码成加号（+）。
+>
 > 如果 `enc_type` 是 PHP_QUERY_RFC3986，将根据 » RFC 3986 编码，空格会被百分号编码（%20）。
 
 ## 对 JSON 格式的字符串进行解码
@@ -151,22 +156,31 @@ int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string 
 `extract_type`
 
 > 对待非法／数字和冲突的键名的方法将根据 `extract_type` 参数决定。可以是以下值之一：
+>
 > `EXTR_OVERWRITE` 
 > 如果有冲突，覆盖已有的变量。
+>
 > `EXTR_SKIP` 
 > 如果有冲突，不覆盖已有的变量。
+>
 > `EXTR_PREFIX_SAME` 
 > 如果有冲突，在变量名前加上前缀 `prefix`。
+>
 > `EXTR_PREFIX_ALL` 
 > 给所有变量名加上前缀 prefix。
+>
 > `EXTR_PREFIX_INVALID`
 > 仅在非法／数字的变量名前加上前缀 `prefix`。
+>
 > `EXTR_IF_EXISTS` 
 > 仅在当前符号表中已有同名变量时，覆盖它们的值。其它的都不处理。 举个例子，以下情况非常有用：定义一些有效变量，然后从 $_REQUEST 中仅导入这些已定义的变量。
+>
 > `EXTR_PREFIX_IF_EXISTS` 
 > 仅在当前符号表中已有同名变量时，建立附加了前缀的变量名，其它的都不处理。
+>
 > `EXTR_REFS` 
 > 将变量作为引用提取。这有力地表明了导入的变量仍然引用了 `var_array` 参数的值。可以单独使用这个标志或者在 `extract_type` 中用 `OR` 与其它任何标志结合使用。
+>
 > 如果没有指定 `extract_type`，则被假定为 `EXTR_OVERWRITE`。
 
 `prefix`
@@ -180,8 +194,11 @@ array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
 ```
 
 > SORT_STRING - 默认。把项目作为字符串来比较。
+>
 > SORT_REGULAR - 把每一项按常规顺序排列（Standard ASCII，不改变类型）。
+>
 > SORT_NUMERIC - 把每一项作为数字来处理。
+>
 > SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
 
 
@@ -279,8 +296,11 @@ bool is_dir ( string $filename );
 mixed pathinfo ( string $path [, int $options = PATHINFO_DIRNAME | PATHINFO_BASENAME | PATHINFO_EXTENSION | PATHINFO_FILENAME ] );
 ```
 > `PATHINFO_DIRNAME` 目录
+>
 > `PATHINFO_BASENAME` 文件全名
+>
 > `PATHINFO_EXTENSION` 类型
+>
 > `PATHINFO_FILENAME` 文件名
 
 ## 打开目录句柄
@@ -315,9 +335,17 @@ array glob ( string $pattern [, int $flags = 0 ] );
 返回一个包含有匹配文件／目录的数组。如果出错返回 FALSE。
 
 > GLOB_MARK - 在每个返回的项目中加一个斜线
-> GLOB_NOSORT - 按照文件在目录中出现的原始顺序返回（不排序）GLOB_NOCHECK - 如果没有文件匹配则返回用于搜索的模式GLOB_NOESCAPE - 反斜线不转义元字符
+>
+> GLOB_NOSORT - 按照文件在目录中出现的原始顺序返回（不排序）
+>
+> GLOB_NOCHECK - 如果没有文件匹配则返回用于搜索的模式
+>
+> GLOB_NOESCAPE - 反斜线不转义元字符
+>
 > GLOB_BRACE - 扩充 {a,b,c} 来匹配 'a'，'b' 或 'c'
+>
 > GLOB_ONLYDIR - 仅返回与模式匹配的目录项
+>
 > GLOB_ERR - 停止并读取错误信息（比如说不可读的目录），默认的情况下忽略所有错误
 
 ## 取得当前工作目录
