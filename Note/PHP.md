@@ -215,7 +215,7 @@ void passthru ( string $command [, int &$return_var ] );
 string system ( string $command [, int &$return_var ] );
 ```
 
-> 成功则返回命令输出的最后一行， 失败则返回 FALSE
+成功则返回命令输出的最后一行， 失败则返回 FALSE
 
 ##  通过 shell 环境执行命令，并且将完整的输出以字符串的方式返回
 
@@ -312,7 +312,8 @@ closedir();
 ```php
 array glob ( string $pattern [, int $flags = 0 ] );
 ```
-> 返回一个包含有匹配文件／目录的数组。如果出错返回 FALSE。
+返回一个包含有匹配文件／目录的数组。如果出错返回 FALSE。
+
 > GLOB_MARK - 在每个返回的项目中加一个斜线
 > GLOB_NOSORT - 按照文件在目录中出现的原始顺序返回（不排序）GLOB_NOCHECK - 如果没有文件匹配则返回用于搜索的模式GLOB_NOESCAPE - 反斜线不转义元字符
 > GLOB_BRACE - 扩充 {a,b,c} 来匹配 'a'，'b' 或 'c'
@@ -324,7 +325,7 @@ array glob ( string $pattern [, int $flags = 0 ] );
 ```php
 string getcwd(void);
 ```
-> 成功则返回当前工作目录，失败返回 FALSE。
+成功则返回当前工作目录，失败返回 FALSE。
 
 ## 返回规范化的绝对路径名
 
