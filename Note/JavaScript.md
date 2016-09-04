@@ -4,6 +4,8 @@
 
 一个类数组对象。代表传给一个`function`的参数列表。
 
+
+
 # JavaScript String 对象
 
 ## `str.match()`
@@ -106,6 +108,8 @@ String.fromCharCode(num1, ..., numN);
 str.charCodeAt(index);
 ```
 
+
+
 # JavaScript Math对象
 
 ## `Math.random()`
@@ -123,6 +127,24 @@ Math.random();
 ```javascript
 Math.floor(x);
 ```
+
+## `Math.min()`
+
+返回零个或更多个数值的最小值
+
+```javascript
+Math.min([value1[, value2, ...]]);
+```
+
+## `Math.max()`
+
+返回一组数中的最大值
+
+```javascript
+Math.max([value1[, value2, ...]]);
+```
+
+
 
 # JSON 对象
 
@@ -181,6 +203,8 @@ JSON.stringify(value [, replacer][, space]);
 > 如果 space 是一个非空字符串（例如“\t”），则返回值文本在每个级别中缩进字符串中的字符。
 >
 > 如果 space 是长度大于 10 个字符的字符串，则使用前 10 个字符。
+
+
 
 # JavaScript Array 对象
 
@@ -367,6 +391,8 @@ arr.forEach(callback[, thisArg]);
 `thisArg`
 
 > 可选参数。用来当作cakkback函数内this的值的对象。
+
+
 
 # JavaScript Object对象
 
