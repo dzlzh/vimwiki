@@ -13,7 +13,7 @@ str.match(searchvalue);
 str.match(regexp);
 ```
 
-## 使用指定的分隔符将一个字符串拆分为多个子字符串，并将其以数组形式返回。
+## 使用指定的分隔符将一个字符串拆分为多个子字符串，并将其以数组形式返回
 
 ```javascript
 str.split([separator[, limit]]);
@@ -100,7 +100,7 @@ Math.floor(x);
 
 # JSON 对象
 
-## 将 JavaScript 对象表示法 (JSON) 字符串转换为对象。
+## 将 JavaScript 对象表示法 (JSON) 字符串转换为对象
 
 ```javascript
 JSON.parse(text [, reviver]);
@@ -120,7 +120,7 @@ JSON.parse(text [, reviver]);
 >
 > 如果 reviver 返回 null 或 undefined，则删除了该成员。
 
-## 将 JavaScript 值转换为 JavaScript 对象表示法 (Json) 字符串。
+## 将 JavaScript 值转换为 JavaScript 对象表示法 (Json) 字符串
 
 ```javascript
 JSON.stringify(value [, replacer][, space]);
@@ -154,90 +154,137 @@ JSON.stringify(value [, replacer][, space]);
 
 # JavaScript Array 对象
 
+## 对数组的每个元素调用定义的回调函数并返回包含结果的数组
+
 ```javascript
-//对数组的每个元素调用定义的回调函数并返回包含结果的数组。
-array.map(callbackfn[, thisArg]);
-/*
-回调函数语法
-回调函数的语法如下所示：
-function callbackfn(value, index, array1)
-你可使用最多三个参数来声明回调函数。
-下表列出了回调函数参数。
-回调参数  定义
-Value    数组元素的值。
-index    数组元素的数字索引。
-array1   包含该元素的数组对象
-*/
+arr.map(callbackfn[, thisArg]);
+```
 
-//对数组中的所有元素调用指定的回调函数。该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
-array.reduce(callbackfn[, initialValue]);
-/*
-回调函数语法
-回调函数的语法如下所示：
-function callbackfn(previousValue, currentValue, currentIndex, array1)
-可使用最多四个参数来声明回调函数。
-下表列出了回调函数参数。
+**回调函数语法**
 
-previousValue 
-通过上一次调用回调函数获得的值。如果向 reduce 方法提供 initialValue，则在首次调用函数时，previousValue 为 initialValue。
+`function callbackfn(value, index, array1)`
 
-currentValue
-当前数组元素的值。
+`Value`
 
-currentIndex
-当前数组元素的数字索引。
+> 数组元素的值。
 
-array1
-包含该元素的数组对象。
-*/
+`index`
 
-//返回数组中的满足回调函数中指定的条件的元素。
-array.filter(callbackfn[, thisArg]);
-/*
-返回值
+> 数组元素的数字索引。
+
+`array1`
+
+> 包含该元素的数组对象
+
+## 对数组中的所有元素调用指定的回调函数
+
+```javascript
+arr.reduce(callbackfn[, initialValue]);
+```
+
+该回调函数的返回值为累积结果，并且此返回值在下一次调用该回调函数时作为参数提供。
+**回调函数语法**
+`function callbackfn(previousValue, currentValue, currentIndex, arr)`
+
+`previousValue` 
+
+> 通过上一次调用回调函数获得的值。如果向 reduce 方法提供 initialValue，则在首次调用函数时，previousValue 为 initialValue。
+
+`currentValue`
+
+> 当前数组元素的值。
+
+`currentIndex`
+
+> 当前数组元素的数字索引。
+
+`arr`
+
+> 包含该元素的数组对象。
+
+## 返回数组中的满足回调函数中指定的条件的元素
+
+```javascript
+arr.filter(callbackfn[, thisArg]);
+```
+
+**返回值**
 一个包含回调函数为其返回 true 的所有值的新数组。如果回调函数为 array1 的所有元素返回 false，则新数组的长度为 0。
 
-回调函数语法
-同map
-*/
+**回调函数语法**
 
-//对 Array 排序
-array.sort(sortFunction);
-/*
-如果省略sortFunction则按ACSII字符顺序
+> 同map
 
-如果在 sortFunction 参数中提供一个函数，则该函数必须返回下列值之一：
-如果所传递的第一个参数小于第二个参数，则返回负值。
-如果两个参数相等，则返回零。
-如果第一个参数大于第二个参数，则返回正值。
-*/
+## 对 Array 排序
 
-//反转 Array 中的元素
-array.reverse();
-
-//组合两个或两个以上的数组
-array.concat([item1[, item2[, . . . [, itemN]]]]);
-
-//添加由指定分隔符字符串分隔的数组的所有元素
-array.join([separator]);
-
-//添加一个或多个元素到数组的末尾，并返回数组新的长度（length 属性值）
-array.push(element1, ..., elmentN);
-
-//复制数组的一部分到一个新的数组,并返回这个数组
-array.slice([begin[, end]]);
-
-//用新元素替换旧元素,以此修改数组的内容
-array.splice(start, deleteCount[, item1[, item2, ...]]);
-
-//使用指定的函数测试所有的元素,并创建一个包含所有通过测试的元素的新数组
-array.filter(callback[, thisArr]);
-/*
-调用时使用参数(element, index, array)
-返回true表示保留该元素
-返回false则不保留
-*/
-
-//返回给定元素能找在数组中找到的第一个索引值,否则返回-1
-array.indexOf(searchElement[, fromIndex = 0]);
+```javascript
+arr.sort(sortFunction);
 ```
+
+> 如果省略sortFunction则按ACSII字符顺序
+
+> 如果在 sortFunction 参数中提供一个函数，则该函数必须返回下列值之一：
+>
+> 如果所传递的第一个参数小于第二个参数，则返回负值。
+>
+> 如果两个参数相等，则返回零。
+>
+> 如果第一个参数大于第二个参数，则返回正值。
+
+## 反转 Array 中的元素
+
+```javascript
+arr.reverse();
+```
+
+## 组合两个或两个以上的数组
+
+```javascript
+arr.concat([item1[, item2[, . . . [, itemN]]]]);
+```
+
+## 添加由指定分隔符字符串分隔的数组的所有元素
+
+```javascript
+arr.join([separator]);
+```
+
+## 添加一个或多个元素到数组的末尾，并返回数组新的长度（length 属性值）
+
+```javascript
+arr.push(element1, ..., elmentN);
+```
+
+## 复制数组的一部分到一个新的数组,并返回这个数组
+
+```javascript
+arr.slice([begin[, end]]);
+```
+
+## 用新元素替换旧元素,以此修改数组的内容
+
+```javascript
+arr.splice(start, deleteCount[, item1[, item2, ...]]);
+```
+
+## 使用指定的函数测试所有的元素,并创建一个包含所有通过测试的元素的新数组
+
+```javascript
+arr.filter(callback[, thisArr]);
+```
+
+**回调函数语法**
+`function callback(element, index, array)`
+
+> 返回true表示保留该元素
+>
+> 返回false则不保留
+
+## 返回给定元素能找在数组中找到的第一个索引值,否则返回-1
+
+```javascript
+arr.indexOf(searchElement[, fromIndex = 0]);
+```
+
+
+
