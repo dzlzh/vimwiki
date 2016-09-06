@@ -2,11 +2,13 @@
 
 `master` 稳定分支
 
-`dev` 不稳定分支(开发分支)
+`develop ` 不稳定分支(开发分支)
 
-`issue` BUG分支
+`issue` 或 `fixbug` BUG分支
 
 `feature` 新功能分支
+
+`release` 预发布分支
 
 ## 本地操作
 
