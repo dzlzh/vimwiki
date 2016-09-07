@@ -1,7 +1,9 @@
 var _date = new Date();
 _date.setDate(_date.getDate()+30);
 //出发日
-document.cookie  = "_jc_save_fromDate=2016-02-04;path=/;expires=" + _date.toGMTString();
+document.cookie  = "_jc_save_fromDate=2016-10-07;path=/;expires=" + _date.toGMTString();
+//%u90AF%u90F8%2CHDP  邯郸
+//%u5317%u4EAC%2CBJP  北京
 //出发地
 document.cookie  = "_jc_save_fromStation=%u5317%u4EAC%2CBJP;path=/;expires=" + _date.toGMTString();
 //目的地
