@@ -20,7 +20,6 @@ var trainNumber = [""];
 var xb = ["ZE", "YZ", "YW"];
 var rq = ["2016-02-03","2016-02-04"];
 var searchTime = 1500;
-var searchTime = 1500;
 var notStop = true;
 
 $("input#auto_query").attr('checked','checked');
