@@ -367,7 +367,24 @@ bool uksort ( array &$array , callable $cmp_function );
 bool shuffle ( array &$array );
 ```
 
+## `natsort()`
 
+用“自然排序”算法对数组排序
+
+```php
+bool natsort ( array &$array );
+```
+
+> 实现了一个和人们通常对字母数字字符串进行排序的方法一样的排序算法并保持原有键／值的关联，这被称为“自然排序”。
+>
+
+## `natcasesort()`
+
+用“自然排序”算法对数组进行不区分大小写字母的排序
+
+```php
+bool natcasesort ( array &$array );
+```
 
 
 
