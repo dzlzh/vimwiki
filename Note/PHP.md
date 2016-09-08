@@ -266,7 +266,7 @@ bool array_multisort ( array &$arr [, mixed $arg = SORT_ASC [, mixed $arg = SORT
 
 ## `asort()`
 
-对数组进行排序并保持索引关系，由低到高
+对数组进行排序并保持索引关联，由低到高
 
 ```php
 bool asort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
@@ -289,7 +289,7 @@ bool asort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 
 ## `arsort()`
 
-对数组进行逆向排序并保持索引关系，由高到低
+对数组进行逆向排序并保持索引关联，由高到低
 
 ```php
 bool arsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
@@ -313,7 +313,7 @@ bool krsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 
 ## `sort()`
 
-对数组排序，不保持索引关系，由低到高
+对数组排序，不保持索引关联，由低到高
 
 ```php
 bool sort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
@@ -321,13 +321,43 @@ bool sort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 
 ## `rsort()`
 
-对数组逆向排序，不保持索引关系，由高到低
+对数组逆向排序，不保持索引关联，由高到低
 
 ```php
 bool rsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 ```
 
+## `usort()`
 
+使用用户自定义的比较函数对数组中的值进行排序，不保持索引关联
+
+```php
+bool usort ( array &$array , callable $cmp_function );
+```
+
+**参数**
+
+`cmp_function`
+
+在第一个参数小于，等于或大于第二个参数时，该比较函数必须相应地返回一个小于，等于或大于 0 的整数。
+
+`int callback ( mixed $a, mixed $b );`
+
+## `uasort()`
+
+使用用户自定义的比较函数对数组中的值进行排序并保持索引关联
+
+```php
+bool uasort ( array &$array , callable $cmp_function );
+```
+
+## `uksort()`
+
+使用用户自定义的比较函数对数组中的键名进行排序并保持索引关联
+
+```php
+bool uksort ( array &$array , callable $cmp_function );
+```
 
 
 
