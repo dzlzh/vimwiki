@@ -264,6 +264,39 @@ bool array_multisort ( array &$arr [, mixed $arg = SORT_ASC [, mixed $arg = SORT
 * **SORT_NUMERIC** - 将项目按照数值比较
 * **SORT_STRING** - 将项目按照字符串比较
 
+## `asort()`
+
+对数组进行排序并保持索引关系，由低到高
+
+```php
+bool asort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
+```
+
+**参数**
+
+`sort_flags`
+
+* **SORT_REGULAR** - 正常比较单元（不改变类型）
+* **SORT_NUMERIC** - 单元被作为数字来比较
+* **SORT_STRING** - 单元被作为字符串来比较
+* **SORT_LOCALE_STRING** - 根据当前的区域（locale）设置来把单元当作字符串比较，可以用 [setlocale()](http://php.net/manual/zh/function.setlocale.php) 来改变。
+* **SORT_NATURAL** - 和 [natsort()](http://php.net/manual/zh/function.natsort.php) 类似对每个单元以“自然的顺序”对字符串进行排序。 PHP 5.4.0 中新增的。
+* **SORT_FLAG_CASE** - 能够与 **SORT_STRING** 或 **SORT_NATURAL** 合并（OR 位运算），不区分大小写排序字符串。
+
+**返回值**
+
+成功时返回 **TRUE**， 或者在失败时返回 **FALSE**。
+
+## `arsort()`
+
+对数组进行逆向排序并保持索引关系，由高到低
+
+```php
+bool arsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
+```
+
+> 同`asort()`
+
 
 
 # PHP执行外部命令函数
