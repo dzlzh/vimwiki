@@ -241,6 +241,29 @@ bool array_key_exists ( mixed $key , array $search );
 array array_map ( callable $callback , array $arr1 [, array $... ] );
 ```
 
+## `array_multisort()`
+
+对多个数组或多维数组进行排序
+
+```php
+bool array_multisort ( array &$arr [, mixed $arg = SORT_ASC [, mixed $arg = SORT_REGULAR [, mixed $... ]]] );
+```
+
+可以用来一次对多个数组进行排序，或者根据某一维或多维对多维数组进行排序。
+
+关联（[string](http://php.net/manual/zh/language.types.string.php)）键名保持不变，但数字键名会被重新索引。
+
+排序顺序标志：
+
+* **SORT_ASC** - 按照上升顺序排序
+* **SORT_DESC** - 按照下降顺序排序
+
+排序类型标志：
+
+* **SORT_REGULAR** - 将项目按照通常方法比较
+* **SORT_NUMERIC** - 将项目按照数值比较
+* **SORT_STRING** - 将项目按照字符串比较
+
 
 
 # PHP执行外部命令函数
