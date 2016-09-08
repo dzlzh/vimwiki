@@ -311,6 +311,24 @@ bool ksort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 bool krsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 ```
 
+## `sort()`
+
+对数组排序，不保持索引关系，由低到高
+
+```php
+bool sort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
+```
+
+## `rsort()`
+
+对数组逆向排序，不保持索引关系，由高到低
+
+```php
+bool rsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
+```
+
+
+
 
 
 # PHP执行外部命令函数
