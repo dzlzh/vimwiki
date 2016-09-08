@@ -295,7 +295,21 @@ bool asort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 bool arsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
 ```
 
-> 同`asort()`
+## `ksort()`
+
+对数组按照键名排序，由低到高
+
+```php
+bool ksort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
+```
+
+## `krsort()`
+
+对数组按照键名逆向排序，由高到低
+
+```php
+bool krsort ( array &$array [, int $sort_flags = SORT_REGULAR ] );
+```
 
 
 
