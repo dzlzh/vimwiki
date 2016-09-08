@@ -359,6 +359,16 @@ bool uasort ( array &$array , callable $cmp_function );
 bool uksort ( array &$array , callable $cmp_function );
 ```
 
+## `shuffle()`
+
+将数组打乱
+
+```php
+bool shuffle ( array &$array );
+```
+
+
+
 
 
 # PHP执行外部命令函数
