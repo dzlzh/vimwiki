@@ -75,9 +75,23 @@ scp ~/test.txt root@localhost:/root/test.txt
 scp ~/test root@localhost:/root/test
 ```
 
+## 提取
+
+```sh
+tar xjf    *.tar.bz2
+tar xzf    *.tar.gz
+bunzip2    *.bz2
+unrar e    *.rar
+gunzip     *.gz
+tar xf     *.tar
+tar xjf    *.tbz2
+tar xzf    *.tgz
+unzip      *.zip
+uncompress *.Z
+7z x       *.7z
+```
 
 
----
 
 # Centos
 
