@@ -1,4 +1,4 @@
-## 分支名称
+# 分支名称
 
 `master` 稳定分支
 
@@ -46,7 +46,7 @@
 
 `git stash pop` 恢复并删除
 
-## 远程操作
+# 远程操作
 
 `git clone` 克隆
 
@@ -56,7 +56,7 @@
 
 `git push` 推送本地到远程库
 
-## 分支
+# 分支
 
 `git branch` 查看分支
 
@@ -74,7 +74,7 @@
 
 `git branch --set-upstream <name> <origin/name>` 指定本地分支与远程分支的链接
 
-## 标签
+# 标签
 
 `git tag` 查看标签
 
@@ -90,6 +90,6 @@
 
 `git push origin :refs/tags/<tagname>` 删除远程标签,先删除本地然后推送
 
-## 别名
+# 别名
 
 `git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
