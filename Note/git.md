@@ -24,7 +24,11 @@
 
 `git mv` 改名文件，并且将这个改名放入暂存区
 
-`git commit -m` 提交到分支
+`git commit` 提交到分支
+
+- `-m` 提交暂存区到仓库区
+- `-a` 提交工作区自上次commit之后的变化，直接到仓库区
+- `--amend -m` 使用一
 
 `git status` 查看状态
 
