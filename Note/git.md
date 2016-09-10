@@ -24,7 +24,9 @@
 
 `git diff` 查看不同
 
-`git diff HEAD -- file` 查看工作区和版本库里面最新版本的区别
+`git diff HEAD` 查看工作区和版本库里面最新版本的区别
+
+`git diff --cached [file]` 显示暂存区和上一个commit的差异
 
 `git log` 查看日志
 
