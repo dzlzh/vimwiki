@@ -56,6 +56,8 @@
 
 `git remote` 远程库
 
+`git fetch` 下载远程仓库的所有变动
+
 `git pull` 拉取远程库到本地
 
 `git push` 推送本地到远程库
