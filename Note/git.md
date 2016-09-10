@@ -60,7 +60,7 @@
 
 ## 分支
 
-`git branch` 查看分支
+`git branch [-r|-a]` 查看分支[远程分支|本地与远程所有分支]
 
 `git branch <name>` 创建分支
 
