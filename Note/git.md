@@ -124,3 +124,25 @@
 # 别名
 
 `git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
+
+
+
+# 技巧
+
+## 关闭Issue
+
+**关键字**
+
+- `close`
+- `closes`
+- `closed`
+- `fix`
+- `fixes`
+- `fixed`
+- `resolve`
+- `resolves`
+- `resolved`
+
+**格式**
+
+`fixes Issue_number`
