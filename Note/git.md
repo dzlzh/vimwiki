@@ -99,6 +99,10 @@
 
 `git push origin :refs/tags/<tagname>` 删除远程标签,先删除本地然后推送
 
+## 其他
+
+`git archive` 生成一个可供发布的压缩包
+
 
 
 # 分支名称
