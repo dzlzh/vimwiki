@@ -1,16 +1,6 @@
-# 分支名称
+# 命令
 
-`master` 稳定分支
-
-`develop ` 不稳定分支(开发分支)
-
-`issue` 或 `fixbug` BUG分支
-
-`feature` 新功能分支
-
-`release` 预发布分支
-
-# 本地操作
+## 本地操作
 
 `git init` 初始化
 
@@ -58,7 +48,7 @@
 
 `git stash pop` 恢复并删除
 
-# 远程操作
+## 远程操作
 
 `git clone` 克隆
 
@@ -68,7 +58,7 @@
 
 `git push` 推送本地到远程库
 
-# 分支
+## 分支
 
 `git branch` 查看分支
 
@@ -86,7 +76,7 @@
 
 `git branch --set-upstream <name> <origin/name>` 指定本地分支与远程分支的链接
 
-# 标签
+## 标签
 
 `git tag` 查看标签
 
@@ -101,6 +91,22 @@
 `git push origin <tagname|--tags>` 推送<标签|全部标签>到远程
 
 `git push origin :refs/tags/<tagname>` 删除远程标签,先删除本地然后推送
+
+
+
+# 分支名称
+
+`master` 稳定分支
+
+`develop ` 不稳定分支(开发分支)
+
+`issue` 或 `fixbug` BUG分支
+
+`feature` 新功能分支
+
+`release` 预发布分支
+
+
 
 # 别名
 
