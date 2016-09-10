@@ -83,6 +83,8 @@
 
 `git branch --set-upstream <name> <origin/name>` 指定本地分支与远程分支的链接
 
+`git rebase` 合并
+
 ## 标签
 
 `git tag` 查看标签
