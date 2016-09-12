@@ -1,40 +1,32 @@
-# 分支名称
+# 命令
 
-`master` 稳定分支
-
-`develop ` 不稳定分支(开发分支)
-
-`issue` 或 `fixbug` BUG分支
-
-`feature` 新功能分支
-
-`release` 预发布分支
-
-# 本地操作
+## 本地操作
 
 `git init` 初始化
 
-`git add` 增加到暂存区
+`git add [file|dir|.|-p]` 添加指定 [文件|目录|所有文件|] 到暂存区
 
 - `-p`添加每个变化前，都会要求确认。对于同一个文件的多处变化，可以实现颁奖提交
 
-`git rm` 删除工作区文件，并且将这次删除放入到暂存区
+`git rm [--cached][file]` 删除工作区文件，并且将这次删除放入到暂存区
 
 - `--cached` 停止追踪指定文件，但该文件会保留在工作区
 
-`git mv` 改名文件，并且将这个改名放入暂存区
+`git mv [file-original] [file-renamed]` 改名文件，并且将这个改名放入暂存区
 
 `git commit` 提交到分支
 
 - `-m` 提交暂存区到仓库区
 - `-a` 提交工作区自上次commit之后的变化，直接到仓库区
-- `--amend -m` 使用一
+- `--amend -m` 使用一新的commit，替代上一次提交。如果代码没有任何新变化，则用来改写上一次commit的提交信息
 
 `git status` 查看状态
 
 `git diff` 查看不同
 
-`git diff HEAD -- file` 查看工作区和版本库里面最新版本的区别
+`git diff HEAD` 查看工作区和版本库里面最新版本的区别
+
+`git diff --cached [file]` 显示暂存区和上一个commit的差异
 
 `git log` 查看日志
 
@@ -58,19 +50,24 @@
 
 `git stash pop` 恢复并删除
 
-# 远程操作
+## 远程操作
 
 `git clone` 克隆
 
 `git remote` 远程库
 
+`git fetch` 下载远程仓库的所有变动
+
 `git pull` 拉取远程库到本地
 
 `git push` 推送本地到远程库
 
-# 分支
+- `--force` 强行推送当前分支到远程仓库，即使有冲突
+- `--all` 推送所有分支到远程仓库
 
-`git branch` 查看分支
+## 分支
+
+`git branch [-r|-a]` 查看分支[远程分支|本地与远程所有分支]
 
 `git branch <name>` 创建分支
 
@@ -86,7 +83,9 @@
 
 `git branch --set-upstream <name> <origin/name>` 指定本地分支与远程分支的链接
 
-# 标签
+`git rebase` 合并
+
+## 标签
 
 `git tag` 查看标签
 
@@ -102,6 +101,48 @@
 
 `git push origin :refs/tags/<tagname>` 删除远程标签,先删除本地然后推送
 
+## 其他
+
+`git archive` 生成一个可供发布的压缩包
+
+
+
+# 分支名称
+
+`master` 稳定分支
+
+`develop ` 不稳定分支(开发分支)
+
+`issue` 或 `fixbug` BUG分支
+
+`feature` 新功能分支
+
+`release` 预发布分支
+
+
+
 # 别名
 
 `git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
+
+
+
+# 技巧
+
+## 关闭Issue
+
+**关键字**
+
+- `close`
+- `closes`
+- `closed`
+- `fix`
+- `fixes`
+- `fixed`
+- `resolve`
+- `resolves`
+- `resolved`
+
+**格式**
+
+`fixes Issue_number`
