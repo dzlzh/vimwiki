@@ -14,6 +14,7 @@
 
 - 关闭`magic_quotes_runtime`安全掌握到自己的手里 `set_magic_quotes_runtime(false)`。
 - 对于传入的整数或浮点数可以使用`intval()`或`floatval()`处理。
+- 对于传入的字符可以使用`htmlspecialchars(strip_tags(trim(string)), ENT_QUOTES)`。
 
 ## 文件上传
 
