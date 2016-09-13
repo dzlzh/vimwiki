@@ -235,6 +235,16 @@ array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
 >
 > SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
 
+## `in_array()`
+
+检查数组中是否存在某个值
+
+```php
+bool in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] );
+```
+
+在 `haystack` 中搜索 `needle`，如果没有设置 `strict` 则使用宽松的比较。
+
 ## `array_key_exists()`
 
 检查给定的键名或索引是否存在于数组中
