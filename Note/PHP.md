@@ -159,6 +159,14 @@ string strtolower ( string $string );
 string strtoupper ( string $string );
 ```
 
+## `mb_substr()`
+
+获取字符串的部分
+
+```php
+string mb_substr ( string $str , int $start [, int $length = NULL [, string $encoding = mb_internal_encoding() ]] );
+```
+
 
 
 # PHP数组函数
