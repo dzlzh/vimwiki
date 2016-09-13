@@ -219,6 +219,18 @@ int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string 
 
 > 注意 prefix 仅在 extract_type 的值是 EXTR_PREFIX_SAME，EXTR_PREFIX_ALL，EXTR_PREFIX_INVALID 或 EXTR_PREFIX_IF_EXISTS 时需要。 如果附加了前缀后的结果不是合法的变量名，将不会导入到符号表中。前缀和数组键名之间会自动加上一个下划线。
 
+## `array_reverse()`
+
+返回一个单元顺序相反的数组
+
+```php
+array array_reverse ( array $array [, bool $preserve_keys = false ] );
+```
+
+`preserve_keys`
+
+> 如果设置为 **TRUE** 会保留数字的键。 非数字的键则不受这个设置的影响，总是会被保留。
+
 ## `array_unique()`
 
 移除数组中重复的值
