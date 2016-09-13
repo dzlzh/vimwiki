@@ -299,6 +299,58 @@ mixed array_search ( mixed $needle , array $haystack [, bool $strict = false ] )
 array array_map ( callable $callback , array $arr1 [, array $... ] );
 ```
 
+## `current()`
+
+返回数组中的当前单元
+
+```php
+mixed current ( array &$array );
+```
+
+## `each()`
+
+返回数组中当前的键／值对并将数组指针向前移动一步
+
+```php
+array each ( array &$array );
+```
+
+> 返回 `array` 数组中当前指针位置的键／值对并向前移动数组指针。键值对被返回为四个单元的数组，键名为*0*，*1*，*key*和 *value*。单元 *0* 和 *key* 包含有数组单元的键名，*1* 和 *value* 包含有数据。
+>
+> 如果内部指针越过了数组的末端，则 **each()** 返回 **FALSE**。
+
+## `reset()`
+
+将数组的内部指针指向第一个单元并返回其值
+
+```php
+mixed reset ( array &$array );
+```
+
+## `end()`
+
+将数组的内部指针指向最后一个单元并返回其值
+
+```php
+mixed end ( array &$array );
+```
+
+## `next()`
+
+将数组中的内部指针向前移动一位并返回其值
+
+```php
+mixed next ( array &$array );
+```
+
+## `prev()`
+
+将数组的内部指针倒回一位并返回其值
+
+```php
+mixed prev ( array &$array );
+```
+
 ## `array_multisort()`
 
 对多个数组或多维数组进行排序
