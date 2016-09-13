@@ -231,6 +231,24 @@ array array_reverse ( array $array [, bool $preserve_keys = false ] );
 
 > 如果设置为 **TRUE** 会保留数字的键。 非数字的键则不受这个设置的影响，总是会被保留。
 
+## `array_splice()`
+
+把数组中的一部分去掉并用其它值取代
+
+```php
+array array_splice ( array &$input , int $offset [, int $length = 0 [, mixed $replacement ]] );
+```
+
+把 `input` 数组中由 `offset` 和 `length` 指定的单元去掉，如果提供了 `replacement` 参数，则用其中的单元取代。
+
+`offset`
+
+> 如果 `offset` 为正，则从 `input` 数组中该值指定的偏移量开始移除。如果 `offset` 为负，则从 `input` 末尾倒数该值指定的偏移量开始移除。
+
+`length`
+
+> 如果省略 `length`，则移除数组中从 `offset` 到结尾的所有部分。如果指定了 `length` 并且为正值，则移除这么多单元。如果指定了`length` 并且为负值，则移除从 `offset` 到数组末尾倒数 `length` 为止中间所有的单元。小窍门：当给出了 `replacement` 时要移除从`offset` 到数组末尾所有单元时，用 *count($input)* 作为 `length`。
+
 ## `array_unique()`
 
 移除数组中重复的值
