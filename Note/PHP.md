@@ -253,6 +253,14 @@ bool in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] );
 bool array_key_exists ( mixed $key , array $search );
 ```
 
+## `array_search()`
+
+在数组中搜索给定的值，如果成功则返回相应的键名
+
+```php
+mixed array_search ( mixed $needle , array $haystack [, bool $strict = false ] );
+```
+
 ##  `array_map()`
 
 将回调函数作用到给定数组的单元上
