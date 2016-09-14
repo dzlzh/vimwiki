@@ -125,6 +125,16 @@ string number_format ( float $number , int $decimals = 0 , string $dec_point = "
 mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count ] );
 ```
 
+## `preg_replace()`
+
+执行一个正则表达式的搜索和替换
+
+```php
+mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int $limit = -1 [, int &$count ]] )
+```
+
+搜索`subject`中匹配`pattern`的部分， 以`replacement`进行替换。
+
 ## `uniqid()`
 
 生成一个唯一ID
@@ -147,6 +157,14 @@ string strtolower ( string $string );
 
 ```php
 string strtoupper ( string $string );
+```
+
+## `mb_substr()`
+
+获取字符串的部分
+
+```php
+string mb_substr ( string $str , int $start [, int $length = NULL [, string $encoding = mb_internal_encoding() ]] );
 ```
 
 
@@ -209,6 +227,36 @@ int extract ( array &$var_array [, int $extract_type = EXTR_OVERWRITE [, string 
 
 > 注意 prefix 仅在 extract_type 的值是 EXTR_PREFIX_SAME，EXTR_PREFIX_ALL，EXTR_PREFIX_INVALID 或 EXTR_PREFIX_IF_EXISTS 时需要。 如果附加了前缀后的结果不是合法的变量名，将不会导入到符号表中。前缀和数组键名之间会自动加上一个下划线。
 
+## `array_reverse()`
+
+返回一个单元顺序相反的数组
+
+```php
+array array_reverse ( array $array [, bool $preserve_keys = false ] );
+```
+
+`preserve_keys`
+
+> 如果设置为 **TRUE** 会保留数字的键。 非数字的键则不受这个设置的影响，总是会被保留。
+
+## `array_splice()`
+
+把数组中的一部分去掉并用其它值取代
+
+```php
+array array_splice ( array &$input , int $offset [, int $length = 0 [, mixed $replacement ]] );
+```
+
+把 `input` 数组中由 `offset` 和 `length` 指定的单元去掉，如果提供了 `replacement` 参数，则用其中的单元取代。
+
+`offset`
+
+> 如果 `offset` 为正，则从 `input` 数组中该值指定的偏移量开始移除。如果 `offset` 为负，则从 `input` 末尾倒数该值指定的偏移量开始移除。
+
+`length`
+
+> 如果省略 `length`，则移除数组中从 `offset` 到结尾的所有部分。如果指定了 `length` 并且为正值，则移除这么多单元。如果指定了`length` 并且为负值，则移除从 `offset` 到数组末尾倒数 `length` 为止中间所有的单元。小窍门：当给出了 `replacement` 时要移除从`offset` 到数组末尾所有单元时，用 *count($input)* 作为 `length`。
+
 ## `array_unique()`
 
 移除数组中重复的值
@@ -225,6 +273,16 @@ array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
 >
 > SORT_LOCALE_STRING - 把每一项作为字符串来处理，基于当前区域设置（可通过 setlocale() 进行更改）。
 
+## `in_array()`
+
+检查数组中是否存在某个值
+
+```php
+bool in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] );
+```
+
+在 `haystack` 中搜索 `needle`，如果没有设置 `strict` 则使用宽松的比较。
+
 ## `array_key_exists()`
 
 检查给定的键名或索引是否存在于数组中
@@ -233,12 +291,72 @@ array array_unique ( array $array [, int $sort_flags = SORT_STRING ] );
 bool array_key_exists ( mixed $key , array $search );
 ```
 
+## `array_search()`
+
+在数组中搜索给定的值，如果成功则返回相应的键名
+
+```php
+mixed array_search ( mixed $needle , array $haystack [, bool $strict = false ] );
+```
+
 ##  `array_map()`
 
 将回调函数作用到给定数组的单元上
 
 ```php
 array array_map ( callable $callback , array $arr1 [, array $... ] );
+```
+
+## `current()`
+
+返回数组中的当前单元
+
+```php
+mixed current ( array &$array );
+```
+
+## `each()`
+
+返回数组中当前的键／值对并将数组指针向前移动一步
+
+```php
+array each ( array &$array );
+```
+
+> 返回 `array` 数组中当前指针位置的键／值对并向前移动数组指针。键值对被返回为四个单元的数组，键名为*0*，*1*，*key*和 *value*。单元 *0* 和 *key* 包含有数组单元的键名，*1* 和 *value* 包含有数据。
+>
+> 如果内部指针越过了数组的末端，则 **each()** 返回 **FALSE**。
+
+## `reset()`
+
+将数组的内部指针指向第一个单元并返回其值
+
+```php
+mixed reset ( array &$array );
+```
+
+## `end()`
+
+将数组的内部指针指向最后一个单元并返回其值
+
+```php
+mixed end ( array &$array );
+```
+
+## `next()`
+
+将数组中的内部指针向前移动一位并返回其值
+
+```php
+mixed next ( array &$array );
+```
+
+## `prev()`
+
+将数组的内部指针倒回一位并返回其值
+
+```php
+mixed prev ( array &$array );
 ```
 
 ## `array_multisort()`
@@ -681,6 +799,144 @@ PHP 提供了一些杂项输入/输出（IO）流，允许访问 PHP 的输入�
 
 
 
+# PHP-魔术常量
+
+## `__LINE__`
+
+文件中的当前行号
+
+## `__FILE__`
+
+文件的完整路径和文件名。如果用在被包含文件中，则返回被包含的文件名。
+
+## `__DIR__`
+
+文件所在的目录。如果用在被包括文件中，则返回被包括的文件所在的目录。
+
+## `__FUNCTION__`
+
+函数名称常量返回该函数被定义时的名字（区分大小写）。
+
+## `__CLASS__`
+
+类的名称常量返回该类被定义时的名字（区分大小写）。
+
+## `__TRAIT__`
+
+Trait 的名字常量返回 trait 被定义时的名字（区分大小写）。
+
+## `__METHOD__`
+
+类的方法名返回该方法被定义时的名字（区分大小写）。
+
+## `__NAMESPACE__`
+
+当前命名空间的名称（区分大小写）。此常量是在编译时定义的（PHP 5.3.0 新增）。
+
+
+
+# PHP-魔术方法
+
+## 构造函数
+
+```
+void __construct ([ mixed $args [, $... ]] )
+```
+
+PHP 5 允行开发者在一个类中定义一个方法作为构造函数。具有构造函数的类会在每次创建新对象时先调用此方法，所以非常适合在使用对象之前做一些初始化工作。
+
+> Note: 如果子类中定义了构造函数则不会隐式调用其父类的构造函数。要执行父类的构造函数，需要在子类的构造函数中调用 parent::__construct()。如果子类没有定义构造函数则会如同一个普通的类方法一样从父类继承（假如没有被定义为 private 的话）。
+
+## 析构函数
+
+```
+oid __destruct ( void )
+```
+
+PHP 5 引入了析构函数的概念，这类似于其它面向对象的语言，如 C++。析构函数会在到某个对象的所有引用都被删除或者当对象被显式销毁时执行。
+
+## 方法重载
+
+```
+public mixed __call ( string $name , array $arguments )
+public static mixed __callStatic ( string $name , array $arguments )
+```
+
+在对象中调用一个不可访问方法时，`__call()` 会被调用。
+
+用静态方式中调用一个不可访问方法时，`__callStatic()`会被调用。
+
+$name 参数是要调用的方法名称。$arguments 参数是一个枚举数组，包含着要传递给方法 $name 的参数。
+
+## 属性重载
+
+```
+public void __set ( string $name , mixed $value )
+public mixed __get ( string $name )
+public bool __isset ( string $name )
+public void __unset ( string $name )
+```
+
+在给不可访问属性赋值时，`__set()` 会被调用。
+
+读取不可访问属性的值时，`__get()` 会被调用。
+
+当对不可访问属性调用 `isset()` 或 `empty()` 时，`__isset()` 会被调用。
+
+当对不可访问属性调用 `unset()` 时，`__unset()` 会被调用。
+
+参数 `$name` 是指要操作的变量名称。`__set()` 方法的 `$value` 参数指定了`$name` 变量的值。
+
+属性重载只能在对象中进行。在静态方法中，这些魔术方法将不会被调用。所以这些方法都不能被 声明为 static。从 PHP 5.3.0 起, 将这些魔术方法定义为 static 会产生一个警告。
+
+> Note: 因为 PHP 处理赋值运算的方式，`__set()` 的返回值将被忽略。类似的, 在下面这样的链式赋值中，`__get()` 不会被调用：$a = $obj->b = 8; 
+
+> Note: 在除 isset() 外的其它语言结构中无法使用重载的属性，这意味着当对一个重载的属性使用 empty() 时，重载魔术方法将不会被调用。为避开此限制，必须将重载属性赋值到本地变量再使用 empty()。
+
+## `__sleep()`和`__wakeup()`
+
+```
+public array __sleep ( void )
+void __wakeup ( void )
+```
+`serialize()` 函数会检查类中是否存在一个魔术方法 `__sleep()`。如果存在，该方法会先被调用，然后才执行序列化操作。此功能可以用于清理对象，并返回一个包含对象中所有应被序列化的变量名称的数组。如果该方法未返回任何内容，则 NULL 被序列化，并产生一个 E_NOTICE 级别的错误。
+
+> Note:__sleep() 不能返回父类的私有成员的名字。这样做会产生一个 E_NOTICE 级别的错误。可以用 Serializable 接口来替代。
+
+`__sleep()` 方法常用于提交未提交的数据，或类似的清理操作。同时，如果有一些很大的对象，但不需要全部保存，这个功能就很好用。
+
+与之相反，`unserialize()` 会检查是否存在一个 `__wakeup()` 方法。如果存在，则会先调用 `__wakeup` 方法，预先准备对象需要的资源。
+
+`__wakeup()` 经常用在反序列化操作中，例如重新建立数据库连接，或执行其它初始化操作。
+
+## `__toString()`
+
+```
+public string __toString ( void )
+```
+
+`__toString()` 方法用于一个类被当成字符串时应怎样回应。例如 echo $obj; 应该显示些什么。此方法必须返回一个字符串，否则将发出一条 E_RECOVERABLE_ERROR 级别的致命错误。
+
+## `__invoke()`
+
+```
+mixed __invoke ([ $... ] )
+```
+
+当尝试以调用函数的方式调用一个对象时，`__invoke()` 方法会被自动调用。
+
+## `__set_state() `
+
+```
+static object __set_state ( array $properties )
+```
+
+自 PHP 5.1.0 起当调用 `var_export()` 导出类时，此静态 方法会被调用。
+
+本方法的唯一参数是一个数组，其中包含按 `array('property' => value, ...)` 格式排列的类属性。
+
+
+
 # PHP静态(Static)关键字
 
 - 静态属性用于保存类的公有数据
@@ -691,10 +947,12 @@ PHP 提供了一些杂项输入/输出（IO）流，允许访问 PHP 的输入�
 
 
 
+
 # PHP命令行参数
 
 - `$argv`是一个数组，包含了提供的参数，第一个参数总是脚本文件名字
 - `$argc`包含了`$argv`数组包含元素的数目
+
 
 
 
@@ -787,6 +1045,7 @@ echo $password;
 - 多路径分隔符 `PATH_SEPARATOR`
 
 - `bool || die()`
+
 
 
 
