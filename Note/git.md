@@ -85,6 +85,8 @@
 
 `git rebase` 合并
 
+- `-i` 把commit压缩成一个
+
 ## 标签
 
 `git tag` 查看标签
