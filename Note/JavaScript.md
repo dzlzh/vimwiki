@@ -441,3 +441,25 @@ arr.forEach(callback[, thisArg]);
 Object.keys(obj);
 ```
 
+
+
+# JavaScript Document
+
+## `document.querySelectorAll()`
+
+返回当前文档中匹配一个特定选择器的所有的元素(使用深度优先，前序遍历规则这样的规则遍历所有文档节点) .返回的对象类型是 NodeList
+
+```javascript
+elementList = document.querySelectorAll(selectors);
+```
+
+> 在Chrome浏览器中可以用`$$()`
+
+## `document.querySelector()`
+
+返回当前文档中匹配一个特定选择器的第一个元素
+
+```javascript
+element = document.querySelector(selectors);
+```
+
