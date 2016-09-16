@@ -16,7 +16,7 @@
 
 
 
-# 系统类
+# Memcached类
 
 ## `addServer()`
 
