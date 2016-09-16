@@ -100,9 +100,15 @@ public mixed Memcached::get ( string $key [, callback $cache_cb [, float &$cas_t
 
 **返回值**
 
-
-
 返回存储在服务端的元素的值或者在其他情况下返回**FALSE**。 如果key不存在，`Memcached::getResultCode()`方法将会返回**`Memcached::RES_NOTFOUND`**。
+
+### `replace()`
+
+替换已存在key下的元素
+
+```php
+public bool Memcached::replace ( string $key , mixed $value [, int $expiration ] );
+```
 
 ## 范例
 
@@ -118,5 +124,7 @@ print_r($m->getStats());
 print_r($m->getVersion());
 
 $m->add('key', 'value', 600);
-print_r($m->get('key'));
+print_r($m->get('key'));//value
+$m->replace('key', 'newValue', 60);
+print_r($m->get('key'));//newValue
 ```
