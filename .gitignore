@@ -3,8 +3,6 @@
 *.lo
 *.o
 *.obj
-*.pdf
-*.swp
 
 # Precompiled Headers
 *.gch
@@ -29,6 +27,8 @@
 *.out
 *.app
 
+*.pdf
+*.swp
 *.un\~
 tags
 .idea/
