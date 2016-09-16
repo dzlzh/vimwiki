@@ -92,6 +92,14 @@ string serialize ( mixed $value );
 mixed unserialize ( string $str );
 ```
 
+## `class_exists()`
+
+检查类是否已定义
+
+```php
+bool class_exists ( string $class_name [, bool $autoload = true ] );
+```
+
 ## `func_get_args()`
 
 返回一个包含函数参数列表的数组
