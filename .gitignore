@@ -28,3 +28,7 @@
 *.exe
 *.out
 *.app
+
+*.un\~
+tags
+.idea/
