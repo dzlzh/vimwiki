@@ -52,7 +52,59 @@ public array Memcached::getStats ( void );
 public array Memcached::getVersion ( void );
 ```
 
-### 范例
+## 数据
+
+### `add()`
+
+向一个新的key下面增加一个元素
+
+```php
+public bool Memcached::add ( string $key , mixed $value [, int $expiration ] );
+```
+
+`key`
+
+> 用于存储值的键名
+
+`value`
+
+> 存储的值
+
+`expiration`
+
+> 到期时间，默认为 0
+
+**返回值**
+
+成功时返回 **TRUE**， 或者在失败时返回 **FALSE**。 如果key已经存在，`Memcached::getResultCode()`方法将会返回**`Memcached::RES_NOTSTORED`**。
+
+### `get()`
+
+检索一个元素
+
+```php
+public mixed Memcached::get ( string $key [, callback $cache_cb [, float &$cas_token ]] );
+```
+
+`key`
+
+> 要检索的元素的key
+
+`cache_cb`
+
+> 通读缓存回掉函数或**NULL**
+
+`cas_token`
+
+> 检索的元素的CAS标记值
+
+**返回值**
+
+
+
+返回存储在服务端的元素的值或者在其他情况下返回**FALSE**。 如果key不存在，`Memcached::getResultCode()`方法将会返回**`Memcached::RES_NOTFOUND`**。
+
+## 范例
 
 ```php
 $m = new Memcached();
@@ -64,4 +116,7 @@ $server = array(
 $m->addServers($server);
 print_r($m->getStats());
 print_r($m->getVersion());
+
+$m->add('key', 'value', 600);
+print_r($m->get('key'));
 ```
