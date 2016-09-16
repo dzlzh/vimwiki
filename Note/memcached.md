@@ -160,6 +160,22 @@ public int Memcached::increment ( string $key [, int $offset = 1 ] );
 public int Memcached::decrement ( string $key [, int $offset = 1 ] );
 ```
 
+### `setMulti()`
+
+存储多个元素
+
+```php
+public bool Memcached::setMulti ( array $items [, int $expiration ] );
+```
+
+### `getMulti()`
+
+检索多个元素
+
+```php
+public mixed Memcached::getMulti ( array $keys [, array &$cas_tokens [, int $flags ]] );
+```
+
 ## 范例
 
 ```php
@@ -185,7 +201,21 @@ $m->delete('key');
 $m->flush();
 
 $m->set('num', 5, 0);
-print_r($m->get('num'));
-$m->increment('num', 5);
-$m->decrement('num', 5);
+print_r($m->get('num'));//5
+$m->increment('num', 5);//10
+$m->decrement('num', 5);//5
+
+$testArr = array(
+    'key0' => 'value0',
+    'key1' => 'value1',
+);
+$m->setMulti($testArr, 0);
+print_r($m->getMulti(array('key0', 'key1')));
+/*
+Array
+(
+    [key0] => value0
+    [key1] => value1
+)
+*/
 ```
