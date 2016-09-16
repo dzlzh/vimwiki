@@ -110,6 +110,16 @@ public mixed Memcached::get ( string $key [, callback $cache_cb [, float &$cas_t
 public bool Memcached::replace ( string $key , mixed $value [, int $expiration ] );
 ```
 
+### `set()`
+
+存储一个元素
+
+```php
+public bool Memcached::set ( string $key , mixed $value [, int $expiration ] );
+```
+
+> 数据不存在会新建，如果存在会覆盖。
+
 ## 范例
 
 ```php
@@ -127,4 +137,8 @@ $m->add('key', 'value', 600);
 print_r($m->get('key'));//value
 $m->replace('key', 'newValue', 60);
 print_r($m->get('key'));//newValue
+$m->set('newKey', 'value', 60);
+print_r($m->get('newKey'));//value
+$m->set('newKey', 'newValue', 60);
+print_r($m->get('newKey'));//newValue
 ```
