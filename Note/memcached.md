@@ -176,6 +176,14 @@ public bool Memcached::setMulti ( array $items [, int $expiration ] );
 public mixed Memcached::getMulti ( array $keys [, array &$cas_tokens [, int $flags ]] );
 ```
 
+### `deleteMulti()`
+
+删除多个元素
+
+```php
+public bool Memcached::deleteMulti ( array $keys [, int $time = 0 ] );
+```
+
 ## 范例
 
 ```php
@@ -218,4 +226,5 @@ Array
     [key1] => value1
 )
 */
+$m->deleteMulti(array('key0', 'key1'));
 ```
