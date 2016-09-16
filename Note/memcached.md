@@ -72,7 +72,7 @@ public bool Memcached::add ( string $key , mixed $value [, int $expiration ] );
 
 `expiration`
 
-> 到期时间，默认为 0
+> 到期时间，默认为 0（永久生效）
 
 **返回值**
 
