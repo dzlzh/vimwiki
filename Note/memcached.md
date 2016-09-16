@@ -120,6 +120,16 @@ public bool Memcached::set ( string $key , mixed $value [, int $expiration ] );
 
 > 数据不存在会新建，如果存在会覆盖。
 
+## `delete()`
+
+删除一个元素
+
+```php
+public bool Memcached::delete ( string $key [, int $time = 0 ] );
+```
+
+
+
 ## 范例
 
 ```php
@@ -141,4 +151,5 @@ $m->set('newKey', 'value', 60);
 print_r($m->get('newKey'));//value
 $m->set('newKey', 'newValue', 60);
 print_r($m->get('newKey'));//newValue
+$m->delete('key');
 ```
