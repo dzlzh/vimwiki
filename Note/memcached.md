@@ -184,6 +184,24 @@ public mixed Memcached::getMulti ( array $keys [, array &$cas_tokens [, int $fla
 public bool Memcached::deleteMulti ( array $keys [, int $time = 0 ] );
 ```
 
+### `getResultCode()`
+
+返回最后一次操作的结果代码
+
+```php
+public int Memcached::getResultCode ( void );
+```
+
+> 0 -- 成功
+
+### `getResultMessage()`
+
+返回最后一次操作的结果描述消息
+
+```php
+public string Memcached::getResultMessage ( void );
+```
+
 ## 范例
 
 ```php
@@ -227,4 +245,6 @@ Array
 )
 */
 $m->deleteMulti(array('key0', 'key1'));
+print_r($m->getResultCode());//0
+print_r($m->getResultMessage());//SUCCESS
 ```
