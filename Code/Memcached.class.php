@@ -56,5 +56,20 @@ class Mem
             }
         }
     }
-
+    
+    /**
+     * getError
+     *
+     * @return string
+     */
+    public function getError()
+    {
+        if ($this->error) {
+            return $this->error;
+        } else {
+            return $this->m->getResultMessage();
+        }
+    }
+    
+    
 }
