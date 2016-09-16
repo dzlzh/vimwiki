@@ -18,7 +18,9 @@
 
 # Memcached类
 
-## `addServer()`
+## 系统
+
+### `addServer()`
 
 向服务器池中增加一个服务器
 
@@ -26,14 +28,7 @@
 public bool Memcached::addServer ( string $host , int $port [, int $weight = 0 ] );
 ```
 
-**范例**
-
-```php
-$m = new Memcached();
-$m->addServer('127.0.0.1', 11211);
-```
-
-## `addServers()`
+### `addServers()`
 
 向服务器池中增加多台服务器
 
@@ -41,18 +36,7 @@ $m->addServer('127.0.0.1', 11211);
 public bool Memcached::addServers ( array $servers );
 ```
 
-**范例**
-
-```php
-$m = new Memcached();
-$server = array(
-    array("127.0.0.1", 11211),
-    array("127.0.0.1", 11211),
-);
-$m->addServers($server);
-```
-
-## `getStats()`
+### `getStats()`
 
 获取服务器池的统计信息
 
@@ -60,7 +44,7 @@ $m->addServers($server);
 public array Memcached::getStats ( void );
 ```
 
- ## `getVersion`
+ ### `getVersion`
 
 获取服务器池中所有服务器的版本信息
 
@@ -68,3 +52,16 @@ public array Memcached::getStats ( void );
 public array Memcached::getVersion ( void );
 ```
 
+### 范例
+
+```php
+$m = new Memcached();
+$m->addServer('127.0.0.1', 11211);
+$server = array(
+    array("127.0.0.1", 11211),
+    array("127.0.0.1", 11211),
+);
+$m->addServers($server);
+print_r($m->getStats());
+print_r($m->getVersion());
+```
