@@ -100,6 +100,14 @@ mixed unserialize ( string $str );
 bool class_exists ( string $class_name [, bool $autoload = true ] );
 ```
 
+## `func_num_args()`
+
+返回调用函数的传入参数个数
+
+```php
+int func_num_args ( void );
+```
+
 ## `func_get_args()`
 
 返回一个包含函数参数列表的数组
