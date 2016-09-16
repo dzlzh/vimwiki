@@ -12,6 +12,7 @@ class Mem
     private $m;
     private $time = 0;
     private $error;
+    private $debug = false;
 
     /**
      * Constructor  
@@ -47,7 +48,7 @@ class Mem
     {
         $number = func_num_args();
         if ($number == 1) {
-            $this->get($key);
+            return $this->get($key);
         } else if ($number >= 2) {
             if ($value === null) {
                 $this->delete($key);
@@ -56,6 +57,51 @@ class Mem
             }
         }
     }
+
+    /**
+     * set
+     *
+     * @return boolean
+     */
+    private function set($key, $value, $time = null)
+    {
+        if ($this->time === null) {
+            $time = $this->time;
+        }
+        $this->m->set($key, $value, $time);
+        if ($this->debug) {
+            if ($this->m->getResultCode()) {
+                return false;
+            }
+        }
+    }
+    
+    /**
+     * get
+     *
+     * @return boolean
+     */
+    private function get($key)
+    {
+        $return = $this->m->get($key);
+        if ($this->debug) {
+            if ($this->m->getResultCode()) {
+                return false;
+            }
+        }
+        return $return;
+    }
+
+    /**
+     * delete
+     *
+     * @return boolean
+     */
+    private function delete($key)
+    {
+        $this->m->delete($key);
+    }
+    
     
     /**
      * getError
