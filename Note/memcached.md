@@ -52,3 +52,12 @@ $server = array(
 $m->addServers($server);
 ```
 
+## `getStats()`
+
+获取服务器池的统计信息
+
+```php
+public array Memcached::getStats ( void );
+```
+
+ 
