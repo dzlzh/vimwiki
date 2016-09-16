@@ -60,4 +60,11 @@ $m->addServers($server);
 public array Memcached::getStats ( void );
 ```
 
- 
+ ## `getVersion`
+
+获取服务器池中所有服务器的版本信息
+
+```php
+public array Memcached::getVersion ( void );
+```
+
