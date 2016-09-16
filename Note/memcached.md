@@ -136,6 +136,30 @@ public bool Memcached::delete ( string $key [, int $time = 0 ] );
 public bool Memcached::flush ([ int $delay = 0 ] );
 ```
 
+### `increment()`
+
+增加数值元素的值
+
+```php
+public int Memcached::increment ( string $key [, int $offset = 1 ] );
+```
+
+`key`
+
+> 要增加值的元素的key。
+
+`offset`
+
+> 要将元素的值增加的大小。
+
+### `decrement()`
+
+减小数值元素的值
+
+```php
+public int Memcached::decrement ( string $key [, int $offset = 1 ] );
+```
+
 ## 范例
 
 ```php
@@ -159,4 +183,9 @@ $m->set('newKey', 'newValue', 60);
 print_r($m->get('newKey'));//newValue
 $m->delete('key');
 $m->flush();
+
+$m->set('num', 5, 0);
+print_r($m->get('num'));
+$m->increment('num', 5);
+$m->decrement('num', 5);
 ```
