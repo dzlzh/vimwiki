@@ -191,6 +191,18 @@ string mb_substr ( string $str , int $start [, int $length = NULL [, string $enc
 bool spl_autoload_register ([ callable $autoload_function [, bool $throw = true [, bool $prepend = false ]]] );
 ```
 
+## `strncmp()`
+
+二进制安全比较字符串开头的若干个字符
+
+```php
+int strncmp ( string $str1 , string $str2 , int $len );
+```
+
+**返回值**
+
+> 如果 `str1` 小于 `str2` 返回 < 0； 如果 `str1` 大于 `str2` 返回 > 0；如果两者相等，返回 0。
+
 
 
 # PHP数组函数
