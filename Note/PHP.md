@@ -528,6 +528,22 @@ bool natsort ( array &$array );
 bool natcasesort ( array &$array );
 ```
 
+## `array_unshift()`
+
+在数组开头插入一个或多个单元
+
+```php
+int array_unshift ( array &$array , mixed $var [, mixed $... ] );
+```
+
+## `array_push()`
+
+将一个或多个单元压入数组的末尾
+
+```php
+int array_push ( array &$array , mixed $var [, mixed $... ] );
+```
+
 
 
 # PHP执行外部命令函数
