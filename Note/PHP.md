@@ -536,12 +536,28 @@ bool natcasesort ( array &$array );
 int array_unshift ( array &$array , mixed $var [, mixed $... ] );
 ```
 
+## `array_shift()`
+
+将数组开头的单元移出数组
+
+```php
+mixed array_shift ( array &$array );
+```
+
 ## `array_push()`
 
-将一个或多个单元压入数组的末尾
+将一个或多个单元压入数组的末尾（入栈）
 
 ```php
 int array_push ( array &$array , mixed $var [, mixed $... ] );
+```
+
+## `array_pop()`
+
+将数组最后一个单元弹出（出栈）
+
+```php
+mixed array_pop ( array &$array );
 ```
 
 
