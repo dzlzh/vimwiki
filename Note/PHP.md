@@ -183,6 +183,14 @@ string strtoupper ( string $string );
 string mb_substr ( string $str , int $start [, int $length = NULL [, string $encoding = mb_internal_encoding() ]] );
 ```
 
+## `sql_autoload_register()`
+
+注册给定的函数作为 __autoload 的实现
+
+```php
+bool spl_autoload_register ([ callable $autoload_function [, bool $throw = true [, bool $prepend = false ]]] );
+```
+
 
 
 # PHP数组函数
