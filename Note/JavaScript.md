@@ -478,3 +478,23 @@ elementList = document.querySelectorAll(selectors);
 element = document.querySelector(selectors);
 ```
 
+
+
+# jQuery
+
+## `jQuery.append()`
+
+在被选元素的结尾插入内容
+
+## `jQuery.prepend()`
+
+在被选元素的开头插入内容
+
+## `jQuery.after()`
+
+在被选元素之后插入内容
+
+## `jQuery.before()`
+
+在被选元素之前插入内容
+
