@@ -498,3 +498,11 @@ element = document.querySelector(selectors);
 
 在被选元素之前插入内容
 
+## `jQuery.getJSON()`
+
+使用 `AJAX` 请求来获得 `JSON` 数据
+
+```javascript
+jQuery.getJSON(url,data,success(data,status,xhr));
+```
+
