@@ -9,6 +9,29 @@
 
 
 
+# BOOK
+
+|                 English                  |        中文         |
+| :--------------------------------------: | :---------------: |
+| The Pragmatic Programmer: From Journeyman to Master |  程序员修炼之道：从小工到专家   |
+| Code Complete: A Practical Handbook of Software Construction, 2nd Edition |       代码大全2       |
+| Refactoring: Improving the Design of Existing Code |   重构：改善既有代码的设计    |
+| Design Patterns: Elements of Reusable Object-Oriented Software | 设计模式：可复用面向对象软件的基础 |
+| The Mythical Man-Month: Essays on Software Engineering |       人月神话        |
+|        The C Programming Language        |      C程序设计语言      |
+|            Programming Pearls            |       编程珠玑        |
+|        Introduction to Algorithms        |       算法导论        |
+|       The Algorithm Design Manual        |    算法设计手册（第2版）    |
+|      Mastering Regular Expressions       |   精通正则表达式（第3版）    |
+| Compilers: Principles, Techniques, and Tools |       编译原理        |
+| Structure and Interpretation of Computer Programs |    计算机程序的构造和解释    |
+| Peopleware: Productive Projects and Teams |        人件         |
+| The Design of the UNIX Operating System  |    UNIX操作系统设计     |
+|            The Little Schemer            |                   |
+| Rapid Development: Taming Wild Software Schedules |                   |
+| Concurrent Programming in Java: Design Principles and Patterns |                   |
+
+
 # 注释
 
 ```
