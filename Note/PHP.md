@@ -203,6 +203,14 @@ int strncmp ( string $str1 , string $str2 , int $len );
 
 > 如果 `str1` 小于 `str2` 返回 < 0； 如果 `str1` 大于 `str2` 返回 > 0；如果两者相等，返回 0。
 
+## `unset()`
+
+释放给定的变量
+
+```php
+void unset ( mixed $var [, mixed $... ] );
+```
+
 
 
 # PHP数组函数
