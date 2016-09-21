@@ -211,6 +211,22 @@ int strncmp ( string $str1 , string $str2 , int $len );
 void unset ( mixed $var [, mixed $... ] );
 ```
 
+## `call_user_func_array()`
+
+调用回调函数，并把一个数组参数作为回调函数的参数
+
+```php
+mixed call_user_func_array ( callable $callback , array $param_arr );
+```
+
+## `class_alias()`
+
+为一个类创建别名
+
+```php
+bool class_alias ( string $original , string $alias [, bool $autoload = TRUE ] )；
+```
+
 
 
 # PHP数组函数
