@@ -219,6 +219,13 @@ void unset ( mixed $var [, mixed $... ] );
 mixed call_user_func_array ( callable $callback , array $param_arr );
 ```
 
+## `class_alias()`
+
+为一个类创建别名
+
+```php
+bool class_alias ( string $original , string $alias [, bool $autoload = TRUE ] )；
+```
 
 
 
