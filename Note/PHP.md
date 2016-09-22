@@ -612,6 +612,14 @@ mixed array_rand( array $input [, int $num_req = 1]);
 string implode ( [string $glue,] array $pieces);
 ```
 
+## `explode()`
+
+使用一个字符串分割另一个字符串
+
+```php
+array explode ( string $delimiter, string $string[, int $limit]);
+```
+
 
 
 # PHP执行外部命令函数
