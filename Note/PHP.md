@@ -897,6 +897,18 @@ string urlencode ( string $str );
 string urldecode ( string $str );
 ```
 
+## `rawurlencode()`
+
+按照 **RFC 3986** 对 URL 进行编码
+
+```php
+string rawurlencode ( string $str );
+```
+
+## `rawurldecode()`
+
+对按照 **RFC 3986** 已编码的 URL 字符串进行解码
+
 
 
 # CURL
