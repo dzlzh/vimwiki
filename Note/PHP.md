@@ -861,6 +861,26 @@ string password_hash ( string $password , integer $algo [, array $options ] );
 string sha1 ( string $str [, bool $raw_output = false ] );
 ```
 
+## `mcrypt_encrypt()`
+
+使用给定参数加密明文
+
+```php
+string mcrypt_encrypt ( string $cipher , string $key , string $data , string $mode [, string $iv ] );
+```
+
+[详情](http://php.net/manual/zh/function.mcrypt-encrypt.php)
+
+## `mcrypt_decrypt()`
+
+使用给定参数解密密文
+
+```php
+string mcrypt_decrypt ( string $cipher , string $key , string $data , string $mode [, string $iv ] );
+```
+
+[详情](http://php.net/manual/zh/function.mcrypt-decrypt.php)
+
 
 
 # CURL
