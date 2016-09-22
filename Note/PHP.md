@@ -819,6 +819,14 @@ int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, reso
 
 # PHP 加密技术
 
+## `md5()`
+
+计算字符串的 MD5 散列值
+
+```php
+string md5 ( string $str [, bool $raw_output = false ] );
+```
+
 
 
 
