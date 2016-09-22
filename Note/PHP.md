@@ -211,6 +211,14 @@ int strncmp ( string $str1 , string $str2 , int $len );
 void unset ( mixed $var [, mixed $... ] );
 ```
 
+## `call_user_func()`
+
+把第一个参数作为回调函数调用
+
+```php
+mixe call_user_func( callable $callback [, mixed $parameter [, mixed $...]]);
+```
+
 ## `call_user_func_array()`
 
 调用回调函数，并把一个数组参数作为回调函数的参数
@@ -594,6 +602,30 @@ int array_push ( array &$array , mixed $var [, mixed $... ] );
 
 ```php
 mixed array_pop ( array &$array );
+```
+
+## `array_rand()`
+
+从数组中随机取出一个或多个单元
+
+```php
+mixed array_rand( array $input [, int $num_req = 1]);
+```
+
+## `implode()`
+
+将一个一维数组的值转化为字符串
+
+```php
+string implode ( [string $glue,] array $pieces);
+```
+
+## `explode()`
+
+使用一个字符串分割另一个字符串
+
+```php
+array explode ( string $delimiter, string $string[, int $limit]);
 ```
 
 
@@ -1297,6 +1329,20 @@ echo $password;
 |     `uasort()`      |  值   |        是         |    由用户定义     |   `uksort()`    |
 |     `uksort()`      |  键   |        是         |    由用户定义     |   `uasort()`    |
 |      `usort()`      |  值   |        否         |    由用户定义     |   `uasort()`    |
+
+
+
+# PHP 链式操作
+
+**链式操作的核心部分是方法返回值是类本身**
+
+类方法时，方法返回值为：
+
+`return $this;`
+
+类静态方法时，方法返回值为：
+
+`return new self;`
 
 
 
