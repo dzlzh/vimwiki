@@ -211,6 +211,14 @@ int strncmp ( string $str1 , string $str2 , int $len );
 void unset ( mixed $var [, mixed $... ] );
 ```
 
+## `call_user_func()`
+
+把第一个参数作为回调函数调用
+
+```php
+mixe call_user_func( callable $callback [, mixed $parameter [, mixed $...]]);
+```
+
 ## `call_user_func_array()`
 
 调用回调函数，并把一个数组参数作为回调函数的参数
