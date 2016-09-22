@@ -596,6 +596,14 @@ int array_push ( array &$array , mixed $var [, mixed $... ] );
 mixed array_pop ( array &$array );
 ```
 
+## `array_rand()`
+
+从数组中随机取出一个或多个单元
+
+```php
+mixed array_rand( array $input [, int $num_req = 1]);
+```
+
 
 
 # PHP执行外部命令函数
