@@ -604,6 +604,14 @@ mixed array_pop ( array &$array );
 mixed array_rand( array $input [, int $num_req = 1]);
 ```
 
+## `implode()`
+
+将一个一维数组的值转化为字符串
+
+```php
+string implode ( [string $glue,] array $pieces);
+```
+
 
 
 # PHP执行外部命令函数
