@@ -853,6 +853,14 @@ string password_hash ( string $password , integer $algo [, array $options ] );
 * **`PASSWORD_DEFAULT`** - 使用 bcrypt 算法 (PHP 5.5.0 默认)。 注意，该常量会随着 PHP 加入更新更高强度的算法而改变。 所以，使用此常量生成结果的长度将在未来有变化。 因此，数据库里储存结果的列可超过60个字符（最好是255个字符）。
 * **`PASSWORD_BCRYPT`** - 使用 **`CRYPT_BLOWFISH`** 算法创建哈希。 这会产生兼容使用 "`$2y$`" 的 `crypt()`。 结果将会是 60 个字符的字符串， 或者在失败时返回 **`FALSE`**。
 
+## `sha1()`
+
+计算字符串的 sha1 散列值
+
+```php
+string sha1 ( string $str [, bool $raw_output = false ] );
+```
+
 
 
 # CURL
