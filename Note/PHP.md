@@ -881,6 +881,22 @@ string mcrypt_decrypt ( string $cipher , string $key , string $data , string $mo
 
 [详情](http://php.net/manual/zh/function.mcrypt-decrypt.php)
 
+## `urlencode()`
+
+编码 URL 字符串
+
+```php
+string urlencode ( string $str );
+```
+
+## `urldecode()`
+
+解码已编码的 URL 字符串
+
+```php
+string urldecode ( string $str );
+```
+
 
 
 # CURL
