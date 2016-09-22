@@ -909,6 +909,22 @@ string rawurlencode ( string $str );
 
 对按照 **RFC 3986** 已编码的 URL 字符串进行解码
 
+## `base64_encode()`
+
+使用 **MIME base64** 对数据进行编码
+
+```php
+string base64_encode ( string $data );
+```
+
+## `base64_decode()`
+
+对使用 **MIME base64** 编码的数据进行解码
+
+```php
+string base64_decode ( string $data [, bool $strict = false ] );
+```
+
 
 
 # CURL
