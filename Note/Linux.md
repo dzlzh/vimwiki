@@ -91,6 +91,15 @@ uncompress *.Z
 7z x       *.7z
 ```
 
+## `source`
+
+`source` 命令也称为 “点命令”，也就是一个点符号（.）。`source` 命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录。
+
+```sh
+source filename
+. filename
+```
+
 
 
 # Centos
