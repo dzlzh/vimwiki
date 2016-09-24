@@ -556,3 +556,23 @@ document.cookie = updatedCookie;
 jQuery.getJSON(url,data,success(data,status,xhr));
 ```
 
+
+
+# JavaScript 小技巧
+
+## 取整
+
+```javascript
+var a = 1.99999,
+    b = -1234.56789,
+    c = 9876.00001;
+
+~~a;  // 1
+~~b;  // -1234
+~~c;  // 9876
+
+0 | a; // 1
+0 | b; // -1234
+0 | c; // 9876
+```
+
