@@ -174,6 +174,19 @@ public:
             current_node->next = node;
         }
     }
+    
+    void output()
+    {
+        if (head == NULL) {
+            return;
+        }
+        Node *current_node = head;
+        while (current_node != NULL) {
+            cout << current_node->data << " ";
+            current_node = current_node->next;
+        }
+        cout << endl;
+    }
 
 };
 int main() {
@@ -182,7 +195,7 @@ int main() {
         Node *node = new Node(i);
         linkedlist.insert(node, i - 1);
     }
-
+    linkedlist.output();
     return 0;
 }
 ```
