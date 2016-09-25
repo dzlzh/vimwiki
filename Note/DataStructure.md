@@ -122,3 +122,68 @@ int main() {
 - 元素不能随机访问。
 - 元素前面和后面不会出现多个元素相连的情况。
 
+```c++
+#include<iostream>
+using std::cout;
+using std::endl;
+class Node {
+public:
+    int data;
+    Node* next;
+    Node(int _data) {
+        data = _data;
+        next = NULL;
+    }
+};
+class LinkedList {
+private:
+    Node* head;
+public:
+    LinkedList() {
+        head = NULL;
+    }
+    ~LinkedList() {
+        Node *current_node = head;
+        while (current_node != NULL) {
+            Node *delete_node = current_node;
+            current_node = current_node->next;
+            delete delete_node;
+        }
+    }
+    void insert(Node *node, int index) {
+        if (head == NULL) {
+            if (index != 0) {
+                return;
+            }
+            head = node;
+            return;
+        }
+        if (index == 0) {
+            node->next = head;
+            head = node;
+            return;
+        }
+        Node *current_node = head;
+        int count = 0;
+        while (current_node->next != NULL && count < index - 1) {
+            current_node = current_node->next;
+            count++;
+        }
+        if (count == index - 1) {
+            node->next = current_node->next;
+            current_node->next = node;
+        }
+    }
+
+};
+int main() {
+    LinkedList linkedlist;
+    for (int i = 1; i <= 10; i++) {
+        Node *node = new Node(i);
+        linkedlist.insert(node, i - 1);
+    }
+
+    return 0;
+}
+```
+
