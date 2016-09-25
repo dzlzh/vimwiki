@@ -150,8 +150,8 @@ public:
             delete delete_node;
         }
     }
-  
-    void insert(Node *node, int index) {
+    void insert(Node *node, int index)
+    {
         if (head == NULL) {
             if (index != 0) {
                 return;
@@ -175,7 +175,6 @@ public:
             current_node->next = node;
         }
     }
-  
     void output()
     {
         if (head == NULL) {
@@ -188,7 +187,6 @@ public:
         }
         cout << endl;
     }
-
     void delete_node(int index)
     {
         if (head == NULL) {
@@ -211,6 +209,23 @@ public:
             delete delete_node;
         }
     }
+    
+    void reverse()
+    {
+        if (head == NULL) {
+            return;
+        }
+        Node *next_node, *current_node;
+        current_node = head->next;
+        head->next = NULL;
+        while (current_node != NULL) {
+            next_node = current_node->next;
+            current_node->next = head;
+            head = current_node;
+            current_node = next_node;
+        }
+    }
+
 };
 int main() {
     LinkedList linkedlist;
@@ -221,7 +236,10 @@ int main() {
     linkedlist.output();
     linkedlist.delete_node(8);
     linkedlist.output();
+    linkedlist.reverse();
+    linkedlist.output();
     return 0;
 }
+
 ```
 
