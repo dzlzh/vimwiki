@@ -311,6 +311,23 @@ public:
             head = node;
         }
     }
+
+    void output_josephus(int m)
+    {
+        Node *current_node = head;
+        head = NULL;
+        while (current_node->next != current_node) {
+            for (int i = 1; i < m; i++) {
+                current_node = current_node->next;
+            }
+            cout << current_node->next->data << " ";
+            Node *delete_node = current_node->next;
+            current_node->next = current_node->next->next;
+            delete delete_node;
+        }
+        cout << current_node->data << endl;
+        delete current_node;
+    }
 };
 int main() {
     LinkedList linkedlist;
@@ -320,6 +337,7 @@ int main() {
         Node *node = new Node(i);
         linkedlist.insert(node, i - 1);
     }
+    linkedlist.output_josephus(m);
     return 0;
 }
 ```
