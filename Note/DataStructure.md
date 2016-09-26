@@ -250,3 +250,79 @@ int main() {
 
 相比单链表，循环链表不同的是它将最后一个结点的指针指向了头结点，这样的结构使得链表更加灵活方便。循环链表里没有空指针，所以在判断结束条件时，不再是判断指针是否为空，而是判断指针是否等于某固定指针。另外，在单链表里，一个节点只能访问到它后面的结点，而在循环链表里它可以访问到所有的结点。
 
+```c++
+#include<iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+class Node {
+public:
+    int data;
+    Node* next;
+    Node(int _data) {
+        data = _data;
+        next = NULL;
+    }
+};
+class LinkedList {
+private:
+    Node* head;
+public:
+    LinkedList() {
+        head = NULL;
+    }
+    ~LinkedList() {
+        if (head == NULL) {
+            return;
+        }
+        Node *current_node = head->next;
+        head->next = NULL;
+        while (current_node != NULL) {
+            Node *delete_node = current_node;
+            current_node = current_node->next;
+            delete delete_node;
+        }
+    }
+    void insert(Node *node, int index) {
+        if (head == NULL) {
+            if (index != 0) {
+                return;
+            }
+            head = node;
+            head->next = head;
+            return;
+        }
+        if (index == 0) {
+            node->next = head->next;
+            head->next = node;
+            return;
+        }
+        Node *current_node = head->next;
+        int count = 0;
+        while (current_node != head && count < index - 1) {
+            current_node = current_node->next;
+            count++;
+        }
+        if (count == index - 1) {
+            node->next = current_node->next;
+            current_node->next = node;
+        }
+        if (node == head->next) {
+            head = node;
+        }
+    }
+};
+int main() {
+    LinkedList linkedlist;
+    int n, m;
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++) {
+        Node *node = new Node(i);
+        linkedlist.insert(node, i - 1);
+    }
+    return 0;
+}
+```
+
+
+
