@@ -579,7 +579,9 @@ $(selector).after(content);
 $(selector).before(content);
 ```
 
-## `jQuery.getJSON()`
+## jQuery AJAX
+
+### `jQuery.getJSON()`
 
 使用 `AJAX` 请求来获得 `JSON` 数据
 
