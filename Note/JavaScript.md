@@ -579,6 +579,32 @@ $(selector).after(content);
 $(selector).before(content);
 ```
 
+## jQuery traversing
+
+### `jQuery.parent()`
+
+返回被选元素的直接父元素
+
+```javascript
+$(selector).parent();
+```
+
+### `jQuery.parents()`
+
+返回被选元素的所有祖先元素，它一路向上直到文档的根元素
+
+```javascript
+$(selector).parents();
+```
+
+### `jQuery.parentsUntil()`
+
+返回介于两个给定元素之间的所有祖先元素
+
+```javascript
+$(selector1).parentsUntil(selector2);
+```
+
 ## jQuery AJAX
 
 ### `jQuery.getJSON()`
