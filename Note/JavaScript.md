@@ -1,25 +1,12 @@
-# 运算符
+# JavaScript
 
-## 按位非运算符
+## Function
 
-位运算`NOT`由否定号`~`表示。
-
-> 位运算`NOT`是三步的处理过程：
-> 1. 把运算数转换成32位数字
-> 2. 把二进制数转换成它的二进抽反码
-> 3. 把二进制数转换成浮点数
-
-对任一数值x进行按位非操作的结果为`-(x + 1)`
-
-
-
-# JavaScript Function
-
-## `arguments`
+### `arguments`
 
 一个类数组对象。代表传给一个`function`的参数列表。
 
-## `parseInt()`
+### `parseInt()`
 
 将给定的字符串以指定基数（radix/base）解析成为整数。
 
@@ -41,7 +28,7 @@ parseInt(string, radix);
 
 > 一个2到36之间的整数值，用于指定转换中采用的基数。比如参数"10"表示使用我们通常使用的十进制数值系统。**总是指定该参数**可以消除阅读该代码时的困惑并且保证转换结果可预测。当忽略该参数时，不同的实现环境可能产生不同的结果。
 
-## `fun.call()`
+### `fun.call()`
 
 使用一个指定的`this`值和若干个指定的参数值的前提下调用某个函数或方法
 
@@ -56,11 +43,9 @@ fun.call(thisArg[, arg1[, arg2[, ...]]]);
 > 在*fun*函数运行时指定的`this`值*。*需要注意的是，指定的`this`值并不一定是该函数执行时真正的`this`值，如果这个函数处于**非严格模式下**，则指定为`null`和`undefined`的`this值会自动指向`全局对象(浏览器中就是window对象)，同时值为原始值(数字，字符串，布尔值)的`this`会指向该原始值的自动包装对象。
 >
 
+## String 对象
 
-
-# JavaScript String 对象
-
-## `str.match()`
+### `str.match()`
 
 字符串内检索指定的值,或找到一个或多个正则表达式的匹配
 
@@ -69,7 +54,7 @@ str.match(searchvalue);
 str.match(regexp);
 ```
 
-## `str.split()`
+### `str.split()`
 
 使用指定的分隔符将一个字符串拆分为多个子字符串，并将其以数组形式返回
 
@@ -88,7 +73,7 @@ str.split([separator[, limit]]);
 
 > 可选。一个用于限制数组中返回的元素数量的值。
 
-## `str.toLowerCase()`
+### `str.toLowerCase()`
 
 字符串转为小写形式
 
@@ -96,7 +81,7 @@ str.split([separator[, limit]]);
 str.toLowerCase();
 ```
 
-## `str.toUpperCase()`
+### `str.toUpperCase()`
 
 字符串转为大写形式
 
@@ -104,7 +89,7 @@ str.toLowerCase();
 str.toUpperCase();
 ```
 
-## `str.replace()`
+### `str.replace()`
 
 使用一个替换值（replacement）替换掉一个匹配模式（pattern）在原字符串中某些或所有的匹配项，并返回替换后的新的字符串
 
@@ -112,7 +97,7 @@ str.toUpperCase();
 str.replace(regexp|substr, newSubStr|function);
 ```
 
-## `str.slice()`
+### `str.slice()`
 
 提取字符串的某个部分，并以新的字符串返回被提取的部分
 
@@ -120,7 +105,7 @@ str.replace(regexp|substr, newSubStr|function);
 str.slice(start,end);
 ```
 
-## `str.substr()`
+### `str.substr()`
 
 返回字符串中从指定位置开始到指定长度的子字符串
 
@@ -128,7 +113,7 @@ str.slice(start,end);
 str.substr(start[, length]);
 ```
 
-## `str.repeat()`
+### `str.repeat()`
 
 构造并返回一个重复当前字符串若干次数的新字符串
 
@@ -136,7 +121,7 @@ str.substr(start[, length]);
 var newStr = str.repeat(count);
 ```
 
-## `str.indexOf()`
+### `str.indexOf()`
 
 返回指定值在字符串对象中首次出现的位置,从formIndex位置开始查找,如果不存在,则返回-1
 
@@ -144,7 +129,7 @@ var newStr = str.repeat(count);
 str.indexOf(searchValue[, formIndex]);
 ```
 
-## `String.fromCharCode()`
+### `String.fromCharCode()`
 
 String对象提供的静态方法,根据指定的Unicode编码中的序号值来返回一个字串
 
@@ -152,7 +137,7 @@ String对象提供的静态方法,根据指定的Unicode编码中的序号值来
 String.fromCharCode(num1, ..., numN);
 ```
 
-## `str.charCodeAt()`
+### `str.charCodeAt()`
 
 返回给定位置字符的Unicode码点,相当与String.fromCharCode()的逆操作
 
@@ -160,11 +145,9 @@ String.fromCharCode(num1, ..., numN);
 str.charCodeAt(index);
 ```
 
+## Math对象
 
-
-# JavaScript Math对象
-
-## `Math.random()`
+### `Math.random()`
 
 返回介于0~1之间的一个随机数
 
@@ -172,7 +155,7 @@ str.charCodeAt(index);
 Math.random();
 ```
 
-## `Math.floor()`
+### `Math.floor()`
 
 对一个数进行下舍入
 
@@ -180,7 +163,7 @@ Math.random();
 Math.floor(x);
 ```
 
-## `Math.min()`
+### `Math.min()`
 
 返回零个或更多个数值的最小值
 
@@ -188,7 +171,7 @@ Math.floor(x);
 Math.min([value1[, value2, ...]]);
 ```
 
-## `Math.max()`
+### `Math.max()`
 
 返回一组数中的最大值
 
@@ -196,11 +179,9 @@ Math.min([value1[, value2, ...]]);
 Math.max([value1[, value2, ...]]);
 ```
 
+## JSON 对象
 
-
-# JSON 对象
-
-## `JSON.parse()`
+### `JSON.parse()`
 
 将 JavaScript 对象表示法 (JSON) 字符串转换为对象
 
@@ -222,7 +203,7 @@ JSON.parse(text [, reviver]);
 >
 > 如果 reviver 返回 null 或 undefined，则删除了该成员。
 
-## `JSON.stringify()`
+### `JSON.stringify()`
 
 将 JavaScript 值转换为 JavaScript 对象表示法 (Json) 字符串
 
@@ -256,11 +237,9 @@ JSON.stringify(value [, replacer][, space]);
 >
 > 如果 space 是长度大于 10 个字符的字符串，则使用前 10 个字符。
 
+## Array 对象
 
-
-# JavaScript Array 对象
-
-## `arr.map()`
+### `arr.map()`
 
 对数组的每个元素调用定义的回调函数并返回包含结果的数组
 
@@ -284,7 +263,7 @@ arr.map(callbackfn[, thisArg]);
 
 > 包含该元素的数组对象
 
-## `arr.reduce()`
+### `arr.reduce()`
 
 对数组中的所有元素调用指定的回调函数
 
@@ -312,7 +291,7 @@ arr.reduce(callbackfn[, initialValue]);
 
 > 包含该元素的数组对象。
 
-## `arr.filter()`
+### `arr.filter()`
 
 返回数组中的满足回调函数中指定的条件的元素
 
@@ -327,7 +306,7 @@ arr.filter(callbackfn[, thisArg]);
 
 > 同map
 
-## `arr.sort()`
+### `arr.sort()`
 
 对 Array 排序
 
@@ -345,7 +324,7 @@ arr.sort(sortFunction);
 >
 > 如果第一个参数大于第二个参数，则返回正值。
 
-## `arr.reverse()`
+### `arr.reverse()`
 
 反转 Array 中的元素
 
@@ -353,7 +332,7 @@ arr.sort(sortFunction);
 arr.reverse();
 ```
 
-## `arr.concat()`
+### `arr.concat()`
 
 组合两个或两个以上的数组
 
@@ -361,7 +340,7 @@ arr.reverse();
 arr.concat([item1[, item2[, . . . [, itemN]]]]);
 ```
 
-## `arr.join()`
+### `arr.join()`
 
 添加由指定分隔符字符串分隔的数组的所有元素
 
@@ -369,7 +348,7 @@ arr.concat([item1[, item2[, . . . [, itemN]]]]);
 arr.join([separator]);
 ```
 
-## `arr.push()`
+### `arr.push()`
 
 添加一个或多个元素到数组的末尾，并返回数组新的长度（length 属性值）
 
@@ -377,7 +356,7 @@ arr.join([separator]);
 arr.push(element1, ..., elmentN);
 ```
 
-## `arr.slice()`
+### `arr.slice()`
 
 复制数组的一部分到一个新的数组,并返回这个数组
 
@@ -385,7 +364,7 @@ arr.push(element1, ..., elmentN);
 arr.slice([begin[, end]]);
 ```
 
-## `arr.splice()`
+### `arr.splice()`
 
 用新元素替换旧元素,以此修改数组的内容
 
@@ -393,7 +372,7 @@ arr.slice([begin[, end]]);
 arr.splice(start, deleteCount[, item1[, item2, ...]]);
 ```
 
-## `arr.filter()`
+### `arr.filter()`
 
 使用指定的函数测试所有的元素,并创建一个包含所有通过测试的元素的新数组
 
@@ -408,7 +387,7 @@ arr.filter(callback[, thisArr]);
 >
 > 返回false则不保留
 
-## `arr.indexOf()`
+### `arr.indexOf()`
 
 返回给定元素能找在数组中找到的第一个索引值,否则返回-1
 
@@ -416,7 +395,7 @@ arr.filter(callback[, thisArr]);
 arr.indexOf(searchElement[, fromIndex = 0]);
 ```
 
-## `arr.forEach()`
+### `arr.forEach()`
 
 让数组的每一项都执行一次给定的函数
 
@@ -444,11 +423,9 @@ arr.forEach(callback[, thisArg]);
 
 > 可选参数。用来当作cakkback函数内this的值的对象。
 
+## Object对象
 
-
-# JavaScript Object对象
-
-## `Object.keys()`
+### `Object.keys()`
 
 返回一个由给定对象的所有可枚举自身属性的属性名组成的数组，数组中属性名的排列顺序和使用`for-in`循环遍历该对象时返回的顺序一致（两者的主要区别是for-in`还会遍历出一个对象从其原型链上继承到的可枚举属性）。
 
@@ -456,7 +433,7 @@ arr.forEach(callback[, thisArg]);
 Object.keys(obj);
 ```
 
-## `obj.toString()`
+### `obj.toString()`
 
 返回一个代表该对象的字符串
 
@@ -481,11 +458,9 @@ obj.toString();
 (62).toString(32);  // "1u"
 ```
 
+## Document
 
-
-# JavaScript Document
-
-## `document.querySelectorAll()`
+### `document.querySelectorAll()`
 
 返回当前文档中匹配一个特定选择器的所有的元素(使用深度优先，前序遍历规则这样的规则遍历所有文档节点) .返回的对象类型是 NodeList
 
@@ -495,7 +470,7 @@ elementList = document.querySelectorAll(selectors);
 
 > 在Chrome浏览器中可以用`$$()`
 
-## `document.querySelector()`
+### `document.querySelector()`
 
 返回当前文档中匹配一个特定选择器的第一个元素
 
@@ -503,7 +478,7 @@ elementList = document.querySelectorAll(selectors);
 element = document.querySelector(selectors);
 ```
 
-## `document.cookie`
+### `document.cookie`
 
 获取和设置与当前文档相关联的 cookie
 
@@ -529,32 +504,219 @@ document.cookie = updatedCookie;
   * `;secure` (cookie 只通过 https 协议传输)
 
 
+## Windows
+
+### `window.setInterval()`
+
+周期性地调用一个函数或者执行一段代码
+
+```javascript
+var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
+```
+
+
 
 # jQuery
 
-## `jQuery.append()`
+## Dom add
+
+### `jQuery.append()`
 
 在被选元素的结尾插入内容
 
-## `jQuery.prepend()`
+```javascript
+$(selector).append(content);
+```
+
+### `jQuery.prepend()`
 
 在被选元素的开头插入内容
 
-## `jQuery.after()`
+```javascript
+$(selector).prepend(content);
+```
+
+### `jQuery.after()`
 
 在被选元素之后插入内容
 
-## `jQuery.before()`
+```javascript
+$(selector).after(content);
+```
+
+### `jQuery.before()`
 
 在被选元素之前插入内容
 
-## `jQuery.getJSON()`
+```javascript
+$(selector).before(content);
+```
+
+## Traversing
+
+### `jQuery.parent()`
+
+返回被选元素的直接父元素
+
+```javascript
+$(selector).parent();
+```
+
+### `jQuery.parents()`
+
+返回被选元素的所有祖先元素，它一路向上直到文档的根元素
+
+```javascript
+$(selector).parents();
+```
+
+### `jQuery.parentsUntil()`
+
+返回介于两个给定元素之间的所有祖先元素
+
+```javascript
+$(selector1).parentsUntil(selector2);
+```
+
+### `jQuery.children()`
+
+返回被选元素的所有直接子元素
+
+```javascript
+$(selector).children([selector]);
+```
+
+### `jQuery.find()`
+
+返回被选元素的后代元素，一路向下直到最后一个后代
+
+```javascript
+$(selector1).find(selector2);
+```
+
+### `jQuery.siblings()`
+
+返回被选元素的所有同胞元素
+
+```javascript
+$(selector).sibligs([selector]);
+```
+
+### `jQuery.next()`
+
+返回被选元素的下一个同胞元素
+
+```javascript
+$(selector).next();
+```
+
+### `jQuery.nextAll()`
+
+返回被选元素的所有跟随的同胞元素
+
+```javascript
+$(selector).nextAll();
+```
+
+### `jQuery.nextUntil()`
+
+返回介于两个给定参数之间的所有跟随的同胞元素
+
+```javascript
+$(selector1).nextUntil(selector2);
+```
+
+### `jQuery.prev()`
+
+返回被选元素的前一个同胞元素
+
+```javascript
+$(selector).prev([selector]);
+```
+
+### `jQuery.prevAll()`
+
+返回被选元素的所有前面的同胞元素
+
+```javascript
+$(selector).prevAll([selector]);
+```
+
+### `jQuery.prevUntil()`
+
+返回介于两个给定参数之间的所有前面的同胞元素
+
+```javascript
+$(selector).prevUntil([selector][, filter]);
+$(selector).prevUntil([element][, filter])
+```
+
+### `jQuery.first()`
+
+返回被选元素的首个元素
+
+```javascript
+$(selector).first();
+```
+
+### `jQuery.last()`
+
+返回被选元素的最后一个元素
+
+```javascript
+$(selector).last();
+```
+
+### `jQuery.eq()`
+
+返回被选元素中带有指定索引号的元素
+
+```javascript
+$(selector).eq(index);
+```
+
+### `jQuery.filter()`
+
+匹配元素集合缩减为匹配指定选择器的元素
+
+```javascript
+$(selector).filter(selector);
+```
+
+### `jQuery.not()`
+
+返回不匹配标准的所有元素
+
+```javascript
+$(selector).not(selector);
+$(selector).not(element);
+$(selector).not(function(index));
+```
+
+## AJAX
+
+### `jQuery.getJSON()`
 
 使用 `AJAX` 请求来获得 `JSON` 数据
 
 ```javascript
-jQuery.getJSON(url,data,success(data,status,xhr));
+$.getJSON(url,data,success(data,status,xhr));
 ```
+
+
+
+# 运算符
+
+## 按位非运算符
+
+位运算`NOT`由否定号`~`表示。
+
+> 位运算`NOT`是三步的处理过程：
+> 1. 把运算数转换成32位数字
+> 2. 把二进制数转换成它的二进抽反码
+> 3. 把二进制数转换成浮点数
+
+对任一数值x进行按位非操作的结果为`-(x + 1)`
 
 
 
