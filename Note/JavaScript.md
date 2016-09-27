@@ -621,6 +621,63 @@ $(selector).children([selector]);
 $(selector1).find(selector2);
 ```
 
+### `jQuery.siblings()`
+
+返回被选元素的所有同胞元素
+
+```javascript
+$(selector).sibligs([selector]);
+```
+
+### `jQuery.next()`
+
+返回被选元素的下一个同胞元素
+
+```javascript
+$(selector).next();
+```
+
+### `jQuery.nextAll()`
+
+返回被选元素的所有跟随的同胞元素
+
+```javascript
+$(selector).nextAll();
+```
+
+### `jQuery.nextUntil()`
+
+返回介于两个给定参数之间的所有跟随的同胞元素
+
+```javascript
+$(selector1).nextUntil(selector2);
+```
+
+### `jQuery.prev()`
+
+返回被选元素的前一个同胞元素
+
+```javascript
+$(selector).prev([selector]);
+```
+
+### `jQuery.prevAll()`
+
+返回被选元素的所有前面的同胞元素
+
+```javascript
+$(selector).prevAll([selector]);
+```
+
+### `jQuery.prevUntil()`
+
+返回介于两个给定参数之间的所有前面的同胞元素
+
+```javascript
+$(selector).prevUntil([selector][, filter]);
+$(selector).prevUntil([element][, filter])
+```
+
 ## jQuery AJAX
 
 ### `jQuery.getJSON()`
