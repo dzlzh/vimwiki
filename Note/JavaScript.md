@@ -605,6 +605,22 @@ $(selector).parents();
 $(selector1).parentsUntil(selector2);
 ```
 
+### `jQuery.children()`
+
+返回被选元素的所有直接子元素
+
+```javascript
+$(selector).children([selector]);
+```
+
+### `jQuery.find()`
+
+返回被选元素的后代元素，一路向下直到最后一个后代
+
+```javascript
+$(selector1).find(selector2);
+```
+
 ## jQuery AJAX
 
 ### `jQuery.getJSON()`
