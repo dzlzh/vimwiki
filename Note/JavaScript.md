@@ -678,6 +678,48 @@ $(selector).prevUntil([selector][, filter]);
 $(selector).prevUntil([element][, filter])
 ```
 
+### `jQuery.first()`
+
+返回被选元素的首个元素
+
+```javascript
+$(selector).first();
+```
+
+### `jQuery.last()`
+
+返回被选元素的最后一个元素
+
+```javascript
+$(selector).last();
+```
+
+### `jQuery.eq()`
+
+返回被选元素中带有指定索引号的元素
+
+```javascript
+$(selector).eq(index);
+```
+
+### `jQuery.filter()`
+
+匹配元素集合缩减为匹配指定选择器的元素
+
+```javascript
+$(selector).filter(selector);
+```
+
+### `jQuery.not()`
+
+返回不匹配标准的所有元素
+
+```javascript
+$(selector).not(selector);
+$(selector).not(element);
+$(selector).not(function(index));
+```
+
 ## jQuery AJAX
 
 ### `jQuery.getJSON()`
