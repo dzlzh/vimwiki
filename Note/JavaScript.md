@@ -545,7 +545,9 @@ var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
 
 # jQuery
 
-## `jQuery.append()`
+## jQuery dom add
+
+### `jQuery.append()`
 
 在被选元素的结尾插入内容
 
@@ -553,7 +555,7 @@ var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
 $(selector).append(content);
 ```
 
-## `jQuery.prepend()`
+### `jQuery.prepend()`
 
 在被选元素的开头插入内容
 
@@ -561,7 +563,7 @@ $(selector).append(content);
 $(selector).prepend(content);
 ```
 
-## `jQuery.after()`
+### `jQuery.after()`
 
 在被选元素之后插入内容
 
@@ -569,7 +571,7 @@ $(selector).prepend(content);
 $(selector).after(content);
 ```
 
-## `jQuery.before()`
+### `jQuery.before()`
 
 在被选元素之前插入内容
 
