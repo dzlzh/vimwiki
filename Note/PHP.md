@@ -243,6 +243,14 @@ bool class_alias ( string $original , string $alias [, bool $autoload = TRUE ] )
 float ceil ( float $value );
 ```
 
+## `floor()`
+
+舍去法取整
+
+```php
+float floor ( float $value );
+```
+
 
 
 # PHP 数组函数
