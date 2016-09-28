@@ -251,6 +251,14 @@ float ceil ( float $value );
 float floor ( float $value );
 ```
 
+## `round()` 
+
+对浮点数进行四舍五入
+
+```php
+float round ( float $val [, int $precision = 0 [, int $mode = PHP_ROUND_HALF_UP ]] );
+```
+
 
 
 # PHP 数组函数
