@@ -1193,6 +1193,14 @@ static object __set_state ( array $properties )
 
 本方法的唯一参数是一个数组，其中包含按 `array('property' => value, ...)` 格式排列的类属性。
 
+## 运算符
+
+### 类型运算符
+
+- `instanceof` 用于确定一个 PHP 变量是否属于某一类 class 的实例
+- `instanceof` 也可以用来确定一个变量是不是继承自某一父类的子类的实例
+- `instanceof` 也可用于确定一个变量是不是实现了某个接口的对象的实例
+
 
 
 # PHP 静态 (Static) 关键字
