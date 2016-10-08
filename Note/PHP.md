@@ -768,6 +768,14 @@ bool is_dir ( string $filename );
 bool is_executable ( string $filename );
 ```
 
+## `is_file()`
+
+判断给定文件名是否为一个正常的文件
+
+```php
+bool is_file ( string $filename );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
