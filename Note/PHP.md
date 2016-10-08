@@ -760,6 +760,14 @@ string basename ( string $path [, string $suffix ] );
 bool is_dir ( string $filename );
 ```
 
+## `is_executable()`
+
+判断给定文件名是否可执行
+
+```php
+bool is_executable ( string $filename );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
