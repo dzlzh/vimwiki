@@ -792,6 +792,16 @@ bool is_link ( string $filename );
 bool is_readable ( string $filename );
 ```
 
+## `is_writable()`
+
+判断给定的文件名是否可写
+
+别名 `is_writeable()`
+
+```php
+bool is_writable ( string $filename );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
