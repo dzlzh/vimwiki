@@ -784,6 +784,14 @@ bool is_file ( string $filename );
 bool is_link ( string $filename );
 ```
 
+## `is_readable()`
+
+判断给定文件名是否可读
+
+```php
+bool is_readable ( string $filename );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
