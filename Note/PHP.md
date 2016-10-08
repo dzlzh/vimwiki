@@ -760,6 +760,56 @@ string basename ( string $path [, string $suffix ] );
 bool is_dir ( string $filename );
 ```
 
+## `is_executable()`
+
+判断给定文件名是否可执行
+
+```php
+bool is_executable ( string $filename );
+```
+
+## `is_file()`
+
+判断给定文件名是否为一个正常的文件
+
+```php
+bool is_file ( string $filename );
+```
+
+## `is_link()`
+
+判断给定文件名是否为一个符号连接
+
+```php
+bool is_link ( string $filename );
+```
+
+## `is_readable()`
+
+判断给定文件名是否可读
+
+```php
+bool is_readable ( string $filename );
+```
+
+## `is_writable()`
+
+判断给定的文件名是否可写
+
+别名 `is_writeable()`
+
+```php
+bool is_writable ( string $filename );
+```
+
+## `is_uploaded_file()`
+
+判断文件是否是通过 HTTP POST 上传的
+
+```php
+bool is_uploaded_file ( string $filename );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
@@ -1192,6 +1242,32 @@ static object __set_state ( array $properties )
 自 PHP 5.1.0 起当调用 `var_export()` 导出类时，此静态 方法会被调用。
 
 本方法的唯一参数是一个数组，其中包含按 `array('property' => value, ...)` 格式排列的类属性。
+
+## 运算符
+
+### 类型运算符
+
+- `instanceof` 用于确定一个 PHP 变量是否属于某一类 class 的实例
+- `instanceof` 也可以用来确定一个变量是不是继承自某一父类的子类的实例
+- `instanceof` 也可用于确定一个变量是不是实现了某个接口的对象的实例
+
+### 数组运算符
+
+- `+` **联合** 两个数组相联合
+- `==` **相等** 两个数组具有相同的键 / 值对则为 **TRUE**
+- `===` **全等** 两个数组具有相同的键 / 值对并且顺序和类型都相同则为 **TRUE**
+- `!=` **不等** 两个数组不等于则为 **TRUE**
+- `<>` **不等** 两个数组不等于则为 **TRUE**
+- `!==` **不全等** 两个数组不全等于则为 **TRUE**
+
+### 位运算符
+
+- `&` **And（按位与）** 两个数中都为 1 的位设为 1
+- `|` **Or（按位或）** 两个数中任何一个为 1 的位设为 1
+- `^` **Xor（按位异或）** 两个数中另一个为 1 另一个为 0 的位设为 1
+- `~` **Not（按位取反）** 将一个数的 0 位设为 1，反之亦然
+- `<<` **Shift left（左移）** 将一个数中的位向左移动 n 次（每一次移动都表示 “乘以 2”）
+- `>>` **Shift right（右移）** 将一个数中的位向右移动 n 次（每一次移动都表示 “除以 2”）
 
 
 
