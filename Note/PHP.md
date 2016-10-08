@@ -802,6 +802,14 @@ bool is_readable ( string $filename );
 bool is_writable ( string $filename );
 ```
 
+## `is_uploaded_file()`
+
+判断文件是否是通过 HTTP POST 上传的
+
+```php
+bool is_uploaded_file ( string $filename );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
