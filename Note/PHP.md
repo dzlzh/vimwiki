@@ -776,6 +776,14 @@ bool is_executable ( string $filename );
 bool is_file ( string $filename );
 ```
 
+## `is_link()`
+
+判断给定文件名是否为一个符号连接
+
+```php
+bool is_link ( string $filename );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
