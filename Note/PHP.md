@@ -267,6 +267,14 @@ float round ( float $val [, int $precision = 0 [, int $mode = PHP_ROUND_HALF_UP 
 bool is_numeric ( mixed $var );
 ```
 
+## `strtotime()`
+
+将任何英文文本的日期时间描述解析为 Unix 时间戳
+
+```php
+int strtotime ( string $time [, int $now = time() ] );
+```
+
 
 
 # PHP 数组函数
