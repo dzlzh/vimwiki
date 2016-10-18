@@ -668,6 +668,14 @@ string implode ( [string $glue,] array $pieces);
 array explode ( string $delimiter, string $string[, int $limit]);
 ```
 
+## `range()`
+
+建立一个包含指定范围单元的数组
+
+```php
+array range ( mixed $start, mixed $limit[, number $step = 1]);
+```
+
 
 
 # PHP 执行外部命令函数
@@ -1444,7 +1452,7 @@ log_errors = On
 **不同 PHP 版本下开启全部错误显示**
 
 - < 5.3 `-1` 或 `E_ALL`
--    5.3 `-1` 或 `E_ALL | E_STRICT`
+- 5.3 `-1` 或 `E_ALL | E_STRICT`
 - \> 5.3 `-1` 或 `E_ALL`
 
 ## 生产环境
