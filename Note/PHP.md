@@ -953,6 +953,14 @@ string file_get_contents ( string $filename [, bool $use_include_path = false [,
 int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, resource $context ]] );
 ```
 
+## `move_uploaded_file()`
+
+将上传的文件移动到新位置
+
+```php
+bool move_uploaded_file ( string $filename , string $destination );
+```
+
 ## `zip_open()`
 
 打开 ZIP 存档文件
