@@ -16,6 +16,14 @@ void header (string $string [, bool $replace = true [, int $http_response_code ]
 string iconv ( string $in_charset , string $out_charset , string $str );
 ```
 
+## `mb_detect_encoding()`
+
+检测字符的编码
+
+```php
+string mb_detect_encoding ( string $str [, mixed $encoding_list = mb_detect_order() [, bool $strict = false ]] );
+```
+
 ## `setcookie()`
 
 创建cookie
