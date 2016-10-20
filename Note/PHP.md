@@ -8,6 +8,14 @@
 void header (string $string [, bool $replace = true [, int $http_response_code ]])
 ```
 
+## `iconv()`
+
+字符串按要求的字符编码来转换
+
+```php
+string iconv ( string $in_charset , string $out_charset , string $str );
+```
+
 ## `setcookie()`
 
 创建cookie
