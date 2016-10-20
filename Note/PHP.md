@@ -760,6 +760,14 @@ bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive = false [, 
 bool chmod ( string $filename , int $mode );
 ```
 
+## `copy()`
+
+拷贝文件
+
+```php
+bool copy ( string $source , string $dest [, resource $context ] );
+```
+
 ## `file_exists()`
 
 检查文件或目录是否存在
