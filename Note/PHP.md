@@ -953,6 +953,86 @@ string file_get_contents ( string $filename [, bool $use_include_path = false [,
 int file_put_contents ( string $filename , mixed $data [, int $flags = 0 [, resource $context ]] );
 ```
 
+## `zip_open()`
+
+打开 ZIP 存档文件
+
+```php
+resource zip_open ( string $filename );
+```
+
+## `zip_read()`
+
+读取 ZIP 存档文件中下一项
+
+```php
+resource zip_read ( resource $zip );
+```
+
+## `zip_close()`
+
+关闭一个 ZIP 档案文件
+
+```php
+void zip_close ( resource $zip );
+```
+
+## `zip_entry_open()`
+
+打开用于读取的目录实体
+
+```php
+bool zip_entry_open ( resource $zip , resource $zip_entry [, string $mode ] );
+```
+
+## `zip_entry_name()`
+
+检索目录项的名称
+
+```php
+string zip_entry_name ( resource $zip_entry );
+```
+
+## `zip_entry_filesize()`
+
+检索目录实体的实际大小
+
+```php
+int zip_entry_filesize ( resource $zip_entry );
+```
+
+## `zip_entry_compressedsize()`
+
+检索目录项压缩过后的大小
+
+```php
+int zip_entry_compressedsize ( resource $zip_entry );
+```
+
+## `zip_entry_compressionmethod()`
+
+检索目录实体的压缩方法
+
+```php
+string zip_entry_compressionmethod ( resource $zip_entry );
+```
+
+## `zip_entry_read()`
+
+读取一个打开了的压缩目录实体
+
+```php
+string zip_entry_read ( resource $zip_entry [, int $length = 1024 ] );
+```
+
+## `zip_entry_close()`
+
+关闭目录项
+
+```php
+bool zip_entry_close ( resource $zip_entry );
+```
+
 
 
 # PHP 加密技术
