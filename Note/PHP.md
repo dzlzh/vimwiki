@@ -834,6 +834,14 @@ bool is_writable ( string $filename );
 bool is_uploaded_file ( string $filename );
 ```
 
+## `is_resource()`
+
+检测变量是否为资源类型
+
+```php
+bool is_resource( mixed $var );
+```
+
 ## `pathinfo()`
 
 返回文件路径的信息
