@@ -760,6 +760,22 @@ DIRECTORY_SEPARATOR
 bool mkdir ( string $pathname [, int $mode = 0777 [, bool $recursive = false [, resource $context ]]] );
 ```
 
+## `rmdir()`
+
+删除目录
+
+```php
+bool rmdir ( string $dirname [, resource $context ] );
+```
+
+## `unlink()`
+
+删除文件
+
+```php
+bool unlink ( string $filename [, resource $context ] );
+```
+
 ## `chmod()`
 
 改变文件模式
