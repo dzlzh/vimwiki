@@ -752,6 +752,78 @@ PHP内置常量，目录分隔符
 DIRECTORY_SEPARATOR
 ```
 
+## `dir()`
+
+返回一个 Directory 类实例
+
+```php
+Directory dir ( string $directory [, resource $context ] );
+```
+
+## `getcwd()`
+
+取得当前工作目录
+
+```php
+string getcwd ( void );
+```
+
+## `scandir()`
+
+列出指定路径中的文件和目录
+
+```php
+array scandir ( string $directory [, int $sorting_order [, resource $context ]] );
+```
+
+## `rewinddir()`
+
+倒回目录名柄
+
+```php
+void rewinddir ( resource $dir_handle );
+```
+
+## `chroot()`
+
+改变根目录
+
+```php
+bool chroot ( string $directory );
+```
+
+## `chdir()`
+
+改变目录
+
+```php
+bool chdir ( string $directory );
+```
+
+## `opendir()`
+
+打开目录名柄
+
+```php
+resource opendir ( string $path [, resource $context ] );
+```
+
+## `readdir()`
+
+从目录名柄中读取条目
+
+```php
+string readdir ( [ resource $dir_handle ] );
+```
+
+## `closedir()`
+
+关闭目录名柄
+
+```php
+void closedir ( [ resource $dir_handle ] );
+```
+
 ## `mkdir()`
 
 新建目录
