@@ -110,7 +110,15 @@ source filename
 . filename
 ```
 
+## 命令后台运行 
 
+- `&` 将指令丢到后台去执行，关掉终端会停止运行
+- `[ctrl]+Z` 将前台任务等到后台中暂停
+- `jobs -l` 查看后台的工作状态
+- `fg %jobnumber` 将后台的任务拿到前台来处理
+- `bg %jobnumber` 将后台任务入到后台中去处理
+- `kill` 管理后台的任务
+- `nohub` 后台运行，关掉终端也会继续运行
 
 # Centos
 
