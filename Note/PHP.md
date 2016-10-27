@@ -291,6 +291,22 @@ bool is_numeric ( mixed $var );
 int strtotime ( string $time [, int $now = time() ] );
 ```
 
+## `pack()`
+
+将数据打包成二进制字符串
+
+```php
+string pack ( string $format [, mixed $args [, mixed $... ]] );
+```
+
+## `unpack()`
+
+将二进制字符串进行解包
+
+```php
+array unpack ( string $format , string $data );
+```
+
 
 
 # PHP 数组函数
