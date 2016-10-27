@@ -145,6 +145,14 @@ String.fromCharCode(num1, ..., numN);
 str.charCodeAt(index);
 ```
 
+### `str.bold()`
+
+创建 HTML 元素 “b”，并将字符串加粗展示
+
+```javascript
+str.bold();
+```
+
 ## Math对象
 
 ### `Math.random()`
