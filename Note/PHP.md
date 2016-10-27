@@ -330,6 +330,15 @@ array unpack ( string $format , string $data );
 * `@` -- 填入 NULL 字符到绝对位置
 
 
+## `bin2hex()`
+
+函数把包含数据的二进制字符串转换为十六进制值
+
+```php
+string bin2hex ( string $str )；
+```
+
+
 
 # PHP 数组函数
 
