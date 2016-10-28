@@ -1661,12 +1661,12 @@ echo $password;
 |  无   |     `==` `!=` `===` `!==` `<>` `<=>`     |      比较运算符      |
 |  左   |                   `&`                    |     位运算符和引用     |
 |  左   |                   `^`                    |      位运算符       |
-|  左   |                   ``                    |      位运算符       |
+|  左   |                   `|`                    |      位运算符       |
 |  左   |                   `&&`                   |      逻辑运算符      |
-|  左   |                   ``                   |      逻辑运算符      |
+|  左   |                   `||`                   |      逻辑运算符      |
 |  左   |                   `??`                   |      比较运算符      |
 |  左   |                  `? :`                   |     ternary     |
-|  右   | `=` `+=` `-=` `*=` `**=` `/=` `.=` `%=` `&=` `=` `^=` `<<=` `>>=` |      赋值运算符      |
+|  右   | `=` `+=` `-=` `*=` `**=` `/=` `.=` `%=` `&=` `|=` `^=` `<<=` `>>=` |      赋值运算符      |
 |  左   |                  `and`                   |      逻辑运算符      |
 |  左   |                  `xor`                   |      逻辑运算符      |
 |  左   |                   `or`                   |      逻辑运算符      |
@@ -1690,6 +1690,30 @@ echo $password;
 |     `uasort()`      |  值   |        是         |    由用户定义     |   `uksort()`    |
 |     `uksort()`      |  键   |        是         |    由用户定义     |   `uasort()`    |
 |      `usort()`      |  值   |        否         |    由用户定义     |   `uasort()`    |
+
+
+
+# 类型比较表
+
+| 表达式 | `gettype()` | `empty()` | `is_null()` | `isset()` | `boolean:if($x)` |
+| :---:  | :---:       | :---:     | :---:       | :---:     | :---: |
+| `$x = "";` | `string` | `TRUE` | `FALSE` | `TRUE` | `FALSE`|
+| `$x = null;` | `NULL` | `TRUE`  | `TRUE` |`FALSE`|`FALSE`|
+| `var $x;` | `NULL` | `TRUE`  | `TRUE` |`FALSE`|`FALSE`|
+| `$x is undefined ` | `NULL` | `TRUE`  | `TRUE` |`FALSE`|`FALSE`|
+| `$x = array();` | `array` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
+| `$x = false;` | `boolean` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
+| `$x = true;` | `boolean` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = 1;` | `integer` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = 42;` | `integer` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = 0;` | `integer` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
+| `$x = -1;` | `integer` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = "1";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = "0";` | `string` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
+| `$x = "-1";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = "php";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = "true";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+| `$x = "false";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
 
 
 
