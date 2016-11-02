@@ -1661,9 +1661,9 @@ echo $password;
 |  无   |     `==` `!=` `===` `!==` `<>` `<=>`     |      比较运算符      |
 |  左   |                   `&`                    |     位运算符和引用     |
 |  左   |                   `^`                    |      位运算符       |
-|  左   |                   `|`                    |      位运算符       |
+|  左   |                   `\|`                   |      位运算符       |
 |  左   |                   `&&`                   |      逻辑运算符      |
-|  左   |                   `||`                   |      逻辑运算符      |
+|  左   |                  `\|\|`                  |      逻辑运算符      |
 |  左   |                   `??`                   |      比较运算符      |
 |  左   |                  `? :`                   |     ternary     |
 |  右   | `=` `+=` `-=` `*=` `**=` `/=` `.=` `%=` `&=` `|=` `^=` `<<=` `>>=` |      赋值运算符      |
@@ -1695,25 +1695,25 @@ echo $password;
 
 # 类型比较表
 
-| 表达式 | `gettype()` | `empty()` | `is_null()` | `isset()` | `boolean:if($x)` |
-| :---:  | :---:       | :---:     | :---:       | :---:     | :---: |
-| `$x = "";` | `string` | `TRUE` | `FALSE` | `TRUE` | `FALSE`|
-| `$x = null;` | `NULL` | `TRUE`  | `TRUE` |`FALSE`|`FALSE`|
-| `var $x;` | `NULL` | `TRUE`  | `TRUE` |`FALSE`|`FALSE`|
-| `$x is undefined ` | `NULL` | `TRUE`  | `TRUE` |`FALSE`|`FALSE`|
-| `$x = array();` | `array` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
-| `$x = false;` | `boolean` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
-| `$x = true;` | `boolean` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = 1;` | `integer` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = 42;` | `integer` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = 0;` | `integer` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
-| `$x = -1;` | `integer` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = "1";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = "0";` | `string` | `TRUE`  | `FALSE` |`TRUE`|`FALSE`|
-| `$x = "-1";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = "php";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = "true";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
-| `$x = "false";` | `string` | `FALSE`  | `FALSE` |`TRUE`|`TRUE`|
+|        表达式         | `gettype()` | `empty()` | `is_null()` | `isset()` | `boolean:if($x)` |
+| :----------------: | :---------: | :-------: | :---------: | :-------: | :--------------: |
+|     `$x = "";`     |  `string`   |  `TRUE`   |   `FALSE`   |  `TRUE`   |     `FALSE`      |
+|    `$x = null;`    |   `NULL`    |  `TRUE`   |   `TRUE`    |  `FALSE`  |     `FALSE`      |
+|     `var $x;`      |   `NULL`    |  `TRUE`   |   `TRUE`    |  `FALSE`  |     `FALSE`      |
+| `$x is undefined ` |   `NULL`    |  `TRUE`   |   `TRUE`    |  `FALSE`  |     `FALSE`      |
+|  `$x = array();`   |   `array`   |  `TRUE`   |   `FALSE`   |  `TRUE`   |     `FALSE`      |
+|   `$x = false;`    |  `boolean`  |  `TRUE`   |   `FALSE`   |  `TRUE`   |     `FALSE`      |
+|    `$x = true;`    |  `boolean`  |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|     `$x = 1;`      |  `integer`  |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|     `$x = 42;`     |  `integer`  |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|     `$x = 0;`      |  `integer`  |  `TRUE`   |   `FALSE`   |  `TRUE`   |     `FALSE`      |
+|     `$x = -1;`     |  `integer`  |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|    `$x = "1";`     |  `string`   |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|    `$x = "0";`     |  `string`   |  `TRUE`   |   `FALSE`   |  `TRUE`   |     `FALSE`      |
+|    `$x = "-1";`    |  `string`   |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|   `$x = "php";`    |  `string`   |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|   `$x = "true";`   |  `string`   |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
+|  `$x = "false";`   |  `string`   |  `FALSE`  |   `FALSE`   |  `TRUE`   |      `TRUE`      |
 
 
 
@@ -1741,6 +1741,17 @@ display_errors = Off
 display_startup_errors = Off
 error_reporting = E_ALL
 log_errors = On
+```
+
+
+
+# 上传设置
+
+```php
+upload_max_filesize = 2G;
+post_max_size = 2000M;
+memory_limit = 1024M;
+max_execution_time = 120;
 ```
 
 
