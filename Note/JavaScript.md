@@ -153,6 +153,14 @@ str.charCodeAt(index);
 str.bold();
 ```
 
+###  `str.charAt()`
+
+返回字符串中指定位置的字符
+
+```javascript
+str.charAt(index);
+```
+
 ## Math对象
 
 ### `Math.random()`
@@ -342,7 +350,7 @@ arr.reverse();
 
 ### `arr.concat()`
 
-组合两个或两个以上的数组
+组合两个或两个以上的非数组或数组
 
 ```javascript
 arr.concat([item1[, item2[, . . . [, itemN]]]]);
@@ -776,5 +784,13 @@ var a = 1.99999,
 +[]    === 0
 +!+[]  === 1
 []+[]  === ""
+```
+
+## 判断一个单词是否是回文
+
+```javascript
+function checkPalindrom(str) {
+  return str == str.split('').reverse().join('');
+}
 ```
 
