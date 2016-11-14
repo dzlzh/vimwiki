@@ -338,6 +338,56 @@ array unpack ( string $format , string $data );
 string bin2hex ( string $str )；
 ```
 
+## `rand()`
+
+产生一个随机整数
+
+```php
+int rand ( vodi );
+int rand ( int $min, int $max );
+```
+
+## `mt_rand()`
+
+生成更好的随机数
+
+```php
+int mt_rand ( void );
+int mt_rand ( int $min, int $max );
+```
+
+## `srand()`
+
+播下随机数发生器种子
+
+```php
+void srand ( [ int $seed ] );
+```
+
+## `mt_srand()`
+
+播下一个更好的随机数发生器种子
+
+```php
+void mt_srand ( [ int $seed ] );
+```
+
+## `getrandmax()`
+
+显示随机数最大的可能值
+
+```php
+int getrandmax ( void );
+```
+
+## `mt_getrandmax()`
+
+显示 `mt_rand()` 随机数的最大可能值
+
+```php
+int mt_getrandmax ( void );
+```
+
 
 
 # PHP 数组函数
