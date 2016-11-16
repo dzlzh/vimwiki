@@ -1250,6 +1250,30 @@ string zip_entry_read ( resource $zip_entry [, int $length = 1024 ] );
 bool zip_entry_close ( resource $zip_entry );
 ```
 
+## `tempnam()`
+
+建立一个具有唯一文件名的文件
+
+```php
+string tempnam ( string $dir, string $prefix );
+```
+
+## `tmpfile()`
+
+建立一个临时文件
+
+```php
+resource tmpfile ( void );
+```
+
+## `sys_get_temp_dir()`
+
+返回用于临时文件的目录
+
+```php
+string sys_get_temp_dir( void );
+```
+
 
 
 # PHP 加密技术
