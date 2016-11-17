@@ -99,6 +99,7 @@ tar xzf    *.tgz
 unzip      *.zip
 uncompress *.Z
 7z x       *.7z
+tar xvJf   *.tar.xz 
 ```
 
 ## `source`
