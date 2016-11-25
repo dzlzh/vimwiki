@@ -545,6 +545,16 @@ editable = element.contentEditable
 element.contentEditable = "true"
 ```
 
+## RegExp
+
+### `regexObj.test()`
+
+执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 `true` 或 `false`
+
+```javascript
+regexObj.test(str);
+```
+
 
 
 # jQuery
@@ -722,6 +732,32 @@ $(selector).filter(selector);
 $(selector).not(selector);
 $(selector).not(element);
 $(selector).not(function(index));
+```
+
+## CSS
+
+### [`jQuery.css()`](http://www.runoob.com/jquery/css-css.html)
+
+返回或设置匹配的元素的一个或多个样式属性
+
+```javascript
+//返回CSS属性值
+$(selector).css(property);
+//设置CSS属性和值
+$(selector).css(property, value);
+```
+
+## Attribute
+
+### [`jQuery.attr()`](http://www.runoob.com/jquery/html-attr.html)
+
+返回或设置被选元素的属性和值
+
+```javascript
+//返回属性的值
+$(selector).attr(attribute);
+//设置属性和值
+$(selector).attr(attribute,value);
 ```
 
 ## AJAX

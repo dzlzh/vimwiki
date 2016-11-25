@@ -338,6 +338,76 @@ array unpack ( string $format , string $data );
 string bin2hex ( string $str )；
 ```
 
+## `rand()`
+
+产生一个随机整数
+
+```php
+int rand ( vodi );
+int rand ( int $min, int $max );
+```
+
+## `mt_rand()`
+
+生成更好的随机数
+
+```php
+int mt_rand ( void );
+int mt_rand ( int $min, int $max );
+```
+
+## `srand()`
+
+播下随机数发生器种子
+
+```php
+void srand ( [ int $seed ] );
+```
+
+## `mt_srand()`
+
+播下一个更好的随机数发生器种子
+
+```php
+void mt_srand ( [ int $seed ] );
+```
+
+## `getrandmax()`
+
+显示随机数最大的可能值
+
+```php
+int getrandmax ( void );
+```
+
+## `mt_getrandmax()`
+
+显示 `mt_rand()` 随机数的最大可能值
+
+```php
+int mt_getrandmax ( void );
+```
+
+## [`trim()`](http://php.net/manual/zh/function.trim.php)
+
+去除字符串首尾处的空白字符（或者其他字符）
+
+```php
+string trim ( string $str [, string $charlist = "\t\n\r\0\x0B" ] );
+```
+
+>" " (ASCII *32* (*0x20*))，普通空格符
+>
+>"\t" (ASCII *9* (*0x09*))，制表符
+>
+>"\n" (ASCII *10* (*0x0A*))，换行符
+>
+>"\r" (ASCII *13* (*0x0D*))，回车符
+>
+>"\0" (ASCII *0* (*0x00*))，空字节符
+>
+>"\x0B" (ASCII *11* (*0x0B*))，垂直制表符
+
 
 
 # PHP 数组函数
@@ -470,12 +540,36 @@ bool array_key_exists ( mixed $key , array $search );
 mixed array_search ( mixed $needle , array $haystack [, bool $strict = false ] );
 ```
 
+## [`array_keys()`](http://php.net/manual/zh/function.array-keys.php)
+
+返回数组中部分的或所有的键名
+
+```php
+array array_keys ( array $array [, mixed $search_value [, bool $strict = false ]] );
+```
+
+## [`array_values()`](http://php.net/manual/zh/function.array-values.php)
+
+返回数组中所有的值
+
+```php
+array array_values ( array $input );
+```
+
 ##  `array_map()`
 
 将回调函数作用到给定数组的单元上
 
 ```php
 array array_map ( callable $callback , array $arr1 [, array $... ] );
+```
+
+## [`key()`](http://php.net/manual/zh/function.key.php)
+
+从关联数组中取得键名
+
+```php
+mixed key ( array &$array );
 ```
 
 ## `current()`
@@ -737,6 +831,84 @@ array explode ( string $delimiter, string $string[, int $limit]);
 
 ```php
 array range ( mixed $start, mixed $limit[, number $step = 1]);
+```
+
+## [`array_merge()`](http://php.net/manual/zh/function.array-merge.php)
+
+合并一个或多个数组
+
+```php
+array array_merge( array $array1 [, array $...] );
+```
+
+> 如果有相同的字符串键名，则该键名后面的值将覆盖前一个值。然而，如果数组包含数字键名，后面的值将*不会*覆盖原来的值，而是附加到后面。
+>
+> `+` 运算符
+>
+> 如果数组中有相同的__键名__，刚会把最先出现的值作为最终结果返回，而把后面拥有相同键名的值抛弃掉。
+
+## [`array_merge_recursive()`](http://php.net/manual/zh/function.array-merge-recursive.php)
+
+递归地合并一个或多个数组
+
+```php
+array array_merge_recursive ( array $array1 [, array $...] );
+```
+
+## [`array_combine()`](http://php.net/manual/zh/function.array-combine.php)
+
+创建一个数组，用一个数组的值作为其键名，另一个数组的值作为其值
+
+```php
+array array_combine ( array $keys , array $values );
+```
+
+## [`array_slice()`](http://php.net/manual/zh/function.array-slice.php)
+
+从数组中取出一段
+
+```php
+array array_slice ( array $array , int $offset [, int $length = NULL [, bool $preserve_keys = false ]] );
+```
+
+## [`array_chunk()`](http://php.net/manual/zh/function.array-chunk.php)
+
+将一个数组分割成多个
+
+```php
+array array_chunk ( array $input , int $size [, bool $preserve_keys = false ] );
+```
+
+## [`array_intersect()`](http://php.net/manual/zh/function.array-intersect.php)
+
+计算数组的交集
+
+```php
+array array_intersect ( array $array1 , array $array2 [, array $ ... ] );
+```
+
+## [`array_intersect_assoc()`](http://php.net/manual/zh/function.array-intersect-assoc.php)
+
+带索引检查计算数组的交集
+
+```php
+array array_intersect_assoc ( array $array1 , array $array2 [, array $ ... ] );
+```
+
+## [`array_diff()`](http://php.net/manual/zh/function.array-diff.php)
+
+计算数组的差集
+
+```php
+array array_diff ( array $array1 , array $array2 [, array $... ] );
+```
+
+## [`array_diff_assoc()`](http://php.net/manual/zh/function.array-diff-assoc.php)
+
+带索引检查计算数组的差集
+
+```php
+array array_diff_assoc ( array $array1 , array $array2 [, array $... ] );
 ```
 
 
@@ -1198,6 +1370,30 @@ string zip_entry_read ( resource $zip_entry [, int $length = 1024 ] );
 
 ```php
 bool zip_entry_close ( resource $zip_entry );
+```
+
+## `tempnam()`
+
+建立一个具有唯一文件名的文件
+
+```php
+string tempnam ( string $dir, string $prefix );
+```
+
+## `tmpfile()`
+
+建立一个临时文件
+
+```php
+resource tmpfile ( void );
+```
+
+## `sys_get_temp_dir()`
+
+返回用于临时文件的目录
+
+```php
+string sys_get_temp_dir( void );
 ```
 
 

@@ -99,6 +99,7 @@ tar xzf    *.tgz
 unzip      *.zip
 uncompress *.Z
 7z x       *.7z
+tar xvJf   *.tar.xz 
 ```
 
 ## `source`
@@ -108,6 +109,15 @@ uncompress *.Z
 ```sh
 source filename
 . filename
+```
+
+## `ls` 显示时间
+
+```shell
+ls -lc #最后更改时间
+ls -u  #最后存取时间
+ls -l  #最后修改时间
+ls --time-style '+%Y/%m/%d %H:%M:%S'  #时间格式
 ```
 
 
