@@ -830,3 +830,24 @@ function checkPalindrom(str) {
 }
 ```
 
+## 类型转换
+
+__数字__
+
+```javascript
++'123.456'; //123.456 number
+~~'123.456'; //123 取整
+```
+
+__字符串__
+
+```javascript
+'' + value;
+```
+
+__布尔__
+
+```javascript
+!!(0); //false
+```
+
