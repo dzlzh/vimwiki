@@ -408,6 +408,14 @@ string trim ( string $str [, string $charlist = "\t\n\r\0\x0B" ] );
 >
 >"\x0B" (ASCII *11* (*0x0B*))，垂直制表符
 
+## [`strrpos()`](https://secure.php.net/manual/zh/function.strrpos.php)
+
+计算指定字符串在目标字符串中最后一次出现的位置
+
+```php
+int strrpos ( string $haystack , string $needle [, int $offset = 0 ] );
+```
+
 
 
 # PHP 数组函数
