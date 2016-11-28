@@ -120,6 +120,12 @@ ls -l  #最后修改时间
 ls --time-style '+%Y/%m/%d %H:%M:%S'  #时间格式
 ```
 
+## 创建多级目录
+
+```sh
+mkdir -p /tmp/tmp1/tmp2
+```
+
 
 
 # Centos
