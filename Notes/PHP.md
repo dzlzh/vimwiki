@@ -116,6 +116,14 @@ mixed unserialize ( string $str );
 bool class_exists ( string $class_name [, bool $autoload = true ] );
 ```
 
+## [`method_exists()`](https://secure.php.net/manual/zh/function.method-exists.php)
+
+检查类的方法是否存在
+
+```php
+bool method_exists ( mixed $object , string $method_name );
+```
+
 ## `func_num_args()`
 
 返回调用函数的传入参数个数
@@ -189,6 +197,30 @@ string strtolower ( string $string );
 
 ```php
 string strtoupper ( string $string );
+```
+
+## [`ucfirst()`](https://secure.php.net/manual/zh/function.ucfirst.php)
+
+将字符串的首字母转换为大写
+
+```php
+string ucfirst ( string $str );
+```
+
+## [`lcfirst()`](https://secure.php.net/manual/zh/function.lcfirst.php)
+
+将字符串的首字母转换为小写
+
+```php
+string lcfirst ( string $str );
+```
+
+## [`ucwords()`](https://secure.php.net/manual/zh/function.ucwords.php)
+
+将字符串中每个单词的首字母转换为大写
+
+```php
+string ucwords ( string $str );
 ```
 
 ## `mb_substr()`
@@ -414,6 +446,14 @@ string trim ( string $str [, string $charlist = "\t\n\r\0\x0B" ] );
 
 ```php
 int strrpos ( string $haystack , string $needle [, int $offset = 0 ] );
+```
+
+## [`parse_url()`](https://secure.php.net/manual/zh/function.parse-url.php)
+
+解析 URL，返回其组成部分
+
+```php
+mixed parse_url ( string $url [, int $component = -1 ] );
 ```
 
 
