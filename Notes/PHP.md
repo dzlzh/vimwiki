@@ -456,6 +456,30 @@ int strrpos ( string $haystack , string $needle [, int $offset = 0 ] );
 mixed parse_url ( string $url [, int $component = -1 ] );
 ```
 
+## [`sprintf()`](https://secure.php.net/manual/zh/function.sprintf.php)
+
+把格式化的字符串写入变量中
+
+```php
+string sprintf ( string $format [, mixed $args [, mixed $... ]] );
+```
+
+## [ord()](https://secure.php.net/manual/zh/function.ord.php)
+
+返回字符的 ASCII 码值
+
+```php
+int ord ( string $string );
+```
+
+## [chr()](https://secure.php.net/manual/zh/function.chr.php)
+
+返回指定的字符
+
+```php
+string chr ( int $ascii );
+```
+
 
 
 # PHP 数组函数
