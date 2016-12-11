@@ -464,7 +464,7 @@ mixed parse_url ( string $url [, int $component = -1 ] );
 string sprintf ( string $format [, mixed $args [, mixed $... ]] );
 ```
 
-## [ord()](https://secure.php.net/manual/zh/function.ord.php)
+## [`ord()`](https://secure.php.net/manual/zh/function.ord.php)
 
 返回字符的 ASCII 码值
 
@@ -472,12 +472,29 @@ string sprintf ( string $format [, mixed $args [, mixed $... ]] );
 int ord ( string $string );
 ```
 
-## [chr()](https://secure.php.net/manual/zh/function.chr.php)
+## [`chr()`](https://secure.php.net/manual/zh/function.chr.php)
 
 返回指定的字符
 
 ```php
 string chr ( int $ascii );
+```
+
+## [`strtr()`](https://secure.php.net/manual/zh/function.strtr.php)
+
+转换指定字符
+
+```php
+string strtr ( string $str , string $from , string $to );
+string strtr ( string $str , array $replace_pairs );
+```
+
+## [`chunk_split()`](https://secure.php.net/manual/zh/function.chunk-split.php)
+
+将字符串分割成小块
+
+```php
+string chunk_split ( string $body [, int $chunklen = 76 [, string $end = "\r\n" ]] );
 ```
 
 
@@ -1338,6 +1355,22 @@ string realpath ( string $path );
 
 ```php
 array scandir ( string $directory [, int $sorting_order [, resource $context ]] );
+```
+
+## [`filesize()`](https://secure.php.net/manual/zh/function.filesize.php)
+
+取得文件大小
+
+```php
+int filesize ( string $filename );
+```
+
+## [`getimagesize()`](https://secure.php.net/manual/zh/function.getimagesize.php)
+
+取得图像大小
+
+```php
+array getimagesize ( string $filename [, array &$imageinfo ] );
 ```
 
 ## `file_get_contents()`
