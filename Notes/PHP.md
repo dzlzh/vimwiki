@@ -497,6 +497,14 @@ string strtr ( string $str , array $replace_pairs );
 string chunk_split ( string $body [, int $chunklen = 76 [, string $end = "\r\n" ]] );
 ```
 
+## [`session_set_save_handler`](https://secure.php.net/manual/zh/function.session-set-save-handler.php)
+
+设置用户自定义会话存储函数
+
+```php
+bool session_set_save_handler ( callable $open , callable $close , callable $read , callable $write , callable $destroy , callable $gc [, callable $create_sid ] );
+```
+
 
 
 # PHP 数组函数
