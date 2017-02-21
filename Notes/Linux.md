@@ -140,19 +140,21 @@ ls --time-style '+%Y/%m/%d %H:%M:%S'  #时间格式
 mkdir -p /tmp/tmp1/tmp2
 ```
 
-## 执行多个命令
-
-```sh
-
-```
-
 
 
 # Centos
 
 ## 修改语言
 
-`/etc/sysconfig/i18n`中`LANG="zh_CN.UTF-8"`为中文，`LANG="en_US.UTF-8"`为英文
+`/etc/sysconfig/i18n`
+
+> 6
+
+`/etc/locale.conf`
+
+> 7
+
+`LANG="zh_CN.UTF-8"` 为中文，`LANG="en_US.UTF-8"` 为英文
 
 ## 修改时区
 
