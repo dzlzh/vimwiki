@@ -43,14 +43,14 @@
 
 ## Software Inventory
 
-- [Windows](https://github.com/DZLZH/software-inventory#windows)
+- [Windows](https://github.com/dzlzh/software-inventory#windows)
 
 ## Crawlers
 
-- [lagou](https://github.com/DZLZH/lagou-crawler)
-- [shiyanlou courses](https://github.com/DZLZH/shiyanlou-courses)
-- [automatic sign](https://github.com/DZLZH/php-crawlers/tree/automatic-sign)
-- [wiki jikexueyuan download](https://github.com/DZLZH/php-crawlers/tree/wiki-jikexueyuan-download)
+- [lagou](https://github.com/dzlzh/lagou-crawler)
+- [shiyanlou courses](https://github.com/dzlzh/shiyanlou-courses)
+- [automatic sign](https://github.com/dzlzh/php-crawlers/tree/automatic-sign)
+- [wiki jikexueyuan download](https://github.com/dzlzh/php-crawlers/tree/wiki-jikexueyuan-download)
 
 ## Blog
 
@@ -66,3 +66,4 @@
 - [PHP 小技巧](https://dzlzh.github.io/#post/10)
 - [PHP 安全](https://dzlzh.github.io/#post/11)
 - [正则表达式小记](https://dzlzh.github.io/#post/12)
+- [Centos7 编译安装 Libmcrypt 库](https://dzlzh.github.io/#post/13)
