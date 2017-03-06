@@ -32,6 +32,8 @@ var_dump(empty($obj->test));
 
 > 当对不可访问属性调用 [`isset()`](https://php.net/manual/zh/function.isset.php) 或 [`empty()`](https://php.net/manual/zh/function.empty.php) 时，[`__isset()`](https://php.net/manual/zh/language.oop5.overloading.php#object.isset) 会被调用。
 
+
+
 ```php
 $arr = [1, 2, 3];
 foreach($arr as &$v) {
