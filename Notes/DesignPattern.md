@@ -26,7 +26,7 @@
 
 使某个类的对象仅允许创建一个
 
-[Singleton](../Codes/PHP/DesignPattern/Singleton.php)
+[Singleton](/Codes/PHP/DesignPattern/Singleton.php)
 
 
 
