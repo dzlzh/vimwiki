@@ -26,6 +26,8 @@
 
 使某个类的对象仅允许创建一个
 
+[Singleton](../Codes/PHP/DesignPattern/Singleton.php)
+
 
 
 # 注册模式
