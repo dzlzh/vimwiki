@@ -140,6 +140,17 @@ ls --time-style '+%Y/%m/%d %H:%M:%S'  #时间格式
 mkdir -p /tmp/tmp1/tmp2
 ```
 
+## 生成指定大小的文件
+
+```shell
+# 生成一个 5G 文件
+dd if=/dev/zero of=tmp.5G bs=1G count=5
+# if=FILE : 指定输入文件，若不指定则从标注输入读取。这里指定为/dev/zero是Linux的一个伪文件，它可以产生连续不断的null流（二进制的0）
+# of=FILE : 指定输出文件，若不指定则输出到标准输出
+# bs=BYTES : 每次读写的字节数，可以使用单位K、M、G等等。另外输入输出可以分别用ibs、obs指定，若使用bs，则表示是ibs和obs都是用该参数
+# count=BLOCKS : 读取的block数，block的大小由ibs指定（只针对输入参数）
+```
+
 
 
 # Centos
