@@ -52,12 +52,12 @@ class FileUtil
      *
      * @return void
      */
-    public static function createDir($path, $mode = 777)
+    public static function createDir($path, $mode = 0755, $user = 'apache', $group = 'apache')
     {
         if (is_dir($path)) {
             return true;
         }
-        return is_dir(dirname($path)) || self::createDir(dirname($path)) ? mkdir($path, $mode) : false;
+        return is_dir(dirname($path)) || self::createDir(dirname($path)) ? mkdir($path, $mode) && chown($path, $user) && chgrp($path, $group) : false;
     }
 
     /**
@@ -65,13 +65,14 @@ class FileUtil
      *
      * @return void
      */
-    public static function moveFile($file, $moveFile)
+    public static function moveFile($file, $moveFile, $mode = 0644, $user = 'apache', $group = 'apache')
     {
         if (!file_exists($file)) {
             return false;
         }
         $movePath = dirname($moveFile);
-        return self::createDir($movePath) && rename($file, $moveFile);
+        // return self::createDir($movePath) && rename($file, $moveFile) && chmod($moveFile, $mode) && chown($moveFile, $user) && chgrp($moveFile, $group);
+        return self::createDir($movePath) && copy($file, $moveFile) && chmod($moveFile, $mode) && chown($moveFile, $user) && chgrp($moveFile, $group);
     }
 
     /**

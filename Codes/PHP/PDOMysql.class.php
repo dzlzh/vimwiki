@@ -24,7 +24,6 @@ class PDOMysql
         $dsn = 'mysql:host=' . $host . ';dbname=' . $dbname;
         try {
             $this->conn = new PDO($dsn, $username, $password);
-            print_r($this->conn);
             return true;
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -42,7 +41,7 @@ class PDOMysql
         $stmt = $this->conn->prepare($sql);
         if (is_array($arr)) {
             foreach ($arr as $k => $v) {
-                $stmt->bindValue($key, $value);
+                $stmt->bindValue($k, $v);
             }
         }
         $stmt->execute();
@@ -76,6 +75,9 @@ class PDOMysql
      */
     public function insert($table, $arr)
     {
+        if (empty($arr)) {
+            return false;
+        }
         $keys = array_keys($arr);
         $fields = $keys;
         array_walk($fields, array('PDOMysql', 'addSpecialChar'));
@@ -98,6 +100,9 @@ class PDOMysql
      */
     public function update($table, $arr, $where)
     {
+        if (empty($arr)) {
+            return false;
+        }
         $keys = array_keys($arr);
         $fields = $keys;
         array_walk($fields, array('PDOMysql', 'addSpecialChar'));
