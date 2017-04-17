@@ -12,7 +12,7 @@
 - [JavaScript](Notes/JavaScript.md)
 - [Laravel](Notes/Laravel.md)
 - [Linux](Notes/Linux.md)
-- [PHP](Notes/PHP.md)
+- [PHP](Notes/PHP)
 - [Sql](Notes/Sql.md)
 - [Vim](Notes/Vim.md)
 - [Wiki](Notes/Wiki.md)
