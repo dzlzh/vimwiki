@@ -1,0 +1,36 @@
+type: "MARKDOWN_NOTE"
+folder: "20e10111bcfee4bc14b5"
+title: "PHP - 错误报告"
+content: '''
+  # PHP - 错误报告
+  
+  ## 开发环境
+  
+  ```ini
+  display_errors = On
+  display_startup_errors = On
+  error_reporting = -1
+  log_errors = On
+  ```
+  
+  **不同 PHP 版本下开启全部错误显示**
+  
+  - < 5.3 `-1` 或 `E_ALL`
+  - 5.3 `-1` 或 `E_ALL | E_STRICT`
+  - \\> 5.3 `-1` 或 `E_ALL`
+  
+  ## 生产环境
+  
+  ```ini
+  display_errors = Off
+  display_startup_errors = Off
+  error_reporting = E_ALL
+  log_errors = On
+  ```
+'''
+tags: [
+  "PHP"
+]
+isStarred: false
+createdAt: "2017-04-17T08:02:01.457Z"
+updatedAt: "2017-04-17T08:22:57.082Z"

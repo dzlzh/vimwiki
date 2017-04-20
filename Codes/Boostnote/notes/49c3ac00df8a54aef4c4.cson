@@ -1,0 +1,20 @@
+type: "MARKDOWN_NOTE"
+folder: "20e10111bcfee4bc14b5"
+title: "PHP - 上传设置"
+content: '''
+  # PHP - 上传设置
+  
+  ```php
+  upload_max_filesize = 2G;
+  post_max_size = 2000M;
+  memory_limit = 1024M;
+  max_execution_time = 120;
+  ```
+  
+'''
+tags: [
+  "PHP"
+]
+isStarred: false
+createdAt: "2017-04-17T08:02:18.025Z"
+updatedAt: "2017-04-17T08:22:51.666Z"
