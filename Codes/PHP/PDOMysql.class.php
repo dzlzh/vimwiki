@@ -36,12 +36,12 @@ class PDOMysql
      *
      * @return void
      */
-    private function query($sql, $arr)
+    private function query($sql, $params)
     {
         $stmt = $this->conn->prepare($sql);
-        if (is_array($arr)) {
-            foreach ($arr as $k => $v) {
-                $stmt->bindValue($k, $v);
+        if (is_array($params)) {
+            foreach ($params as $key => $value) {
+                $stmt->bindValue($key, $value);
             }
         }
         $stmt->execute();
@@ -53,9 +53,9 @@ class PDOMysql
      *
      * @return void
      */
-    public function findAll($sql, $arr = null)
+    public function getAll($sql, $params = null)
     {
-        return $this->query($sql, $arr)->fetchall(PDO::FETCH_ASSOC);
+        return $this->query($sql, $params)->fetchall(PDO::FETCH_ASSOC);
     }
 
     /**
@@ -63,22 +63,34 @@ class PDOMysql
      *
      * @return void
      */
-    public function findOne($sql, $arr = null)
+    public function getRow($sql, $params = null)
     {
-        return $this->query($sql, $arr)->fetch(PDO::FETCH_ASSOC);
+        return $this->query($sql, $params)->fetch(PDO::FETCH_ASSOC);
     }
 
+    /**
+     * 取回一列结果
+     *
+     * @return void
+     */
+    public function getOne($sql, $params = null)
+    {
+
+        $data = $this->query($sql, $params)->fetch(PDO::FETCH_NUM);
+        return $data[0];
+    }
+    
     /**
      * 插入
      *
      * @return void
      */
-    public function insert($table, $arr)
+    public function insert($tableName, $data)
     {
-        if (empty($arr)) {
+        if (empty($data)) {
             return false;
         }
-        $keys = array_keys($arr);
+        $keys = array_keys($data);
         $fields = $keys;
         array_walk($fields, array('PDOMysql', 'addSpecialChar'));
         $fields = implode(',', $fields);
@@ -87,8 +99,8 @@ class PDOMysql
             $parameters[$k] = ':' . $v;
         }
         $parameters = implode(',', $parameters);
-        $sql = 'INSERT INTO `' . $table . '` (' . $fields . ') VALUE (' . $parameters . ')';
-        $stmt = $this->query($sql, $arr);
+        $sql = 'INSERT INTO `' . $tableName . '` (' . $fields . ') VALUE (' . $parameters . ')';
+        $stmt = $this->query($sql, $data);
         return $this->conn->lastInsertId();
 
     }
@@ -98,23 +110,26 @@ class PDOMysql
      *
      * @return void
      */
-    public function update($table, $arr, $where)
+    public function update($tableName, $data, $where, $whereParams = null)
     {
-        if (empty($arr)) {
+        if (empty($data)) {
             return false;
         }
-        $keys = array_keys($arr);
+        $keys = array_keys($data);
         $fields = $keys;
         array_walk($fields, array('PDOMysql', 'addSpecialChar'));
         foreach ($keys as $key => $value) {
             $parameters[$key] = $fields[$key] . '=:' . $value;
         }
         $parameters = implode(',', $parameters);
-        $sql = 'UPDATE `' . $table . '` SET ' . $parameters;
+        $sql = 'UPDATE `' . $tableName . '` SET ' . $parameters;
         if (!empty($where)) {
             $sql .= ' WHERE ' . $where;
+            if (is_array($whereParam)) {
+                $params = array_merge($data, $whereParams);
+            }
         }
-        $stmt = $this->query($sql, $arr);
+        $stmt = $this->query($sql, $params);
         return self::errorMsg($stmt);
     }
 
@@ -123,13 +138,13 @@ class PDOMysql
      *
      * @return void
      */
-    public function del($table, $where)
+    public function del($tableName, $where, $whereParams = null)
     {
-        $sql = 'DELETE FROM `' . $table . '`';
+        $sql = 'DELETE FROM `' . $tableName . '`';
         if (!empty($where)) {
             $sql .= ' WHERE ' . $where;
         }
-        $stmt = $this->query($sql, null);
+        $stmt = $this->query($sql, $whereParams);
         return self::errorMsg($stmt);
     }
 
@@ -152,6 +167,12 @@ class PDOMysql
         }
 
         return $value;
+
+    }
+
+    public function qstr($string)
+    {
+        return $this->conn->quote($string);
     }
     
 }
