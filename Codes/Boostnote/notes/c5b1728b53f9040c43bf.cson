@@ -1,0 +1,18 @@
+type: "MARKDOWN_NOTE"
+folder: "12b42fe17974412f5639"
+title: "JavaScript - RegExp"
+content: '''
+  # JavaScript - RegExp
+  
+  ## `regexObj.test()`
+  
+  执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 `true` 或 `false`
+  
+  ```javascript
+  regexObj.test(str);
+  ```
+'''
+tags: []
+isStarred: false
+createdAt: "2017-05-03T09:18:58.809Z"
+updatedAt: "2017-05-03T09:19:07.028Z"

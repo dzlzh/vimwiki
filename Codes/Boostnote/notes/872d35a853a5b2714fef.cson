@@ -1,0 +1,21 @@
+type: "MARKDOWN_NOTE"
+folder: "12b42fe17974412f5639"
+title: "jQuery - CSS"
+content: '''
+  # jQuery - CSS
+  
+  ## [`jQuery.css()`](http://www.runoob.com/jquery/css-css.html)
+  
+  返回或设置匹配的元素的一个或多个样式属性
+  
+  ```javascript
+  //返回CSS属性值
+  $(selector).css(property);
+  //设置CSS属性和值
+  $(selector).css(property, value);
+  ```
+'''
+tags: []
+isStarred: false
+createdAt: "2017-05-03T09:21:12.360Z"
+updatedAt: "2017-05-03T09:21:19.684Z"

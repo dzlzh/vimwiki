@@ -1,0 +1,18 @@
+type: "MARKDOWN_NOTE"
+folder: "12b42fe17974412f5639"
+title: "JavaScript - Windows"
+content: '''
+  # JavaScript - Windows
+  
+  ## `window.setInterval()`
+  
+  周期性地调用一个函数或者执行一段代码
+  
+  ```javascript
+  var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
+  ```
+'''
+tags: []
+isStarred: false
+createdAt: "2017-05-03T09:18:24.129Z"
+updatedAt: "2017-05-03T09:18:33.205Z"

@@ -1,0 +1,18 @@
+type: "MARKDOWN_NOTE"
+folder: "12b42fe17974412f5639"
+title: "jQuery - AJAX"
+content: '''
+  # jQuery - AJAX
+  
+  ## `jQuery.getJSON()`
+  
+  使用 `AJAX` 请求来获得 `JSON` 数据
+  
+  ```javascript
+  $.getJSON(url,data,success(data,status,xhr));
+  ```
+'''
+tags: []
+isStarred: false
+createdAt: "2017-05-03T09:21:36.553Z"
+updatedAt: "2017-05-03T09:21:50.003Z"

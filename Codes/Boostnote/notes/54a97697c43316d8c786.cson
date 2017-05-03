@@ -1,0 +1,23 @@
+type: "MARKDOWN_NOTE"
+folder: "12b42fe17974412f5639"
+title: "JavaScript - HTMLElement"
+content: '''
+  # JavaScript - HTMLElement
+  
+  ## `HTMLElement.contentEditable`
+  
+  **`HTMLElement.contentEditable`** 属性用于表明元素是否是可编辑的。该枚举属性（enumerated attribute）可以具有下面的几种值之一：
+  
+  * `"true"` 表明该元素可编辑。
+  * `"false"` 表明该元素不可编辑。
+  * `"inherit"` 表明该元素继承了其父元素的可编辑状态。
+  
+  ```javascript
+  editable = element.contentEditable
+  element.contentEditable = "true"
+  ```
+'''
+tags: []
+isStarred: false
+createdAt: "2017-05-03T09:18:35.745Z"
+updatedAt: "2017-05-03T09:18:50.796Z"

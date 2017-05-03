@@ -2,13 +2,18 @@
   "folders": [
     {
       "key": "20e10111bcfee4bc14b5",
-      "color": "#6AA5E9",
-      "name": "PHP - Note"
+      "color": "#0645ad",
+      "name": "PHP - Notes"
     },
     {
-      "key": "e6d0edca5866d9345682",
+      "key": "12b42fe17974412f5639",
+      "color": "#4a90e2",
+      "name": "WEB - Notes"
+    },
+    {
+      "key": "71b8d172b36e10e5de60",
       "color": "#E10051",
-      "name": "Code"
+      "name": "Notes"
     }
   ],
   "version": "1.0"

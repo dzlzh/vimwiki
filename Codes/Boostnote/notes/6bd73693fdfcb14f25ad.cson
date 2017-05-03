@@ -1,0 +1,21 @@
+type: "MARKDOWN_NOTE"
+folder: "12b42fe17974412f5639"
+title: "JavaScript - 运算符"
+content: '''
+  # JavaScript - 运算符
+  
+  ## 按位非运算符
+  
+  位运算`NOT`由否定号`~`表示。
+  
+  > 位运算`NOT`是三步的处理过程：
+  > 1. 把运算数转换成32位数字
+  > 2. 把二进制数转换成它的二进抽反码
+  > 3. 把二进制数转换成浮点数
+  
+  对任一数值x进行按位非操作的结果为`-(x + 1)`
+'''
+tags: []
+isStarred: false
+createdAt: "2017-05-03T09:22:11.648Z"
+updatedAt: "2017-05-03T09:22:18.923Z"
