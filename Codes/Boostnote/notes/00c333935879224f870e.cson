@@ -144,12 +144,20 @@ content: '''
   array func_get_args ( void );
   ```
   
-  ## `parse_ini_file()`
+  ## [`parse_ini_file()`](https://secure.php.net/manual/zh/function.parse-ini-file.php)
   
   解析一个配置文件
   
   ```php
   array parse_ini_file ( string $filename [, bool $process_sections = false [, int $scanner_mode = INI_SCANNER_NORMAL ]] );
+  ```
+  
+  ## [`parse_ini_string()`](https://secure.php.net/manual/zh/function.parse-ini-string.php)
+  
+  解析配置字符串
+  
+  ```php
+  array parse_ini_string ( string $ini [, bool $process_sections = false [, int $scanner_mode = INI_SCANNER_NORMAL ]] );
   ```
   
   ## [`getenv()`](https://secure.php.net/manual/zh/function.getenv.php)
@@ -538,4 +546,4 @@ tags: [
 ]
 isStarred: false
 createdAt: "2017-04-17T07:54:00.685Z"
-updatedAt: "2017-04-18T03:26:39.446Z"
+updatedAt: "2017-05-08T08:36:14.276Z"
