@@ -4,23 +4,25 @@ title: "Docker"
 content: '''
   # Docker
   
-  ## Windows7 下安装 Docker
+  ## 安装 Docker
+  
+  ### Windows7 下安装 Docker
   
   - [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
   
-  ## Windows10 下安装 Docker
+  ### Windows10 下安装 Docker
   
   - [Docker For Windows](https://www.docker.com/docker-windows)
   
-  ## CentOS7 下安装
+  ### CentOS7 下安装
   
-  ### 自动安装
+  #### 自动安装
   
   - Docker `curl -sSL https://get.docker.com/ | sh`
   - DaoCloud `curl -sSL https://get.daocloud.io/docker | sh`
   - 阿里云 `curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh`
   
-  ### 手动安装
+  #### 手动安装
   
   - 添加内核参数
   ```shell
@@ -62,26 +64,66 @@ content: '''
   $ sudo usermod -aG docker $USER
   ```
   
-  ## 获取镜像
+  ## 镜像
+  
+  ### 获取镜像
   
   ```shell
   docker pull [选项] [Docker Registry地址]<仓库名>:<标签>
   ```
   
-  ## 列出镜像
+  ### 列出镜像
   
   ```shell
   docker images
   ```
   
-  ## 构建镜像
+  ### 构建镜像
   
   ```shell
   docker build [选项] <上下文路径/URL/->
   ```
   
+  ### 删除镜像
+  
+  ```shell
+  docker rmi [选项] <镜像1> [<镜像2> ...]
+  ```
+  
+  ## 容器
+  
+  ### 启动容器
+  
+  - `docker run` 新建并启动
+    - `-d` 后台运行
+  - `docker start` 启动已终止容器
+  
+  ### 终止容器
+  
+  - `docker stop`
+  
+  ### 重启容器
+  
+  - `docker restart`
+  
+  ### 进入容器
+  
+  - `docker attach`
+  
+  ### 导出容器
+  
+  - `docker export`
+  
+  ### 导入容器快照
+  
+  - `docker import`
+  
+  ### 删除容器
+  
+  - `docker rm`
+  
 '''
 tags: []
 isStarred: false
 createdAt: "2017-05-14T15:36:43.229Z"
-updatedAt: "2017-05-19T02:19:49.655Z"
+updatedAt: "2017-05-23T08:57:36.880Z"
