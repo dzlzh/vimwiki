@@ -1,0 +1,25 @@
+type: "SNIPPET_NOTE"
+folder: "20e10111bcfee4bc14b5"
+title: "下载文件"
+description: "下载文件"
+snippets: [
+  {
+    name: "download.php"
+    mode: "PHP"
+    content: '''
+      <?php
+      function download($data)
+      {
+          header('Content-type: application/octet-stream');
+          header('Accept-Ranges: bytes');
+          header('Accept-Length:' . strlen($data));
+          header('Content-Disposition: attachment; filename=test');
+          echo $data;
+      }
+    '''
+  }
+]
+tags: []
+isStarred: false
+createdAt: "2017-06-13T03:39:15.844Z"
+updatedAt: "2017-06-13T03:42:15.496Z"
