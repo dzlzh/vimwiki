@@ -127,11 +127,25 @@ content: '''
   
   `release` 预发布分支
   
-  
-  
   ## 别名
   
+  `git config --global user.name  'DZLZH'`
+  
+  `git config --global 	user.email  'dzlzh@null.net'`
+  
+  `git config --global alias.st = status`
+  
+  `git config --global alias.br = branch`
+  
+  `git config --global alias.ch = checkout`
+  
   `git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
+  
+  ## 忽略文件
+  
+  `.gitignore`
+  
+  `.gitkeep`
   
   
   
@@ -158,4 +172,4 @@ content: '''
 tags: []
 isStarred: false
 createdAt: "2017-05-05T08:57:15.287Z"
-updatedAt: "2017-05-05T08:58:07.110Z"
+updatedAt: "2017-06-14T10:03:48.487Z"
