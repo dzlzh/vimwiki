@@ -71,7 +71,7 @@ content: '''
   - `--force` 强行推送当前分支到远程仓库，即使有冲突
   - `--all` 推送所有分支到远程仓库
   
-  ### 分支
+  ### 分支操作
   
   `git branch [-r|-a]` 查看分支[远程分支|本地与远程所有分支]
   
@@ -93,7 +93,7 @@ content: '''
   
   - `-i` 把commit压缩成一个
   
-  ### 标签
+  ### 标签操作
   
   `git tag` 查看标签
   
@@ -109,7 +109,7 @@ content: '''
   
   `git push origin :refs/tags/<tagname>` 删除远程标签,先删除本地然后推送
   
-  ### 其他
+  ### 其他操作
   
   `git archive` 生成一个可供发布的压缩包
   
@@ -172,4 +172,4 @@ content: '''
 tags: []
 isStarred: false
 createdAt: "2017-05-05T08:57:15.287Z"
-updatedAt: "2017-06-14T10:03:48.487Z"
+updatedAt: "2017-06-16T15:48:41.018Z"

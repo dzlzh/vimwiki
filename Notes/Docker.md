@@ -1,104 +1,119 @@
-## 查看Docker的守护进程
+# Docker
 
-`service docker start`
+## 安装 Docker
 
-## Docker系统启动时运行
+### Windows7 下安装 Docker
 
-`chkconfig docker on`
+- [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
 
-## 登录https://hub.docker.com/
+### Windows10 下安装 Docker
 
-`docker login`
+- [Docker For Windows](https://www.docker.com/docker-windows)
 
-## 查找官方仓库中的镜像
+### CentOS7 下安装
 
-`docker search`
+#### 自动安装
 
-## 创建镜像
+- Docker `curl -sSL https://get.docker.com/ | sh`
+- DaoCloud `curl -sSL https://get.daocloud.io/docker | sh`
+- 阿里云 `curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh`
 
-`docker pull [ubuntu]`
+#### 手动安装
 
-## 运行容器
-
+- 添加内核参数
+```shell
+$ sudo tee -a /etc/sysctl.conf <<-EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
 ```
-docker run
-    -t -i
-    -d      //后台运行
+- 重新加载 `sysctl.conf`
+```shell
+$ sudo sysctl -p
 ```
-
-## 启动已终止容器
-
+- 添加 `yun` 源
+```shell
+$ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
 ```
-docker start
-    -i
+- 安装 Docker
+```shell
+$ sudo yum update
+$ sudo yum install docker-engine
 ```
-
-## 终止容器
-
-`docker stop`
-
-## 终止并重启
-
-`docker restart`
-
-## 进入容器
-
-`docker attach`
-
-## 列出容器
-
+- 启动 Docker 引擎
+```shell
+$ sudo systemctl enable docker
+$ sudo systemctl start docker
 ```
-docker ps
-    -a
-```
-## 查看容器输出信息
-
-`docker log`
-
-## 列出本地镜像
-
-`docker images`
-
-## 提交更新
-
-```
-docker commit
-
-    -m "" -a "作者"
+- 建立 Docker 用户组
+```shell
+# 建立 docker 组
+$ sudo groupadd docker
+# 将当前用户加入 docker 组
+$ sudo usermod -aG docker $USER
 ```
 
-## 修改镜像的标签
+## 镜像
 
-`docker tag`
+### 获取镜像
 
-## 创建新镜像Dockerfile
+```shell
+docker pull [选项] [Docker Registry地址]<仓库名>:<标签>
+```
 
-`docker buila`
+### 列出镜像
 
-## 上传到仓库
+```shell
+docker images
+```
 
-`docker push`
+### 构建镜像
 
-## 导出镜像
+```shell
+docker build [选项] <上下文路径/URL/->
+```
 
-`docker save`
+### 删除镜像
 
-## 裁入镜像
+```shell
+docker rmi [选项] <镜像1> [<镜像2> ...]
+```
 
-`docker load`
+## 容器
 
-## 移除本地镜像
+### 启动容器
 
-`docker rmi`
+- `docker run` 新建并启动
+  - `-d` 后台运行
+- `docker start` 启动已终止容器
 
-## 移除容器
+### 终止容器
 
-`docker rm`
+- `docker stop`
 
-## 导出某个容器
+### 重启容器
 
-`docker export`
+- `docker restart`
 
-## 导出某个容器
+### 进入容器
 
-`docker import`
+- `docker attach`
+
+### 导出容器
+
+- `docker export`
+
+### 导入容器快照
+
+- `docker import`
+
+### 删除容器
+
+- `docker rm`

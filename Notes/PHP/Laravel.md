@@ -1,4 +1,4 @@
-# Blade
+# Laravel - Blade
 
 **输出内容，被转义过的**
 
@@ -30,7 +30,7 @@
 
 `@extends('layout.name')`
 
-**实现命名为 name 的区块（yield 占位的地方**
+**实现命名为 name 的区块（yield 占位的地方)**
 
 `@section('name')`
 

@@ -9,7 +9,7 @@ content: '''
   发送原生HTTP头
   
   ```php
-  void header (string $string [, bool $replace = true [, int $http_response_code ]])
+  void header (string $string [, bool $replace = true [, int $http_response_code ]]);
   ```
   
   ## `iconv()`
@@ -546,4 +546,4 @@ tags: [
 ]
 isStarred: false
 createdAt: "2017-04-17T07:54:00.685Z"
-updatedAt: "2017-05-08T08:36:14.276Z"
+updatedAt: "2017-06-16T16:00:56.879Z"
