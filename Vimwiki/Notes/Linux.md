@@ -1,41 +1,21 @@
-= Contents =
-    - [[#Linux|Linux]]
-        - [[#Linux#定时任务|定时任务]]
-        - [[#Linux#执行多个命令|执行多个命令]]
-        - [[#Linux#Linux Shell echo log 1>/dev/null 2>&1 含义|Linux Shell echo log 1>/dev/null 2>&1 含义]]
-        - [[#Linux#命令后台运行|命令后台运行]]
-        - [[#Linux#SSH Key|SSH Key]]
-        - [[#Linux#SCP|SCP]]
-        - [[#Linux#提取|提取]]
-        - [[#Linux#source|source]]
-        - [[#Linux#ls 显示时间|ls 显示时间]]
-        - [[#Linux#创建多级目录|创建多级目录]]
-        - [[#Linux#生成指定大小的文件|生成指定大小的文件]]
-        - [[#Linux#.bashrc 提示符|.bashrc 提示符]]
-    - [[#Centos|Centos]]
-        - [[#Centos#修改语言|修改语言]]
-        - [[#Centos#修改时区|修改时区]]
-        - [[#Centos#查看内核|查看内核]]
-        - [[#Centos#强制检查分区|强制检查分区]]
+# Linux
 
-= Linux =
-
-== 定时任务 ==
+## 定时任务
 
 - `crontab` 命令的一般形式为：
 - `crontab [-u user] -e -l -r`
- - `-u` 用户名
- - `-e` 编辑 `crontab` 文件
- - `-l` 列出 `crontab` 文件中的内容
- - `-r` 删除 `crontab` 文件
+  - `-u` 用户名
+  - `-e` 编辑 `crontab` 文件
+  - `-l` 列出 `crontab` 文件中的内容
+  - `-r` 删除 `crontab` 文件
 
-== 执行多个命令 ==
+## 执行多个命令
 
 - `;` 每个命令之间用 `;` 隔开，各命令的执行结果，不会影响其它命令的执行。
 - `&&` 每个命令之间用 `&&` 隔开，若前面的命令执行成功，才会去执行后面的命令。
 - `||` 每个命令之间用 `||` 隔开，`||` 是或的意思，只有前面的命令执行失败后才去执行下一条命令，直到执行成功一条命令为止。
  
-== Linux Shell echo log 1>/dev/null 2>&1 含义 ==
+## Linux Shell echo log 1>/dev/null 2>&1 含义
 
 命令的结果可以通过 `%>` 的形式来定义输出
 
@@ -45,7 +25,7 @@
 - `2` 表示 stderr 标准错误
 - `&` 表示等同于的意思，`2>&1`，表示 `2` 的输出重定向等同于 `1`
 
-== 命令后台运行 ==
+## 命令后台运行
 
 - `&` 将指令丢到后台去执行，关掉终端会停止运行
 - `[ctrl]+Z` 将前台任务等到后台中暂停
@@ -55,11 +35,11 @@
 - `kill` 管理后台的任务
 - `nohup` 后台运行，关掉终端也会继续运行
 
-== SSH Key ==
+## SSH Key
 
 `ssh-keygen -t rsa -C "email"`
 
-== SCP ==
+## SCP
 
 `scp` 用于在 Linux 下进行远程拷贝文件的命令。
 
@@ -89,7 +69,7 @@
 
 *例子*
 
-{{{
+```sh
 #获取远程服务器上的文件
 scp root@localhost:/root/test.txt ~/test.txt
 #获取远程服务器上的目录
@@ -98,11 +78,11 @@ scp -r root@localhost:/root/test ~/test
 scp ~/test.txt root@localhost:/root/test.txt
 #将本地目录上传到服务器上
 scp ~/test root@localhost:/root/test
-}}}
+```
 
-== 提取 ==
+## 提取
 
-{{{
+```sh
 tar xjf    *.tar.bz2
 tar xzf    *.tar.gz
 bunzip2    *.bz2
@@ -115,46 +95,46 @@ unzip      *.zip
 uncompress *.Z
 7z x       *.7z
 tar xvJf   *.tar.xz 
-}}}
+```
 
-== source ==
+## source
 
 `source` 命令也称为 “点命令”，也就是一个点符号（.）。`source` 命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录。
 
-{{{
+```sh
 source filename
 . filename
-}}}
+```
 
-== ls 显示时间 ==
+## ls 显示时间
 
-{{{
+```sh
 ls -lc #最后更改时间
 ls -u  #最后存取时间
 ls -l  #最后修改时间
 ls --time-style '+%Y/%m/%d %H:%M:%S'  #时间格式
-}}}
+```
 
-== 创建多级目录 ==
+## 创建多级目录
 
-{{{
+```sh
 mkdir -p /tmp/tmp1/tmp2
-}}}
+```
 
-== 生成指定大小的文件 ==
+## 生成指定大小的文件
 
-{{{
-# 生成一个 5G 文件
+```sh
+* 生成一个 5G 文件
 dd if=/dev/zero of=tmp.5G bs=1G count=5
-# if=FILE : 指定输入文件，若不指定则从标注输入读取。这里指定为 /dev/zero 是 Linux 的一个伪文件，它可以产生连续不断的 null 流（二进制的 0）
-# of=FILE : 指定输出文件，若不指定则输出到标准输出
-# bs=BYTES : 每次读写的字节数，可以使用单位 K、M、G 等等。另外输入输出可以分别用 ibs、obs 指定，若使用 bs，则表示是 ibs 和 obs 都是用该参数
-# count=BLOCKS : 读取的 block 数，block 的大小由 ibs 指定（只针对输入参数）
-}}}
+* if=FILE : 指定输入文件，若不指定则从标注输入读取。这里指定为 /dev/zero 是 Linux 的一个伪文件，它可以产生连续不断的 null 流（二进制的 0）
+* of=FILE : 指定输出文件，若不指定则输出到标准输出
+* bs=BYTES : 每次读写的字节数，可以使用单位 K、M、G 等等。另外输入输出可以分别用 ibs、obs 指定，若使用 bs，则表示是 ibs 和 obs 都是用该参数
+* count=BLOCKS : 读取的 block 数，block 的大小由 ibs 指定（只针对输入参数）
+```
 
-== .bashrc 提示符 ==
+## .bashrc 提示符
 
-{{{
+```
 提示符(PROMPTING)
     在 交互执行时， bash 在准备好读入一条命令时显示主提示符 PS1，在需要更多的输入来完成一条命令时显示 PS2。 Bash 允许通过插入一些反斜杠转义的特
     殊字符来定制这些提示字符串，这些字符被如下解释：
@@ -180,7 +160,7 @@ dd if=/dev/zero of=tmp.5G bs=1G count=5
         \w     当前工作目录
         \W     当前工作目录的基本部分
         \!     此命令的历史编号
-        \#     此命令的命令编号
+        \*     此命令的命令编号
         \$     如果有效 UID 是 0，就是 #， 其他情况下是 $
         \nnn   对应八进制数 nnn 的字符
         \\     一个反斜杠
@@ -191,7 +171,7 @@ dd if=/dev/zero of=tmp.5G bs=1G count=5
     是 当 前 shell 会话中执行的命令序列中，命令的位置。字符串被解码之后，它将进行扩展，要经过 parameter expansion， command substitution， arith‐
     metic expansion 和 quote removal， 最后要经过 shell 选项 promptvars 处理 (参见下面的 shell 内建命令(SHELL BUILTIN COMMANDS) 章节中，对 命 令
     shopt 的描述)。
-}}}
+```
 
 |前景|背景|颜色|
 |---|---|---|
@@ -215,9 +195,9 @@ dd if=/dev/zero of=tmp.5G bs=1G count=5
 
 ----
 
-= Centos =
+# Centos
 
-== 修改语言 ==
+## 修改语言
 
 *6*
 
@@ -229,21 +209,21 @@ dd if=/dev/zero of=tmp.5G bs=1G count=5
 
 `LANG="zh_CN.UTF-8"` 为中文，`LANG="en_US.UTF-8"` 为英文
 
-== 修改时区 ==
+## 修改时区
 
-{{{
+```sh
 cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 clock -w
-}}}
+```
 
-== 查看内核 ==
+## 查看内核
 
-{{{
+```sh
 cat /proc/version
 rpm -qa | grep kernel
 uname -r
-}}}
+```
 
-== 强制检查分区 ==
+## 强制检查分区
 
 在根目录下建立一个 `/forcefsck` 文件

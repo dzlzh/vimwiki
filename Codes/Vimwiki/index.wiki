@@ -1,5 +1,0 @@
-= DZLZH's Wiki =
-== [[Notes/Git|Git]] ==
-== [[Notes/Linux|Linux]] ==
-== [[Notes/Shell|Shell]] ==
-== [[TODO|TODO]] ==
