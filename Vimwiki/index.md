@@ -1,9 +1,14 @@
 # DZLZH's Wiki
 
-## [Git](Notes/Git.md)
+## Notes
 
-## [Linux](Notes/Linux.md)
+- [PHP](Notes/PHP.md)
+- [Git](Notes/Git.md)
+- [Linux](Notes/Linux.md)
+- [Shell](Notes/Shell.md)
+- [Vim](Notes/Vim.md)
+- [Docker](Notes/Docker.md)
 
-## [Shell](Notes/Shell.md)
+## TODO
 
-## [TODO](TODO.md)
+- [Work](TODO/Work.md)
