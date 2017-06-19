@@ -7,6 +7,7 @@
 ## Notes
 
 - [PHP](notes/php.md)
+- [WEB](notes/web.md)
 - [Git](notes/git.md)
 - [Linux](notes/linux.md)
 - [Shell](notes/shell.md)
