@@ -118,4 +118,4 @@ docker rmi [选项] <镜像1> [<镜像2> ...]
 
 - `docker rm`
 
-## [Dockerfile](Dockerfile.md)
+## [Dockerfile](dockerfile.md)

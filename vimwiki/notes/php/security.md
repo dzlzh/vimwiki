@@ -1,0 +1,200 @@
+# PHP - 安全
+
+**一切输入都是不可信的**
+
+**一切输入都是不可信的**
+
+**一切输入都是不可信的**
+
+## 变量的处理
+
+ __web程序中所有`get` `post` `cookies` `update_files`来的变量都是不可信的__
+
+- 输入的变量组成mysql SQL前都要用`mysql_real_escape_string()`处理
+
+- 输入的变量回显在页面或者存入数据库钱都要用`htmlspecialchars()`函数处
+
+- 对于传入的整数或浮点数可以使用`intval()`或`floatval()`处理
+
+- 关闭`magic_quotes_runtime`安全掌握到自己的手里 `set_magic_quotes_runtime(false) `
+
+## 不可信的数据
+
+**所有用户的输入都不值得信任的。输入必须被用合适的方式校验或者过滤**
+
+`$_SERVER`、`$_GET`、`$_POST`、`$_REQUEST`、`$_FILES`和`$_COOKIE`这些超全局变量也不应该被信任。尽管`$_REQUEST`中并非所有的数据都可以被用户伪造，但还是有相当部分的可能被伪造，特别是处理HTTP header的那部分(以HTTP_开头的)。
+
+- 关闭`magic_quotes_runtime`安全掌握到自己的手里 `set_magic_quotes_runtime(false)`。
+- 对于传入的整数或浮点数可以使用`intval()`或`floatval()`处理。
+- 对于传入的字符可以使用`htmlspecialchars(strip_tags(trim(string)), ENT_QUOTES)`。
+
+## 文件上传
+
+来自用户上传的文件会带来巨大的安全隐患，特别是该文件可以被其他用户下载。
+
+- 任何HTML文件可能会导致XSS攻击。
+- 任务PHP文件可能会带来远程执行的风险。
+- 严格控制上传文件类型。
+
+## 数据库
+
+**不要直接使用用户数据构造SQL**
+
+```php
+$sql = "SELECT * FROM users WHERE username = '" . $username . "'";
+```
+
+如果`$username`来自不可信任的来源，它可以包含类似于`'`这样的字符，从而可以执行其它命令。使用prepare语句和绑定参数是更好的解决方案。PHP的PDO提供了相关的特性。
+
+**防MYSQL字符集编码不同addslashes和mysql_real_escape_string注入**
+
+## XSS
+
+XSS是一种攻击，由用户输入一些数据到你的网站，其中包括客户端脚本。
+
+为了防止XSS攻击，使用PHP的`htmlspecialchars()`处理。
+
+也可以使用模板引擎，有一些模板引擎可以帮助开发者或设计者输出数据，防止XSS攻击。类似的引擎包括twig、Smarty和Haanga等。
+
+## 数据加密
+
+__序列化 -> 加密 -> 解密 -> 反序列化__
+
+```php
+$userinfo = '信息'; //用户信息
+$secureKey = '密钥'; //加密密钥
+$str = serialize($userinfo); //将用户信息序列化
+echo "用户信息加密前：".$str;
+$str = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $secureKey, $str, MCRYPT_MODE_ECB));
+echo "用户信息加密后：".$str;
+//将加密后的用户数据存储到cookie中
+setcookie('userinfo', $str); 
+//当需要使用时进行解密
+$str = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $secureKey, base64_decode($str), MCRYPT_MODE_ECB);
+$uinfo = unserialize($str);
+echo "解密后的用户信息：\n";
+var_dump($uinfo);
+```
+
+## 密码加密
+
+```php
+$password = '密码';
+$salt = substr(uniqid(rand()), -6);
+echo $salt . "\n";
+$password = md5(md5($password).$salt);
+echo $password;
+```
+
+## 弱类型
+
+PHP不会严格检验传入的变量类型，也可以将变量自由的转换类型。
+
+### 数学运算
+
+```php
+var_dump(0 == '0'); //ture
+var_dump(0 == 'abcdefg'); //true
+var_dump(0 === 'abcdefg'); //false
+var_dump(1 == '1abcdefg'); //true
+```
+
+当有一个对比参数是整数的时候，会把另外一个参数强制转换为整数。
+
+下面这个例子告诉我们，永远不要上相信下面的代码
+
+```php
+if ($a > 1000) {
+    mysql_query('update ... set valer=$a');
+}
+```
+
+其实`$a`可能是`1001/**/union select ...`
+
+### 函数的松散判断
+
+```php
+var_dump(in_array($needle, $haystack));
+```
+
+`in_array` - 检查数组中是否存在某个值
+
+**needle**
+
+待搜索的值。
+
+**haystack**
+
+这个数组。
+
+**strict**
+
+如果第三个参数**strict**的值为`TRUE`则`in_array()`函数还会检查**needle**的类型是否和**haystack**中的相同。
+
+只有加了**strict**才会对类型进行严格比较
+
+```php
+var_dump(in_array("abc", $array1));
+var_dump(in_array("1ab", $array2));
+```
+
+他遍历了array的每个值，并且作`==`比较（当设置**strict**用`===`）。
+
+如果`$array1`里面有个值为0，那么第一条返回就会为`TURE`。
+
+如果`$array2`里面有个值为1，那么第二条返回也为`TURE`。
+
+`array_search`也是一样的原理。
+
+完全可以构造好的int 0 或 1骗过检测函数，使它返回为真。
+
+**在所有PHP认为是int的地方输入string，都会被强制转换。**
+
+## 比较操作符
+
+### bool欺骗
+
+当存在`json_decode`和`unserialize`的时候，部分对构会被解释成bool类型，也会造成欺骗。
+
+```php
+$json_str = '{"user":true, "pass":true}';
+$data = json_decode($json_str, true);
+if ($data['user'] == 'admin' && $data['pass'] == 'secirity') {
+    echo 'logined in as bool';
+}
+
+//结果：logined in as bool
+
+$unserialize_str = 'a:2:{s:4:"user";b:1;s:4:"pass";b:1;}';
+$data_unserialize = unserialize($unserialize_str);
+if ($data_unserialize['user'] == 'admin' && $data_unserialize['pass'] == 'secirity') {
+    echo 'logined in unserialize';
+}
+
+//结果：logined in unserialize
+```
+
+### 数字转换欺骗
+
+```php
+$user_id = $_POST['user_id'];
+if ($user_id == '1') {
+    $user_id = (int)$user_id;
+    //$user_id = intval($user_id);
+    $query = "SELECT * FROM user WHERE user_id =" . $user_id;
+}
+$result = mysql_query($query) or die(mysql_error());
+print_r(mysql_fetch_row($result));
+```
+
+将`user_id = 0.999999999999999999999999999`发送出去得到user_id =0的数据，本来是要查询user_id=1的数据。
+
+`intvalt`有个尽力模式，就是转换所有数字直到遇到非数字为止。
+
+```php
+if (intval($qq) === '123456') {
+    $db->query("select * from user where qq=$qq");
+}
+```
+
+攻击者传入`123456 UNION SELECT version()`进行攻击。
