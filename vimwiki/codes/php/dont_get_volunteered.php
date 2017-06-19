@@ -1,0 +1,97 @@
+<?php
+function answer($src, $dest)
+{
+
+    $coordinates = getPosition($src, $dest);
+    if ($coordinates[0] == -1) {
+        return -1;
+    }
+
+    $source['x'] = $coordinates[0];
+    $source['y'] = $coordinates[1];
+    $destination['x'] = $coordinates[2];
+    $destination['y'] = $coordinates[3];
+    return BFS($source, $destination);
+}
+
+function getPosition($src, $dest)
+{
+    $chessBoard = array();
+    $count = 0;
+    for ($i = 0; $i < 8; $i++) {
+        for ($j = 0; $j < 8; $j++) {
+            $chessBoard[$i][$j] = $count;
+            $count++;
+        }
+    }
+    $coordinates = array();
+    if ($src >= 0 && $src <= 63 && $dest >= 0 && $dest <= 63) {
+        for ($i = 0; $i < 8; $i++) {
+            for ($j = 0; $j < 8; $j++) {
+                if ($chessBoard[$i][$j] == $src) {
+                    $coordinates[0] = $j;
+                    $coordinates[1] = $i;
+                }
+                if ($chessBoard[$i][$j] == $dest) {
+                    $coordinates[2] = $j;
+                    $coordinates[3] = $i;
+                }
+            }
+        }
+    } else {
+        $coordinates[0] = -1;
+    }
+    return $coordinates;
+}
+
+function BFS($src, $dest)
+{
+    $row = [2, 2, -2, -2, 1, 1, -1, -1];
+    $col = [-1, 1, 1, -1, 2, -2, 2, -2];
+    $queue = array();
+    $map = array();
+    array_push($queue, $src);
+    while (count($queue)) {
+        $node = array_pop($queue);
+        $x = $node['x'];
+        $y = $node['y'];
+        $dist = $node['dist'];
+
+        if (isEqual($node, $dest)) {
+            return $dist;
+        }
+
+        if ($map[count($queue) - 1] == null) {
+            $map[count($queue) - 1] = false;
+        }
+        if (!$map[count($queue) - 1]) {
+            $map[count($queue) - 1] = true;
+
+            for ($i = 0; $i < 8; $i++) {
+                $x1 = $x + $row[$i];
+                $y1 = $y + $col[$i];
+                if (isValidChessBoardCoordinate($x1, $y1)) {
+                    $n['x'] = $x1;
+                    $n['y'] = $y1;
+                    $n['dist'] = $dist + 1;
+                    array_unshift($queue, $n);
+                }
+            }
+        }
+    }
+    return -1;
+
+}
+
+function isEqual($src, $dest)
+{
+    return $src['x'] == $dest['x'] && $src['y'] == $dest['y'];
+}
+
+function isValidChessBoardCoordinate($x, $y)
+{
+    if ($x < 0 || $y < 0 || $x >= 8 || $y >= 8) {
+        return false;
+    }
+    return true;
+}

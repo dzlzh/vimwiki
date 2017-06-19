@@ -1,5 +1,9 @@
 # DZLZH's Wiki
 
+## TODO
+
+- [Work](todo/work.md)
+ 
 ## Notes
 
 - [PHP](notes/php.md)
@@ -10,6 +14,6 @@
 - [Docker](notes/docker.md)
 - [Google foo.bar](notes/google_foo_bar.md)
 
-## TODO
+## Codes
 
-- [Work](todo/work.md)
+- [PHP](codes/php.md)
