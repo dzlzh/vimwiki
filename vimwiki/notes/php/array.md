@@ -498,3 +498,11 @@ array array_diff ( array $array1 , array $array2 [, array $... ] );
 ```php
 array array_diff_assoc ( array $array1 , array $array2 [, array $... ] );
 ```
+
+## [`array_column()`](http://php.net/manual/zh/function.array-diff-assoc.php)
+
+返回数组中指定的一列
+
+```php
+array array_column ( array $input , mixed $column_key [, mixed $index_key = null ] );
+```
