@@ -506,3 +506,5 @@ array array_diff_assoc ( array $array1 , array $array2 [, array $... ] );
 ```php
 array array_column ( array $input , mixed $column_key [, mixed $index_key = null ] );
 ```
+
+> 返回input数组中键值为column_key的列， 如果指定了可选参数index_key，那么input数组中的这一列的值将作为返回数组中对应值的键。
