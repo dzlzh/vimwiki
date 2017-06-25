@@ -1,5 +1,13 @@
 # PHP - 数组函数
 
+## [`count`](https://secure.php.net/manual/zh/function.count.php)
+
+计算数组中的单元数目，或对象中的属性个数
+
+```php
+int count ( mixed $array_or_countable [, int $mode = COUNT_NORMAL ] );
+```
+
 ## `compact()`
 
 建立一个数组，包括变量名和它们的值
@@ -508,3 +516,19 @@ array array_column ( array $input , mixed $column_key [, mixed $index_key = null
 ```
 
 > 返回input数组中键值为column_key的列， 如果指定了可选参数index_key，那么input数组中的这一列的值将作为返回数组中对应值的键。
+
+## [`array_fill`](https://secure.php.net/manual/zh/function.array-fill.php)
+
+用给定的值填充数组
+
+```php
+array array_fill ( int $start_index , int $num , mixed $value );
+```
+
+## [`array_fill_keys`](https://secure.php.net/manual/zh/function.array-fill-keys.php)
+
+使用指定的键和值填充数组
+
+```php
+array array_fill_keys ( array $keys , mixed $value );
+```
