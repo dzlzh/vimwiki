@@ -8,6 +8,7 @@
 
 - [PHP](notes/php.md)
 - [WEB](notes/web.md)
+- [SQL](notes/sql.md)
 - [Git](notes/git.md)
 - [Linux](notes/linux.md)
 - [Shell](notes/shell.md)
