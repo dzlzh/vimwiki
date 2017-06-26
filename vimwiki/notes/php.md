@@ -1,6 +1,7 @@
 # PHP
 
 - [函数](php/function.md)
+- [字符串函数](php/string.md)
 - [数组函数](php/array.md)
 - [文件函数](php/file.md)
 - [加密函数](php/encryption.md)

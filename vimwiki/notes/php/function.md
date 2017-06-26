@@ -189,14 +189,6 @@ string number_format ( float $number [, int $decimals = 0 ] );
 string number_format ( float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = "," );
 ```
 
-## `str_replace()`
-
-子字符串替换
-
-```php
-mixed str_replace ( mixed $search , mixed $replace , mixed $subject [, int &$count ] );
-```
-
 ## `preg_replace()`
 
 执行一个正则表达式的搜索和替换
@@ -213,54 +205,6 @@ mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int
 
 ```php
 string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
-```
-
-## `strtolower()`
-
-将字符串转化为小写
-
-```php
-string strtolower ( string $string );
-```
-
-## `strtoupper()`
-
-将字符串转化为大写
-
-```php
-string strtoupper ( string $string );
-```
-
-## [`ucfirst()`](https://secure.php.net/manual/zh/function.ucfirst.php)
-
-将字符串的首字母转换为大写
-
-```php
-string ucfirst ( string $str );
-```
-
-## [`lcfirst()`](https://secure.php.net/manual/zh/function.lcfirst.php)
-
-将字符串的首字母转换为小写
-
-```php
-string lcfirst ( string $str );
-```
-
-## [`ucwords()`](https://secure.php.net/manual/zh/function.ucwords.php)
-
-将字符串中每个单词的首字母转换为大写
-
-```php
-string ucwords ( string $str );
-```
-
-## `mb_substr()`
-
-获取字符串的部分
-
-```php
-string mb_substr ( string $str , int $start [, int $length = NULL [, string $encoding = mb_internal_encoding() ]] );
 ```
 
 ## `sql_autoload_register()`
@@ -472,14 +416,6 @@ string trim ( string $str [, string $charlist = "\t\n\r\0\x0B" ] );
 >
 >"\x0B" (ASCII *11* (*0x0B*))，垂直制表符
 
-## [`strrpos()`](https://secure.php.net/manual/zh/function.strrpos.php)
-
-计算指定字符串在目标字符串中最后一次出现的位置
-
-```php
-int strrpos ( string $haystack , string $needle [, int $offset = 0 ] );
-```
-
 ## [`parse_url()`](https://secure.php.net/manual/zh/function.parse-url.php)
 
 解析 URL，返回其组成部分
@@ -494,39 +430,6 @@ mixed parse_url ( string $url [, int $component = -1 ] );
 
 ```php
 string sprintf ( string $format [, mixed $args [, mixed $... ]] );
-```
-
-## [`ord()`](https://secure.php.net/manual/zh/function.ord.php)
-
-返回字符的 ASCII 码值
-
-```php
-int ord ( string $string );
-```
-
-## [`chr()`](https://secure.php.net/manual/zh/function.chr.php)
-
-返回指定的字符
-
-```php
-string chr ( int $ascii );
-```
-
-## [`strtr()`](https://secure.php.net/manual/zh/function.strtr.php)
-
-转换指定字符
-
-```php
-string strtr ( string $str , string $from , string $to );
-string strtr ( string $str , array $replace_pairs );
-```
-
-## [`chunk_split()`](https://secure.php.net/manual/zh/function.chunk-split.php)
-
-将字符串分割成小块
-
-```php
-string chunk_split ( string $body [, int $chunklen = 76 [, string $end = "\r\n" ]] );
 ```
 
 ## [`session_set_save_handler`](https://secure.php.net/manual/zh/function.session-set-save-handler.php)
