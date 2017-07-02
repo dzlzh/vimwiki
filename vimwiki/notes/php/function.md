@@ -439,3 +439,32 @@ string sprintf ( string $format [, mixed $args [, mixed $... ]] );
 ```php
 bool session_set_save_handler ( callable $open , callable $close , callable $read , callable $write , callable $destroy , callable $gc [, callable $create_sid ] );
 ```
+
+## [`getimagesize`](https://secure.php.net/manual/zh/function.getimagesize.php)
+
+取得图像大小
+
+```php
+array getimagesize ( string $filename [, array &$imageinfo ] );
+```
+
+- 索引 0 包含图像宽度的像素值
+- 索引 1 包含图像高度的像素值
+- 索引 2 是图像类型的标记：
+  - 1 = GIF
+  - 2 = JPG
+  - 3 = PNG
+  - 4 = SWF
+  - 5 = PSD
+  - 6 = BMP
+  - 7 = TIFF(intel byte order)
+  - 8 = TIFF(motorola byte order)
+  - 9 = JPC
+  - 10 = JP2
+  - 11 = JPX
+  - 12 = JB2
+  - 13 = SWC
+  - 14 = IFF
+  - 15 = WBMP
+  - 16 = XBM
+- 索引 3 是文本字符串，内容为 “height="yyy"width="xxx"”，可直接用于 IMG 标记。
