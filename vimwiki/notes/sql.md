@@ -33,3 +33,27 @@ SELECT column_name(s) FROM table_name2
 ## AFTER
 
 删除，添加或修改表字段时设定位于某个字段之后
+
+## FROM_UNIXTIME
+
+时间戳以格式化显示
+
+```sql
+FROM_UNIXTIME(unix_timestamp ，format)
+```
+
+## UNIX_TIMESTAMP
+
+日期数据转换成时间戳
+
+```sql
+UNIX_TIMESTAMP(date)
+```
+
+## DATE_FORMAT
+
+以不同的格式显示日期 / 时间数据
+
+```sql
+DATE_FORMAT(date,format)
+```
