@@ -24,6 +24,8 @@
 - `git reset --hard <HEAD^|commitID>` 版本回退
 - `git reset HEAD file` 可以把暂存区的修改撤销掉
 - `git checkout -- file` 可以丢弃工作区的修改
+  - `-b` 创建分支并切换
+  - `--orphan` 创建一个干净的分支
 - `git stash` 把当前工作现场“储藏”起来
 - `git stash list` 查看储藏
 - `git stash apply [stash@{x}]` 恢复储藏，`stash@{x}` 指定恢复
