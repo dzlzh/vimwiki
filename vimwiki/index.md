@@ -16,7 +16,7 @@
 - [Redis](notes/redis.md)
 - [Docker](notes/docker.md)
 - [Google foo.bar](notes/google_foo_bar.md)
-- [software Inventory](notes/software.md)
+- [Software Inventory](notes/software.md)
 
 ## Codes
 
