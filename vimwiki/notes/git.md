@@ -15,6 +15,8 @@
   - `-a` 提交工作区自上次 commit 之后的变化，直接到仓库区
   - `--amend -m` 使用一新的 commit，替代上一次提交。如果代码没有任何新变化，则用来改写上一次 commit 的提交信息
 - `git status` 查看状态
+- `git show [commit]` 查看 commit 的详细内容
+- `git diff [commit]^!` 查看 commit 的详细内容
 - `git diff` 查看不同
 - `git diff HEAD` 查看工作区和版本库里面最新版本的区别
 - `git diff --cached [file]` 显示暂存区和上一个 commit 的差异
