@@ -17,3 +17,12 @@
 > “驼峰式大小写（Camel-Case）一词来自[Perl](https://zh.wikipedia.org/wiki/Perl)语言中普遍使用的大小写混合格式，而Larry Wall等人所著的畅销书《Programming Perl》（[O'Reilly](https://zh.wikipedia.org/wiki/O%27Reilly)出版）的封面图片正是一匹[骆驼](https://zh.wikipedia.org/wiki/%E9%A7%B1%E9%A7%9D)。”[[1\]](https://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB#cite_note-1)
 >
 > “驼峰式大小写”命名规则可视为一种惯例，并无绝对与强制，为的是增加识别和可读性。一旦选用或设置好命名规则，在程序编写时应保持一致格式。
+
+## 语句
+
+- 命名空间 `namespace` 和 声明语句块 `use` 后面__必须__插入一行空格
+- 类的 `{}` __必须__自成一行
+- 方法的 `{}` __必须__自成一行
+- 类的属性和方法__必须__添加访问__修饰符__
+- 控制结构的关键字后__必须__有一个__空格__
+- 控制结构的开始 `{` __必须__要和声明在同一行，结束 `}` __必须__自成一行
