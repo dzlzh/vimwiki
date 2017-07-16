@@ -16,6 +16,7 @@
 - [Tmux](notes/tmux.md)
 - [Redis](notes/redis.md)
 - [Docker](notes/docker.md)
+- [Go](notes/go.md)
 - [Google foo.bar](notes/google_foo_bar.md)
 - [Software Inventory](notes/software.md)
 
