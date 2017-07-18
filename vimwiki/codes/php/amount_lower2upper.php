@@ -1,5 +1,7 @@
 <?php
 function amount_lower2upper() {
+
+    $amount = (int)$amount;
     // 分割金额的整数和小数
     $parts = explode('.', $amount, 2);
     $int   = isset($parts[0]) ? strval($parts[0]) : '0';
@@ -14,7 +16,7 @@ function amount_lower2upper() {
     }
 
     if (empty($int) && empty($dec)) {
-        return '零';
+        return '零' . $unit . '整';
     }
 
     $chs = array('0','壹','贰','叁','肆','伍','陆','柒','捌','玖'); 
