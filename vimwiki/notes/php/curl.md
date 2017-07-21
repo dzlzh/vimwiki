@@ -13,6 +13,11 @@ bool curl_setopt_array ( resource $ch , array $options );
 - `CURLOPT_HTTPHEADER` 设置 HTTP 头字段的数组。格式： `array('Content-type: text/plain', 'Content-length: 100')`
 - `CURLOPT_POST` `TRUE` 时会发送 `POST` 请求，类型为：`application/x-www-form-urlencoded`，是 HTML 表单提交时最常见的一种。	
 
+### 重定向
+
+- `CURLOPT_FOLLOWLOCATION` `TRUE` 时将会根据服务器返回 HTTP 头中的 "`Location:`" 重定向。(递归)
+- `CURLOPT_MAXREDIRS` 指定最多的 HTTP 重定向次数，这个选项是和 `CURLOPT_FOLLOWLOCATION` 一起使用的。
+
 ## CURLFile 类
 
 ```php
