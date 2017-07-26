@@ -12,6 +12,7 @@
 - [Git](notes/git.md)
 - [Linux](notes/linux.md)
 - [Shell](notes/shell.md)
+- [RegExr](notes/regexr.md)
 - [Vim](notes/vim.md)
 - [Tmux](notes/tmux.md)
 - [Redis](notes/redis.md)
