@@ -43,7 +43,11 @@ function amount_lower2upper() {
         $u2 = $str != '' ? $exp[$k] : ''; 
         $res = $str . $u2 . $res; 
     }
- 
+
+    if (empty($res)) {
+        $res = '零';
+    }
+
     // 如果小数部分处理完之后是00，需要处理下 
     $dec = rtrim($dec, '0'); 
  
