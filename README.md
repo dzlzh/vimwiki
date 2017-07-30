@@ -41,10 +41,6 @@
   - [11.11](Codes/Web/11.11.js)
   - [12306](Codes/Web/12306.js)
 
-## Software Inventory
-
-- [Windows](https://github.com/dzlzh/software-inventory#windows)
-
 ## Crawlers
 
 - [lagou](https://github.com/dzlzh/lagou-crawler)
@@ -69,3 +65,6 @@
 - [Centos7 编译安装 Libmcrypt 库](https://dzlzh.github.io/#post/13)
 - [PHP 函数可变数量的参数列表](https://dzlzh.github.io/#post/14)
 - [数值变量交换常用方法](https://dzlzh.github.io/#post/15)
+- [PHP 扩展 ZipArchive 安装](https://dzlzh.github.io/#post/16)
+- [PHP7 install](https://dzlzh.github.io/#post/17)
+
