@@ -1,3 +1,31 @@
+## DZLZH's Wiki
+
+### TODO
+
+- [Work](vimwiki/todo/work.md)
+- [Reading](vimwiki/todo/reading.md)
+
+### Notes
+
+- [PHP](vimwiki/notes/php.md)
+- [WEB](vimwiki/notes/web.md)
+- [SQL](vimwiki/notes/sql.md)
+- [Git](vimwiki/notes/git.md)
+- [Linux](vimwiki/notes/linux.md)
+- [Shell](vimwiki/notes/shell.md)
+- [RegExr](vimwiki/notes/regexr.md)
+- [Vim](vimwiki/notes/vim.md)
+- [Tmux](vimwiki/notes/tmux.md)
+- [Redis](vimwiki/notes/redis.md)
+- [Docker](vimwiki/notes/docker.md)
+- [Go](vimwiki/notes/go.md)
+- [Google foo.bar](vimwiki/notes/google_foo_bar.md)
+- [Software Inventory](vimwiki/notes/software.md)
+
+### Codes
+
+- [PHP](vimwiki/codes/php.md)
+
 ## Notes
 
 - [Algorithm](Notes/Algorithm.md)
@@ -41,10 +69,6 @@
   - [11.11](Codes/Web/11.11.js)
   - [12306](Codes/Web/12306.js)
 
-## Software Inventory
-
-- [Windows](https://github.com/dzlzh/software-inventory#windows)
-
 ## Crawlers
 
 - [lagou](https://github.com/dzlzh/lagou-crawler)
@@ -69,3 +93,6 @@
 - [Centos7 编译安装 Libmcrypt 库](https://dzlzh.github.io/#post/13)
 - [PHP 函数可变数量的参数列表](https://dzlzh.github.io/#post/14)
 - [数值变量交换常用方法](https://dzlzh.github.io/#post/15)
+- [PHP 扩展 ZipArchive 安装](https://dzlzh.github.io/#post/16)
+- [PHP7 install](https://dzlzh.github.io/#post/17)
+
