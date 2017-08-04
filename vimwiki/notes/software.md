@@ -26,6 +26,7 @@
   - [AutoHotkey](https://autohotkey.com/)
   - [Snipaste](https://www.snipaste.com/)
   - [有道词典](http://www.youdao.com/)
+  - [traymond](https://github.com/fcFn/traymond)
 - __编辑器__
   - [Vim](http://www.vim.org/)
   - [Notepad++](https://notepad-plus-plus.org/)
