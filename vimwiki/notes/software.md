@@ -17,6 +17,7 @@
   - [火绒安全](http://huorong.cn/)
   - [Sandboxie](https://www.sandboxie.com/)
   - [Best Trace](https://www.ipip.net/download.html)
+  - [Dism++](http://www.chuyu.me/zh-Hans/)
 - __辅助工具__
   - [Wox](http://www.getwox.com/)
   - [KeePass](http://keepass.info/index.html)
