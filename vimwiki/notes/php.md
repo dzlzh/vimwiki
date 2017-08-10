@@ -25,3 +25,4 @@
 # Laravel
 
 - [Blade](php/laravel/blade.md)
+- [Model](php/laravel/model.md)
