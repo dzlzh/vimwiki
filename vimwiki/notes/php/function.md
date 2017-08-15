@@ -460,3 +460,15 @@ array getimagesize ( string $filename [, array &$imageinfo ] );
   - 15 = WBMP
   - 16 = XBM
 - 索引 3 是文本字符串，内容为 “height="yyy"width="xxx"”，可直接用于 IMG 标记。
+
+
+## [`sleep`](http://php.net/manual/zh/function.sleep.php)
+
+延缓执行
+
+```php
+int sleep ( int $seconds );
+```
+成功时返回 0，错误时返回 `FALSE`。
+
+如果函数的调用被一个信号中止，`sleep()` 会返回一个非零的值。在 Windows 上，该值总是 192（即 Windows API 常量 `WAIT_IO_COMPLETION` 的值）。其他平台上，该返回值是剩余未 `sleep` 的秒数。
