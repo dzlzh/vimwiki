@@ -7,20 +7,32 @@
 
 ### Notes
 
-- [PHP](vimwiki/notes/php.md)
-- [WEB](vimwiki/notes/web.md)
-- [SQL](vimwiki/notes/sql.md)
-- [Git](vimwiki/notes/git.md)
-- [Linux](vimwiki/notes/linux.md)
-- [Shell](vimwiki/notes/shell.md)
-- [RegExr](vimwiki/notes/regexr.md)
-- [Vim](vimwiki/notes/vim.md)
-- [Tmux](vimwiki/notes/tmux.md)
-- [Redis](vimwiki/notes/redis.md)
-- [Docker](vimwiki/notes/docker.md)
-- [Go](vimwiki/notes/go.md)
-- [Google foo.bar](vimwiki/notes/google_foo_bar.md)
-- [Software Inventory](vimwiki/notes/software.md)
+- ### [程序设计 (Programming)](vimwiki/notes/programming.md)
+
+  - [PHP](vimwiki/notes/programming/php.md)
+  - [Go](vimwiki/notes/programming/go.md)
+  - [WEB](vimwiki/notes/programming/web.md)
+  - [Shell](vimwiki/notes/programming/shell.md)
+  - [RegExr](vimwiki/notes/programming/regexr.md)
+  - [API 设计原则](vimwiki/notes/programming/api.md)
+
+  ### [数据库 (Database)](vimwiki/notes/database.md)
+
+  - [SQL](vimwiki/notes/database/sql.md)
+  - [Redis](vimwiki/notes/database/redis.md)
+
+  ### [开发工具 (Develop)](vimwiki/notes/develop.md)
+
+  - [Linux](vimwiki/notes/develop/linux.md)
+  - [Docker](vimwiki/notes/develop/docker.md)
+  - [Git](vimwiki/notes/develop/git.md)
+  - [Vim](vimwiki/notes/develop/vim.md)
+  - [Tmux](vimwiki/notes/develop/tmux.md)
+
+  ### [其他 (Others)](vimwiki/notes/others.md)
+
+  - [Google foo.bar](vimwiki/notes/others/google_foo_bar.md)
+  - [Software Inventory](vimwiki/notes/others/software.md)
 
 ### Codes
 
