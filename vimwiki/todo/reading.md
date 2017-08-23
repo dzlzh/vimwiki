@@ -1,5 +1,6 @@
 # TODO - Reading 
 
+- [ ] [总有你要的编程书单（GitHub）](http://blog.didiaoyuan.com/2017/04/18/%E6%80%BB%E6%9C%89%E4%BD%A0%E8%A6%81%E7%9A%84%E7%BC%96%E7%A8%8B%E4%B9%A6%E5%8D%95%EF%BC%88GitHub-%EF%BC%89/)
 - [X] [正则表达式系列总结](https://zhuanlan.zhihu.com/p/27653434)
     - [X] [正则表达式字符匹配攻略](https://zhuanlan.zhihu.com/p/27338649)
     - [X] [正则表达式位置匹配攻略](https://zhuanlan.zhihu.com/p/27309508)
@@ -15,3 +16,11 @@
     - [ ] [SED 简明教程](http://coolshell.cn/articles/9104.html)
     - [ ] [AWK 简明教程](http://coolshell.cn/articles/9070.html)
     - [ ] [API 设计原则](http://coolshell.cn/articles/18024.html)
+- [ ] [segmentfault](https://segmentfault.com)
+    - [ ] [《Web 全栈工程师的自我修养》浓缩笔记（上） ](https://segmentfault.com/a/1190000008921805)
+    - [ ] [《Web 全栈工程师的自我修养》浓缩笔记（下） ](https://segmentfault.com/a/1190000010128001)
+    - [ ] [我的编程之路——知识管理与知识体系](https://segmentfault.com/a/1190000004612590)
+- [ ] [GitHub](https://github.com)
+    - [ ] [使用 Dockerfile 部署 Lnmp+Redis 环境](https://github.com/voocel/docker-lnmp)
+- [ ] [GitBook](https://www.gitbook.com)
+    - [ ] [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/)
