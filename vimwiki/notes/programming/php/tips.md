@@ -35,3 +35,19 @@
 类静态方法时，方法返回值为：
 
 `return new self;`
+
+# 知识点
+
+## PHP7 中的 NULL合并运算符
+
+```
+$test ?? 1;
+isset($test) ? $test : 1;
+```
+
+## 简洁的三元运算符
+
+```
+$test ?: 1;
+$test ? $test : 1;
+```
