@@ -472,3 +472,23 @@ int sleep ( int $seconds );
 成功时返回 0，错误时返回 `FALSE`。
 
 如果函数的调用被一个信号中止，`sleep()` 会返回一个非零的值。在 Windows 上，该值总是 192（即 Windows API 常量 `WAIT_IO_COMPLETION` 的值）。其他平台上，该返回值是剩余未 `sleep` 的秒数。
+
+## [`bcsub`](https://secure.php.net/manual/zh/function.bcsub.php)
+
+2 个任意精度数字的减法
+
+```php
+string bcsub ( string $left_operand , string $right_operand [, int $scale = int ] );
+```
+
+左操作数减去右操作数
+
+## [`bcadd`](https://secure.php.net/manual/zh/function.bcadd.php)
+
+2 个任意精度数字的加法计算
+
+```php
+string bcadd ( string $left_operand , string $right_operand [, int $scale ] );
+```
+
+左操作数和右操作数求和
