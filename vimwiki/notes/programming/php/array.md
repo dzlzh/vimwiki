@@ -532,3 +532,11 @@ array array_fill ( int $start_index , int $num , mixed $value );
 ```php
 array array_fill_keys ( array $keys , mixed $value );
 ```
+
+## [`array_sum`](https://secure.php.net/manual/zh/function.array-sum.php)
+
+对数组中所有值求和
+
+```php
+number array_sum ( array $array );
+```
