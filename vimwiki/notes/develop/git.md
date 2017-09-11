@@ -14,6 +14,7 @@
   - `-m` 提交暂存区到仓库区
   - `-a` 提交工作区自上次 commit 之后的变化，直接到仓库区
   - `--amend -m` 使用一新的 commit，替代上一次提交。如果代码没有任何新变化，则用来改写上一次 commit 的提交信息
+  - `--verbose` 列出 diff 信息
 - `git status` 查看状态
 - `git show [commit]` 查看 commit 的详细内容
 - `git diff [commit]^!` 查看 commit 的详细内容
@@ -56,6 +57,12 @@
 - `git branch --set-upstream <name> <origin/name>` 指定本地分支与远程分支的链接
 - `git rebase` 合并
   - `-i` 把 commit 压缩成一个
+    - `pick` 正常选中
+    - `reword` 选中，并且修改提交信息；
+    - `edit` 选中，rebase 时会暂停，允许你修改这个 commit（参考这里）
+    - `squash` 选中，会将当前 commit 与上一个 commit 合并
+    - `fixup` 与 squash 相同，但不会保存当前 commit 的提交信息
+    - `exec` 执行其他 shell 命令 
   - `--continue` 继续
   - `--abort` 取消
 
