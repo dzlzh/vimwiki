@@ -56,6 +56,9 @@
 - `git branch --set-upstream <name> <origin/name>` 指定本地分支与远程分支的链接
 - `git rebase` 合并
   - `-i` 把 commit 压缩成一个
+  - `--continue` 继续
+  - `--abort` 取消
+
 ### 标签操作
 
 - `git tag` 查看标签
