@@ -22,6 +22,7 @@
     - [X] [我的编程之路——知识管理与知识体系](https://segmentfault.com/a/1190000004612590)
 - [ ] [GitHub](https://github.com)
     - [ ] [使用 Dockerfile 部署 Lnmp+Redis 环境](https://github.com/voocel/docker-lnmp)
+    - [ ] [高质量的 Git 中文教程](https://github.com/geeeeeeeeek/git-recipes/wiki)
 - [ ] [GitBook](https://www.gitbook.com)
     - [ ] [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/)
     - [ ] [English-level-up-tips-for-Chinese](https://byoungd.gitbooks.io/english-level-up-tips-for-chinese/content/)
