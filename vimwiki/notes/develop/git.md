@@ -25,6 +25,8 @@
 - `git log --graph ` 查看分支合并图
 - `git reflog` 查看用过的命令
 - `git reset --hard <HEAD^|commitID>` 版本回退
+  - `--hard` 丢弃工作区的修改
+  - `--soft` 保留工作区的修改
 - `git reset HEAD file` 可以把暂存区的修改撤销掉
 - `git checkout -- file` 可以丢弃工作区的修改
   - `-b` 创建分支并切换
