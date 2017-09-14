@@ -4,7 +4,7 @@
 
 ```
 # 启动
-tmus [new -s <session-name>]
+tmux [new -s <session-name>]
 :new [-s <session-name>]
 
 # 列出
