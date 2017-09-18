@@ -97,3 +97,9 @@ tmux <a|at|attach> [-t <name>]
 # 以 5 个单元格为单位移动边缘以调整当前面板大小
 <prefix>C-[up|down|left|right]
 ```
+
+## 同步窗口
+
+```
+:setw synchronize-panes
+```
