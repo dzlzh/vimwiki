@@ -540,3 +540,11 @@ array array_fill_keys ( array $keys , mixed $value );
 ```php
 number array_sum ( array $array );
 ```
+
+## [`array_flip`](https://secure.php.net/manual/zh/function.array-flip.php)
+
+交换数组中的键和值
+
+```php
+array array_flip ( array $array );
+```
