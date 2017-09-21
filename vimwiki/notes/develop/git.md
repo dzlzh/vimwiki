@@ -131,6 +131,16 @@
 
 - `fixes Issue_number`
 
+### upstream master
+
+```
+git remote add --track master upstream git://github.com/upstreamname/projectname.git
+ 
+git fetch upstream
+ 
+git merge upstream/master
+```
+
 ### emoji
 
 | emoji                       | code                          | info                        |
