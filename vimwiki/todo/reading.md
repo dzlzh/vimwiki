@@ -24,6 +24,7 @@
 - [ ] [GitHub](https://github.com)
     - [ ] [使用 Dockerfile 部署 Lnmp+Redis 环境](https://github.com/voocel/docker-lnmp)
     - [ ] [高质量的 Git 中文教程](https://github.com/geeeeeeeeek/git-recipes/wiki)
+    - [ ] [一些不错英文资料的中文翻译](https://github.com/oldratlee/translations)
 - [ ] [GitBook](https://www.gitbook.com)
     - [ ] [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/)
     - [ ] [English-level-up-tips-for-Chinese](https://byoungd.gitbooks.io/english-level-up-tips-for-chinese/content/)
