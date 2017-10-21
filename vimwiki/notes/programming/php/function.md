@@ -472,3 +472,13 @@ int sleep ( int $seconds );
 成功时返回 0，错误时返回 `FALSE`。
 
 如果函数的调用被一个信号中止，`sleep()` 会返回一个非零的值。在 Windows 上，该值总是 192（即 Windows API 常量 `WAIT_IO_COMPLETION` 的值）。其他平台上，该返回值是剩余未 `sleep` 的秒数。
+
+## [`ignore_user_abort`](https://secure.php.net/manual/zh/function.ignore-user-abort.php)
+
+设置客户端断开连接时是否中断脚本的执行
+
+```
+int ignore_user_abort ([ bool $value ] );
+```
+
+PHP 以命令行脚本执行时，当脚本终端结束，脚本不会被立即中止，除非设置 `value` 为 `TRUE`，否则脚本输出任意字符时会被中止。
