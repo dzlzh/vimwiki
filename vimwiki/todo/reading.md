@@ -29,4 +29,4 @@
     - [ ] [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/)
     - [ ] [English-level-up-tips-for-Chinese](https://byoungd.gitbooks.io/english-level-up-tips-for-chinese/content/)
 - [ ] [PHP 简洁之道](http://www.hellonine.top/index.php/archives/70/)
-- [ ] [深入理解什么是 RESTful API](http://www.jianshu.com/p/84568e364ee8)
+- [ ] [深入理解什么是 RESTful API](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
