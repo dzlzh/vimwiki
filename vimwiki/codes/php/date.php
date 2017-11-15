@@ -19,6 +19,8 @@ function getMonth($date = '', $format = 'Y-m-01')
 // T+1
 function getTPlus1()
 {
+    // 今天开始时间
+    $todayStartTime = strtotime(date('Y-m-d 00:00:00'));
     // 结算时间
     $settleTime = strtotime(date('Y-m-d 12:00:00'));
     // 如果当前时间小于今天12点就记算从上个结算日的12点后开始
@@ -27,7 +29,9 @@ function getTPlus1()
         case 1:
             // 周一的上个结算是为上周周五12点
             if (NOW_TIMESTAMP <= $settleTime) {
-                $settleTime = $settleTime - 259200;
+                $startTime = $todayStartTime - 259200;
+            } else {
+                $startTime = $todayStartTime;
             }
             break;
         
@@ -37,14 +41,19 @@ function getTPlus1()
         case 5:
             // 周二到周五的上个结算是为昨天12点后到今天12点前
             if (NOW_TIMESTAMP <= $settleTime) {
-                $settleTime = strtotime(date("Y-m-d 12:00:00", strtotime("-1 day")));
+                $startTime = strtotime(date("Y-m-d 12:00:00", strtotime("-1 day")));
+            } else {
+                $startTime = $todayStartTime;
             }
             break;
 
         case 6:
         case 7:
             // 周六日的结算时间为周五12点后开始直到下周一的12点
-            $settleTime = $settleTime - 86400 * (date('N') - 5);
+            $startTime = $todayStartTime - 86400 * (date('N') - 5);
             break;
     }
+    $endTime = time();
+    // 不可结果金额的开始时间 $startTime
+    // 不可结果金额的结果时间 $endTime
 }
