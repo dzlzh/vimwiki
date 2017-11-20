@@ -82,8 +82,10 @@
   - [Cryptomator](https://cryptomator.org/)
 - __下载工具__
   - [EagleGet](http://www.eagleget.com/cn/)
+  - [Persepolis Download Manager](https://persepolisdm.github.io/)
 - __压缩工具__
   - [7-Zip](http://www.7-zip.org/)
 - __输入法__
   - [RIME](http://rime.im/)
   - [手心输入法](http://www.xinshuru.com)
+  - [精灵五笔](http://www.jlwubi.com/)
