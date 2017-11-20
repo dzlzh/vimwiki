@@ -44,6 +44,9 @@
   - [VMware Workstation](https://www.vmware.com/)
   - [SourceTree](https://www.sourcetreeapp.com/)
   - [FileZilla](https://filezilla-project.org/)
+  - [HeidiSQL](https://www.heidisql.com/)
+  - [Robo 3T](https://robomongo.org/)
+  - [Redis Desktop Manager](https://redisdesktop.com/)
 - __浏览器__
   - [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html)
   - [Firefox](https://www.mozilla.org/zh-CN/firefox/new/)
