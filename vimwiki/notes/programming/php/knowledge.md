@@ -30,5 +30,5 @@ $test ? $test : 1;
 
 - 直接调用
 - 变量函数调用
-- [`call_user_func`](function#call_user_func) 调用
-- [`call_user_func_array`](function#call_user_func_array) 调用
+- [`call_user_func`](function.md#call_user_func) 调用
+- [`call_user_func_array`](function.md#call_user_func_array) 调用
