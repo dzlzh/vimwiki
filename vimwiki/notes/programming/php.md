@@ -19,6 +19,7 @@
 - [I/O streams](php/io_streams.md)
 - [规范标准](php/standard.md)
 - [技巧](php/tips.md)
+- [知识点](php/knowledge.md)
 - [易错](php/fallible.md)
 - [安全](php/security.md)
 - [配置](php/ini.md)
