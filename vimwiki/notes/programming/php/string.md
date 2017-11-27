@@ -1,6 +1,6 @@
 # PHP - 字符串函数
 
-## `str_replace()`
+## [`str_replace()`](http://php.net/manual/zh/function.str-replace.php)
 
 子字符串替换
 
