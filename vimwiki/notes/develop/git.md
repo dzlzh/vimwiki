@@ -55,6 +55,7 @@
 - `git checkout -b <name> [origin/name]` 创建并切换 (-b) 分支，[origin/name] 指定远程分支
 - `git merge <name>` 合并指定分支到当前分支
 - `git merge --no-ff -m "<message>" <branch>` 用普通模式合并，并且提交描述
+- `git merge --squash`
 - `git branch -d <name>` 删除分支，-D 强制删除
 - `git branch --set-upstream <name> <origin/name>` 指定本地分支与远程分支的链接
 - `git rebase` 合并
