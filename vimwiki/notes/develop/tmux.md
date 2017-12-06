@@ -110,3 +110,16 @@ tmux kill-session -t <session-name>
 ```
 :setw synchronize-panes
 ```
+
+## 调整窗口排序
+
+```
+# 交换<num>号和<num>号窗口
+swap-window -s <num> -t <num>
+
+# 交换当前和<num>号窗口
+swap-window -t <num>
+
+# 移动当前窗口到<num>号
+move-window -t <num>
+```
