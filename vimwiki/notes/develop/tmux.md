@@ -5,7 +5,7 @@
 ```
 # 启动
 tmux [new -s <session-name>]
-:new [-s <session-name>]
+<prefix>:new [-s <session-name>]
 
 # 列出
 tmux ls
