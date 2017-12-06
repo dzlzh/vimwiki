@@ -19,6 +19,13 @@ tmux <a|at|attach> [-t <name>]
 
 # 重命名
 <prefix>$
+
+# 删除
+tmux kill-session -t <session-name>
+<prefix>:kill-session
+
+## 删除所有
+<prefix>:kill-server
 ```
 
 ## Window
