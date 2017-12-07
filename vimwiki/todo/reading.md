@@ -30,3 +30,6 @@
     - [ ] [English-level-up-tips-for-Chinese](https://byoungd.gitbooks.io/english-level-up-tips-for-chinese/content/)
 - [ ] [PHP 简洁之道](http://www.hellonine.top/index.php/archives/70/)
 - [ ] [深入理解什么是 RESTful API](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+- [ ] [【译】注释的艺术](https://elevenbeans.github.io/2017/11/24/art-of-comments/)
+- [ ] [Docker 核心技术与实现原理](https://draveness.me/docker)
+- [ ] [API 是如何工作的（傻瓜式教学）](https://zhuanlan.zhihu.com/p/31294362)
