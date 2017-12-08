@@ -152,12 +152,20 @@ array array_keys ( array $array [, mixed $search_value [, bool $strict = false ]
 array array_values ( array $input );
 ```
 
-##  `array_map()`
+##  [`array_map()`](https://secure.php.net/manual/zh/function.array-map.php)
 
 将回调函数作用到给定数组的单元上
 
 ```php
 array array_map ( callable $callback , array $arr1 [, array $... ] );
+```
+
+##  [`array_walk()`](https://secure.php.net/manual/zh/function.array-walk.php)
+
+使用用户自定义函数对数组中的每个元素做回调处理
+
+```php
+bool array_walk ( array &$array , callable $callback [, mixed $userdata = NULL ] );
 ```
 
 ## [`key()`](http://php.net/manual/zh/function.key.php)
