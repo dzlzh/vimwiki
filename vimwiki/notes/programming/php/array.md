@@ -168,6 +168,14 @@ array array_map ( callable $callback , array $arr1 [, array $... ] );
 bool array_walk ( array &$array , callable $callback [, mixed $userdata = NULL ] );
 ```
 
+## [`array_walk_recursive`](https://secure.php.net/manual/zh/function.array-walk-recursive.php)
+
+对数组中的每个成员递归地应用用户函数
+
+```php
+bool array_walk_recursive ( array &$array , callable $callback [, mixed $userdata = NULL ] );
+```
+
 ## [`key()`](http://php.net/manual/zh/function.key.php)
 
 从关联数组中取得键名
