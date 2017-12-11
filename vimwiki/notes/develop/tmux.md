@@ -102,7 +102,7 @@ tmux kill-session -t <session-name>
 <prefix>C-[up|down|left|right]
 
 # 以 5 个单元格为单位移动边缘以调整当前面板大小
-<prefix>C-[up|down|left|right]
+<prefix>A-[up|down|left|right]
 ```
 
 ## 同步窗口
