@@ -482,3 +482,11 @@ int ignore_user_abort ([ bool $value ] );
 ```
 
 PHP 以命令行脚本执行时，当脚本终端结束，脚本不会被立即中止，除非设置 `value` 为 `TRUE`，否则脚本输出任意字符时会被中止。
+
+## [`create_function`](https://secure.php.net/manual/zh/function.create-function.php)
+
+创建一个匿名函数
+
+```php
+string create_function ( string $args , string $code );
+```
