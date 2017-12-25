@@ -114,7 +114,7 @@ tmux kill-session -t <session-name>
 # 同步窗口
 :setw synchronize-panes
 
-## 固定 Window 名称
+# 固定 Window 名称
 set-option -g allow-rename off
 
 # 交换<num>号和<num>号窗口
