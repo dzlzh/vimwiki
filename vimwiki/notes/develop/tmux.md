@@ -54,6 +54,9 @@ tmux kill-session -t <session-name>
 
 # 关闭
 <prefix>&
+
+# 移动当前窗口到<num>号
+<prefix>.
 ```
 
 ## Pane
@@ -105,15 +108,15 @@ tmux kill-session -t <session-name>
 <prefix>A-[up|down|left|right]
 ```
 
-## 同步窗口
+## 命令
 
 ```
+# 同步窗口
 :setw synchronize-panes
-```
 
-## 调整窗口排序
+## 固定 Window 名称
+set-option -g allow-rename off
 
-```
 # 交换<num>号和<num>号窗口
 swap-window -s <num> -t <num>
 
