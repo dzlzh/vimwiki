@@ -14,6 +14,7 @@
   - `-m` 提交暂存区到仓库区
   - `-a` 提交工作区自上次 commit 之后的变化，直接到仓库区
   - `--amend -m` 使用一新的 commit，替代上一次提交。如果代码没有任何新变化，则用来改写上一次 commit 的提交信息
+  - `--amend --no-edit` 不修改提交信息，提交新的文件与更改
   - `--verbose` 列出 diff 信息
 - `git status` 查看状态
 - `git show [commit]` 查看 commit 的详细内容
@@ -46,6 +47,7 @@
 - `git remote` 远程库
 - `git fetch` 下载远程仓库的所有变动
 - `git pull [remote] [rbranch:branch]` 拉取远程库到本地
+  - `--rebase`
 - `git push [remote] [branch:rbranch]` 推送本地到远程库
   - `--force` 强行推送当前分支到远程仓库，即使有冲突
   - `--all` 推送所有分支到远程仓库
@@ -65,7 +67,7 @@
   - `-i` 把 commit 压缩成一个
     - `pick` 正常选中
     - `reword` 选中，并且修改提交信息；
-    - `edit` 选中，rebase 时会暂停，允许你修改这个 commit（参考这里）
+    - `edit` 选中，rebase 时会暂停，允许你修改这个 commit
     - `squash` 选中，会将当前 commit 与上一个 commit 合并
     - `fixup` 与 squash 相同，但不会保存当前 commit 的提交信息
     - `exec` 执行其他 shell 命令 
