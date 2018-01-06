@@ -203,3 +203,12 @@ gt          " 后一个
 :[n]r! command
 :m,n! command
 ```
+
+## 文件操作
+
+```
+%  " 当前文件路径
+:p " path
+:h " head
+:t " tail
+```
