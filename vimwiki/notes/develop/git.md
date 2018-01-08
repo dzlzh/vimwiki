@@ -47,7 +47,7 @@
 - `git remote` 远程库
 - `git fetch` 下载远程仓库的所有变动
 - `git pull [remote] [rbranch:branch]` 拉取远程库到本地
-  - `--rebase`
+  - `--rebase` 使用 `rebase` 策略代替 `merge` 策略
 - `git push [remote] [branch:rbranch]` 推送本地到远程库
   - `--force` 强行推送当前分支到远程仓库，即使有冲突
   - `--all` 推送所有分支到远程仓库
