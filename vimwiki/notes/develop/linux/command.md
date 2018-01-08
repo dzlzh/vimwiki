@@ -258,3 +258,19 @@ test [选项] [文件|数值|字符串]
 ```
 find <指定目录> <指定条件> <指定动作>
 ```
+
+## 文件夹挂载
+
+```
+# 手动挂载
+mount [-t vfstype] [-o options] device dir
+# 取消挂载
+umount -f dir
+```
+
+- 光盘或光盘镜像：`iso9660`
+- DOS fat16文件系统：`msdos`
+- Windows 9x fat32文件系统：`vfat `
+- Windows NT ntfs文件系统：`ntfs`
+- Mount Windows文件网络共享：`smbfs`
+- UNIX(LINUX) 文件网络共享：`nfs`
