@@ -108,6 +108,20 @@ tmux kill-session -t <session-name>
 <prefix>A-[up|down|left|right]
 ```
 
+## 文本复制模式
+
+```
+# 进入复制模式
+<prefix>[
+
+# 复制
+# <space>进行复制
+# <enter>复制完成
+
+# 粘贴
+<prefix>]
+```
+
 ## 命令
 
 ```
