@@ -34,4 +34,5 @@
 - [ ] [【译】注释的艺术](https://elevenbeans.github.io/2017/11/24/art-of-comments/)
 - [ ] [Docker 核心技术与实现原理](https://draveness.me/docker)
 - [ ] [API 是如何工作的（傻瓜式教学）](https://zhuanlan.zhihu.com/p/31294362)
-- [ ] [Git 使用之重写历史记录](https://blog.ymfe.org/Git%20%E4%BD%BF%E7%94%A8%E4%B9%8B%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/)
+- [X] [Git 使用之重写历史记录](https://blog.ymfe.org/Git%20%E4%BD%BF%E7%94%A8%E4%B9%8B%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/)
+- [ ] [PHPer 面试指南](https://todayqq.gitbooks.io/phper/content/)
