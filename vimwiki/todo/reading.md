@@ -41,3 +41,8 @@
 - [ ] [API 是如何工作的（傻瓜式教学）](https://zhuanlan.zhihu.com/p/31294362)
 - [X] [Git 使用之重写历史记录](https://blog.ymfe.org/Git%20%E4%BD%BF%E7%94%A8%E4%B9%8B%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95/)
 - [ ] [PHPer 面试指南](https://todayqq.gitbooks.io/phper/content/)
+- [ ] [PHP7 数据结构与算法分析](http://www.ituring.com.cn/space/274337)
+    - [ ] [PHP7 数据结构与算法分析：前言](http://www.ituring.com.cn/article/498160)
+    - [ ] [PHP7 数据结构与算法分析：第一章 -- 数据结构和算法简介](http://www.ituring.com.cn/article/498164)
+    - [ ] [PHP7 数据结构与算法分析：第二章 -- 算法天平: 复杂度分析](http://www.ituring.com.cn/article/498336)
+
