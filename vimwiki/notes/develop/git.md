@@ -22,6 +22,8 @@
 - `git diff` 查看不同
 - `git diff HEAD` 查看工作区和版本库里面最新版本的区别
 - `git diff --cached [file]` 显示暂存区和上一个 commit 的差异
+- `git diff <branch> <branch> [file]` 比较两个分支的差异[可指定文件]
+    - `--stat` 只给出文件列表
 - `git log` 查看日志
 - `git log --graph ` 查看分支合并图
 - `git reflog` 查看用过的命令
