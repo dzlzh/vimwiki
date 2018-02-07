@@ -45,10 +45,20 @@ import (
 )
 
 func Sqrt(x float64) float64 {
-	z := 1.0
-	for i := 0; i < 10; i++ {
+	z, d, i := 1.0, 1000.0, 1
+	// for i := 0; i < 10; i++ {
+	// 	 z = z - (z*z-x)/(2*z)
+	// 	 fmt.Println(z)
+	// }
+	for {
+		old := z
+		fmt.Printf("第%v次循环\n", i)
 		z = z - (z*z-x)/(2*z)
 		fmt.Println(z)
+		if uint(d*old) == uint(d*z) {
+			return z
+		}
+		i++
 	}
 	fmt.Println("-----")
 	return z
