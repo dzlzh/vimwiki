@@ -8,6 +8,16 @@
 void header (string $string [, bool $replace = true [, int $http_response_code ]]);
 ```
 
+## [`http_response_code`](https://secure.php.net/manual/zh/function.http-response-code.php)
+
+获取/设置响应的 HTTP 状态码
+
+> PHP >= 5.4.0
+
+```
+mixed http_response_code ([ int $response_code ] );
+```
+
 ## `iconv()`
 
 字符串按要求的字符编码来转换
