@@ -33,6 +33,7 @@
 - [Git](notes/develop/git.md)
 - [Vim](notes/develop/vim.md)
 - [Tmux](notes/develop/tmux.md)
+- [Markdown](notes/develop/markdown.md)
 
 ### [其他 (Others)](notes/others.md)
 
