@@ -474,3 +474,17 @@ type error interface {
 通常函数会返回一个 `error` 值，调用的它的代码应当判断这个错误是否等于 `nil` 来进行错误处理。
 
 `error` 为 `nil` 时表示成功；非 `nil` 的 `error` 表示失败。
+
+### `Reader`
+
+`io` 包指定了 `io.Reader` 接口，它表示从数据流的末尾进行读取。
+
+Go 标准库包含了该接口的许多实现，包括文件、网络连接、压缩和加密等等。
+
+`io.Reader` 接口有一个 `Read` 方法：
+
+```go
+func (T) Read(b []byte) (n int, err error)
+```
+
+`Read` 用数据填充给定的字节切片并返回填充的字节数和错误值。 在遇到数据流的结尾时，它会返回一个 `io.EOF` 错误。
