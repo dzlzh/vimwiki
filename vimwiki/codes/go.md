@@ -6,3 +6,4 @@
     - [练习：映射](go/exercise_maps.md)
     - [练习：斐波纳契闭包](go/exercise_fibonacci_closure.md)
     - [练习：Stringer](go/exercise_stringer.md)
+    - [练习：错误](go/exercise_errors.md)
