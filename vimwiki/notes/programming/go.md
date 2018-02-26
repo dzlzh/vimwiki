@@ -460,3 +460,17 @@ type Stringer interface {
 ```
 
 `Stringer` 是一个可以用字符串描述自己的类型。很多包都通过此接口来打印值。 
+
+### `error`
+
+Go 程序使用 `error` 值来表示错误状态。
+
+```go
+type error interface {
+    Error() string
+}
+```
+
+通常函数会返回一个 `error` 值，调用的它的代码应当判断这个错误是否等于 `nil` 来进行错误处理。
+
+`error` 为 `nil` 时表示成功；非 `nil` 的 `error` 表示失败。
