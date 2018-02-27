@@ -8,3 +8,4 @@
     - [练习：Stringer](go/exercise_stringer.md)
     - [练习：错误](go/exercise_errors.md)
     - [练习：Reader](go/exercise_reader.md)
+    - [练习：rot13Reader](go/exercise_rot_reader.md)
