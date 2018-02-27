@@ -488,3 +488,21 @@ func (T) Read(b []byte) (n int, err error)
 ```
 
 `Read` 用数据填充给定的字节切片并返回填充的字节数和错误值。 在遇到数据流的结尾时，它会返回一个 `io.EOF` 错误。
+
+### image
+
+`image` 包定义了 `Image` 接口：
+
+```go
+package image
+
+type Image interface {
+    ColorModel() color.Model
+    Bounds() Rectangle
+    At(x, y int) color.Color
+}
+```
+
+> **注意** ：`Bounds` 方法的返回值 `Rectangle` 实际上是一个 `image.Rectangle`，它在 `image` 包中声明。
+
+`color.Color` 和 `color.Model` 类型也是接口，但是通常因为直接使用预定义的实现 `image.RGBA` 和 `image.RGBAModel` 而被忽视了。这些接口和类型由 `image/color` 包定义。
