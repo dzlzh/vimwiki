@@ -95,3 +95,174 @@ multiArray := [2][3]int{{1,2,3},{4,5,6}}
 ## new 
 
 `new` 用于各种类型的内存分配，`new` 返回指针，`new(T)` 分配了零值填充的 `T` 类型内存空间，返回一个 `*T` 类型的值
+
+## 流程控制
+
+### 条件判断
+
+条件判断又称分支语，包括三类，即 `if`、`switch` 和 `select`。
+
+#### `if`
+
+```go
+if optional;boolean {
+    // code
+} else if optional;boolean {
+    // code
+} else {
+    // code
+}
+```
+
+#### `switch`
+
+##### 表达式开关
+
+```go
+switch optionalStatement;optionalExpression {
+    case expressionList:
+    // code
+    default:
+    // code
+}
+```
+
+##### 类型开关
+
+```go
+switch optionalStatement;typeSwitchGuard {
+    case typeList:
+    // code
+    default:
+    // code
+}
+```
+
+#### `select`
+
+```go
+select {
+    case sendOrReceive: 
+    // code
+    default:
+    // code
+
+}
+```
+
+没有 `default` 语句的 `select` 语句会阻塞，只有当至少有一个通信 (接收或者发送) 到达时才完成阻塞
+
+包含 `default` 语句的 `select` 语句是非阻塞的，并且会立即执行
+
+### 循环控制
+
+#### `for`
+
+```go
+// 无限循环
+for {
+    // code
+}
+
+// while 循环
+for boolean {
+    // code
+}
+ 
+// for 循环
+for optionalPreStatement;boolean;optionalPostStatement {
+    // code
+}
+
+// 字符
+for index,char := range String{
+    // code
+}
+
+// 数组或切片
+for index,item := range ArrayOrSlice {
+    // code
+}
+
+// 映射
+for key, value := range Map {
+    // code
+}
+
+// 通道
+for item := range Channel {
+    // code
+}
+```
+
+### 无条件跳转
+
+#### `break`
+
+跳出当前循环
+
+> 可跟标签跳出多重循环
+
+#### `continue`
+
+跳过本次循环
+
+> 可跟标签跳出多重循环
+
+#### `goto`
+
+无条件地转移到过程中指定的行
+
+## 函数
+
+```go
+func funcName(param) (return) {
+    // code
+}
+```
+
+### 变参
+
+接受不定数量的参数，且具有相同类型 `type`
+
+```go
+func funcName(arg...type) {
+    // code
+}
+```
+
+### 延迟 (`defer`) 语句
+
+可以在函数中添加多个 `defer` 语句。当函数执行到最后时，这些 `defer` 语句会按照逆序执行，最后该函数返回
+
+### `init` 函数
+
+定义时不能有任何的参数和返回值
+
+一个包里可以写任意多个 `init` 函数，但建议只写一个
+
+先执行 `init` 函数，再执行 `main` 函数
+
+### `panic` 和 `recover`
+
+`panic` 中断原有的控制流程，进入一个令人恐慌的流程
+
+`recover` 让进入令人恐慌的流程中恢复过来。仅在延迟函数中有效，无还会 `nil`
+
+## `import`
+
+```go
+import (
+    // 绝对路径
+    "fmt" // $GOPATH/src/fmt
+    
+    // 点操作
+    . "fmt" // fmt.Println() -> Println()
+    
+    // 别名
+    f "fmt" // f.Println()
+    
+    // _操作
+    _ "fmt" // 调用包中 init
+)
+```
