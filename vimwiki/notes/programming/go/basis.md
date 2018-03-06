@@ -266,3 +266,19 @@ import (
     _ "fmt" // 调用包中 init
 )
 ```
+
+## `struct`
+
+```go
+type StructName struct {
+    Property type
+}
+```
+
+## `interface`
+
+```go
+type InterfaceName interface {
+    funcName()
+}
+```
