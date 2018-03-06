@@ -10,9 +10,9 @@
 
 ### [程序设计 (Programming)](notes/programming.md)
 
-- [数据结构](notes/programming/data_structure.md)
+- [数据结构](notes/programming/datastructure.md)
 - [算法](notes/programming/algorithm.md)
-- [设计模式](notes/programming/design_pattern.md)
+- [设计模式](notes/programming/designpattern.md)
 - [PHP](notes/programming/php.md)
 - [Go](notes/programming/go.md)
 - [WEB](notes/programming/web.md)
