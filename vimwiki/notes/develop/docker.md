@@ -112,9 +112,13 @@ docker image push [username]/[repository]:[tag]
 - `docker run` 
 - `docker container run` 
   - `-d` 后台运行
-  - `-p <本机端口:容器端口>` 本机端口映射到容器
+  - `-p [ip:]<本机端口:容器端口>` 本机端口映射到容器
   - `-it <shell>` 映射到当前 Shell
   - `--rm` 容器终止运行后自动删除容器文件
+  - `--name <name>` 容器名字
+  - `--volume <path>:<container path>` 将目录映射
+  - `--env <env>` 向容器进程中传入一个环境变量
+  - `--link <container name>:<alias>` 要连接容器
  
 #### 启动已终止容器
 
