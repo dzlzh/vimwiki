@@ -10,6 +10,7 @@
 
 ### [程序设计 (Programming)](notes/programming.md)
 
+- [基础](notes/programming/basis.md)
 - [数据结构](notes/programming/datastructure.md)
 - [算法](notes/programming/algorithm.md)
 - [设计模式](notes/programming/designpattern.md)
