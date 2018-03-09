@@ -28,6 +28,45 @@
 - `goto`
 - `fallthrough`
 
+## 预定义标识符
+
+- `byte`
+- `bool`
+- `int`
+- `int8`
+- `int16`
+- `int32`
+- `int64`
+- `uint`
+- `uint8`
+- `uint16`
+- `uint32`
+- `uint64`
+- `float32`
+- `float64`
+- `string`
+- `complex`
+- `complex64`
+- `complex128`
+- `nil`
+- `make`
+- `new`
+- `cap`
+- `len`
+- `append`
+- `true`
+- `false`
+- `panic`
+- `recover`
+- `close`
+- `copy`
+- `imag`
+- `iota`
+- `real`
+- `uintptr`
+- `print`
+- `println`
+
 ## 规则
 
 大写字母开头的变量才可以被其他包读取，为公用变量；小写字母开头为私有变量，不可导出。
