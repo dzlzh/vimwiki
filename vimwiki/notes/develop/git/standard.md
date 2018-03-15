@@ -12,7 +12,7 @@
 
 ### 类型
 
-- `feat` : 特性（feature ）
+- `feat` : 特性(`feature`)
 - `fix` : bug 修复
 - `docs` : 文档
 - `style` : 代码格式，例如丢了个分号，格式化代码，修改了缩进之类的
