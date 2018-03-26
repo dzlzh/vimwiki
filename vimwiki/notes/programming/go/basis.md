@@ -95,7 +95,11 @@ a,b,c := 8,9,10
 
 ## 常量
 
-`const constName type = value`
+`const constName [type] = value`
+
+可使用 `\` 作为多行的连续符使用
+
+`iota` 可用作枚举，每次使用会自动加 1
 
 ## 数组
 
