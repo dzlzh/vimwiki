@@ -564,3 +564,11 @@ number array_sum ( array $array );
 ```php
 array array_flip ( array $array );
 ```
+
+## [`array_filter`](http://php.net/manual/zh/function.array-filter.php)
+
+用回调函数过滤数组中的单元
+
+```php
+array array_filter ( array $array [, callable $callback [, int $flag = 0 ]] );
+```
