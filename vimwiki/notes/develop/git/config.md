@@ -10,3 +10,7 @@
   - `upstream` - push 当前分支到它的 upstream 分支上（这一项其实用于经常从本地分支 push/pull 到同一远程仓库的情景，这种模式叫做 central workflow）
   - `simple` - simple 和 upstream 是相似的，只有一点不同，simple 必须保证本地分支和它的远程 upstream 分支同名，否则会拒绝 push 操作
   - `matching` - push 所有本地和远程两端都存在的同名分支
+- `git config --global core.autocrlf input`
+  - `true` - 提交时转换为LF，检出时转换为CRLF
+  - `input` - 提交时转换为LF，检出时不转换
+  - `false` - 提交检出均不转换
