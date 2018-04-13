@@ -3,6 +3,7 @@
 - [函数](php/function.md)
 - [字符串函数](php/string.md)
 - [数组函数](php/array.md)
+- [类](php/class.md)
 - [文件函数](php/file.md)
 - [BC Math](php/bc_math.md)
 - [日期/时间函数](php/datetime.md)
