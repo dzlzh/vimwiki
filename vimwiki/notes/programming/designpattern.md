@@ -20,50 +20,20 @@
 
 ## 创建型
 
-### 工厂模式
-
-工厂方法或者类生成对象，而不是在代码中直接 `new`
-
-### 单例模式
-
-使某个类的对象仅允许创建一个
-
-### 注册模式
-
-全局共享和交换对象
-
-### 原型模式
-
-先创建一个原型对象，然后能过 `clone` 原型对象来创建新的对象
+- [单例模式](designpattern/singleton.md)
+- [工厂模式](designpattern/factory.md)
+- [注册模式](designpattern/registry.md)
+- [原型模式](designpattern/prototype.md)
 
 ## 结构型
 
-### 适配器模式
-
-可以将截然不同的函数接口封闭成统一的 API
-
-### 装饰器模式
-
-可以动态地添加修改类的功能
-
-### 代理模式
-
-在客户端与实体之间建立一个代理对象，客户端对实体进行操作全部委派给代理对象，隐藏实体的具体实现细节
-
-### 数据对象映射模式
-
-将对象和数据存储映射起来，对一个对象的操作会映射为对数据存储的操作
+- [适配器模式](designpattern/adapter.md)
+- [装饰器模式](designpattern/decorator.md)
+- [代理模式](designpattern/proxy.md)
+- [数据对象映射模式](designpattern/data_mapper.md)
 
 ## 行为型
 
-### 策略模式
-
-将一组特定的行为和算法封装成类，以适应某些特定的上下文环境
-
-### 观察者模式
-
-当一个对象状态发生改变时，依赖它的对象全部会收到通知，并自动更新
-
-### 迭代器模式
-
-在不需要了解内部实现的前提下，遍历一个聚合对象的内部元素
+- [策略模式](designpattern/strategy.md)
+- [观察者模式](designpattern/observer.md)
+- [迭代器模式](designpattern/iterator.md)
