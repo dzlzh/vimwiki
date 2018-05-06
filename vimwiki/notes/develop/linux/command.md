@@ -345,3 +345,13 @@ userdel username
 # 连同用户主目录一块删除
 userdel -r username
 ```
+
+## 时间
+
+```
+# 时间戳转时间
+date -d @时间戳
+
+# 时间转时间戳
+date -d '时间' +%s
+```
