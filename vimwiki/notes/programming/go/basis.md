@@ -191,6 +191,8 @@ if optional;boolean {
 
 #### `switch`
 
+继续执行后续分支代码使用 `fallthrough` 关键字
+
 ##### 表达式开关
 
 ```go
