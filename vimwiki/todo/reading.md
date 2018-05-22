@@ -54,3 +54,4 @@
 - [ ] [解谜计算机科学-王垠](http://www.yinwang.org)
     - [ ] [前言](http://www.yinwang.org/blog-cn/2018/03/21/csbook-preface)
     - [ ] [第一章 - 初识计算](http://www.yinwang.org/blog-cn/2018/04/13/csbook-chapter1)
+- [ ] [Go语言圣经（中文版）](https://love2.io/@meiritugua/doc/gopl-zh/preface.md)
