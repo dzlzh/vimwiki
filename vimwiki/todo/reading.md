@@ -34,7 +34,7 @@
     - [ ] [程序员的自我修养](https://leohxj.gitbooks.io/a-programmer-prepares/)
     - [ ] [English-level-up-tips-for-Chinese](https://byoungd.gitbooks.io/english-level-up-tips-for-chinese/content/)
     - [ ] [程序设计思想与方法](https://wizardforcel.gitbooks.io/sjtu-cs902-courseware/content/)
-- [ ] [PHP 简洁之道](http://www.hellonine.top/index.php/archives/70/)
+- [X] [PHP 简洁之道](http://www.hellonine.top/index.php/archives/70/)
 - [ ] [深入理解什么是 RESTful API](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
 - [ ] [【译】注释的艺术](https://elevenbeans.github.io/2017/11/24/art-of-comments/)
 - [ ] [Docker 核心技术与实现原理](https://draveness.me/docker)
