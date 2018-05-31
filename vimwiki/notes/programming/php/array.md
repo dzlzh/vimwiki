@@ -94,7 +94,7 @@ array array_splice ( array &$input , int $offset [, int $length = 0 [, mixed $re
 
 > 如果省略 `length`，则移除数组中从 `offset` 到结尾的所有部分。如果指定了 `length` 并且为正值，则移除这么多单元。如果指定了`length` 并且为负值，则移除从 `offset` 到数组末尾倒数 `length` 为止中间所有的单元。小窍门：当给出了 `replacement` 时要移除从`offset` 到数组末尾所有单元时，用 *count($input)* 作为 `length`。
 
-## `array_unique()`
+## [`array_unique()`](http://php.net/manual/zh/function.array-unique.php)
 
 移除数组中重复的值
 
