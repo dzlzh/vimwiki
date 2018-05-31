@@ -204,10 +204,18 @@ string number_format ( float $number , int $decimals = 0 , string $dec_point = "
 执行一个正则表达式的搜索和替换
 
 ```php
-mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int $limit = -1 [, int &$count ]] )
+mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int $limit = -1 [, int &$count ]] );
 ```
 
 搜索`subject`中匹配`pattern`的部分， 以`replacement`进行替换。
+
+## [`preg_split`](http://php.net/manual/zh/function.preg-split.php)
+
+通过一个正则表达式分隔字符串
+
+```
+array preg_split ( string $pattern , string $subject [, int $limit = -1 [, int $flags = 0 ]] );
+```
 
 ## `uniqid()`
 
