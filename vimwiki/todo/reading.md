@@ -55,3 +55,7 @@
     - [X] [前言](http://www.yinwang.org/blog-cn/2018/03/21/csbook-preface)
     - [ ] [第一章 - 初识计算](http://www.yinwang.org/blog-cn/2018/04/13/csbook-chapter1)
 - [ ] [Go语言圣经（中文版）](https://love2.io/@meiritugua/doc/gopl-zh/preface.md)
+- [ ] [我的支付总结](http://www.cnblogs.com/zhenbianshu/)
+    - [ ] [基础概念](https://www.cnblogs.com/zhenbianshu/p/6648165.html)
+    - [ ] [系统设计](http://www.cnblogs.com/zhenbianshu/p/6664379.html)
+    - [ ] [常见问题](http://www.cnblogs.com/zhenbianshu/p/6664416.html)
