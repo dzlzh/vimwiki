@@ -18,6 +18,7 @@
 - [命令行](php/command_line.md)
 - [系统程序执行](php/exec.md)
 - [I/O streams](php/io_streams.md)
+- [特性](php/features.md)
 - [规范标准](php/standard.md)
 - [技巧](php/tips.md)
 - [知识点](php/knowledge.md)
