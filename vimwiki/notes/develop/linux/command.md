@@ -80,6 +80,38 @@ scp ~/test.txt root@localhost:/root/test.txt
 scp ~/test root@localhost:/root/test
 ```
 
+## rsync
+
+`rsync` 一个远程数据同步工具
+
+**命令格式**
+
+```
+# 拷贝本地文件
+rsync [OPTION]... SRC DEST
+# 将本地机器的内容拷贝到远程机器 
+rsync [OPTION]... SRC [USER@]host:DEST
+# 将远程机器的内容拷贝到本地机器
+rsync [OPTION]... [USER@]HOST:SRC DEST
+# 从远程 rsync 服务器中拷贝文件到本地机
+rsync [OPTION]... [USER@]HOST::SRC DEST
+# 从本地机器拷贝文件到远程 rsync 服务器中
+rsync [OPTION]... SRC [USER@]HOST::DEST
+# 列远程机的文件列表
+rsync [OPTION]... rsync://[USER@]HOST[:PORT]/SRC [DEST]
+```
+
+**命令参数**
+
+- `-a` 采取递归方式来同步，且尽可能的保持各个方面的一致性。
+- `-t` 将源文件的 “modify time” 同步到目标机器。 
+- `-z` 压缩
+- `-r` 递归文件夹
+- `-p` 保持权限
+- `-g` 保持文件的属组
+- `-o` 保持文件的属主
+- `-D` 是保持设备文件的原始信息
+
 ## 提取
 
 ```sh
