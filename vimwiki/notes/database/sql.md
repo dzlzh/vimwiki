@@ -57,3 +57,11 @@ UNIX_TIMESTAMP(date)
 ```sql
 DATE_FORMAT(date,format)
 ```
+
+## DISTINCT
+
+仅仅列出不同的值
+
+```
+SELECT DISTINCT 列名称 FROM 表名称
+```
