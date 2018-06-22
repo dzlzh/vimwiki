@@ -21,6 +21,12 @@ Ctrl+w -            " 减小窗口高度
 Ctrl+w +            " 增加窗口高度
 Ctrl+w <            " 减小窗口宽度
 Ctrl+w >            " 增加窗口宽度
+
+:set scb
+:set scrollbind     " 分屏同步移动
+
+:set scb!
+:set scrollbind!    " 解除分屏同步移动
 ```
 
 ## tab
