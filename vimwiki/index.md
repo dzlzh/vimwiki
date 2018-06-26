@@ -35,6 +35,7 @@
 - [Vim](notes/develop/vim.md)
 - [Tmux](notes/develop/tmux.md)
 - [Markdown](notes/develop/markdown.md)
+- [Nginx](notes/develop/nginx.md)
 
 ### [其他 (Others)](notes/others.md)
 
