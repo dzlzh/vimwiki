@@ -41,6 +41,7 @@
 
 - [Google foo.bar](notes/others/google_foo_bar.md)
 - [Software Inventory](notes/others/software.md)
+- [Idea](notes/others/idea.md)
 
 ## [Codes](codes.md)
 
