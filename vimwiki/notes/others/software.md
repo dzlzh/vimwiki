@@ -28,6 +28,7 @@
   - [Snipaste](https://www.snipaste.com/)
   - [有道词典](http://www.youdao.com/)
   - [traymond](https://github.com/fcFn/traymond)
+  - [bug.n](https://github.com/fuhsjr00/bug.n)
 - __编辑器__
   - [Vim](http://www.vim.org/)
   - [Notepad++](https://notepad-plus-plus.org/)
