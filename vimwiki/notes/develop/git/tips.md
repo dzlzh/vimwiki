@@ -27,3 +27,16 @@ git fetch upstream
  
 git merge upstream/master
 ```
+
+## 安全回滚远程分支
+
+```
+# 查看历史版本
+git log
+# 签出历史版本
+git checkout -b old hash
+# 假合并 master
+git merge -s ours master
+# push 到远程
+git push origin old:master
+```
