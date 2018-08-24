@@ -40,6 +40,8 @@
 - `git stash apply [stash@{x}]` 恢复储藏，`stash@{x}` 指定恢复
 - `git stash drop` 删除储藏
 - `git stash pop` 恢复并删除
+- `git revert <commit>` 撤销
+  - `-m <parentId>` 撤销合并的时候选择撤销到那个parent
 
 ## 远程操作
 

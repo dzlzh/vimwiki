@@ -40,3 +40,13 @@ git merge -s ours master
 # push 到远程
 git push origin old:master
 ```
+
+## 合并撤销
+
+```
+# 撤销错误的合并
+git revert -m 1 <commit>
+# 恢复之前的回滚
+git revert <commit>
+git merge <branch>
+```
