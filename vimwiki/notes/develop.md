@@ -5,3 +5,5 @@
 - [Git](develop/git.md)
 - [Vim](develop/vim.md)
 - [Tmux](develop/tmux.md)
+- [Markdown](develop/markdown.md)
+- [Nginx](develop/nginx.md)
