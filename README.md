@@ -10,6 +10,10 @@
 
 ### [程序设计 (Programming)](vimwiki/notes/programming.md)
 
+- [基础](vimwiki/notes/programming/basis.md)
+- [数据结构](vimwiki/notes/programming/datastructure.md)
+- [算法](vimwiki/notes/programming/algorithm.md)
+- [设计模式](vimwiki/notes/programming/designpattern.md)
 - [PHP](vimwiki/notes/programming/php.md)
 - [Go](vimwiki/notes/programming/go.md)
 - [WEB](vimwiki/notes/programming/web.md)
@@ -22,6 +26,7 @@
 
 - [SQL](vimwiki/notes/database/sql.md)
 - [Redis](vimwiki/notes/database/redis.md)
+- [MongoDB](vimwiki/notes/database/mongodb.md)
  
 ### [开发工具 (Develop)](vimwiki/notes/develop.md)
 
@@ -30,15 +35,20 @@
 - [Git](vimwiki/notes/develop/git.md)
 - [Vim](vimwiki/notes/develop/vim.md)
 - [Tmux](vimwiki/notes/develop/tmux.md)
+- [Markdown](vimwiki/notes/develop/markdown.md)
+- [Nginx](vimwiki/notes/develop/nginx.md)
 
 ### [其他 (Others)](vimwiki/notes/others.md)
 
 - [Google foo.bar](vimwiki/notes/others/google_foo_bar.md)
 - [Software Inventory](vimwiki/notes/others/software.md)
+- [Idea](vimwiki/notes/others/idea.md)
+- [Collection](vimwiki/notes/others/collection.md)
 
 ## [Codes](vimwiki/codes.md)
 
 - [PHP](vimwiki/codes/php.md)
+- [Go](vimwiki/codes/go.md)
 - [Linux](vimwiki/codes/liunx.md)
 
 ## [Blog](vimwiki/blog.md)
