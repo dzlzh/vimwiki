@@ -32,3 +32,18 @@ $test ? $test : 1;
 - 变量函数调用
 - [`call_user_func`](function.md#call_user_func) 调用
 - [`call_user_func_array`](function.md#call_user_func_array) 调用
+
+## [`declare`](http://php.net/manual/zh/control-structures.declare.php)
+
+设定一段代码的执行指令
+
+```php
+declare (directive)
+    statement
+```
+
+开启文件全部了函数调用与语句返回，都有一个“严格约束”的标题类型声明检查。
+
+```php
+declare(strict_type=1);
+```
