@@ -417,3 +417,5 @@ last [options]
 - `-num` 展示前 num 个
 - `username` 展示 username 的登入讯息
 - `tty` 限制登入讯息包含终端机代号
+
+> **Tips**：`ssh -T user@ip /usr/bin/bash -i` 可隐匿于 `w` 和 `last`
