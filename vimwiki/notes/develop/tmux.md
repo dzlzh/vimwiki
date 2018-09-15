@@ -7,6 +7,9 @@
 tmux [new -s <session-name>]
 <prefix>:new [-s <session-name>]
 
+# 加载指定配置文件启动
+tmux -f <conf>
+
 # 列出
 tmux ls
 <prefix>s
