@@ -1,30 +1,76 @@
 # Tmux
 
+### 启动加载指定配置文件
+
+`tmux [-f <conf>]`
+
+- `-f` 加载指定的配置文件
+
+### 新建 Session
+
+`tmux <new|new-session> [-d] [-s <session-name>] [-n <window-name>] [shell-command]`
+
+- `-d` 不打开 tmux 对话
+
+### 判断一个 Session 是否存在
+
+`tmux has [-t <session-name>]`
+
+> 判断指定的 tmux 对话是否存在，如果存在返回码为 0，不存在返回码为 1
+
+### 列出 Session
+
+`tmux ls`
+
+### 恢复 Session
+
+`tmux <a|at|attach|attach-session> [-t <name>]`
+
+### 删除 Session
+
+`tmux kill-session -t <session-name>`
+
+### 新建 Windows
+
+`tmux <neww|new-window> [-t <session-name>] [-n <window-name>] [shell-command]`
+
+### 选择一个 Windows
+
+`tmux <selectw|select-window> [-lnp] [-t <window-name>]`
+
+### 新建 Panel
+
+`tmux <splitw|split-window> [-dhvP] [-t <window-name>]`
+
+- `-h` 水平分割
+- `-v` 垂直分割
+
+### 选择一个 Panel
+
+`tmux <selectp|select-pane> `
+
+### `target-window` 和 `target-panel` 的命名规则
+
+- `session:1` 指 session 对话的第一个窗口
+- `session:name` 指 session 对话的叫 name 的窗口
+- `session:1.0` 指 session 对话的第一个窗口的第 0 个面板。
+
 ## Session
 
 ```
 # 启动
-tmux [new -s <session-name>]
 <prefix>:new [-s <session-name>]
 
-# 加载指定配置文件启动
-tmux -f <conf>
-
 # 列出
-tmux ls
 <prefix>s
 
 # 退出
 <prefix>d
 
-# 恢复
-tmux <a|at|attach> [-t <name>]
-
 # 重命名
 <prefix>$
 
 # 删除
-tmux kill-session -t <session-name>
 <prefix>:kill-session
 
 ## 删除所有
