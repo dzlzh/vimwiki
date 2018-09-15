@@ -128,15 +128,22 @@ tmux kill-session -t <session-name>
 # 同步窗口
 :setw synchronize-panes
 
-# 固定 Window 名称
-set-option -g allow-rename off
-
 # 交换<num>号和<num>号窗口
-swap-window -s <num> -t <num>
+:swap-window -s <num> -t <num>
 
 # 交换当前和<num>号窗口
-swap-window -t <num>
+:swap-window -t <num>
 
 # 移动当前窗口到<num>号
-move-window -t <num>
+:move-window -t <num>
+
+# 加载配置文件
+:source-file <conf>
+```
+
+## 配置
+
+```
+# 固定 Window 名称
+set-option -g allow-rename off
 ```
