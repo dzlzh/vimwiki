@@ -59,3 +59,4 @@
     - [X] [基础概念](https://www.cnblogs.com/zhenbianshu/p/6648165.html)
     - [ ] [系统设计](http://www.cnblogs.com/zhenbianshu/p/6664379.html)
     - [ ] [常见问题](http://www.cnblogs.com/zhenbianshu/p/6664416.html)
+- [ ] [tmux-Productive-Mouse-Free-Development_zh](https://aquaregia.gitbooks.io/tmux-productive-mouse-free-development_zh/content/)
