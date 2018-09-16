@@ -1,5 +1,12 @@
 # Vim - 基本操作
 
+## 加载指定的 .vimrc
+
+```
+vim -u <.vimrc>
+gvim -U <.vimrc>
+```
+
 ## window
 
 ```
