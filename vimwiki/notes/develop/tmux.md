@@ -63,9 +63,20 @@
 
 > `C-m` 回车符
 
+<<<<<<< HEAD
 ### 设置Tmux Option
 
 `tmux <set-window-option|setw> [-agu] [-t target-window] option value`
+
+### 设置一个布局
+
+`tmux <select-layout|selectl> [-np] [-t target-window] [layout-name]`
+
+- `even-horizontal`
+- `even-vertical`
+- `main-horizontal`
+- `main-vertical`
+- `tiled`
 
 ## Session
 
