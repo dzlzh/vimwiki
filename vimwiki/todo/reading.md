@@ -60,3 +60,4 @@
     - [ ] [系统设计](http://www.cnblogs.com/zhenbianshu/p/6664379.html)
     - [ ] [常见问题](http://www.cnblogs.com/zhenbianshu/p/6664416.html)
 - [X] [tmux-Productive-Mouse-Free-Development_zh](https://aquaregia.gitbooks.io/tmux-productive-mouse-free-development_zh/content/)
+- [ ] [Linux 工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
