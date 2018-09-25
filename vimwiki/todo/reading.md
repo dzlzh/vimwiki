@@ -61,3 +61,6 @@
     - [ ] [常见问题](http://www.cnblogs.com/zhenbianshu/p/6664416.html)
 - [X] [tmux-Productive-Mouse-Free-Development_zh](https://aquaregia.gitbooks.io/tmux-productive-mouse-free-development_zh/content/)
 - [ ] [Linux 工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
+- [ ] [极客时间](https://time.geekbang.org/) 
+    - [ ] [数据结构与算法之美](https://time.geekbang.org/column/intro/126)
+    - [ ] [Go语言核心36讲](https://time.geekbang.org/column/112)
