@@ -19,7 +19,7 @@
 - [WEB](notes/programming/web.md)
 - [Shell](notes/programming/shell.md)
 - [RegExr](notes/programming/regexr.md)
-- [API 设计原则](notes/programming/api.md)
+- [API](notes/programming/api.md)
 - [代码注释](notes/programming/annotation.md)
  
 ### [数据库 (Database)](notes/database.md)
