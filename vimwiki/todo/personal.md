@@ -23,3 +23,4 @@
 - [ ] 注释规范
 - [ ] JWT
 - [ ] PHP 抽象类与接口
+- [ ] PHP define 与 const
