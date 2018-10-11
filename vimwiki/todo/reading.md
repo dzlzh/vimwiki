@@ -64,3 +64,4 @@
 - [ ] [极客时间](https://time.geekbang.org/) 
     - [ ] [数据结构与算法之美](https://time.geekbang.org/column/intro/126)
     - [ ] [Go语言核心36讲](https://time.geekbang.org/column/112)
+- [ ] [七个面向对象设计原则和 24 个设计模式](https://blog.csdn.net/lovelion/article/details/17517213)
