@@ -32,11 +32,12 @@
 
 - [Linux](notes/develop/linux.md)
 - [Docker](notes/develop/docker.md)
+- [Nginx](notes/develop/nginx.md)
+- [Markdown](notes/develop/markdown.md)
 - [Git](notes/develop/git.md)
 - [Vim](notes/develop/vim.md)
 - [Tmux](notes/develop/tmux.md)
-- [Markdown](notes/develop/markdown.md)
-- [Nginx](notes/develop/nginx.md)
+- [i3wm](notes/develop/i3wm.md)
 
 ### [其他 (Others)](notes/others.md)
 
