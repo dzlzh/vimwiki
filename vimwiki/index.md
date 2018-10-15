@@ -51,6 +51,7 @@
 - [PHP](codes/php.md)
 - [Go](codes/go.md)
 - [Linux](codes/liunx.md)
+- [Windows](codes/windows.md)
 
 ## [Blog](blog.md)
 
