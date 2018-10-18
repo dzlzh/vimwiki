@@ -102,5 +102,13 @@ string strval(mixed $var);
 替换字符串的子串
 
 ```php
-mixed substr_replace(mixed $string , mixed $replacement , mixed $start [, mixed $length ]);
+mixed substr_replace(mixed $string, mixed $replacement, mixed $start [, mixed $length ]);
+```
+
+## [`str_repeat`](http://php.net/manual/zh/function.str-repeat.php)
+
+重复一个字符串
+
+```
+string str_repeat(string $input, int $multiplier)
 ```
