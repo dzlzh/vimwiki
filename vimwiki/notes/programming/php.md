@@ -2,6 +2,7 @@
 
 - [函数](php/function.md)
 - [字符串函数](php/string.md)
+- [多字节字符串函数](php/mbstring.md)
 - [数组函数](php/array.md)
 - [类](php/class.md)
 - [文件函数](php/file.md)
