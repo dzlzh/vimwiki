@@ -1,0 +1,90 @@
+# Software Inventory - Windows
+
+- __文件管理__
+  - [Everything](https://www.voidtools.com/)
+  - [Clover 3](http://cn.ejie.me/)
+  - [Listary](http://www.listary.com/)
+  - [Total Commander](https://www.ghisler.com/)
+- __系统工具__
+  - [GeekUninstaller](https://www.geekuninstaller.com/)
+  - [CCleaner](https://www.piriform.com/ccleaner)
+  - [PowerTool](http://powertool.s601.xrea.com/)
+  - [f.lux](https://justgetflux.com/)
+  - [MacType](http://mactype.net/)
+  - [软媒魔方](http://mofang.ruanmei.com/)
+  - [火绒安全](http://huorong.cn/)
+  - [Sandboxie](https://www.sandboxie.com/)
+  - [Best Trace](https://www.ipip.net/download.html)
+  - [Dism++](http://www.chuyu.me/zh-Hans/)
+- __辅助工具__
+  - [Wox](http://www.getwox.com/)
+  - [KeePass](http://keepass.info/index.html)
+  - [ALTRun](https://code.google.com/archive/p/altrun/)
+  - [Shadowsocks](https://github.com/shadowsocks)
+  - [Proxifier](http://www.proxifier.com/)
+  - [AutoHotkey](https://autohotkey.com/)
+  - [Snipaste](https://www.snipaste.com/)
+  - [有道词典](http://www.youdao.com/)
+  - [traymond](https://github.com/fcFn/traymond)
+  - [bug.n](https://github.com/fuhsjr00/bug.n)
+- __编辑器__
+  - [Vim](http://www.vim.org/)
+  - [Notepad++](https://notepad-plus-plus.org/)
+  - [Typora](https://typora.io/)
+  - [Atom](https://atom.io/)
+  - [Visual Studio Code](https://code.visualstudio.com/)
+  - [PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Early+Access+Program)
+- __开发工具__
+  - [Git](https://git-scm.com/)
+  - [Cmder](http://cmder.net/)
+  - [Oracle VM VirtualBox](https://www.virtualbox.org/) 4.3.12版本最稳定
+  - [Vagrant](https://www.vagrantup.com/)
+  - [Navicat](https://www.navicat.com.cn/)
+  - [VMware Workstation](https://www.vmware.com/)
+  - [SourceTree](https://www.sourcetreeapp.com/)
+  - [FileZilla](https://filezilla-project.org/)
+  - [HeidiSQL](https://www.heidisql.com/)
+  - [Robo 3T](https://robomongo.org/)
+  - [Redis Desktop Manager](https://redisdesktop.com/)
+- __浏览器__
+  - [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html)
+  - [Firefox](https://www.mozilla.org/zh-CN/firefox/new/)
+- __远程控制__
+  - [TeamViewer](https://www.teamviewer.com/zhCN/)
+  - [PuTTY](http://www.putty.org/)
+- __通讯工具__
+  - [腾讯QQ轻聊版](http://im.qq.com/lightqq/)
+  - [TIM](http://tim.qq.com/)
+  - [微信](https://weixin.qq.com/)
+  - [YoMail](http://www.yomail.com/)
+  - [Telegram](https://telegram.org/)
+- __办公软件__
+  - [Microsoft Office](https://www.office.com/)
+  - [LibreOffice](https://zh-cn.libreoffice.org/)
+  - [印象笔记](https://www.yinxiang.com/)
+  - [为知笔记](http://www.wiz.cn/)
+- __阅读软件__
+  - [Sumatra PDF](https://www.sumatrapdfreader.org)
+  - [QuiteRSS](https://quiterss.org/)
+- __播放器__
+  - [网易云音乐](http://music.163.com/)
+  - [Potplayer](http://potplayer.daum.net/?lang=zh_CN)
+- __网盘同步__
+  - [坚果云](https://www.jianguoyun.com/)
+  - [dropbox](https://www.dropbox.com/)
+  - [Resilio Sync](https://www.resilio.com/)
+  - [Degoo](https://degoo.com/)
+  - [百度网盘](https://pan.baidu.com/)
+  - [百度企业网盘](https://eyun.baidu.com/)
+- __文件加密__
+  - [VeraCrypt](https://veracrypt.codeplex.com/)
+  - [Cryptomator](https://cryptomator.org/)
+- __下载工具__
+  - [EagleGet](http://www.eagleget.com/cn/)
+  - [Persepolis Download Manager](https://persepolisdm.github.io/)
+- __压缩工具__
+  - [7-Zip](http://www.7-zip.org/)
+- __输入法__
+  - [RIME](http://rime.im/)
+  - [手心输入法](http://www.xinshuru.com)
+  - [精灵五笔](http://www.jlwubi.com/)
