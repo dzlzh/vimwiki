@@ -41,3 +41,4 @@
 - [Postman](https://chrome.google.com/webstore/detail/fhbjgbiflinjbdggehcddcbncdddomop)
 - [Secure Shell App](https://chrome.google.com/webstore/detail/pnhechapfaindjhompbnflcldabbghjo)
 - [Termius - SSH Client](https://chrome.google.com/webstore/detail/fjcdjmmkgnkgihjnlbgcdamkadlkbmam)
+- [Bookmarks clean up](https://chrome.google.com/webstore/detail/oncbjlgldmiagjophlhobkogeladjijl)
