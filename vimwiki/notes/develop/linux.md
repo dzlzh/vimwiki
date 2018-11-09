@@ -1,6 +1,6 @@
 # Linux
 
 - [命令](linux/command.md)
+- [awk](linux/awk.md)
 - [Bash](linux/bash.md)
-- [bashrc](linux/bashrc.md)
 - [Centos](linux/centos.md)
