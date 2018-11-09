@@ -1,0 +1,182 @@
+1 PHP防SQL注入
+	1.使用PDO(PHP Data Objects )
+
+	$stmt = $pdo->prepare('SELECT * FROM employees WHERE name = :name');
+        $stmt->execute(array(':name' => $name));
+        foreach ($stmt as $row) {
+           // do something with $row
+        }
+	注意当使用PDO访问MySQL数据库真正的预备义语句并不是默认使用的！为了解决这个问题，你必须禁用仿真准备好的语句。使用PDO创建连接的例子如下：
+	$dbConnection = new PDO('mysql:dbname=dbtest;host=127.0.0.1;charset=utf8', 'user', 'pass');
+	$dbConnection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+	$dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+	2.使用mysqli
+	$stmt = $dbConnection->prepare('SELECT * FROM employees WHERE name = ?');
+        $stmt->bind_param('s', $name);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while ($row = $result->fetch_assoc()) {
+          // do something with $row
+        }
+2 PHP防止xss攻击的方法
+	其实就是过滤从表单提交来的数据，使用php过滤函数就可以达到很好的目的
+	实例:	
+	<?php  
+	if (isset($_POST['name'])){  
+    	$str = trim($_POST['name']);  //清理空格  
+    	$str = strip_tags($str);   //过滤html标签  
+    	$str = htmlspecialchars($str);   //将字符内容转化为html实体  
+   	 $str = addslashes($str);  
+    	echo $str;  
+	}  
+	?>  
+	<form method="post" action="">  
+	<input name="name" type="text">  
+	<input type="submit" value="提交" >  
+	</form>
+3 对输出要进行转义  
+	最常见的输出目标是客户机，使用htmlentities( )在数据发出前进行转义是最好的方法。与其它字符串函数一样，它输入是一个字符串，对其进行加工后进行输出。
+	但是使用htmlentities( )函数的最佳方式是指定它的两个可选参数：引号的转义方式（第二参数）及字符集（第三参数）。
+	引号的转义方式应该指定为ENT_QUOTES，它的目的是同时转义单引号和双引号，这样做是最彻底的，字符集参数必须与该页面所使用的字符集相必配。
+	<?php  
+  	$html = array(  );  
+ 	 $html['username'] = htmlentities($clean['username'], ENT_QUOTES, 'UTF-8');  
+  	echo "<p>Welcome back, {$html['username']}.</p>";  
+	?> 
+	
+	另外一个常见的输出目标是数据库。如果可能的话，你需要对SQL语句中的数据使用PHP内建函数进行转义。
+	对于MySQL用户，最好的转义函数是mysql_real_escape_string( )。如果你使用的数据库没有PHP内建转义函数可用的话，addslashes( )是最后的选择。
+	<?php  
+   
+  	$mysql = array();  
+ 	 $mysql['username'] = mysql_real_escape_string($clean['username']);  
+ 	 $sql = "SELECT *  
+        	  FROM   profile  
+         	 WHERE  username = '{$mysql['username']}'";  
+	  $result = mysql_query($sql);  
+   
+	?>
+
+4 过滤用户输入
+	过滤是Web应用安全的基础。它是你验证数据合法性的过程。通过在输入时确认对所有的数据进行过滤，你可以避免被污染（未过滤）数据在你的程序中被误信及误用。
+	大多数流行的PHP应用的漏洞最终都是因为没有对输入进行恰当过滤造成的。
+	实际上，只有初始化是至关紧要的，但是养成这样一个习惯也是很好的：把所有命名为clean的变量认为是你的已过滤数据数组。
+	这一步骤合理地保证了$clean中只包括你有意保存进去的数据，你所要负责的只是不在$clean存在被污染数据
+	为了巩固这些概念，考虑下面的表单，它允许用户选择三种颜色中的一种：
+	<form action="process.php" method="POST">  
+  	Please select a color:  
+ 	 <select name="color">  
+    	<option value="red">red</option>  
+  	  <option value="green">green</option>  
+  	  <option value="blue">blue</option>  
+ 	 </select>  
+	  <input type="submit" />  
+	</form>  
+	在处理这个表单的编程逻辑中，非常容易犯的错误是认为只能提交三个选择中的一个。为了正确地过滤数据，你需要用一个switch语句来进行：
+	<?php  
+   
+  	$clean = array();  
+ 	 switch($_POST['color'])  
+ 	 {  
+ 	   case 'red':  
+  	  case 'green':  
+  	  case 'blue':  
+      	$clean['color'] = $_POST['color'];  
+     	 break;  
+ 	 }  
+   
+	?>  
+	上面的方法对于过滤有一组已知的合法值的数据很有效，但是对于过滤有一组已知合法字符组成的数据时就没有什么帮助。例如，你可能需要一个用户名只能由字母及数字组成：
+	<?php  
+  
+	$clean = array();  
+  
+	if (ctype_alnum($_POST['username']))  
+	{  
+	   $clean['username'] = $_POST['username'];  
+	}  
+  
+	?>  
+
+5 不要暴露数据库访问权限
+	数据库使用中需要关注的主要问题之一是访问权限即用户名及密码的暴露。在编程中为了方便，一般都会用一个db.inc文件保存，如：
+	<?php  
+   
+	$db_user = 'myuser';  
+	$db_pass = 'mypass';  
+	$db_host = '127.0.0.1';  
+   
+	$db = mysql_connect($db_host, $db_user, $db_pass);  
+   
+	?> 
+	如果由于外部因素导致无法做到把所有包含文件放在网站根目录之外，你可以在Apache配置成拒绝对.inc资源的请求。
+	<Files ~ "\.inc$">  
+ 	 Order allow,deny  
+  	Deny from all  
+	</Files> 
+	如果只是因为要举个例子而这么写的话，可以理解，毕竟大家学到了一些手段，但这个例子未免生硬了一点。
+	实际上只要把该文件更名为db.inc.php就可以了。就好象房子破了个洞而不去修补，却在外面去造一个更大的房子把破房子套起来一样。
+
+6 记住登录状态的安全做法
+	你应该坚持从三个方面来限制永久登录cookie的使用。 
+
+	Cookie需在一周内（或更少）过期
+
+	Cookie最好只能用于一次验证（在一次成功验证后即删除或重新生成）
+
+	在服务器端限定cookie在一周（或更少）时间内过期 
+
+	如果你想要用户无限制的被记住，那只要是该用户的访问你的应用的频度比过期时间更大的话，简单地在每次验证后重新生成标识并设定一个新的cookie即可。 
+
+	另一个有用的原则是在用户执行敏感操作前需要用户提供密码。你只能让永久登录用户访问你的应用中不是特别敏感的功能。在执行一些敏感操作前让用户手工进行验证是不可替代的步骤。 
+
+	最后，你需要确认登出系统的用户是确实登出了，这包括删除永久登录cookie。
+
+
+7 对脚本执行漏洞的防范
+	黑客利用脚本执行漏洞进行攻击的手段是多种多样的，而且是灵活多变的，对此，必须要采用多种防范方法综合的手段，才能有效防止黑客对脚本执行漏洞进行攻击。这里常用的方法方法有以下四种。
+	一是对可执行文件的路径进行预先设定。可以通过safe_moade_exec_dir来实现;二是对命令参数进行处理，一般用escapeshellarg函数实现;三是用系统自带的函数库来代替外部命令;
+	四是在操作的时候进可能减少使用外部命令。
+
+8 对文件漏洞的防范
+	对于PHP文件漏桐可以通过对服务器进行设置和配置来达到防范目的。这里具体的操作如下:一是把PHP代码中的错误提示关闭，这样可以避免黑客通过错误提示获取数据库信息和网页文件物理路径;
+	二是对open_basedir尽心设置，也就是对目录外的文件操作进行禁止处理;这样可以对本地文件或者远程文件起到保护作用，防止它们被攻击，这里还要注意防范Session文件和上载文件的攻击;
+	三是把safe-made设置为开启状态，从而对将要执行的命令进行规范，通过禁止文件上传，可以有效的提高PHP网站的安全系数。
+
+9 对全局变量漏洞防范
+	对于PHP全局变量的漏洞问题，以前的PHP版本存在这样的问题，但是随着PHP版本升级到5.5以后，可以通过对php.ini的设置来实现，设置ruquest_order为GPC。
+	另外在php.ini配置文件中，可以通过对magic_quotes_runtime进行布尔值设置是否对外部引人的数据中的溢出字符加反斜线。为了确保网站程序在服务器的任何设置状态下都能运行。
+	可以在整个程序开始的时候用get_magic_quotes_runtime检测设置状态决定是否要手工处理，或者在开始(或不需要自动转义的时候)用set_magic_quotes_runtime(0)关掉。
+10 对于Session漏洞的防范
+	从前面的分析可以知道，Session攻击最常见的就是会话劫持，也就是黑客通过各种攻击手段获取用户的Session ID，然后利用被攻击用户的身份来登录相应网站。
+	为此，这里可以用以下几种方法进行防范:一是定期更换Session ID，更换Session ID可以用PHP自带函数来实现;
+	二是更换Session名称，通常情况下Session的默认名称是PHPSESSID，这个变量一般是在cookie中保存的，如果更改了它的名称，就可以阻档黑客的部分攻击;
+	三是对透明化的Session ID进行关闭处理，所谓透明化也就是指在http请求没有使用cookies来制定Session id时，Sessioin id使用链接来传递.关闭透明化Session ID可以通过操作PHP.ini文件来实现;
+	四是通过URL传递隐藏参数，这样可以确保即使黑客获取了session数据，但是由于相关参数是隐藏的，它也很难获得Session ID变量值。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
