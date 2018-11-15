@@ -14,6 +14,7 @@
 - [数据结构](notes/programming/datastructure.md)
 - [算法](notes/programming/algorithm.md)
 - [设计模式](notes/programming/designpattern.md)
+- [架构](notes/programming/software_architecture.md)
 - [PHP](notes/programming/php.md)
 - [Go](notes/programming/go.md)
 - [WEB](notes/programming/web.md)
