@@ -1,5 +1,15 @@
 # PHP - BC Math
 
+> 处理精度相关的函数
+
+## [`bcscale`](https://secure.php.net/manual/zh/function.bcscale.php)
+
+设置所有 bc 数学函数的默认小数点保留位数
+
+```
+bool bcscale (int $scale)
+```
+
 ## [`bcadd`](https://secure.php.net/manual/zh/function.bcadd.php)
 
 2 个任意精度数字的加法计算
@@ -79,3 +89,13 @@ int bccomp ( string $left_operand , string $right_operand [, int $scale = int ] 
 ```
 
 把 `right_operand` 和 `left_operand `作比较, 并且返回一个整数的结果
+
+## [`bcpowmod`](http://php.net/manual/zh/function.bcpowmod.php)
+
+将任意精度数的乘方，取指定的模数
+
+```php
+string bcpowmod (string $base , string $exponent , string $modulus [, int $scale = 0]);
+
+bcpowmod($x, $y, $mod) === bcmod(bcpow($x, $y), $mod);
+```
