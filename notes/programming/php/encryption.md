@@ -105,3 +105,19 @@ string base64_encode ( string $data );
 ```php
 string base64_decode ( string $data [, bool $strict = false ] );
 ```
+
+AES 分组模式有多种：ECB、CBC、CFB、OFB、CTR 五种分组模式。目前优先推荐使用 CBC 模式。
+openssl_encrypt() // 加密。
+openssl_decrypt() // 解密。
+openssl_cipher_iv_length() // 获取密码 iv 长度。
+openssl_random_pseudo_bytes() // 生成一个伪随机字节串
+openssl_get_cipher_methods() // openssl 所支持的算法列表。
+AES 支持三种强度：128、192、256。128 位的强度最低，但是，加密解密速度较快。256 位强度最高，但是，加密解密速度最低。所以，大家根据自己系统的重要程度选择使用对应强度。通常普通的金融项目使用 192 位完整够用了。顶级的就用 256 位。其他的就用 128 位吧。
+
+
+openssl_pkey_get_private() // 获取私钥
+openssl_pkey_get_public() // 从证书中解析公钥，以供使用
+openssl_private_decrypt() // 使用私钥解密数据
+openssl_private_encrypt() // 使用私钥加密数据
+openssl_public_decrypt() // 使用公钥解密数据
+openssl_public_encrypt() // 使用公钥加密数据
