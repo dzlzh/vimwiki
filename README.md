@@ -15,6 +15,7 @@
 - [算法](notes/programming/algorithm.md)
 - [设计模式](notes/programming/designpattern.md)
 - [架构](notes/programming/software_architecture.md)
+- [网络](notes/programming/network.md)
 - [PHP](notes/programming/php.md)
 - [Go](notes/programming/go.md)
 - [WEB](notes/programming/web.md)
@@ -42,6 +43,7 @@
 
 ### [其他 (Others)](notes/others.md)
 
+- [程序员必读书籍](notes/others/book.md)
 - [Google foo.bar](notes/others/google_foo_bar.md)
 - [Software Inventory](notes/others/software.md)
 - [Idea](notes/others/idea.md)
