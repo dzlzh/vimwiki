@@ -42,3 +42,4 @@
 - [Secure Shell App](https://chrome.google.com/webstore/detail/pnhechapfaindjhompbnflcldabbghjo)
 - [Termius - SSH Client](https://chrome.google.com/webstore/detail/fjcdjmmkgnkgihjnlbgcdamkadlkbmam)
 - [Bookmarks clean up](https://chrome.google.com/webstore/detail/oncbjlgldmiagjophlhobkogeladjijl)
+- [Camtd - Aria2 Download Manager](https://chrome.google.com/webstore/detail/lcfobgbcebdnnppciffalfndpdfeence)
