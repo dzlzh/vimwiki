@@ -199,7 +199,7 @@ string number_format ( float $number [, int $decimals = 0 ] );
 string number_format ( float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = "," );
 ```
 
-## `preg_replace()`
+## [`preg_replace()`](http://php.net/manual/zh/function.preg-match.php)
 
 执行一个正则表达式的搜索和替换
 
@@ -208,6 +208,14 @@ mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int
 ```
 
 搜索`subject`中匹配`pattern`的部分， 以`replacement`进行替换。
+
+## [`preg_match_all`](http://php.net/manual/zh/function.preg-match-all.php)
+
+执行一个全局正则表达式匹配
+
+```php
+int preg_match_all ( string $pattern , string $subject [, array &$matches [, int $flags = PREG_PATTERN_ORDER [, int $offset = 0 ]]] )
+```
 
 ## [`preg_split`](http://php.net/manual/zh/function.preg-split.php)
 
