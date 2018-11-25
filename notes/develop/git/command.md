@@ -36,6 +36,7 @@
   - `-f` 文件
   - `-d` 文件夹
 - `git stash` 把当前工作现场“储藏”起来
+- `git stash save <commit>` 把当前工作现场“储藏”起来
 - `git stash list` 查看储藏
 - `git stash apply [stash@{x}]` 恢复储藏，`stash@{x}` 指定恢复
 - `git stash drop` 删除储藏
