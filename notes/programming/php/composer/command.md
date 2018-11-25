@@ -6,6 +6,10 @@
 
 如有 composer.lock 文件，直接安装，否则从 composer.json 安装最新扩展包和依赖
 
+`composer install --no-dev`
+
+安装时跳过 `require-dev` 列出的软件包
+
 ## require 
 
 `composer require vendor/package` 
@@ -17,6 +21,10 @@
 `composer update` 
 
 更新所有依赖，从 composer.json 安装最新扩展包和依赖
+
+`composer update --no-dev` 
+
+更新时跳过 `require-dev` 列出来的软件包
 
 `composer update vendor/package`
 
@@ -49,3 +57,13 @@
 `composer show vendor/package`
 
 显示具体某个包的信息
+
+## dump-autoload
+
+`composer dump-autoload`
+
+更新 `autoload` 或 `autoload-dev` 规则
+
+`composer dump-autoload --no-dev`
+
+禁用 `autoload-dev` 规则
