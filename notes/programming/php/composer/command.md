@@ -67,3 +67,14 @@
 `composer dump-autoload --no-dev`
 
 禁用 `autoload-dev` 规则
+
+`composer dump-autoload --optimize(-o)`
+
+转换 `RPS-0/4 autoloading` 到 `classmap`
+
+**`autoload`/`autoload-dev`** 自动加载类型
+
+1. `classmap`
+2. `psr-0`
+3. `psr-4`
+4. `files`
