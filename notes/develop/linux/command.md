@@ -455,19 +455,6 @@ last [options]
 -o                        只输出文件中匹配到的部分。
 ```
 
-### sed
-
-```
-sed [options] 'command' file(s)
-sed [options] -f scriptfile file(s)
-```
-
-- `-e <script>` 以选项中的指定的script来处理输入的文本文件
-- `-f <script file>` 以选项中指定的script文件来处理输入的文本文件
-- `-n` 仅显示script处理后的结果
-- `-i` 直接修改原文件
-- `-r` 使用扩展正则表达式
-
 ## kill
 
 删除执行中的程序或工作
@@ -481,3 +468,18 @@ kill [options] pid
 - `-p` 指定kill 命令只打印相关进程的进程号，而不发送任何信号
 - `-s <信息名称或编号>` 指定要送出的信息
 - `-u` 指定用户
+
+## dos2unix/unix2dos
+
+`windows` 与 `linux` 格式互换
+
+```sh
+dos2unix [-hkqV] [-c convmode] [-o file ...] [-n infile outfile ...]
+```
+
+`-k` 保持输出文件的日期不变 
+`-q` 安静模式，不提示任何警告信息
+`-V` 查看版本
+`-c` 转换模式，模式有：`ASCII`, `7bit`, `ISO`, `Mac`, 默认是：`ASCII`
+`-o` 写入到源文件
+`-n` 写入到新文件
