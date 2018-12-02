@@ -5,3 +5,4 @@
 - [基础](go/basis.md)
 - [String](go/string.md)
 - [Packages](go/pkg.md)
+- [Go 语言核心 36 讲](go/core_36_speak.md)
