@@ -2,13 +2,15 @@
 
 ## 提交
 
+> [阮一峰的网络日志 - Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+
 ### 格式
 
-- <类型>(作用域): <主题>
+- Header <类型>(<作用域>): <主题>
 - <空行>
-- 提交详情
+- Body 提交详情
 - <空行>
-- <脚注>
+- Footer <脚注>
 
 ### 类型
 
@@ -19,6 +21,12 @@
 - `refactor` : 没有修改功能的情况下重写、优化、整理了代码
 - `test` : 添加之前遗漏的测试
 - `chore` : 维护，零星的工作。我们约定：当该次提交不属于上面几种时，使用该类型，注意如果提交明确属于上面几种时，尽量不要使用该类型，它不够明确
+
+### Revert
+
+当前 `Commit` 用于撤销以前的 `Commit`，则必须以 `revert:` 开头，后面跟着被撤销 `Commit` 的 `Header`。
+
+`revert: Header`
 
 ## 分支名称
 
