@@ -63,7 +63,6 @@
 
 > `C-m` 回车符
 
-<<<<<<< HEAD
 ### 设置Tmux Option
 
 `tmux <set-window-option|setw> [-agu] [-t target-window] option value`
