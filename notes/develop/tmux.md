@@ -95,7 +95,7 @@
 # 删除
 <prefix>:kill-session
 
-## 删除所有
+# 删除所有
 <prefix>:kill-server
 ```
 
