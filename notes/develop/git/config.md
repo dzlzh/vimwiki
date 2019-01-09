@@ -18,3 +18,4 @@
   - `true` - 拒绝提交包含混合换行符的文件
   - `false` - 允许提交包含混合换行符的文件
   - `warn` - 提交包含混合换行符的文件时给出警告
+- `git config commit.template [template path]` 设置当前项目提交模板
