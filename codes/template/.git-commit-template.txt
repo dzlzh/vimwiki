@@ -1,1 +1,15 @@
-<feat|fix|docs|style|refactor|test|chore>(<scope>): <subject>
+
+# Header <类型>(<作用域>): <主题>
+# <空行>
+# Body 提交详情
+# <空行>
+# Footer <脚注>
+#
+# feat     : 特性
+# fix      : bug 修复
+# docs     : 文档
+# style    : 代码格式
+# refactor : 没有修改功能的情况下重写、优化、整理了代码
+# test     : 添加之前遗漏的测试
+# chore    : 维护，零星的工作
+# revert   : 当前 Commit 用于撤销以前的 Commit，后面跟着被撤销 Commit 的 Header
