@@ -29,6 +29,24 @@ Ctrl+w +            " 增加窗口高度
 Ctrl+w <            " 减小窗口宽度
 Ctrl+w >            " 增加窗口宽度
 
+Ctrl+w w            " 逐个窗口移动
+Ctrl+w h            " 向左窗口移动
+Ctrl+w j            " 向下窗口移动
+Ctrl+w k            " 向上窗口移动
+Ctrl+w l            " 向右窗口移动
+Ctrl+w t            " 向最左上角窗口移动
+Ctrl+w b            " 向最右下角窗口移动
+Ctrl+w p            " 向前一个访问窗口移动
+
+Ctrl+w r            " 向右或向下方交换窗口
+Ctrl+w R            " 向左或向上方交换窗口
+Ctrl+w x            " 交换同列或同行的窗口的位置
+
+Ctrl+w H            " 移动窗口至最左端
+Ctrl+w J            " 移动窗口至最下端
+Ctrl+w K            " 移动窗口至最上端
+Ctrl+w L            " 移动窗口至最右端
+
 :set scb
 :set scrollbind     " 分屏同步移动
 
