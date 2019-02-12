@@ -38,6 +38,7 @@
 - [Markdown](notes/develop/markdown.md)
 - [Git](notes/develop/git.md)
 - [Vim](notes/develop/vim.md)
+- [Neovim](notes/develop/neovim.md)
 - [Tmux](notes/develop/tmux.md)
 - [i3wm](notes/develop/i3wm.md)
 
