@@ -31,6 +31,7 @@
 
 - [Blade](php/laravel/blade.md)
 - [Model](php/laravel/model.md)
+- [DB](php/laravel/db.md)
 
 # Composer
 
