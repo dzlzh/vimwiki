@@ -10,19 +10,19 @@
 
 安装时跳过 `require-dev` 列出的软件包
 
-## require 
+## require
 
-`composer require vendor/package` 
+`composer require vendor/package`
 
 添加安装 vendor/package, 可以指定版本
 
 ## update
 
-`composer update` 
+`composer update`
 
 更新所有依赖，从 composer.json 安装最新扩展包和依赖
 
-`composer update --no-dev` 
+`composer update --no-dev`
 
 更新时跳过 `require-dev` 列出来的软件包
 
@@ -40,7 +40,7 @@
 
 `composer search package`
 
-进行包的搜索 
+进行包的搜索
 
 > 如果只是想匹配名称可以使用 `--only-name` 选项
 
@@ -78,3 +78,9 @@
 2. `psr-0`
 3. `psr-4`
 4. `files`
+
+## global
+
+`composer global`
+
+全局执行，允许你在 `COMPOSER_HOME` 目录下执行其它命令
