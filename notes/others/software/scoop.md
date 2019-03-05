@@ -20,3 +20,8 @@
 ```
 scoop bucket add extras
 ```
+
+## 必装软件
+
+- aria2
+- bandizip
