@@ -34,3 +34,5 @@ tags
 .idea/
 
 Codes/Vimwiki/html/
+
+.php_cs.cache
