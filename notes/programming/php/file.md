@@ -433,7 +433,7 @@ bool zip_entry_close ( resource $zip_entry );
 string tempnam ( string $dir, string $prefix );
 ```
 
-## `tmpfile()`
+## [`tmpfile()`](http://php.net/manual/zh/function.tmpfile.php)
 
 建立一个临时文件
 
@@ -447,4 +447,12 @@ resource tmpfile ( void );
 
 ```php
 string sys_get_temp_dir( void );
+```
+
+## [`stream_get_meta_data`](http://php.net/manual/zh/function.stream-get-meta-data.php)
+
+从封装协议文件指针中取得报头／元数据
+
+```php
+stream_get_meta_data ( int $fp ) : array
 ```
