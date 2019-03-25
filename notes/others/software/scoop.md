@@ -2,6 +2,13 @@
 
 [Scoop](https://github.com/lukesampson/scoop)
 
+```
+set-executionpolicy remotesigned -scope currentuser
+[environment]::setEnvironmentVariable('SCOOP','D:\Scoop','User')
+$env:SCOOP='D:\Scoop'
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+```
+
 ## 基本操作
 
 | 命令      | 动作         |
@@ -19,9 +26,15 @@
 
 ```
 scoop bucket add extras
+scoop bucket add versions
 ```
 
 ## 必装软件
 
-- aria2
-- bandizip
+```
+scoop install aria2
+scoop install aria2 7z git
+scoop install php-nts composer
+scoop install python27 python
+scoop install nodejs-lts yarn
+```
