@@ -18,3 +18,4 @@
 - [PHP 扩展 ZipArchive 安装](blog/php_expand_ziparchive_install.md)
 - [PHP7 install](blog/php7_install.md)
 - [PHP 导出 csv 长数值变科学记数法解决方法](blog/csv_scientific_notation.md)
+- [Manjaro 安装并配置](blog/manjaro_install_deploy.md)
