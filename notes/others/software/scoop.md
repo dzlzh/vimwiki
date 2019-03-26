@@ -40,7 +40,7 @@ scoop install -a <32bit|64bit> phpstorm
 scoop install -a <32bit|64bit> keepass telegram
 scoop install -a <32bit|64bit> snipaste quicklook flux
 scoop install -a <32bit|64bit> neovim-nightly
-scoop install -a <32bit|64bit> ag
+scoop install -a <32bit|64bit> ag ctags
 scoop install -a <32bit|64bit> php-nts composer
 scoop install -a <32bit|64bit> python27 python
 scoop install -a <32bit|64bit> nodejs-lts yarn
