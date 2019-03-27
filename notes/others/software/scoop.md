@@ -33,19 +33,20 @@ scoop bucket add jetbrains
 ## 必装软件
 
 ```
-scoop install -a <32bit|64bit> 7zip aria2 git shadowsocks
-scoop install -a <32bit|64bit> putty terminus ag
-scoop install -a <32bit|64bit> heidisql robo3t postman
-scoop install -a <32bit|64bit> phpstorm
-scoop install -a <32bit|64bit> keepass telegram
-scoop install -a <32bit|64bit> snipaste quicklook flux
-scoop install -a <32bit|64bit> neovim-nightly
-scoop install -a <32bit|64bit> ag ctags
-scoop install -a <32bit|64bit> php-nts composer
-scoop install -a <32bit|64bit> python27 python
-scoop install -a <32bit|64bit> nodejs-lts yarn
-scoop install -a <32bit|64bit> proxifier-portable
-scoop install -a <32bit|64bit> geekuninstaller
-scoop install -a <32bit|64bit> motrix rufus
-scoop install -a <32bit|64bit> teamviewer
+scoop install -a 64bit 7zip aria2 git
+scoop install -a 64bit shadowsocks
+scoop install -a 64bit keepass telegram
+scoop install -a 64bit snipaste quicklook flux
+scoop install -a 64bit putty terminus
+scoop install -a 64bit heidisql robo3t postman
+scoop install -a 64bit phpstorm
+scoop install -a 64bit neovim-nightly
+scoop install -a 64bit ag ctags
+scoop install -a 64bit php-nts composer
+scoop install -a 64bit python27 python
+scoop install -a 64bit nodejs-lts yarn
+scoop install -a 64bit proxifier-portable
+scoop install -a 64bit geekuninstaller
+scoop install -a 64bit motrix rufus
+scoop install -a 64bit teamviewer
 ```
