@@ -17,5 +17,6 @@
 - [数值变量交换常用方法](blog/common_method_of_exchange_of_numeric_variables.md)
 - [PHP 扩展 ZipArchive 安装](blog/php_expand_ziparchive_install.md)
 - [PHP7 install](blog/php7_install.md)
-- [PHP 导出 csv 长数值变科学记数法解决方法](blog/csv_scientific_notation.md)
+- [PHP 导出 .csv 长数值变科学记数法解决方法](blog/csv_scientific_notation.md)
+- [iconv(): Detected an illegal character in input string](blog/iconv_detected_an_illegal_character_in_input_string.md)
 - [Manjaro 安装并配置](blog/manjaro_install_deploy.md)
