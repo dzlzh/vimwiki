@@ -1,4 +1,4 @@
-# PHP Trait
+# PHP Trait# PHP Trait
 
 ## 参考
 
