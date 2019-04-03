@@ -36,3 +36,4 @@
 - [Manjaro 安装并配置](blog/linux_manjaro.md)
 - [PHP 生命周期](blog/php_life_cycle.md)
 - [PHP 运行模式](blog/php_operation_mode.md)
+- [消息队列](blog/resque.md)
