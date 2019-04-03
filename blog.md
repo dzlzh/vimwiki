@@ -34,3 +34,5 @@
 - [zsh 安装](blog/linux_install_zsh.md)
 - [tmux 编译安装](blog/linux_install_tmux.md)
 - [Manjaro 安装并配置](blog/linux_manjaro.md)
+- [PHP 生命周期](blog/php_life_cycle.md)
+- [PHP 运行模式](blog/php_operation_mode.md)
