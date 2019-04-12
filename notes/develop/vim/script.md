@@ -10,23 +10,23 @@
 
 ### 作用域
 
-- `g:var`` 全局
-- `a:var`` 函数参数
-- `l:var`` 函数局部变量
-- `b:var`` buffer 局部变量
-- `w:var`` window 局部变量
-- `t:var`` tab 局部变量
-- `s:var`` 当前脚本内可见的局部变量
-- `v:var`` Vim 预定义的内部变量
+- `g:var` 全局
+- `a:var` 函数参数
+- `l:var` 函数局部变量
+- `b:var` buffer 局部变量
+- `w:var` window 局部变量
+- `t:var` tab 局部变量
+- `s:var` 当前脚本内可见的局部变量
+- `v:var` Vim 预定义的内部变量
 
 ## 数据类型
 
-- `Number``     32 位有符号整数
-- `Float``      浮点数，需要编译 Vim 的时候，有 +float 特性支持
-- `String``     NULL 结尾的 8 位无符号字符串
-- `Funcref``    函数引用，函数引用类型的变量名必须以大写字母开头
-- `List``       有序列表
-- `Dictionary`` 无序的 Key/Value 容器
+- `Number`     32 位有符号整数
+- `Float`      浮点数，需要编译 Vim 的时候，有 +float 特性支持
+- `String`     NULL 结尾的 8 位无符号字符串
+- `Funcref`    函数引用，函数引用类型的变量名必须以大写字母开头
+- `List`       有序列表
+- `Dictionary` 无序的 Key/Value 容器
 - `Boolean`     Vim8.1 中包含 `v:true`/`v:false`
 
 ## 字符串操作
@@ -105,8 +105,11 @@ call <function>
 ```
 
 > 创建时使用关键字 `function!`
+
 > 函数名称首字母大写
+
 > `...` 不定长参数形式
+
 > `range` 只会执行一次
 
 ## 面向对象
