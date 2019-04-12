@@ -40,6 +40,7 @@
 - [Vim](notes/develop/vim.md)
 - [Tmux](notes/develop/tmux.md)
 - [i3wm](notes/develop/i3wm.md)
+- [Aria2](notes/develop/aria2)
 
 ### [其他 (Others)](notes/others.md)
 
