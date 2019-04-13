@@ -32,8 +32,6 @@ var_dump(empty($obj->test));
 
 > 当对不可访问属性调用 [`isset()`](https://php.net/manual/zh/function.isset.php) 或 [`empty()`](https://php.net/manual/zh/function.empty.php) 时，[`__isset()`](https://php.net/manual/zh/language.oop5.overloading.php#object.isset) 会被调用。
 
-
-
 ```php
 $arr = [1, 2, 3];
 foreach($arr as &$v) {
@@ -104,16 +102,12 @@ Array
 
 > `&$v` 是一个指向 `$arr[2]` 的引用，第二次 `foreach` 分别给 `$v` 赋值 `1 2 2`
 
-
-
 ```php
 echo '6+5' . 9 + 7; //13
 echo '6+5' . 9 * 7; //6+563
 ```
 
 > 运算符优先级 `+-.` 是从左到右
-
-
 
 ```php
 echo '1' . (print '2') + 3; //214
@@ -122,10 +116,49 @@ echo '1' . print (2) + 3; //511
 
 > `print` 是函数返回 1
 
-
-
 ```php
-var_dump(0 == 'abc'); // true
+var_dump(
+    0 == 'abc', // true
+    in_array('abc', [0, 1]) // true
+);
 ```
 
 > 如果比较一个数字和字符串或者比较涉及到数字内容的字符串，则字符串会被转换为数值并且比较按照数值来进行。
+
+```php
+$myString = 'abc';
+$findString = 'a';
+$pos = strpos($myString, $findString); // 0
+var_dump($pos == false); // true
+var_dump($pos === false); // false
+```
+
+> 请使用===来检查
+
+```php
+print_r(expload(',', '')); // ['']
+```
+
+> 空字符串被分割后，并不为空
+
+```php
+echo true ? 1 : false ? 2 : 3; // 2
+```
+
+> php 三目运算符是从左到右，上面表达式实践是这样执行 `(true ? 1 : fasle) ? 2 : 3`
+
+```php
+var_dump(
+    count([]), //0
+    count(NULL), //0
+    count('aaa'), //1
+    count(''), //1
+    count(false) //1
+);
+```
+
+```php
+var_dump(rtrim('abcppp.jpg', '.jpg')); //abc
+```
+
+> [rtrim](https://www.php.net/manual/zh/function.rtrim.php) 第二个参数是指定的一个字符列表
