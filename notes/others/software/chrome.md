@@ -43,3 +43,5 @@
 - [Termius - SSH Client](https://chrome.google.com/webstore/detail/fjcdjmmkgnkgihjnlbgcdamkadlkbmam)
 - [Bookmarks clean up](https://chrome.google.com/webstore/detail/oncbjlgldmiagjophlhobkogeladjijl)
 - [Camtd - Aria2 Download Manager](https://chrome.google.com/webstore/detail/lcfobgbcebdnnppciffalfndpdfeence)
+- [Chrome Cleaner Pro](https://chrome.google.com/webstore/detail/chrome-cleaner-pro/ccjleegmemocfpghkhpjmiccjcacackp)
+- [Enhanced Github](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd/)
