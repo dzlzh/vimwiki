@@ -45,3 +45,4 @@
 - [Camtd - Aria2 Download Manager](https://chrome.google.com/webstore/detail/lcfobgbcebdnnppciffalfndpdfeence)
 - [Chrome Cleaner Pro](https://chrome.google.com/webstore/detail/chrome-cleaner-pro/ccjleegmemocfpghkhpjmiccjcacackp)
 - [Enhanced Github](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd/)
+- [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)
