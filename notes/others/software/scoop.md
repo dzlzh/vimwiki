@@ -35,18 +35,28 @@ scoop bucket add jetbrains
 ```
 scoop install -a 64bit 7zip aria2 git
 scoop install -a 64bit shadowsocks
-scoop install -a 64bit keepass telegram
-scoop install -a 64bit snipaste quicklook flux
-scoop install -a 64bit putty terminus
-scoop install -a 64bit heidisql robo3t postman
-scoop install -a 64bit phpstorm
+scoop install -a 64bit keepass
+scoop install -a 64bit telegram
+scoop install -a 64bit snipaste
+scoop install -a 64bit quicklook
+scoop install -a 64bit flux
+scoop install -a 64bit putty
+scoop install -a 64bit heidisql
+scoop install -a 64bit robo3t
+scoop install -a 64bit postman
 scoop install -a 64bit neovim-nightly
-scoop install -a 64bit ag ctags
+scoop install -a 64bit phpstorm
+scoop install -a 64bit ag
+scoop install -a 64bit ctags
 scoop install -a 64bit php-nts composer
 scoop install -a 64bit python27 python
 scoop install -a 64bit nodejs-lts yarn
 scoop install -a 64bit proxifier-portable
 scoop install -a 64bit geekuninstaller
-scoop install -a 64bit motrix rufus
 scoop install -a 64bit teamviewer
+scoop install -a 64bit motrix
+scoop install -a 64bit rufus
+scoop install -a 64bit terminus
+scoop install -a 64bit concfg
+scoop install -a 64bit pshazz 
 ```
