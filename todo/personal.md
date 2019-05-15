@@ -11,3 +11,4 @@
 - [ ] 短域名分发器
 - [ ] [博客评论](https://github.com/gitalk/gitalk)
 - [ ] 农历生日推送提醒
+- [ ] dotfiles 管理
