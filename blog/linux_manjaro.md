@@ -43,6 +43,14 @@ vim ~/.xprofile
 ### 代理
 
 ```sh
-alias setproxy="export ALL_PROY=socks5://127.0.0.1:1080"
-alias unsetproxy="unset ALL_PROY"
+# 安装 SS
+sudo pacman -S shadowsocks
+
+sslocal 
+
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias unsetproxy="unset ALL_PROXY"
+
+# 可先使用命令让浏览器走代理
+google-chrome-stable --proy-service="socks5://127.0.0.1:1080"
 ```
