@@ -19,14 +19,15 @@ pacman -Qs   # 查询已安装的软件包
 ## 初始化
 
 ```sh
+sudo pacman-mirrors -gb testing -c China
 sudo pacman-mirrors -c China
 sudo pacman-mirrors -i -c China -m rank
 sudo vim /etc/pacman.conf
     [archlinuxcn]
     SigLevel = Optional TrustedOnly
     Server = https:://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-sudo pacman -Syyu # 强制升级软件包
 sudo pacman -S archlinuxcn-keyring
+sudo pacman -Syyu # 强制升级软件包
 ```
 
 ### 输入法
