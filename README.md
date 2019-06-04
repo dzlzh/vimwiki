@@ -53,6 +53,7 @@
 ## [Codes](codes.md)
 
 - [PHP](codes/php.md)
+- [JavaScript](codes/javascript.md)
 - [Go](codes/go.md)
 - [Linux](codes/liunx.md)
 - [Windows](codes/windows.md)
