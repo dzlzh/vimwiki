@@ -104,3 +104,5 @@
 - [消息队列](blog/resque.md)
 - [SQL 几种连接方式](blog/sql_join.md)
 - [dotfiles 管理]()
+- [求余运算与取模运算]()
+- [一致性 Hash 算法]()
