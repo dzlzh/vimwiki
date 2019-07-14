@@ -16,3 +16,5 @@
 - Lenovo X1 Carbon
 - HP Spectre 13 x360
 - Lenovo Yoga 900
+- 荣耀 MagicBook
+- 蓝天准系统
