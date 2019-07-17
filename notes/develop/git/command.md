@@ -43,6 +43,7 @@
 - `git stash pop` 恢复并删除
 - `git revert <commit>` 撤销
   - `-m <parentId>` 撤销合并的时候选择撤销到那个parent
+- `git cherry-pick [<options]> <commit>` 挑一个 commit 重新提交
 
 ## 远程操作
 
