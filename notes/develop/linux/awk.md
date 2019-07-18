@@ -10,3 +10,9 @@ awk [options] 'command' file(s)
 ## options
 
 - `-F` 指定分隔符
+
+## 内置变量
+
+### FS
+
+
