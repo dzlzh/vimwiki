@@ -30,6 +30,24 @@ sudo pacman -S archlinuxcn-keyring
 sudo pacman -Syyu # 强制升级软件包
 ```
 
+### 常用软件
+
+```sh
+sudo pacman -S google-chrome
+sudo pacman -Sy yay
+# zsh
+yay -S zsh powerline-fonts powerline
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# wechat
+yay -S deepin.com.wechat
+```
+
+### 字体
+
+```sh
+yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji wqy-microhei wqy-microhei-lite adobe-source-code-pro-fonts 
+```
+
 ### 输入法
 
 ```sh
