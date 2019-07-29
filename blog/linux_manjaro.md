@@ -42,10 +42,6 @@ cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
-# 更改 urxvt 字体
-vim ~/.Xresources
-    URxvt.font:     xft:Source Code Pro for Powerline:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
-    URxvt.boldfont: xft:Source Code Pro for Powerline:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
 ```
 
 ### 常用软件
