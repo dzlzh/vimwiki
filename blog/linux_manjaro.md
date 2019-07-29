@@ -36,11 +36,16 @@ sudo pacman -Syyu # 强制升级软件包
 
 ```sh
 yay -S wqy-microhei adobe-source-code-pro-fonts 
+# 安装 powerline 字体
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
 # 更改 urxvt 字体
 vim ~/.Xresources
-    URxvt.font: xft:Source Code Pro:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
-    !URxvt.font:xft:Droid\ Sans\ Mono\ For\ Powerline:regular:size=10,xft:WenQuanYi Micro Hei Mono:regular:size=13:minispace=true
-    URxvt.boldfont: xft:Source Code Pro:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
+    URxvt.font:     xft:Source Code Pro for Powerline:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
+    URxvt.boldfont: xft:Source Code Pro for Powerline:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
 ```
 
 ### 常用软件
@@ -50,6 +55,10 @@ sudo pacman -Sy yay
 # zsh
 yay -S zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# 安装主题
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+vim ~/.zshrc 
+    ZSH_THEME="powerlevel9k/powerlevel9k"
 # google chrome
 yay -S google-chrome
 # wechat
