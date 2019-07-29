@@ -19,33 +19,41 @@ pacman -Qs   # 查询已安装的软件包
 ## 初始化
 
 ```sh
-sudo pacman-mirrors -gb testing -c China
+sudo pacman-mirrors -GB testing -c China
 sudo pacman-mirrors -c China
 sudo pacman-mirrors -i -c China -m rank
 sudo vim /etc/pacman.conf
     [archlinuxcn]
     SigLevel = Optional TrustedOnly
-    Server = https:://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+    Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+    # Server = https:://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+sudo pacman -Syu
 sudo pacman -S archlinuxcn-keyring
 sudo pacman -Syyu # 强制升级软件包
-```
-
-### 常用软件
-
-```sh
-sudo pacman -S google-chrome
-sudo pacman -Sy yay
-# zsh
-yay -S zsh powerline-fonts powerline
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# wechat
-yay -S deepin.com.wechat
 ```
 
 ### 字体
 
 ```sh
-yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji wqy-microhei wqy-microhei-lite adobe-source-code-pro-fonts 
+yay -S wqy-microhei adobe-source-code-pro-fonts 
+# 更改 urxvt 字体
+vim ~/.Xresources
+    URxvt.font: xft:Source Code Pro:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
+    !URxvt.font:xft:Droid\ Sans\ Mono\ For\ Powerline:regular:size=10,xft:WenQuanYi Micro Hei Mono:regular:size=13:minispace=true
+    URxvt.boldfont: xft:Source Code Pro:antialias=True:pixelsize=18,xft:WenQuanYi Zen Hei:pixelsize=18
+```
+
+### 常用软件
+
+```sh
+sudo pacman -Sy yay
+# zsh
+yay -S zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# google chrome
+yay -S google-chrome
+# wechat
+yay -S deepin.com.wechat
 ```
 
 ### 输入法
