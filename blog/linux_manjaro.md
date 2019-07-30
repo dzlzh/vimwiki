@@ -30,6 +30,7 @@ sudo vim /etc/pacman.conf
 sudo pacman -Syu
 sudo pacman -S archlinuxcn-keyring
 sudo pacman -Syyu # 强制升级软件包
+sudo pacman -Sy yay
 ```
 
 ### 字体
@@ -44,32 +45,35 @@ cd ..
 rm -rf fonts
 ```
 
-### 常用软件
-
-```sh
-sudo pacman -Sy yay
-# zsh
-yay -S zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# 安装主题
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-vim ~/.zshrc 
-    ZSH_THEME="powerlevel9k/powerlevel9k"
-# google chrome
-yay -S google-chrome
-# wechat
-yay -S deepin.com.wechat
-```
-
 ### 输入法
 
 ```sh
-sudo pacman -s fcitx-im fcitx-configtool fcitx-rime
+yay -S fcitx-im fcitx-configtool fcitx-rime
 vim ~/.xprofile
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
     export XMODIFIERS="@im=fcitx"
     exec fcitx &
+```
+
+### 常用软件
+
+```sh
+# zsh nvim tmux
+yay -S zsh nvim tmux
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# 安装主题
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+vim ~/.zshrc 
+    ZSH_THEME="powerlevel9k/powerlevel9k"
+# xrandr 多显示器管理
+yay -S xorg-xrandr
+xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
+# google chrome
+yay -S google-chrome
+# wechat
+yay -S deepin.com.wechat
 ```
 
 ### 代理
