@@ -36,24 +36,19 @@ sudo pacman -Sy yay
 ### 字体
 
 ```sh
-yay -S wqy-microhei adobe-source-code-pro-fonts 
+yay -S wqy-microhei adobe-source-code-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
 # 安装 powerline 字体
-git clone https://github.com/powerline/fonts.git
+git clone https://github.com/powerline/fonts.git --deepin=1
 cd fonts
 ./install.sh
 cd ..
 rm -rf fonts
+fc-cache -vf
 ```
-
-### 输入法
-
+### 输入法 
 ```sh
 yay -S fcitx-im fcitx-configtool fcitx-rime
-vim ~/.xprofile
-    export GTK_IM_MODULE=fcitx
-    export QT_IM_MODULE=fcitx
-    export XMODIFIERS="@im=fcitx"
-    exec fcitx &
+# dotfiles
 ```
 
 ### 常用软件
@@ -69,11 +64,12 @@ vim ~/.zshrc
     ZSH_THEME="powerlevel9k/powerlevel9k"
 # xrandr 多显示器管理
 yay -S xorg-xrandr
-xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
+# xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
 # google chrome
 yay -S google-chrome
 # wechat
-yay -S deepin.com.wechat
+yay -S deepin-wine-wechat
+# /opt/deepinwine/apps/Deepin-WeChat/run.sh
 ```
 
 ### 代理
