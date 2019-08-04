@@ -36,7 +36,9 @@ sudo pacman -Sy yay
 ### 字体
 
 ```sh
-yay -S wqy-microhei adobe-source-code-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji
+yay -S wqy-microhei
+yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
+yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 # 安装 powerline 字体
 git clone https://github.com/powerline/fonts.git --deepin=1
 cd fonts
