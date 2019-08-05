@@ -56,6 +56,8 @@ yay -S fcitx-im fcitx-configtool fcitx-rime
 ### 常用软件
 
 ```sh
+# rofi
+yay -S rofi
 # zsh nvim tmux
 yay -S zsh nvim tmux aria2
 # oh-my-zsh
