@@ -57,7 +57,7 @@ yay -S fcitx-im fcitx-configtool fcitx-rime
 
 ```sh
 # zsh nvim tmux
-yay -S zsh nvim tmux
+yay -S zsh nvim tmux aria2
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # 安装主题
@@ -67,11 +67,16 @@ vim ~/.zshrc
 # xrandr 多显示器管理
 yay -S xorg-xrandr
 # xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
+yay -S xorg-xprop
 # google chrome
 yay -S google-chrome
 # wechat
 yay -S deepin-wine-wechat
 # /opt/deepinwine/apps/Deepin-WeChat/run.sh
+# ag
+ysy -S the_silver_searcher
+# music
+ysy -S iease-music
 ```
 
 ### 代理
@@ -86,5 +91,5 @@ alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
 alias unsetproxy="unset ALL_PROXY"
 
 # 可先使用命令让浏览器走代理
-google-chrome-stable --proy-service="socks5://127.0.0.1:1080"
+google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
 ```
