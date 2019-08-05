@@ -37,6 +37,7 @@ sudo pacman -Sy yay
 
 ```sh
 yay -S wqy-microhei
+yay -S ttf-font-awesome ttf-font-icons
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 # 安装 powerline 字体
@@ -57,7 +58,7 @@ yay -S fcitx-im fcitx-configtool fcitx-rime
 
 ```sh
 # rofi
-yay -S rofi
+yay -S rofi feh
 # zsh nvim tmux
 yay -S zsh nvim tmux aria2
 # oh-my-zsh
