@@ -77,9 +77,9 @@ yay -S google-chrome
 yay -S deepin-wine-wechat
 # /opt/deepinwine/apps/Deepin-WeChat/run.sh
 # ag
-ysy -S the_silver_searcher
+yay -S the_silver_searcher
 # music
-ysy -S iease-music
+yay -S iease-music
 ```
 
 ### 代理
