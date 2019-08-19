@@ -42,57 +42,38 @@ yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 # 安装 powerline 字体
 git clone https://github.com/powerline/fonts.git --deepin=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
 fc-cache -vf
-```
-### 输入法 
-```sh
-yay -S fcitx-im fcitx-configtool fcitx-rime
-# dotfiles
 ```
 
 ### 常用软件
 
 ```sh
-# rofi
+# rofi feh
 yay -S rofi feh
+# fcitx-rime
+yay -S fcitx-im fcitx-configtool fcitx-rime
 # zsh nvim tmux
 yay -S zsh nvim tmux aria2
-# oh-my-zsh
+# oh-my-zsh themes-powerlevel9k
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# 安装主题
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-vim ~/.zshrc 
-    ZSH_THEME="powerlevel9k/powerlevel9k"
-# xrandr 多显示器管理
-yay -S xorg-xrandr
-# xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
-yay -S xorg-xprop
+# shadowsocks sslocal
+yay -S shadowsocks
 # google chrome
+# google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
 yay -S google-chrome
 # wechat
-yay -S deepin-wine-wechat
 # /opt/deepinwine/apps/Deepin-WeChat/run.sh
+yay -S deepin-wine-wechat
 # ag
 yay -S the_silver_searcher
 # music
 yay -S iease-music
-```
-
-### 代理
-
-```sh
-# 安装 SS
-sudo pacman -S shadowsocks
-
-sslocal 
-
-alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
-alias unsetproxy="unset ALL_PROXY"
-
-# 可先使用命令让浏览器走代理
-google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
+# f.lux
+yay -S fluxgui
+# xprop
+yay -S xorg-xprop
+# xrandr
+# xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
+yay -S xorg-xrandr
 ```
