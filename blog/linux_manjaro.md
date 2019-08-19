@@ -77,3 +77,11 @@ yay -S xorg-xprop
 # xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
 yay -S xorg-xrandr
 ```
+
+### VirtualBox
+
+```sh
+yay -S virtualbox $(pacman -Qsq "^linux" | grep "^linux[0-9]*[-rt]*$" | awk '{print $1"-virtualbox-host-modules"}' ORS=' ')
+sudo vboxreload
+sudo gpasswd -a $USER vboxusers
+```
