@@ -7,6 +7,7 @@
 - [Personal](todo/personal.md)
 
 ## [Notes](notes.md) 
+
 ### [程序设计 (Programming)](notes/programming.md)
 
 - [基础](notes/programming/basis.md)
@@ -106,3 +107,4 @@
 - [求余运算与取模运算]()
 - [一致性 Hash 算法]()
 - [Manjaro 安装 Scrcpy](blog/linux_manjaro_scrcpy.md)
+- [密码管理解决方案](blog/password_manager.md)
