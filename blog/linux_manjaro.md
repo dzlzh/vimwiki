@@ -37,9 +37,10 @@ sudo pacman -Sy yay
 
 ```sh
 yay -S wqy-microhei
-yay -S ttf-font-awesome ttf-font-icons
-yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
-yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
+yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons
+# yay -S ttf-font-icons
+# yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
+# yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 # 安装 powerline 字体
 git clone https://github.com/powerline/fonts.git --deepin=1
 fc-cache -vf
@@ -48,18 +49,19 @@ fc-cache -vf
 ### 常用软件
 
 ```sh
-# rofi feh
-yay -S rofi feh
+# polybar rofi dunst feh 
+yay -S polybar rofi dunst feh 
 # fcitx-rime
 yay -S fcitx-im fcitx-configtool fcitx-rime
+# jq aria2 ag
+yay -S jq aria2 the_silver_searcher
 # zsh nvim tmux
 yay -S zsh nvim tmux aria2
 # oh-my-zsh themes-powerlevel9k
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-# v2ray
+# v2ray Or shadowsocks
 yay -S v2ray
-# shadowsocks sslocal
 yay -S shadowsocks
 # google chrome
 # google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
@@ -69,11 +71,10 @@ yay -S deepin-screenshot
 # wechat
 # /opt/deepinwine/apps/Deepin-WeChat/run.sh
 yay -S deepin-wine-wechat
-# ag
-yay -S the_silver_searcher
 # music
 yay -S iease-music
-# f.lux
+# Redshift Or f.lux
+yay -S redshift
 yay -S fluxgui
 # xprop
 yay -S xorg-xprop
