@@ -57,11 +57,15 @@ yay -S zsh nvim tmux aria2
 # oh-my-zsh themes-powerlevel9k
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+# v2ray
+yay -S v2ray
 # shadowsocks sslocal
 yay -S shadowsocks
 # google chrome
 # google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
 yay -S google-chrome
+# deepin-screenshot
+yay -S deepin-screenshot
 # wechat
 # /opt/deepinwine/apps/Deepin-WeChat/run.sh
 yay -S deepin-wine-wechat
