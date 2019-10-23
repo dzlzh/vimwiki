@@ -42,7 +42,7 @@ yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons
 # yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 # yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 # 安装 powerline 字体
-git clone https://github.com/powerline/fonts.git --deepin=1
+git clone https://github.com/powerline/fonts.git --depth=1
 fc-cache -vf
 ```
 
@@ -56,7 +56,7 @@ yay -S fcitx-im fcitx-configtool fcitx-rime
 # jq aria2 ag
 yay -S jq aria2 the_silver_searcher
 # zsh nvim tmux
-yay -S zsh nvim tmux aria2
+yay -S zsh nvim tmux
 # oh-my-zsh themes-powerlevel9k
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
