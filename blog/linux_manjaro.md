@@ -55,11 +55,10 @@ yay -S polybar rofi dunst feh
 yay -S fcitx-im fcitx-configtool fcitx-rime
 # jq aria2 ag
 yay -S jq aria2 the_silver_searcher
-# zsh nvim tmux
-yay -S zsh neovim tmux
-# oh-my-zsh themes-powerlevel9k
+# nvim tmux
+yay -S neovim tmux
+# zsh oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 # v2ray Or shadowsocks
 yay -S v2ray
 yay -S shadowsocks
@@ -81,6 +80,10 @@ yay -S xorg-xprop
 # xrandr
 # xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
 yay -S xorg-xrandr
+# telegram
+yay -S telegram-desktop
+# Rambox
+yay -S rambox
 ```
 
 ### VirtualBox
