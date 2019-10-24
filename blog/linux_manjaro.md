@@ -36,7 +36,7 @@ sudo pacman -Sy yay
 ### 字体
 
 ```sh
-yay -S wqy-microhei
+yay -S wqy-zenhei wqy-microhei-lite wqy-microhei wqy-bitmapfont
 yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons
 # yay -S ttf-font-icons
 # yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
@@ -58,6 +58,7 @@ yay -S jq aria2 the_silver_searcher
 # nvim tmux
 yay -S neovim tmux
 # zsh oh-my-zsh
+yay -S zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # v2ray Or shadowsocks
 yay -S v2ray
