@@ -109,3 +109,5 @@
 - [Manjaro 安装 Scrcpy](blog/linux_manjaro_scrcpy.md)
 - [密码管理解决方案](blog/password_manager.md)
 - [位运算与权限控制](blog/bitwise_operation_and_permission.md)
+- [KMP算法](blog/kmp_algorithm.md)
+- [AC自动机算法](blog/ac_algorithm.md)
