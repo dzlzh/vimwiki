@@ -22,6 +22,23 @@ FROM <image>[@<digest>] [AS <name>]
 LABEL <key>=<value>
 ```
 
+## `USER`
+
+指定运行镜像所使用的用户
+
+```
+USER <user>[:<group>]
+USER <UID>[:<GID>]
+```
+
+# `ARG`
+
+在镜像构建时可传递的变量
+
+```
+ARG <name>[=<default value>]
+```
+
 ## `ENV`
 
 设置环境变量
@@ -120,23 +137,6 @@ CMD <command> [<param>]
 CMD ["exec", "param1", "param2"...]
 # 在指定了 ENTRYPOINT 指令后，用 CMD 指定具体的参数
 CMD ["param1", "param2"...] 
-```
-
-## `USER`
-
-指定运行镜像所使用的用户
-
-```
-USER <user>[:<group>]
-USER <UID>[:<GID>]
-```
-
-# `ARG`
-
-在镜像构建时可传递的变量
-
-```
-ARG <name>[=<default value>]
 ```
 
 ## `ONBUILD`

@@ -5,7 +5,7 @@
 ### 获取镜像
 
 ```
-docker pull [option] [Docker Registry]<仓库名>:<标签>
+docker pull [options] [Docker Registry]<仓库名>:<标签>
 ```
 
 ### 列出镜像
@@ -18,15 +18,17 @@ docker image ls
 ### 构建镜像
 
 ```
-docker build [option] <path/URL/->
+docker build [options] <path/URL/->
 ```
 
 - `-t <image name>`
+- `-f <Dockerfile path>` 指定要使用的 Dockerfile 文件
+- `--rm` 设置镜像成功后删除中间容器
 
 ### 删除镜像
 
 ```
-docker rmi [option] <image1> [<image2> ...]
+docker rmi [options] <image1> [<image2> ...]
 ```
 
 ### 发布
@@ -42,6 +44,18 @@ docker image push [username]/[repository]:[tag]
 ```
 
 ## 容器(container)
+
+### 创建容器
+
+#### `docker create`
+
+创建一个新容器但不启动它
+
+```
+docker create [options] <image> [command] [arg]
+```
+
+- `-name` 指定容器名称
 
 ### 启动容器
 
