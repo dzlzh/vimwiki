@@ -6,4 +6,4 @@
 
 ## [Dockerfile](docker/dockerfile.md)
 
-## [Compose](docker/compose.md)
+## [Docker-Compose](docker/docker-compose.md)
