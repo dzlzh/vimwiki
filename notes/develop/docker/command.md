@@ -95,6 +95,7 @@ docker create [options] <image> [command] [arg]
 
 - `docker ps`
 - `docker container ls`
+    - `-a` 显示全部
 
 #### 全部容器
 
