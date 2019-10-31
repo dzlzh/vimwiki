@@ -112,3 +112,4 @@
 - [位运算与权限控制](blog/bitwise_operation_and_permission.md)
 - [KMP算法](blog/kmp_algorithm.md)
 - [AC自动机算法](blog/ac_algorithm.md)
+- [Manjaro 中使用蓝牙耳机](blog/manjaro_bluetooth_earphone.md)
