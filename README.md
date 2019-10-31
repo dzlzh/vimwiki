@@ -81,6 +81,8 @@
 - [PHP7 install](blog/php7_install.md)
 - [PHP 导出 .csv 长数值变科学记数法解决方法](blog/csv_scientific_notation.md)
 - [iconv(): Deteced an illegal character in input string](blog/iconv_detected_an_illegal_character_in_input_string.md)
+- [MySQL 8.0.11 踩坑记](blog/some-craters-in-mysql-8011.md)
+- [Manjaro 安装并配置](blog/linux_manjaro.md)
 
 ### 待完成
 
@@ -98,7 +100,6 @@
 - [PHP Trait](blog/php_trait.md)
 - [zsh 安装](blog/linux_install_zsh.md)
 - [tmux 编译安装](blog/linux_install_tmux.md)
-- [Manjaro 安装并配置](blog/linux_manjaro.md)
 - [PHP 生命周期](blog/php_life_cycle.md)
 - [PHP 运行模式](blog/php_operation_mode.md)
 - [消息队列](blog/resque.md)
