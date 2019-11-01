@@ -16,8 +16,8 @@ yay -S bluez bluez-firmware pulseaudio-bluetooth pulseaudio-alsa
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
-sudo pulseaudio -k
-sudo pulseaudio --start
+pulseaudio -k
+pulseaudio --start
 
-sudo usermod -a -G lp $USER
+sudo usermod -aG lp $USER
 ```
