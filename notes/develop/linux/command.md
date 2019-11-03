@@ -115,18 +115,18 @@ rsync [OPTION]... rsync://[USER@]HOST[:PORT]/SRC [DEST]
 ## 提取
 
 ```sh
-tar xjf    *.tar.bz2
-tar xzf    *.tar.gz
-bunzip2    *.bz2
-unrar e    *.rar
-gunzip     *.gz
-tar xf     *.tar
-tar xjf    *.tbz2
-tar xzf    *.tgz
-unzip      *.zip
-uncompress *.Z
-7z x       *.7z
-tar xvJf   *.tar.xz 
+tar -xjf    *.tar.bz2
+tar -xzf    *.tar.gz
+tar -xf     *.tar
+tar -xjf    *.tbz2
+tar -xzf    *.tgz
+tar -xvJf   *.tar.xz 
+7z -x       *.7z
+unrar -e    *.rar
+unzip       *.zip
+gunzip      *.gz
+bunzip2     *.bz2
+uncompress  *.Z
 ```
 
 ## source
