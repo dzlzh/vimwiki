@@ -55,8 +55,8 @@ fc-cache -vf
 yay -S polybar rofi dunst feh 
 # fcitx-rime
 yay -S fcitx-im fcitx-configtool fcitx-rime
-# jq aria2 ag
-yay -S jq aria2 the_silver_searcher
+# jq aria2 ag rg
+yay -S jq aria2 the_silver_searcher ripgrep
 # nvim tmux
 yay -S neovim tmux
 # zsh oh-my-zsh
