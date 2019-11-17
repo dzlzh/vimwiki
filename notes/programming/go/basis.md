@@ -6,32 +6,39 @@
 - `import`
 - `const`
 - `var`
+- `map`
 - `type`
+- `struct`
+- `interface`
 - `func`
 - `return`
-- `interface`
-- `map`
+- `defer`
 - `if`
 - `else`
 - `switch`
 - `case`
 - `default`
-- `select`
 - `for`
 - `range`
 - `continue`
 - `break`
-- `go`
-- `chan`
-- `defer`
-- `struct`
-- `goto`
 - `fallthrough`
+- `select`
+- `chan`
+- `go`
+- `goto`
 
 ## 预定义标识符
 
-- `byte`
-- `bool`
+### 内建常量
+
+- `nil`
+- `true`
+- `false`
+- `iota`
+
+### 内建类型
+
 - `int`
 - `int8`
 - `int16`
@@ -42,30 +49,33 @@
 - `uint16`
 - `uint32`
 - `uint64`
+- `uintptr`
 - `float32`
 - `float64`
-- `string`
-- `complex`
 - `complex64`
 - `complex128`
-- `nil`
+- `string`
+- `bool`
+- `byte`
+- `rune`
+- `error`
+
+### 内建函数
+
+- `len`
 - `make`
+- `append`
 - `new`
 - `cap`
-- `len`
-- `append`
-- `true`
-- `false`
-- `panic`
-- `recover`
 - `close`
 - `copy`
 - `imag`
-- `iota`
 - `real`
-- `uintptr`
 - `print`
 - `println`
+- `complex`
+- `panic`
+- `recover`
 
 ## 规则
 
@@ -167,7 +177,7 @@ multiArray := [2][3]int{{1,2,3},{4,5,6}}
 
 `make` 用于内建类型(`map`,`slice`,`channel`)的内存分配
 
-## new 
+## new
 
 `new` 用于各种类型的内存分配，`new` 返回指针，`new(T)` 分配了零值填充的 `T` 类型内存空间，返回一个 `*T` 类型的值
 
@@ -219,7 +229,7 @@ switch optionalStatement;typeSwitchGuard {
 
 ```go
 select {
-    case sendOrReceive: 
+    case sendOrReceive:
     // code
     default:
     // code
@@ -245,7 +255,7 @@ for {
 for boolean {
     // code
 }
- 
+
 // for 循环
 for optionalPreStatement;boolean;optionalPostStatement {
     // code
@@ -332,13 +342,13 @@ func funcName(arg...type) {
 import (
     // 绝对路径
     "fmt" // $GOPATH/src/fmt
-    
+
     // 点操作
     . "fmt" // fmt.Println() -> Println()
-    
+
     // 别名
     f "fmt" // f.Println()
-    
+
     // _操作
     _ "fmt" // 调用包中 init
 )
