@@ -51,8 +51,10 @@ fc-cache -vf
 ### 常用软件
 
 ```sh
-# polybar rofi dunst feh 
-yay -S polybar rofi dunst feh 
+# polybar rofi dunst feh termite tilda
+yay -S polybar rofi dunst feh
+# Terminal
+yay -S termite tilda
 # fcitx-rime
 yay -S fcitx-im fcitx-configtool fcitx-rime
 # jq aria2 ag rg
@@ -65,28 +67,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # v2ray Or shadowsocks
 yay -S v2ray
 yay -S shadowsocks
-# google chrome
-# google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
+# Redshift
+yay -S redshift
+# xprop xrandr
+yay -S xorg-xprop xorg-xrandr
+# google chrome google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
 yay -S google-chrome
 # deepin-screenshot
 yay -S deepin-screenshot
 # wechat
-# /opt/deepinwine/apps/Deepin-WeChat/run.sh
 yay -S deepin-wine-wechat
 # music
 yay -S iease-music
-# Redshift Or f.lux
-yay -S redshift
-yay -S fluxgui
-# xprop
-yay -S xorg-xprop
-# xrandr
-# xrandr --output VGA1 --primary --auto --output VGA1 --auto --left-of LVDS1
-yay -S xorg-xrandr
 # telegram
 yay -S telegram-desktop
-# Rambox
-yay -S rambox
 ```
 
 ### VirtualBox

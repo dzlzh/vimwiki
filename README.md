@@ -6,7 +6,7 @@
 - [Reading](todo/reading.md)
 - [Personal](todo/personal.md)
 
-## [Notes](notes.md) 
+## [Notes](notes.md)
 
 ### [程序设计 (Programming)](notes/programming.md)
 
