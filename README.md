@@ -2,9 +2,8 @@
 
 ## [TODO](todo.md)
 
-- [Work](todo/work.md)
-- [Reading](todo/reading.md)
 - [Personal](todo/personal.md)
+- [Reading](todo/reading.md)
 
 ## [Notes](notes.md)
 
