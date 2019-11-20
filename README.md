@@ -86,6 +86,7 @@
 ### 待完成
 
 - [书单](blog/book_list.md)
+- [二进制运算](blog/binary_operation.md)
 - [原码、反码、补码](blog/computer_code.md)
 - [位运算](blog/bitwise_operation.md)
 - [PV、VV、IP、UV](blog/pv_vv_ip_uv.md)
