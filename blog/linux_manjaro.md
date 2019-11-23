@@ -14,8 +14,9 @@ pacman -Sc   # 清理软件包缓存
 pacman -Scc  # 清理所有软件包缓存
 pacman -Ss   # 查询软件包数据库
 pacman -Qs   # 查询已安装的软件包
+pacman -U    # 回滚
 
-yay -S  --mflags --skipinteg # 跳过checksums
+yay -S  --mflags --skipinteg # 跳过 checksums
 ```
 
 ## 初始化
@@ -76,8 +77,10 @@ yay -S google-chrome
 # deepin-screenshot
 yay -S deepin-screenshot
 # wechat
+# https://github.com/countstarlight/deepin-wine-wechat-arch
 yay -S deepin-wine-wechat
 # music
+yay -S netease-cloud-music
 yay -S iease-music
 # telegram
 yay -S telegram-desktop
