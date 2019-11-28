@@ -281,6 +281,30 @@ value, ok := map[K] // 可获取对应的值是否存在
 
 `delete(map, K)` 删除元素
 
+## 结构体 (struct)
+
+由零个或多个任意类型的值聚合成的实体。
+每个值称为结构体的成员。
+
+```go
+type StructName struct {
+    Property type
+}
+
+var s StructName
+s.Property = value
+
+news1 := StructName{value}
+
+news2 := StructName{Property: value}
+```
+
+声明一个成员对应的数据类型而不指名成员的名字；
+这类成员就叫匿名成员。
+匿名成员的数据类型必须是命名的类型或指向一个命名的类型的指针。
+
+> 匿名成员只可以用。来初始化
+
 ## 指针
 
 取地址符 `&`
@@ -474,14 +498,6 @@ import (
     // _操作
     _ "fmt" // 调用包中 init
 )
-```
-
-## `struct`
-
-```go
-type StructName struct {
-    Property type
-}
 ```
 
 ## `interface`
