@@ -254,7 +254,7 @@ multiArray := [2][3]int{{1,2,3},{4,5,6}}
 - **长度**元素的数目 `len`
 - **容量**从开始位置到底层数据的结尾位置 `cap`
 
-为引用类型
+> 为引用类型
 
 `append` 可追加元素，容量会以双倍增加
 
@@ -265,9 +265,21 @@ make([]T, len, cap)
 
 ## map
 
-为引用类型
+无序的 key/value 对的集合
 
-`map[keyType]valueType`
+零值为 `nil`
+
+> 为引用类型
+> 不可进行取址操作
+
+```go
+map[KT]VT
+make(map[KT]VT)
+
+value, ok := map[K] // 可获取对应的值是否存在
+```
+
+`delete(map, K)` 删除元素
 
 ## 指针
 
