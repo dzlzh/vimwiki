@@ -76,6 +76,7 @@ gt          " 后一个
 :bp[revious]            " 上一个缓冲区
 :b {number, expression} " 跳转到指定缓冲区
 :bd {number}            " 删除缓冲区
+:bw[ipeout]             " 删除所有缓冲区
 ```
 
 ## 寄存器
