@@ -2,7 +2,7 @@
 
 ## `header()`
 
-发送原生HTTP头
+发送原生 HTTP 头
 
 ```php
 void header (string $string [, bool $replace = true [, int $http_response_code ]]);
@@ -10,7 +10,7 @@ void header (string $string [, bool $replace = true [, int $http_response_code ]
 
 ## [`http_response_code`](https://secure.php.net/manual/zh/function.http-response-code.php)
 
-获取/设置响应的 HTTP 状态码
+获取 / 设置响应的 HTTP 状态码
 
 > PHP >= 5.4.0
 
@@ -36,7 +36,7 @@ string mb_detect_encoding ( string $str [, mixed $encoding_list = mb_detect_orde
 
 ## `setcookie()`
 
-创建cookie
+创建 cookie
 
 ```php
 bool setcookie ( string $name [, string $value = "" [, int $expire = 0 [, string $path = "" [, string $domain = "" [, bool $secure = false [, bool $httponly = false ]]]]]] );
@@ -88,7 +88,7 @@ mixed json_decode ( string $json [, bool $assoc = false [, int $depth = 512 [, i
 
 `json`
 
-> 待解码的 json string 格式的字符串。(这个函数仅能处理 UTF-8 编码的数据。)
+> 待解码的 json string 格式的字符串。（这个函数仅能处理 UTF-8 编码的数据。)
 
 `assoc`
 
@@ -104,7 +104,7 @@ string json_encode ( mixed $value [, int $options = 0 [, int $depth = 512 ]] );
 
 ##  `serialize()`
 
-产生一个可存储的值的表示-序列化
+产生一个可存储的值的表示 - 序列化
 
 ```php
 string serialize ( mixed $value );
@@ -112,7 +112,7 @@ string serialize ( mixed $value );
 
 ##  `unserialize()`
 
-从已存储的表示中创建 PHP 的值-反序列化
+从已存储的表示中创建 PHP 的值 - 反序列化
 
 ```php
 mixed unserialize ( string $str );
@@ -227,7 +227,7 @@ array preg_split ( string $pattern , string $subject [, int $limit = -1 [, int $
 
 ## `uniqid()`
 
-生成一个唯一ID
+生成一个唯一 ID
 
 ```php
 string uniqid ([ string $prefix = "" [, bool $more_entropy = false ]] );
@@ -334,23 +334,23 @@ array unpack ( string $format , string $data );
 ```
 
 * `a` -- 将字符串空白以 NULL 字符填满
-* `A` -- 将字符串空白以 SPACE 字符 (空格) 填满
+* `A` -- 将字符串空白以 SPACE 字符 （空格） 填满
 * `h` -- 16 进制字符串，低位在前以半字节为单位
 * `H` -- 16 进制字符串，高位在前以半字节为单位
 * `c` -- 有符号字符
 * `C` -- 无符号字符
-* `s` -- 有符号短整数 (16 位，主机字节序)
-* `S` -- 无符号短整数 (16 位，主机字节序)
-* `n` -- 无符号短整数 (16 位, 大端字节序)
-* `v` -- 无符号短整数 (16 位, 小端字节序)
-* `i` -- 有符号整数 (依赖机器大小及字节序)
-* `I` -- 无符号整数 (依赖机器大小及字节序)
-* `l` -- 有符号长整数 (32 位，主机字节序)
-* `L` -- 无符号长整数 (32 位，主机字节序)
-* `N` -- 无符号长整数 (32 位, 大端字节序)
-* `V` -- 无符号长整数 (32 位, 小端字节序)
-* `f` -- 单精度浮点数 (依计算机的范围)
-* `d` -- 双精度浮点数 (依计算机的范围)
+* `s` -- 有符号短整数 (16 位，主机字节序）
+* `S` -- 无符号短整数 (16 位，主机字节序）
+* `n` -- 无符号短整数 (16 位，大端字节序）
+* `v` -- 无符号短整数 (16 位，小端字节序）
+* `i` -- 有符号整数 （依赖机器大小及字节序）
+* `I` -- 无符号整数 （依赖机器大小及字节序）
+* `l` -- 有符号长整数 (32 位，主机字节序）
+* `L` -- 无符号长整数 (32 位，主机字节序）
+* `N` -- 无符号长整数 (32 位，大端字节序）
+* `V` -- 无符号长整数 (32 位，小端字节序）
+* `f` -- 单精度浮点数 （依计算机的范围）
+* `d` -- 双精度浮点数 （依计算机的范围）
 * `x` -- 空字节
 * `X` -- 倒回一位
 * `@` -- 填入 NULL 字符到绝对位置
@@ -515,4 +515,12 @@ PHP 以命令行脚本执行时，当脚本终端结束，脚本不会被立即�
 
 ```php
 string create_function ( string $args , string $code );
+```
+
+## [`constant`](https://www.php.net/manual/zh/function.constant.php)
+
+返回一个常量的值
+
+```php
+constant ( string $name ) : mixed
 ```
