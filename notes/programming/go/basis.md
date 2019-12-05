@@ -449,7 +449,7 @@ for item := range Channel {
 ## 函数
 
 ```go
-func funcName(param) (return) {
+func funcName(param-list) (return-list) {
     // code
 }
 ```
