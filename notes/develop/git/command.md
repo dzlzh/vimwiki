@@ -3,7 +3,7 @@
 ## 本地操作
 
 - `git init` 初始化
-- `git add [file|dir|.|-p]` 添加指定 [文件|目录|所有文件|] 到暂存区
+- `git add [file|dir|.|-p]` 添加指定 『文件|目录|所有文件|] 到暂存区
   - `-p` 添加每个变化前，都会要求确认。对于同一个文件的多处变化，可以实现颁奖提交
 - `git rm [--cached][file]` 删除工作区文件，并且将这次删除放入到暂存区
   - `--cached` 停止追踪指定文件，但该文件会保留在工作区
@@ -20,7 +20,7 @@
 - `git diff` 查看不同
 - `git diff HEAD` 查看工作区和版本库里面最新版本的区别
 - `git diff --cached [file]` 显示暂存区和上一个 commit 的差异
-- `git diff <branch> <branch> [file]` 比较两个分支的差异[可指定文件]
+- `git diff <branch> <branch> [file]` 比较两个分支的差异『可指定文件』
     - `--stat` 只给出文件列表
 - `git log` 查看日志
 - `git log --graph ` 查看分支合并图
@@ -32,7 +32,7 @@
 - `git checkout -- file` 可以丢弃工作区的修改
   - `-b` 创建分支并切换
   - `--orphan` 创建一个干净的分支
-- `git clean` 撤销新增 
+- `git clean` 撤销新增
   - `-f` 文件
   - `-d` 文件夹
 - `git stash` 把当前工作现场“储藏”起来
@@ -42,7 +42,7 @@
 - `git stash drop` 删除储藏
 - `git stash pop` 恢复并删除
 - `git revert <commit>` 撤销
-  - `-m <parentId>` 撤销合并的时候选择撤销到那个parent
+  - `-m <parentId>` 撤销合并的时候选择撤销到那个 parent
 - `git cherry-pick [<options>] <commit>` 挑一个 commit 重新提交
 
 ## 远程操作
@@ -58,7 +58,7 @@
 
 ## 分支操作
 
-- `git branch [-r|-a]` 查看分支 [远程分支|本地与远程所有分支]
+- `git branch [-r|-a]` 查看分支 『远程分支|本地与远程所有分支』
 - `git branch <name>` 创建分支
 - `git checkout <name>` 切换分支
 - `git checkout -b <name> [origin/name]` 创建并切换 (-b) 分支，[origin/name] 指定远程分支
@@ -74,7 +74,7 @@
     - `edit` 选中，rebase 时会暂停，允许你修改这个 commit
     - `squash` 选中，会将当前 commit 与上一个 commit 合并
     - `fixup` 与 squash 相同，但不会保存当前 commit 的提交信息
-    - `exec` 执行其他 shell 命令 
+    - `exec` 执行其他 shell 命令
   - `--continue` 继续
   - `--abort` 取消
 
@@ -85,7 +85,7 @@
 - `git tag -a <name> -m <message>` -a 指定标签名， -m 指定标签说明， -s 私钥签名一个标签 (PGP) 必须有 gpg
 - `git show <tagname>` 查看标签信息
 - `git tag -d <name>` 删除标签
-- `git push origin <tagname|--tags>` 推送<标签|全部标签>到远程
+- `git push origin <tagname|--tags>` 推送《标签|全部标签》到远程
 - `git push origin :refs/tags/<tagname>` 删除远程标签，先删除本地然后推送
 
 ## 其他操作
