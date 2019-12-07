@@ -84,6 +84,7 @@
 - [Manjaro 安装并配置](blog/linux_manjaro.md)
 - [Manjaro 安装 Scrcpy](blog/linux_manjaro_scrcpy.md)
 - [Manjaro 中使用蓝牙耳机](blog/manjaro_bluetooth_earphone.md)
+- [.bashrc、.xinitrc、.xprofile](blog/bashrc_xinitrc_xprofile.md)
 
 ### 待完成
 
