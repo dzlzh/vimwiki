@@ -74,8 +74,10 @@ yay -S redshift
 yay -S xorg-xprop xorg-xrandr
 # google chrome google-chrome-stable --proxy-server="socks5://127.0.0.1:1080"
 yay -S google-chrome
+# flameshot
+yay -S flameshot
 # deepin-screenshot
-yay -S deepin-screenshot
+# yay -S deepin-screenshot
 # wechat
 # https://github.com/countstarlight/deepin-wine-wechat-arch
 yay -S deepin-wine-wechat
