@@ -100,6 +100,7 @@
 - [PHP 抽象类与接口区别](blog/php_abstract_interfaces_difference.md)
 - [PHP Trait](blog/php_trait.md)
 - [PHP Reflection](blog/php_reflection.md)
+- [PHPUnit](blog/phpunit.md)
 - [消息队列](blog/resque.md)
 - [SQL 几种连接方式](blog/sql_join.md)
 - [求余运算与取模运算](blog)
