@@ -107,6 +107,7 @@
 - [KMP 算法](blog/kmp_algorithm.md)
 - [AC 自动机算法](blog/ac_algorithm.md)
 - [时间轮盘算法](blog/timing_wheel.md)
+- [Redis 订阅与发布](blog/redis_pubsub.md)
 - [zsh 安装](blog/linux_install_zsh.md)
 - [tmux 编译安装](blog/linux_install_tmux.md)
 - [dotfiles 管理](blog/dotfiles.md)
