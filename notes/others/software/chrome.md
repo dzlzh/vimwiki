@@ -32,7 +32,7 @@
 - [uBlock Origin](https://chrome.google.com/webstore/detail/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 - [Vimium](https://chrome.google.com/webstore/detail/dbepggeogbaibhgnhhndojpepiihcmeb)
 - [Wappalyzer](https://chrome.google.com/webstore/detail/gppongmhjkpfnbhagpmjfkannfbllamg)
-- [WEB前端助手(FeHelper)](https://chrome.google.com/webstore/detail/pkgccpejnmalmdinmhkkfafefagiiiad)
+- [WEB 前端助手 (FeHelper)](https://chrome.google.com/webstore/detail/pkgccpejnmalmdinmhkkfafefagiiiad)
 - [Windscribe - Free VPN and Ad Blocker](https://chrome.google.com/webstore/detail/hnmpcagpplmpfojmgmnngilcnanddlhb)
 - [京价保 - 京东价保助手](https://chrome.google.com/webstore/detail/gfgkebiommjpiaomalcbfefimhhanlfd)
 - [划词翻译](https://chrome.google.com/webstore/detail/ikhdkkncnoglghljlkmcimlnlhkeamad)
@@ -46,3 +46,4 @@
 - [Chrome Cleaner Pro](https://chrome.google.com/webstore/detail/chrome-cleaner-pro/ccjleegmemocfpghkhpjmiccjcacackp)
 - [Enhanced Github](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd/)
 - [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)
+- [沙拉查词 - 聚合词典划词翻译](https://chrome.google.com/webstore/detail/sourcegraph/cdonnmffkdaoajfknoeeecmchibpmkmg)
