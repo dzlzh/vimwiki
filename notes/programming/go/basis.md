@@ -462,11 +462,17 @@ func funcName(param-list) (return-list) {
 func funcName(arg...type) {
     // code
 }
+// interface{} 接收任意类型
 ```
 
 ### 延迟 (`defer`) 语句
 
-可以在函数中添加多个 `defer` 语句。当函数执行到最后时，这些 `defer` 语句会按照逆序执行，最后该函数返回
+可以在函数中添加多个 `defer` 语句。
+当函数执行到最后时，
+这些 `defer` 语句会按照逆序执行，
+最后该函数返回。
+
+执行顺序与声明顺序相反 (Stack)
 
 ### `init` 函数
 
