@@ -94,6 +94,32 @@
 
 则分号将被自动插入到标记流中非空白行的末尾
 
+## `import`
+
+```go
+import (
+    // 绝对路径
+    "fmt" // $GOPATH/src/fmt
+
+    // 点操作
+    . "fmt" // fmt.Println() -> Println()
+
+    // 别名
+    f "fmt" // f.Println()
+
+    // _操作
+    _ "fmt" // 调用包中 init
+)
+```
+
+## `init` 函数
+
+定义时不能有任何的参数和返回值
+
+一个包里可以写任意多个 `init` 函数，但建议只写一个
+
+先执行 `init` 函数，再执行 `main` 函数
+
 ## 常量
 
 `const constName [type] = value`
@@ -305,6 +331,14 @@ news2 := StructName{Property: value}
 
 > 匿名成员只可以用 `.` 来初始化
 
+## `interface`
+
+```go
+type InterfaceName interface {
+    funcName()
+}
+```
+
 ## 指针
 
 取地址符 `&`
@@ -474,42 +508,10 @@ func funcName(arg...type) {
 
 执行顺序与声明顺序相反 (Stack)
 
-### `init` 函数
-
-定义时不能有任何的参数和返回值
-
-一个包里可以写任意多个 `init` 函数，但建议只写一个
-
-先执行 `init` 函数，再执行 `main` 函数
-
 ### `panic` 和 `recover`
 
 `panic` 中断原有的控制流程，进入一个令人恐慌的流程
 
 `recover` 让进入令人恐慌的流程中恢复过来。仅在延迟函数中有效，无还会 `nil`
 
-## `import`
 
-```go
-import (
-    // 绝对路径
-    "fmt" // $GOPATH/src/fmt
-
-    // 点操作
-    . "fmt" // fmt.Println() -> Println()
-
-    // 别名
-    f "fmt" // f.Println()
-
-    // _操作
-    _ "fmt" // 调用包中 init
-)
-```
-
-## `interface`
-
-```go
-type InterfaceName interface {
-    funcName()
-}
-```
