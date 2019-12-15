@@ -514,4 +514,16 @@ func funcName(arg...type) {
 
 `recover` 让进入令人恐慌的流程中恢复过来。仅在延迟函数中有效，无还会 `nil`
 
+## 方法
 
+在函数声明时，
+在其名字之前放上一个变量，
+即是一个方法。
+这个附加的参数会将该函数附加到这种类型上，
+即相当于为这种类型定义了一个独占的方法。
+
+```go
+func (var type) funcName(param-list) (return-list) {
+    // code
+}
+```
