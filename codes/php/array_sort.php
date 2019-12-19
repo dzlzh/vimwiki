@@ -1,9 +1,8 @@
 <?php
 
-function arraySort($array, $keys, $sort = 'asc')
+function arraySort($array, $key, $sort = 'asc')
 {
-    $sort === 'desc' 
-        ? array_multisort(array_column($array, $keys), SORT_DESC, $array)
-        : array_multisort(array_column($array, $keys), SORT_ASC, $array);
+    $sort = $sort === 'asc' ? SORT_ASC : SORT_DESC;
+    array_multisort(array_column($array, $key), $sort, $array);
     return $array;
 }
