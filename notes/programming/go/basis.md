@@ -331,14 +331,6 @@ news2 := StructName{Property: value}
 
 > 匿名成员只可以用 `.` 来初始化
 
-## `interface`
-
-```go
-type InterfaceName interface {
-    funcName()
-}
-```
-
 ## 指针
 
 取地址符 `&`
@@ -525,5 +517,13 @@ func funcName(arg...type) {
 ```go
 func (var type) funcName(param-list) (return-list) {
     // code
+}
+```
+
+## `interface`
+
+```go
+type InterfaceName interface {
+    funcName()
 }
 ```
