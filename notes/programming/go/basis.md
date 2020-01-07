@@ -527,3 +527,39 @@ type InterfaceName interface {
     funcName()
 }
 ```
+
+## Goroutines
+
+```go
+go func()
+```
+## Channels
+
+```go
+ch := make(chan type)    // 无缓存
+ch := make(chan type, 0) // 无缓存
+ch := make(chan type, 1) // 有缓存大于零
+
+ch <- x
+x = <-ch
+<-ch
+
+close(ch)
+```
+
+### 单方向的 Channels
+
+双向可以转单向，单向不可转双向
+
+```go
+out := make(chan<- type)
+in  := make(<-chan type)
+```
+
+### 带缓存的 Channels
+
+```go
+ch := make(chan type, 3)
+len(ch) // 可查已有个数
+cap(ch) // 可查容量
+```
