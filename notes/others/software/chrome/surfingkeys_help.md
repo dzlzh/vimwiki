@@ -238,7 +238,7 @@
 | `'`        | Jump to vim-like mark             |
 | `<Ctrl-'>` | Jump to vim-like mark in new tab  |
 
-##Settings
+## Settings
 
 | keys           | description               |
 | :--            | :--                       |
