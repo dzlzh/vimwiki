@@ -47,3 +47,7 @@
 - [Enhanced Github](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd/)
 - [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)
 - [沙拉查词 - 聚合词典划词翻译](https://chrome.google.com/webstore/detail/sourcegraph/cdonnmffkdaoajfknoeeecmchibpmkmg)
+
+## Surfingkeys
+
+- [Help](chrome/surfingkeys_help.md)
