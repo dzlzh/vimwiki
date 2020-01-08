@@ -3,7 +3,7 @@
 ## Help
 
 | keys      | description                                                          |
-| :-:       | :-:                                                                  |
+| :--       | :--                                                                  |
 | `<Alt-s>` | Toggle SurfingKeys on current site                                   |
 | `sql`     | Show last action                                                     |
 | `.`       | Repeat last action                                                   |
@@ -14,7 +14,7 @@
 ## Mouse Click
 
 | keys       | description                                                                 |
-| :-:        | :-:                                                                         |
+| :--        | :--                                                                         |
 | `cf`       | Open multiple links in a new tab                                            |
 | `gf`       | Open a link in non-active new tab                                           |
 | `gi`       | Go to the first edit box                                                    |
@@ -35,7 +35,7 @@
 ## Scroll Page / Element
 
 | keys | description                          |
-| :-:  | :-:                                  |
+| :--  | :--                                  |
 | `0`  | Scroll all the way to the left       |
 | `cS` | Reset scroll target                  |
 | `cs` | Change scroll target                 |
@@ -57,7 +57,7 @@
 ## Tabs
 
 | keys      | description                         |
-| :-:       | :-:                                 |
+| :--       | :--                                 |
 | `yt`      | Duplicate current tab               |
 | `yT`      | Duplicate current tab in background |
 | `g0`      | Go to the first tab                 |
@@ -86,7 +86,7 @@
 ## Page Navigation
 
 | keys       | description                                                             |
-| :-:        | :-:                                                                     |
+| :--        | :--                                                                     |
 | `gT`       | Go to first activated tab                                               |
 | `gu`       | Go up one path in the URL                                               |
 | `g?`       | Reload current page without query string(all parts after question mark) |
@@ -104,14 +104,14 @@
 ## Sessions
 
 | keys | description           |
-| :-:  | :-:                   |
+| :--  | :--                   |
 | `ZZ` | Save session and quit |
 | `ZR` | Restore last session  |
 
 ## Search selected with
 
 | keys | description                        |
-| :-:  | :-:                                |
+| :--  | :--                                |
 | `sg` | Search selected with google        |
 | `sd` | Search selected with duckduckgo    |
 | `sb` | Search selected with baidu         |
@@ -123,7 +123,7 @@
 ## Clipboard
 
 | keys  | description                               |
-| :-:   | :-:                                       |
+| :--   | :--                                       |
 | `yG`  | Capture current full page                 |
 | `yS`  | Capture scrolling element                 |
 | `ya`  | Copy a link URL to the clipboard          |
@@ -153,7 +153,7 @@
 ## Omnibar
 
 | keys           | description                                      |
-| :-:            | :-:                                              |
+| :--            | :--                                              |
 | `go`           | Open a URL in current tab                        |
 | `gab`          | Bookmark current page to selected folder         |
 | `gt`           | Open a URL                                       |
@@ -191,7 +191,7 @@
 ## Visual Mode
 
 | keys            | description                                                |
-| :-:             | :-:                                                        |
+| :--             | :--                                                        |
 | `v`             | Toggle visual mode                                         |
 | `/`             | Find in current page                                       |
 | `n`             | Next found text                                            |
@@ -233,7 +233,7 @@
 ## vim-like marks
 
 | keys       | description                       |
-| :-:        | :-:                               |
+| :--        | :--                               |
 | `m`        | Add current URL to vim-like marks |
 | `'`        | Jump to vim-like mark             |
 | `<Ctrl-'>` | Jump to vim-like mark in new tab  |
@@ -241,7 +241,7 @@
 ##Settings
 
 | keys           | description               |
-| :-:            | :-:                       |
+| :--            | :--                       |
 | `se`           | Edit Settings             |
 | `sm`           | Preview markdown          |
 | `<Ctrl-Alt-d>` | Mermaid diagram generator |
@@ -249,7 +249,7 @@
 ## Chrome URLs
 
 | keys | description               |
-| :-:  | :-:                       |
+| :--  | :--                       |
 | `ga` | Open Chrome About         |
 | `gb` | Open Chrome Bookmarks     |
 | `gc` | Open Chrome Cache         |
@@ -265,7 +265,7 @@
 ## Proxy
 
 | keys  | description                              |
-| :-:   | :-:                                      |
+| :--   | :--                                      |
 | `cp`  | Toggle proxy for current site            |
 | `;cp` | Copy proxy info                          |
 | `;ap` | Apply proxy info from clipboard          |
@@ -279,7 +279,7 @@
 ## Misc
 
 | keys       | description                               |
-| :-:        | :-:                                       |
+| :--        | :--                                       |
 | `gr`       | Read selected text or text from clipboard |
 | `;q`       | Toggle mouseSelectToQuery                 |
 | `;s`       | Toggle PDF viewer from SurfingKeys        |
@@ -292,7 +292,7 @@
 ## Insert Mode
 
 | keys       | description                                     |
-| :-:        | :-:                                             |
+| :--        | :--                                             |
 | `<Ctrl-e>` | Move the cursor to the end of the line          |
 | `<Ctrl-f>` | Move the cursor to the beginning of the line    |
 | `<Ctrl-u>` | Delete all entered characters before the cursor |
