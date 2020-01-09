@@ -15,8 +15,12 @@ pacman -Scc  # 清理所有软件包缓存
 pacman -Ss   # 查询软件包数据库
 pacman -Qs   # 查询已安装的软件包
 pacman -U    # 回滚
+# 可在 /etc/pamac.conf 中配置忽略更新
 
 yay -S  --mflags --skipinteg # 跳过 checksums
+# 生成配置可在~/.config/yay/config.json 中更改 AUR 源
+# https://aur.tuna.tsinghua.edu.cn
+yay -Syu --devel --combinedupgrade --save
 ```
 
 ## 初始化
