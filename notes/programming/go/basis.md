@@ -472,6 +472,12 @@ for item := range Channel {
 
 无条件地转移到过程中指定的行
 
+```
+lable:
+goto lable
+break lable // 标签只可以定义到 for 前面，跳出循环
+```
+
 ## 函数
 
 ```go
@@ -552,8 +558,8 @@ close(ch)
 双向可以转单向，单向不可转双向
 
 ```go
-out := make(chan<- type)
-in  := make(<-chan type)
+send := make(chan<- type)
+receive := make(<-chan type)
 ```
 
 ### 带缓存的 Channels
