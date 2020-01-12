@@ -558,8 +558,8 @@ close(ch)
 双向可以转单向，单向不可转双向
 
 ```go
-send := make(chan<- type)
-receive := make(<-chan type)
+send := make(chan<- type)    // 只发送不接收
+receive := make(<-chan type) // 只接收不发送
 ```
 
 ### 带缓存的 Channels
