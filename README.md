@@ -85,6 +85,7 @@
 - [Manjaro 安装 Scrcpy](blog/linux_manjaro_scrcpy.md)
 - [Manjaro 中使用蓝牙耳机](blog/manjaro_bluetooth_earphone.md)
 - [.bashrc、.xinitrc、.xprofile](blog/bashrc_xinitrc_xprofile.md)
+- [tmux 编译安装](blog/linux_install_tmux.md)
 
 ### 待完成
 
@@ -112,7 +113,6 @@
 - [时间轮盘算法](blog/timing_wheel.md)
 - [Redis 订阅与发布](blog/redis_pubsub.md)
 - [zsh 安装](blog/linux_install_zsh.md)
-- [tmux 编译安装](blog/linux_install_tmux.md)
 - [dotfiles 管理](blog/dotfiles.md)
 - [PV、VV、IP、UV](blog/pv_vv_ip_uv.md)
 - [TPS、QPS、并发数、响应时间](blog/tps_qps_concurrency_rt.md)
