@@ -569,3 +569,19 @@ ch := make(chan type, 3)
 len(ch) // 可查已有个数
 cap(ch) // 可查容量
 ```
+
+## go test
+
+以 `_test.go` 为后缀名
+
+- 测试函数
+- 基准测试函数 (benchmark)
+- 示例函数
+
+### 测试函数
+
+必须导入 `testing` 包
+
+```go
+func TestName(t *testing.T) {}
+```
