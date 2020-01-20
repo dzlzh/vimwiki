@@ -13,7 +13,7 @@
 `go mod`
 
 - `download` 下载依赖
-- `edit` 编辑go.mod文件
+- `edit` 编辑 go.mod 文件
 - `graph` 打印模块依赖图
 - `int` 初始化
 - `tidy` 拉取缺少的模块，移除不用的模块
@@ -23,7 +23,8 @@
 
 ## `go.mod`
 
-- `module` 语句指定包的名字（路径）
+- `module` 语句指定模块的名字（路径）
+- `go` 用于设置预期的 Go 版本
 - `require` 语句指定的依赖项模块
 - `replace` 语句可以替换依赖项模块
 - `exclude` 语句可以忽略依赖项模块
@@ -36,7 +37,7 @@
 
 ## `go get`
 
-- `go get -u <package>` 升级到最新的次要版本或者修订版本 
+- `go get -u <package>` 升级到最新的次要版本或者修订版本
 - `go get -u=patch <package>` 将会升级到最新的修订版本
 - `go get package@version` 将会升级到指定的版本号 version
 - `go get` 有版本的更改，那么 go.mod 文件也会更改
