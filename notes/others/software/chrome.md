@@ -48,6 +48,7 @@
 - [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)
 - [沙拉查词 - 聚合词典划词翻译](https://chrome.google.com/webstore/detail/sourcegraph/cdonnmffkdaoajfknoeeecmchibpmkmg)
 - [GayHub](https://chrome.google.com/webstore/detail/mdcffelghikdiafnfodjlgllenhlnejl)
+- [Dark Reader](https://chrome.google.com/webstore/detail/eimadpbcbfnmbkopoojfekhnkhdbieeh)
 
 ## Surfingkeys
 
