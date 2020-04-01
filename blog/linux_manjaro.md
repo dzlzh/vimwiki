@@ -26,14 +26,22 @@ yay -Syu --devel --combinedupgrade --save
 ## 初始化
 
 ```sh
-sudo pacman-mirrors -GB testing -c China
-sudo pacman-mirrors -c China
+# sudo pacman-mirrors -GB testing -c China
+# sudo pacman-mirrors -c China
 sudo pacman-mirrors -i -c China -m rank
 sudo vim /etc/pacman.conf
     [archlinuxcn]
     SigLevel = Optional TrustedOnly
-    Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-    # Server = https:://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+    # Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+    Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+
+    [antergos]
+    SigLevel = TrustAll
+    Server = https://mirrors.tuna.tsinghua.edu.cn/antergos/$repo/$arch
+
+    [arch4edu]
+    SigLevel = TrustAll
+    Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
 sudo pacman -Syu
 sudo pacman -S archlinuxcn-keyring
 sudo pacman -Syyu # 强制升级软件包
@@ -43,10 +51,10 @@ sudo pacman -Sy yay
 ### 字体
 
 ```sh
+yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 yay -S wqy-zenhei wqy-microhei-lite wqy-microhei wqy-bitmapfont
 yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons
 # yay -S ttf-font-icons
-# yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 # yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 # 安装 powerline 字体
 git clone https://github.com/powerline/fonts.git --depth=1
@@ -69,9 +77,10 @@ yay -S neovim tmux
 # zsh oh-my-zsh
 yay -S zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# v2ray Or shadowsocks
+# v2ray Or shadowsocks Or clase
 yay -S v2ray
 yay -S shadowsocks
+yay -S clase
 # Redshift
 yay -S redshift
 # xprop xrandr
@@ -86,8 +95,8 @@ yay -S flameshot
 # https://github.com/countstarlight/deepin-wine-wechat-arch
 yay -S deepin-wine-wechat
 # music
-yay -S netease-cloud-music
-yay -S iease-music
+# yay -S netease-cloud-music
+# yay -S iease-music
 # telegram
 yay -S telegram-desktop
 ```
