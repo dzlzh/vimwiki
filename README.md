@@ -120,3 +120,4 @@
 - [JWT](blog/jwt.md)
 - [密码管理解决方案](blog/password_manager.md)
 - [记一次 Docker 小问题](blog/docker_issues.md)
+- [Manjaro 安装 Wireguard](blog/linux_manjaro_wireguard.md)
