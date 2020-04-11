@@ -53,7 +53,7 @@ sudo pacman -Sy yay
 ```sh
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 yay -S wqy-zenhei wqy-microhei-lite wqy-microhei wqy-bitmapfont
-yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons
+yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons awesome-terminal-fonts
 # yay -S ttf-font-icons
 # yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 # 安装 powerline 字体
