@@ -64,7 +64,7 @@
 - [ ] [七个面向对象设计原则和 24 个设计模式](https://blog.csdn.net/lovelion/article/details/17517213)
 - [ ] [自学是门手艺](https://github.com/selfteaching/the-craft-of-selfteaching)
 - [ ] [我的代码没有 else 系列](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns)
-    - [ ] [代码模板](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/template)
+    - [X] [代码模板](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/template)
     - [ ] [链式调用](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/responsibility)
     - [ ] [代码组件](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/composite)
     - [ ] [订阅通知](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/observer)
