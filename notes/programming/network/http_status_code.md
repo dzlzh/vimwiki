@@ -25,3 +25,8 @@
 | `410`  | Gone                  | GET            | 用户请求的资源被永久删除，且不会再得到的                                 |
 | `422`  | Unprocesable entity   | POST/PUT/PATCH | 当创建一个对象时，发生一个验证错误                                       |
 | `500`  | INTERNAL SERVER ERROR | *              | 服务器发生错误，用户将无法判断发出的请求是否成功                         |
+
+## 参考资料
+
+- [HTTP Status Codes](https://httpstatuses.com/)
+- [HTTP 响应代码](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)
