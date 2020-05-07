@@ -80,7 +80,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # v2ray Or shadowsocks Or clase
 # yay -S v2ray
 # yay -S shadowsocks
-yay -S clase
+yay -S clash
 # Redshift
 yay -S redshift
 # xprop xrandr
