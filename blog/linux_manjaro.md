@@ -67,11 +67,11 @@ fc-cache -vf
 # polybar rofi dunst feh termite tilda
 yay -S polybar rofi dunst feh
 # Terminal
-yay -S termite tilda
+yay -S termite tilda fzf
 # fcitx-rime
 yay -S fcitx-im fcitx-configtool fcitx-rime
 # jq aria2 ag rg
-yay -S jq aria2 the_silver_searcher ripgrep
+yay -S jq aria2 the_silver_searcher ripgrep ctags
 # nvim tmux
 yay -S neovim tmux
 # zsh oh-my-zsh chsh -s /bin/zsh
@@ -99,6 +99,14 @@ yay -S deepin-wine-wechat
 # yay -S iease-music
 # telegram
 yay -S telegram-desktop
+# dingtalk
+yay -S dingtalk-electron
+# db
+yay -S dbeaver
+# redis
+yay -S redis-desktop-manager
+# curl
+yay -S insomnia
 ```
 
 ### VirtualBox
