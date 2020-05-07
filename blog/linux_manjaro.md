@@ -52,7 +52,7 @@ sudo pacman -Sy yay
 
 ```sh
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
-yay -S wqy-zenhei wqy-microhei-lite wqy-microhei wqy-bitmapfont
+# yay -S wqy-zenhei wqy-microhei-lite wqy-microhei wqy-bitmapfont
 yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons awesome-terminal-fonts
 # yay -S ttf-font-icons
 # yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
@@ -74,12 +74,12 @@ yay -S fcitx-im fcitx-configtool fcitx-rime
 yay -S jq aria2 the_silver_searcher ripgrep
 # nvim tmux
 yay -S neovim tmux
-# zsh oh-my-zsh
+# zsh oh-my-zsh chsh -s /bin/zsh
 yay -S zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # v2ray Or shadowsocks Or clase
-yay -S v2ray
-yay -S shadowsocks
+# yay -S v2ray
+# yay -S shadowsocks
 yay -S clase
 # Redshift
 yay -S redshift
