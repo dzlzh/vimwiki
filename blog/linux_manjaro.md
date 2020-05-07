@@ -43,7 +43,7 @@ sudo vim /etc/pacman.conf
     SigLevel = TrustAll
     Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
 sudo pacman -Syu
-sudo pacman -S archlinuxcn-keyring
+sudo pacman -S archlinuxcn-keyring manjaro-settings-manager
 sudo pacman -Syyu # 强制升级软件包
 sudo pacman -Sy yay
 ```
