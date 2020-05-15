@@ -68,3 +68,4 @@
     - [X] [链式调用](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/responsibility)
     - [X] [代码组件](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/composite)
     - [X] [订阅通知](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/observer)
+    - [X] [客户决策](https://github.com/TIGERB/easy-tips/tree/master/go/src/patterns/strategy)
