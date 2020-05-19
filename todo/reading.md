@@ -7,6 +7,8 @@
     - [ ] [SED 简明教程](http://coolshell.cn/articles/9104.html)
     - [ ] [AWK 简明教程](http://coolshell.cn/articles/9070.html)
     - [ ] [API 设计原则](http://coolshell.cn/articles/18024.html)
+- [ ] [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
+    - [ ] [Bash 脚本教程](https://wangdoc.com/bash/intro.html)
 - [ ] [GitHub](https://github.com)
     - [ ] [一些不错英文资料的中文翻译](https://github.com/oldratlee/translations)
     - [ ] [Laravel 核心代码学习](https://github.com/kevinyan815/Learning_Laravel_Kernel)
