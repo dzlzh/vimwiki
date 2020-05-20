@@ -44,10 +44,6 @@
 ### [其他 (Others)](notes/others.md)
 
 - [程序员必读书籍](notes/others/book.md)
-- [Google foo.bar](notes/others/google_foo_bar.md)
-- [Software Inventory](notes/others/software.md)
-- [Idea](notes/others/idea.md)
-- [Collection](notes/others/collection.md)
 
 ## [Codes](codes.md)
 

@@ -1,4 +1,6 @@
-# Collection - 笔记本
+# Collection - 电脑
+
+## 笔记本
 
 - Acer Predator Helios 300
 - Acer Swift 3
@@ -17,5 +19,10 @@
 - Microsoft Surface Book 2 (13.5-inch)
 - Microsoft Surface Laptop 2
 - Samsung Notebook 9
+- Huawei MateBook X Pro
 - 荣耀 MagicBook
 - 蓝天准系统
+
+## 迷你主机
+
+- Intel NUC
