@@ -107,6 +107,8 @@ yay -S dbeaver
 yay -S redis-desktop-manager
 # curl
 yay -S insomnia
+# proxy
+yay -S mitmproxy
 ```
 
 ### VirtualBox
