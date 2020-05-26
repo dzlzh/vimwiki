@@ -46,6 +46,7 @@ sudo pacman -Syu
 sudo pacman -S archlinuxcn-keyring manjaro-settings-manager
 sudo pacman -Syyu # 强制升级软件包
 sudo pacman -Sy yay
+yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 ```
 
 ### 字体
@@ -53,9 +54,11 @@ sudo pacman -Sy yay
 ```sh
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 # yay -S wqy-zenhei wqy-microhei-lite wqy-microhei wqy-bitmapfont
-yay -S ttf-font-awesome paper-icon-theme ttf-weather-icons awesome-terminal-fonts
-# yay -S ttf-font-icons
+# yay -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
 # yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
+yay -S ttf-font-awesome paper-icon-theme awesome-terminal-fonts
+# yay -S ttf-weather-icons
+# yay -S ttf-font-icons
 # 安装 powerline 字体
 git clone https://github.com/powerline/fonts.git --depth=1
 fc-cache -vf
