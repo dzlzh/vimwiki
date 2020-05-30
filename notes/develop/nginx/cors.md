@@ -9,4 +9,5 @@ location / {
   if ($request_method = 'OPTIONS') {
     return 204;
   }
+}
 ```
