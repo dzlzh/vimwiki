@@ -14,6 +14,7 @@
 - Huawei MateBook X Pro
 - Lenovo X1 Carbon
 - Lenovo Yoga 900
+- Lenovo Y9000X
 - MSI GS65 Stealth
 - MSI Prestige 15(A10SC)
 - Microsoft Surface Book 2 (13.5-inch)
