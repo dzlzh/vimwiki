@@ -20,3 +20,4 @@
 - [ ] [七个面向对象设计原则和 24 个设计模式](https://blog.csdn.net/lovelion/article/details/17517213)
 - [ ] [Docker 核心技术与实现原理](https://draveness.me/docker)
 - [ ] [PHPer 面试指南](https://todayqq.gitbooks.io/phper/content/)
+- [ ] [史上最全设计模式](https://blog.csdn.net/lovelion/article/details/17517213)
