@@ -112,6 +112,8 @@ yay -S redis-desktop-manager
 yay -S insomnia
 # proxy
 yay -S mitmproxy
+# read
+yay -S foliate
 ```
 
 ### VirtualBox
