@@ -103,7 +103,8 @@ yay -S deepin-wine-wechat
 # telegram
 yay -S telegram-desktop
 # dingtalk
-yay -S dingtalk-electron
+# yay -S dingtalk-electron
+yay -S dingtalk-linux
 # db
 yay -S dbeaver
 # redis
