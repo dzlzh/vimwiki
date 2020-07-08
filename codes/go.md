@@ -12,3 +12,4 @@
     - [练习：图像](go/exercise_images.md)
     - [练习：等价二叉查找树](go/exercise_equivalent_binary_trees.md)
     - [练习：Web 爬虫](go/exercise_web_crawler.md)
+- [雪花算法](go/snowflake.go)
