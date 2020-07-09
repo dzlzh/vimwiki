@@ -86,8 +86,9 @@
 ### 待完成
 
 - [书单](blog/book_list.md)
-- [二进制运算](blog/binary_operation.md)
+- [负二进制](blog/negative_binary_operation.md)
 - [原码、反码、补码](blog/computer_code.md)
+- [二进制运算](blog/binary_operation.md)
 - [位运算](blog/bitwise_operation.md)
 - [位运算与权限控制](blog/bitwise_operation_and_permission.md)
 - [PHP 生命周期](blog/php_life_cycle.md)
