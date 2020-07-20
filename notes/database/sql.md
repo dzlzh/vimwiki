@@ -10,7 +10,7 @@
 
 ## `UNION` 和 `UNION ALL`操作符
 
-`UNION`操作符用于合并两个或多个SELECT语句的结果集。
+`UNION`操作符用于合并两个或多个 SELECT 语句的结果集。
 
 **SQL `UNION` 语法**
 
@@ -60,8 +60,16 @@ DATE_FORMAT(date,format)
 
 ## DISTINCT
 
-仅仅列出不同的值
+列出不同的值
 
 ```
 SELECT DISTINCT 列名称 FROM 表名称
 ```
+
+### 作用于单列
+
+单列去重
+
+### 作用于多列
+
+多列去重，是作用于两列
