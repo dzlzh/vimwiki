@@ -22,6 +22,25 @@
 
 - main 包：执行完 `go build`，会在当前目录下生成一个可执行文件
 
+### `-tags`
+
+构建约束，也称为构建标记，是以一行注释开头的
+
+```
+// +build
+```
+
+```
+// +build linux,386 darwin,!cgo
+(linux AND 386) OR (darwin AND (NOT cgo))
+
+// +build linux darwin
+// +build 386
+(linux OR darwin) AND 386
+
+// +build ignore
+```
+
 ## `go clean`
 
 用来移除当前源码包里编译生成的文件
