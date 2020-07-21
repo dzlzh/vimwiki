@@ -6,9 +6,13 @@
 
 如有 composer.lock 文件，直接安装，否则从 composer.json 安装最新扩展包和依赖
 
-`composer install --no-dev`
+`--no-dev`
 
 安装时跳过 `require-dev` 列出的软件包
+
+`-o/--optimize-autoloader`
+
+类映射生成
 
 ## require
 
