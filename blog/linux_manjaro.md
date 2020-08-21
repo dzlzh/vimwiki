@@ -74,7 +74,9 @@ yay -S termite tilda fzf
 # fcitx-rime
 yay -S fcitx-im fcitx-configtool fcitx-rime
 # jq aria2 ag rg
-yay -S jq aria2 the_silver_searcher ripgrep ctags bat
+yay -S jq the_silver_searcher ripgrep ctags bat
+# download
+yay -S aria2 axel
 # nvim tmux
 yay -S neovim tmux
 # zsh oh-my-zsh chsh -s /bin/zsh
