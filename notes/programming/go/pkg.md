@@ -4,4 +4,6 @@
 - [strconv](pkg/strconv.md)
 - [time](pkg/time.md)
 - [encoding]()
-    - [json](pkg/json.md)
+    - [json](pkg/encoding/json.md)
+- [sync](pkg/sync.md)
+    - [atomic](pkg/sync/atomic.md)
