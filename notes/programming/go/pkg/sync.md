@@ -28,3 +28,17 @@
 ## sync.Once
 
 - `Do()`
+
+## sync.Pool
+
+- `Put()`
+- `Get()`
+
+## sync.Map
+
+- `Range()`
+- `Load()`
+- `Store()`
+- `Delete()`
+- `LoadOrStore()`
+- `LoadAndDelete()`
