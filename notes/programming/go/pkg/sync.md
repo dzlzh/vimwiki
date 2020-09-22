@@ -1,30 +1,30 @@
 # sync
 
-## `sync.Mutex`
+## sync.Mutex
 
 - `Lock()`
-`- Unlock()`
+- `Unlock()`
 
-## `sync.RWMutex`
+## sync.RWMutex
 
 - `Lock()`
-`- Unlock()`
+- `Unlock()`
 - `RLock()`
-`- RUnlock()`
+- `RUnlock()`
 
-## `sync.Cond`
+## sync.Cond
 
 - `NewCond()`
 - `Wait()`
 - `Signal()`
 - `Broadcast()`
 
-## `sync.WaitGroup`
+## sync.WaitGroup
 
 - `Add()`
 - `Done()`
 - `Wait()`
 
-## `sync.Once`
+## sync.Once
 
 - `Do()`
