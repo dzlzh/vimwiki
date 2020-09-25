@@ -10,6 +10,7 @@
 - [sync](pkg/sync.md)
     - [atomic](pkg/sync/atomic.md)
 - [context](pkg/context.md)
+- [os](pkg/os.md)
 
 ## 第三方包
 
