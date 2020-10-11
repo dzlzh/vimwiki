@@ -69,7 +69,7 @@ strings.Repeat(s, count int) string
 ## 修改字符串大小写
 
 - `ToLower` 将字符串中的 Unicode 字符全部转换成相应的小写字符
- 
+
 ```
 strings.ToLower(s) string
 ```
@@ -78,6 +78,12 @@ strings.ToLower(s) string
 
 ```
 strings.ToUpper(s) string
+```
+
+- `Title` 所有单词首字母大写
+
+```
+strings.Title(s) string
 ```
 
 ## 修剪字符串
@@ -100,7 +106,7 @@ strings.Trim(s, str string) string
 ## 分割字符串
 
 - `Fields` 利用 1 个或多个空白符号来作为动态长度的分隔符将字符串分割成若干小块，并返回一个 slice，如果字符串只包含空白符号，则返回一个长度为 0 的 slice
- 
+
 ```
 strings.Fields(s) []string
 ```
