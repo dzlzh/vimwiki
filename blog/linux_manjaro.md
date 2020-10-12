@@ -96,7 +96,7 @@ yay -S google-chrome
 yay -S flameshot
 # deepin-screenshot
 # yay -S deepin-screenshot
-# wechat
+# wechat $WINELOADER winecfg Graphics->Allow the window manager to decorate the windows
 # https://github.com/countstarlight/deepin-wine-wechat-arch
 yay -S deepin-wine-wechat
 # music
