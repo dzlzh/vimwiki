@@ -41,6 +41,12 @@
 // +build ignore
 ```
 
+### `-ldflags`
+
+- `-w` 去掉 DWARF 调试信息，得到的程序就不能用 gdb 调试了
+- `-s` 去掉符号表，panic 时候的 stack trace 就没有任何文件名 / 行号信息了，这个等价于普通 C/C++ 程序被 strip 的效果
+- `-X` 设置包中的变量值
+
 ## `go clean`
 
 用来移除当前源码包里编译生成的文件
