@@ -88,3 +88,7 @@
 `composer global`
 
 全局执行，允许你在 `COMPOSER_HOME` 目录下执行其它命令
+
+## Allowed memory size
+
+`php -d memory_limit=-1 composer install`
