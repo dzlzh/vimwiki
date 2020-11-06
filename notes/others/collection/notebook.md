@@ -23,6 +23,7 @@
 - Huawei MateBook X Pro
 - 荣耀 MagicBook
 - 蓝天准系统
+- 机械革命 Code 01
 
 ## 迷你主机
 
