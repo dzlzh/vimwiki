@@ -16,4 +16,6 @@
 
 ## 第三方包
 
-- [gorm](pkg/gorm.md)
+- [go-gorm/gorm](pkg/gorm.md)
+- [go-redis/redis](pkg/redis.md)
+- [robfig/cron](pkg/cron.md)
