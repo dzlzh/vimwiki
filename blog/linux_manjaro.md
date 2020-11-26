@@ -59,8 +59,9 @@ yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 yay -S ttf-font-awesome paper-icon-theme awesome-terminal-fonts
 # yay -S ttf-weather-icons
 # yay -S ttf-font-icons
+git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
 # 安装 powerline 字体
-git clone https://github.com/powerline/fonts.git --depth=1
+git clone --depth=1 https://github.com/powerline/fonts.git
 fc-cache -vf
 ```
 
