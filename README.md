@@ -113,7 +113,7 @@
 - [Redis 订阅与发布](blog/redis_pubsub.md)
 - [zsh 安装](blog/linux_install_zsh.md)
 - [dotfiles 管理](blog/dotfiles.md)
-- [PV、VV、IP、UV](blog/pv_vv_ip_uv.md)
+- [PV、UV、IP、VV、CV](blog/pv_vv_ip_uv.md)
 - [TPS、QPS、并发数、响应时间](blog/tps_qps_concurrency_rt.md)
 - [注释规范](blog/comments_styleguide.md)
 - [JWT](blog/jwt.md)
