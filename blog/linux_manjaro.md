@@ -53,9 +53,8 @@ yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
 
 ```sh
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji
+# yay -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts adobe-source-code-pro-fonts
 # yay -S wqy-zenhei wqy-microhei-lite wqy-microhei wqy-bitmapfont
-# yay -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts
-# yay -S adobe-source-code-pro-fonts adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts
 yay -S ttf-font-awesome paper-icon-theme awesome-terminal-fonts
 # yay -S ttf-weather-icons
 # yay -S ttf-font-icons
