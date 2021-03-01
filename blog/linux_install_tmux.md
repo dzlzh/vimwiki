@@ -20,7 +20,13 @@ tra xzfv tmux-3.0a.tar.gz
 ### centos
 
 ```sh
-yum install -y libevent-devel ncurses-devel
+yum install -y libevent-devel ncurses-devel gcc make bison pkg-config
+```
+
+### Debian
+
+```sh
+apt install libevent-dev ncurses-dev build-essential bison pkg-config
 ```
 
 ## 编译安装
