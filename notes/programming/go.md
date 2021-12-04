@@ -7,3 +7,4 @@
 - [Packages](go/pkg.md)
 - [Go 语言核心 36 讲](go/core_36_speak.md)
 - [go mod](go/go_mod.md)
+- [泛型](go/generic.md)
