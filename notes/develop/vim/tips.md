@@ -118,3 +118,10 @@ ggVGg?
 :[n]r! command
 :m,n! command
 ```
+
+## 匹配中文
+
+```
+[\u4e00-\u9fa5]
+[^\x00-\xff]
+```
