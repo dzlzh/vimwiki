@@ -118,6 +118,8 @@ yay -S insomnia
 yay -S mitmproxy
 # read
 yay -S foliate
+# wps
+yay -S wps-office-cn wps-office-mui-zh-cn ttf-wps-fonts
 ```
 
 ### VirtualBox
