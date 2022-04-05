@@ -70,7 +70,8 @@ fc-cache -vf
 # polybar rofi dunst feh termite tilda
 yay -S polybar rofi dunst feh
 # Terminal
-yay -S termite tilda fzf
+# yay -S termite tilda fzf
+yay -S alacritty tilda fzf
 # fcitx-rime
 yay -S fcitx-im fcitx-configtool fcitx-rime
 # jq aria2 ag rg
