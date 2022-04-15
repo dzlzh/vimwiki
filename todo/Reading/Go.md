@@ -6,6 +6,7 @@
 - [ ] [数据结构和算法](https://github.com/hunterhug/goa.c)
 - [ ] [algo-learn](https://github.com/roseduan/algo-learn)
 
+- [ ] [Go 语言设计模式](https://github.com/senghoo/golang-design-pattern)
 - [ ] [设计模式超简单的解释](https://github.com/guanguans/design-patterns-for-humans-cn)
 - [ ] [Go 设计模式](https://lailin.xyz/post/go-design-pattern.html)
 
@@ -13,6 +14,7 @@
 - [ ] [Go 语言定制指南](https://github.com/chai2010/go-ast-book)
 - [ ] [Go 语言原本](https://github.com/golang-design/under-the-hood)
 - [ ] [Go 语言设计哲学](https://golang3.eddycjy.com/)
+- [ ] [Go 语言设计与实现](https://draveness.me/golang/)
 - [ ] [Go 语言开发笔记](https://github.com/guyan0319/golang_development_notes/blob/master/zh/preface.md)
 - [ ] [Go 源码分析](https://github.com/cch123/golang-notes)
 - [ ] [Go by Example](https://gobyexample-cn.github.io/)
