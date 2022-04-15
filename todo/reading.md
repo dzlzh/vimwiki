@@ -1,5 +1,9 @@
 # TODO - Reading
 
+- [ ] [Go](Reading/Go.md)
+- [ ] [Vue](Reading/Vue.md)
+- [ ] [Neovim](Reading/Neovim.md)
+
 - [ ] [七个面向对象设计原则和 24 个设计模式](https://blog.csdn.net/lovelion/article/details/17517213)
 - [ ] [设计模式](https://refactoringguru.cn/)
 - [ ] [我的代码没有 else 系列](https://github.com/TIGERB/easy-tips/tree/master/go/patterns)
