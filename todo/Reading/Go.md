@@ -8,6 +8,7 @@
 
 - [ ] [Go 语言设计模式](https://github.com/senghoo/golang-design-pattern)
 - [ ] [设计模式超简单的解释](https://github.com/guanguans/design-patterns-for-humans-cn)
+- [ ] [Golang 设计模式思想](https://github.com/sevenelevenlee/go-patterns)
 - [ ] [Go 设计模式](https://lailin.xyz/post/go-design-pattern.html)
 
 - [ ] [Golang - 100 天从新手到大师](https://github.com/rubyhan1314/Golang-100-Days)
