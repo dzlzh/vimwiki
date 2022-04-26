@@ -106,8 +106,9 @@ yay -S deepin-wine-wechat
 # telegram
 yay -S telegram-desktop
 # dingtalk
-yay -S dingtalk-electron
-yay -S deepin.com.dingtalk.com
+yay -S dingtalk-bin
+# yay -S dingtalk-electron
+# yay -S deepin.com.dingtalk.com
 # yay -S dingtalk-linux
 # db
 yay -S dbeaver
