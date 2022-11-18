@@ -73,7 +73,7 @@ yay -S polybar rofi dunst feh
 # yay -S termite tilda fzf
 yay -S alacritty tilda fzf
 # fcitx-rime
-yay -S fcitx-im fcitx-configtool fcitx-rime
+yay -S fcitx5 fcitx5-configtool fcitx5-qt fcitx5-gtk fcitx5-rime fcitx5-chinese-addons
 # jq aria2 ag rg
 yay -S jq the_silver_searcher ripgrep ctags bat
 # download
