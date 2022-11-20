@@ -17,6 +17,7 @@
 - [网络](notes/programming/network.md)
 - [PHP](notes/programming/php.md)
 - [Go](notes/programming/go.md)
+- [Lua](notes/programming/lua.md)
 - [WEB](notes/programming/web.md)
 - [Shell](notes/programming/shell.md)
 - [RegExr](notes/programming/regexr.md)
