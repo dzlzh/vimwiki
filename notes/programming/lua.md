@@ -77,6 +77,9 @@ until sum > 1000
 ## 函数
 
 ```lua
+-- 局部函数前加 local
+-- fu(...) 可变参数
+
 -- 递归
 function fib(n)
     if n < 2 then return 1 end
@@ -102,4 +105,104 @@ p2 = Power(2)
 p3 = Power(3)
 print(p2(4)) -- 4 的 2 次方
 print(p3(5)) -- 5 的 3 次方
+```
+
+## Table
+
+```lua
+-- _G 所有的全局变量都在这个特殊的 Table 中
+
+table = {key=value}
+print(table.key)
+
+-- 数组
+-- 下标从 1 开始
+arr = {value}
+print(arr[1])
+print(#arr) -- 长度
+
+-- 遍历
+for k, v in pairs(t) do
+    print(k,v)
+end
+```
+
+## MateTable 和 MetaMethod
+
+```lua
+fraction_a = {numerator=2, denominator=3}
+fraction_b = {numerator=4, denominator=7}
+fraction_op={}
+function fraction_op.__add(f1, f2)
+    ret = {}
+    ret.numerator = f1.numerator * f2.denominator + f2.numerator * f1.denominator
+    ret.denominator = f1.denominator * f2.denominator
+    return ret
+end
+setmetatable(fraction_a, fraction_op)
+setmetatable(fraction_b, fraction_op)
+fraction_s = fraction_a + fraction_b
+
+--[[
+__add(a, b)         对应表达式 a + b
+__sub(a, b)         对应表达式 a - b
+__mul(a, b)         对应表达式 a * b
+__div(a, b)         对应表达式 a / b
+__mod(a, b)         对应表达式 a % b
+__pow(a, b)         对应表达式 a ^ b
+__unm(a)            对应表达式 -a
+__concat(a, b)      对应表达式 a .. b
+__len(a)            对应表达式 #a
+__eq(a, b)          对应表达式 a == b
+__lt(a, b)          对应表达式 a < b
+__le(a, b)          对应表达式 a <= b
+__index(a, b)       对应表达式 a.b
+__newindex(a, b, c) 对应表达式 a.b = c
+__call(a, ...)      对应表达式 a(...)
+]]--
+```
+
+## 面向对象
+
+```lua
+-- 类
+Dog = {}
+function Dog:new()
+    local newObj = {sound = 'woof'}
+    self.__index = self
+    return setmetatable(newObj, self) -- 返回第一个参数
+end
+function Dog:makeSound()
+    print('i say ' .. self.sound)
+end
+mrDog = Dog:new()
+mrDog:makeSound()
+
+-- 继承
+LoudDog = Dog:new()
+function LoudDog:makeSound()
+    local s = self.sound .. ' '
+    print(s .. s .. s)
+end
+seymour = LoudDog:new()
+seymour:makeSound()
+```
+
+## 模块
+
+```lua
+-- 只执行一次
+require("model_name")
+m = require("model_name")
+local m = (function ()
+  -- model_name.lua 文件的内容
+end)()
+
+-- 每次执行
+dofile("model_name")
+m = dofile("model_name")
+
+-- 载入不执行，需要的时候手动执行
+m = loadfile("model_name")
+m()
 ```
