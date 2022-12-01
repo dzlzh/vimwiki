@@ -67,15 +67,15 @@ fc-cache -vf
 ### 常用软件
 
 ```sh
-# polybar rofi dunst feh termite tilda
-yay -S polybar rofi dunst feh
+# polybar rofi dunst feh neofetch
+yay -S polybar rofi dunst feh neofetch
 # Terminal
-# yay -S termite tilda fzf
+# yay -S alacritty tilda fzf
 yay -S alacritty tilda fzf
 # fcitx-rime
 yay -S fcitx5 fcitx5-configtool fcitx5-qt fcitx5-gtk fcitx5-rime fcitx5-chinese-addons
-# jq aria2 ag rg
-yay -S jq the_silver_searcher ripgrep ctags bat
+# jq ag rg
+yay -S jq the_silver_searcher ripgrep ctags bat exa
 # download
 yay -S aria2 axel
 # nvim tmux
