@@ -48,6 +48,7 @@
 ## 远程操作
 
 - `git clone` 克隆
+  - `--recursive` 递归拉取
 - `git remote` 远程库
 - `git fetch` 下载远程仓库的所有变动
 - `git pull [remote] [rbranch:branch]` 拉取远程库到本地
@@ -102,3 +103,14 @@
 | `git checkout`  | 文件层面 | 舍弃工作目录中的更改               |
 | `git revert`    | 提交层面 | 在公共分支上回滚更改               |
 | `git revert`    | 文件层面 | (N/A)                              |
+
+## 子模块
+
+- `git submodule add <path>` 添加子模块
+- `git submodule foreach <command>` 对子模块使用的命令
+
+```git
+# 克隆带有子模块的仓库
+git submodule init # 初始化子模块
+git submodule update # 更新到主仓库
+```
