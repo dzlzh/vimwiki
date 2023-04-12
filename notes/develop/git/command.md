@@ -63,6 +63,7 @@
 - `git branch <name>` 创建分支
 - `git checkout <name>` 切换分支
 - `git checkout -b <name> [origin/name]` 创建并切换 (-b) 分支，[origin/name] 指定远程分支
+- `git checkout --orphan <name> ` 创建空分支
 - `git merge <name>` 合并指定分支到当前分支
 - `git merge --no-ff -m "<message>" <branch>` 用普通模式合并，并且提交描述
 - `git merge --squash`
