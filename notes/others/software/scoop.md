@@ -28,6 +28,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 scoop bucket add extras
 scoop bucket add versions
 scoop bucket add jetbrains
+scoop bucket add nonportable
 ```
 
 ## 必装软件
@@ -58,5 +59,26 @@ scoop install -a 64bit motrix
 scoop install -a 64bit rufus
 scoop install -a 64bit terminus
 scoop install -a 64bit concfg
-scoop install -a 64bit pshazz 
+scoop install -a 64bit pshazz
+```
+
+```
+Name             Source
+----             ------
+7zip             main
+aria2            main
+clash.mini       extras
+dismplusplus     extras
+geekuninstaller  extras
+git              main
+googlechrome     extras
+innounp          main
+mactype-np       nonportable
+motrix           extras
+obs-studio       extras
+potplayer        extras
+putty            extras
+snipaste         extras
+windows-terminal extras
+wpd              extras
 ```
