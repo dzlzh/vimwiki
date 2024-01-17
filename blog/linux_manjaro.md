@@ -44,8 +44,8 @@ sudo vim /etc/pacman.conf
     [arch4edu]
     SigLevel = TrustAll
     Server = https://mirrors.tuna.tsinghua.edu.cn/arch4edu/$arch
-sudo pacman -Syu
-sudo pacman -S archlinuxcn-keyring manjaro-settings-manager
+sudo pacman -Sy archlinuxcn-keyring && pacman -Syu
+sudo pacman -S manjaro-settings-manager
 sudo pacman -Syyu # 强制升级软件包
 sudo pacman -Sy yay
 yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
