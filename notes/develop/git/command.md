@@ -114,4 +114,7 @@
 # 克隆带有子模块的仓库
 git submodule init # 初始化子模块
 git submodule update # 更新到主仓库
+
+git clone --recursive
+git submodule update --remote
 ```
