@@ -17,3 +17,6 @@
 
 [理解 RESTful 架构 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2011/09/restful.html)
 
+- `POST` 创建
+- `PUT` 全量更新创建 幂等
+- `PATCH` 局部更新
