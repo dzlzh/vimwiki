@@ -118,3 +118,16 @@ git submodule update # 更新到主仓库
 git clone --recursive
 git submodule update --remote
 ```
+
+## git worktree
+
+```git
+git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]] [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]
+git worktree list [-v | --porcelain [-z]]
+git worktree lock [--reason <string>] <worktree>
+git worktree move <worktree> <new-path>
+git worktree prune [-n] [-v] [--expire <expire>]
+git worktree remove [-f] <worktree>
+git worktree repair [<path>...]
+git worktree unlock <worktree>
+```
