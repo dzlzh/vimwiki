@@ -1,9 +1,11 @@
-# HTML
+# WEB
+
+## HTML
 
 - [HTML5](web/html/html5.md)
 - [HTML字符实体](web/html/entities.md)
 
-# JavaScript
+## JavaScript
 
 - [Function](web/javascript/function.md)
 - [Array](web/javascript/array.md)
@@ -18,7 +20,7 @@
 - [数据类型](web/javascript/data_type.md)
 - [技巧](web/javascript/tips.md)
 
-# jQuery
+## jQuery
 
 - [AJAX](web/jquery/ajax.md)
 - [Attribute](web/jquery/attribute.md)
