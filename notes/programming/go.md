@@ -9,4 +9,5 @@
 - [泛型](go/generic.md)
 - [go mod](go/go_mod.md)
 - [go work](go/go_work.md)
-- [go 注释](go/comments.md)
+- [注释](go/comments.md)
+- [技巧](go/tips.md)
