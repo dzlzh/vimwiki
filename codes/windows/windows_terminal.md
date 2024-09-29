@@ -1,7 +1,6 @@
 Windows Terminal
 
 ```
-
 /etc/wsl.conf
 [boot]
 systemd = true
