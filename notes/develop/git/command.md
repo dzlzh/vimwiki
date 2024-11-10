@@ -131,3 +131,30 @@ git worktree remove [-f] <worktree>
 git worktree repair [<path>...]
 git worktree unlock <worktree>
 ```
+
+## git lfs
+
+```
+# 先安装 git-lfs
+
+# 初始化 Git LFS
+git lfs install
+
+# 添加文件到 Git LFS
+git lfs track *.<file>
+
+# 查看已追踪的文件类型
+git lfs track
+
+# 取消追踪某个文件类型（需要手动编辑 .gitattributes 文件，删除对应的行）
+git lfs untrack *.<file>
+
+# 获取 LFS 文件
+git lfs pull
+
+# 查看 LFS 状态
+git lfs status
+
+# 查看所有 LFS 文件
+git lfs ls-files
+```
