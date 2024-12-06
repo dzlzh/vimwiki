@@ -457,3 +457,10 @@ dos2unix [-hkqV] [-c convmode] [-o file ...] [-n infile outfile ...]
 `-c` 转换模式，模式有：`ASCII`, `7bit`, `ISO`, `Mac`, 默认是：`ASCII`
 `-o` 写入到源文件
 `-n` 写入到新文件
+
+## 隐藏属性
+
+```sh
+lsattr 查看隐藏属性
+chattr 修改隐藏属性
+```
