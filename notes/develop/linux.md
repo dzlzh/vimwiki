@@ -7,3 +7,4 @@
 - [awk](linux/awk.md)
 - [curl](linux/curl.md)
 - [Centos](linux/centos.md)
+- [ssh](linux/ssh.md)
