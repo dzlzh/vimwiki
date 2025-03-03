@@ -28,6 +28,7 @@
 - `require` 语句指定的依赖项模块
 - `replace` 语句可以替换依赖项模块
 - `exclude` 语句可以忽略依赖项模块
+- `toolchain` 明确声明项目所需的 Go 工具链
 
 ## `go list`
 
