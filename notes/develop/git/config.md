@@ -19,3 +19,6 @@
   - `false` - 允许提交包含混合换行符的文件
   - `warn` - 提交包含混合换行符的文件时给出警告
 - `git config commit.template [template path]` 设置当前项目提交模板
+- `git config --global credential.helper`
+  - `'cache --timeout=3600'` 记住密码，缓存 3600 秒
+  - `'store'` 记住密码
