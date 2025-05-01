@@ -30,6 +30,13 @@ yay -Syu --devel --combinedupgrade --save
 ```sh
 # sudo pacman-mirrors -GB testing -c China
 # sudo pacman-mirrors -c China
+
+sudo pacman -Scc
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+sudo pacman -Syu archlinux-keyring
+sudo pacman -Syu
+
 sudo pacman-mirrors -i -c China -m rank
 sudo vim /etc/pacman.conf
     [archlinuxcn]
