@@ -22,3 +22,6 @@
 - `git config --global credential.helper`
   - `'cache --timeout=3600'` 记住密码，缓存 3600 秒
   - `'store'` 记住密码
+
+- `~/.config/git/ignore` 可以设置全局忽略文件
+
