@@ -84,6 +84,7 @@
 - [Manjaro 中使用蓝牙耳机](blog/manjaro_bluetooth_earphone.md)
 - [.bashrc、.xinitrc、.xprofile](blog/bashrc_xinitrc_xprofile.md)
 - [tmux 编译安装](blog/linux_install_tmux.md)
+- [Linux 2GB 内存环境优化手册](blog/linux_2gb_memory_optimization.md)
 
 ### 待完成
 
