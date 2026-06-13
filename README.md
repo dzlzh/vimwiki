@@ -85,6 +85,7 @@
 - [.bashrc、.xinitrc、.xprofile](blog/bashrc_xinitrc_xprofile.md)
 - [tmux 编译安装](blog/linux_install_tmux.md)
 - [Linux 2GB 内存环境优化手册](blog/linux_2gb_memory_optimization.md)
+- [Go 项目目录到底该怎么组织？官方指南终于讲清楚了](blog/go-project-layout.md)
 
 ### 待完成
 
