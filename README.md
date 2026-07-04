@@ -68,6 +68,7 @@
 - [CSS 杂记](blog/css_miscellany.md)
 - [Docker 命令速查表](blog/docker_command_quick_list.md)
 - [Git 命令速查表](blog/git_command_quick_list.md)
+- [Git cherry-pick 使用指南](blog/git_cherry_pick.md)
 - [PHP 小技巧](blog/php_tips_note.md)
 - [PHP 安全小记](blog/php_security_note.md)
 - [正则表达式小记](blog/regular_note.md)
